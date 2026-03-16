@@ -1,0 +1,85 @@
+/* Estilos para blocos de código — compatível com Shiki (Slidev padrão) */
+/* Nota: Shiki injeta cores via style= inline. Seletores .token.* (PrismJS) não funcionam aqui. */
+
+/*
+  Tamanho de fonte dos blocos de código.
+  Padrão: 0.85rem. Para aumentar num slide específico, use uma das classes abaixo:
+    <div class="code-sm">  → 0.75rem  (menor)
+    <div class="code-md">  → 0.85rem  (padrão)
+    <div class="code-lg">  → 0.95rem  (maior)
+    <div class="code-xl">  → 1.05rem  (bem grande)
+  Ou sobrescreva a variável diretamente num bloco <style> do slide:
+    :deep(.shiki) { --code-font-size: 1rem; }
+*/
+:root {
+  --code-font-size: 0.85rem;
+}
+
+/* ─── Container do bloco de código ─────────────────────────── */
+.shiki {
+  @apply rounded-xl;
+  /* Fundo escuro profundo — alto contraste para tokens coloridos do Shiki */
+  background: #0d1117 !important;  /* GitHub Dark bg */
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  overflow-x: auto;
+  padding: 1rem 1.25rem;
+}
+
+/* Garante que sub-elementos não sobreponham o fundo definido acima */
+.shiki,
+.shiki pre {
+  background: transparent !important;
+}
+
+/* Cor base do texto quando Shiki não injeta cor (fallback) */
+.shiki code,
+.shiki .line {
+  color: #e6edf3;           /* GitHub Dark: texto padrão */
+  font-size: var(--code-font-size);
+  @apply leading-relaxed font-mono;
+}
+
+/* ─── Classes utilitárias para ajuste de fonte no slide ─────── */
+/* Uso: envolva o bloco de código num <div class="code-lg"> no slide */
+.code-sm .shiki code,
+.code-sm .shiki .line { --code-font-size: 0.75rem; font-size: 0.75rem; }
+
+.code-md .shiki code,
+.code-md .shiki .line { --code-font-size: 0.85rem; font-size: 0.85rem; }
+
+.code-lg .shiki code,
+.code-lg .shiki .line { --code-font-size: 0.95rem; font-size: 0.95rem; }
+
+.code-xl .shiki code,
+.code-xl .shiki .line { --code-font-size: 1.05rem; font-size: 1.05rem; }
+
+/* ─── Números de linha ──────────────────────────────────────── */
+.slidev-code-line-numbers {
+  color: #484f58;           /* GitHub Dark: número de linha */
+  user-select: none;
+}
+
+/* ─── Linha destacada ({1|2} ou {1-3}) ─────────────────────── */
+.slidev-code .highlighted {
+  background: rgba(99, 102, 241, 0.22) !important;
+  border-left: 3px solid #6366f1;
+  /* sem margin negativa — não quebra o layout da linha */
+}
+
+/* ─── Título do bloco (```python filename=example.py) ───────── */
+.slidev-code-title {
+  @apply px-4 py-2 text-sm font-mono rounded-t-lg;
+  background: rgba(99, 102, 241, 0.18);
+  color: #a5b4fc;           /* indigo-300 — legível no fundo escuro */
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  border-bottom: none;
+}
+
+/* ─── Botão de copiar ───────────────────────────────────────── */
+.slidev-code-copy {
+  @apply opacity-0 transition-opacity;
+}
+
+.slidev-code-wrapper:hover .slidev-code-copy {
+  @apply opacity-100;
+}

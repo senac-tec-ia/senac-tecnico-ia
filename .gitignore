@@ -1,0 +1,38 @@
+# Dependências
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+dist-ssr/
+.output/
+build/
+out/
+
+# Cache e temp
+.cache/
+.temp/
+.vite/
+*.local
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/settings.json
+*.swp
+*.swo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Sub-repos com repositórios GitHub próprios
+# (gerencie cada um separadamente)
+slidev-theme-neural/
+senac-planning-ai-tech/

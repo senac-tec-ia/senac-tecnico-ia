@@ -1,0 +1,33 @@
+# Metadados da Aula — Neural Slides
+# Preenchido pelo CLI ao rodar `course new`
+
+aula: 5
+slug: "a05-python-loops-matematica-estatistica"
+title: "Python: Loops e Listas, Matemática e Estatística"
+author: "Leonardo Zanini"
+courseTitle: "Técnico em Inteligência Artificial"
+
+disciplines:
+  - code: D05-UC03
+    name: "Python para IA"
+    ha: 3
+  - code: D03-UC01
+    name: "Fundamentos Matemáticos"
+    ha: 2
+  - code: D09-UC07
+    name: "Estatística Aplicada"
+    ha: 1
+
+date: "2026-03-12"
+
+# draft | ready | published
+status: ready
+
+deployUrl: ""
+
+slideCount: 26
+
+agentsUsed:
+  - orquestrador-1ano
+  - slidev-writer
+  - exercise-builder

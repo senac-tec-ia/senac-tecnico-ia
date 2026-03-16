@@ -1,0 +1,17 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": null,
+  "installCommand": "npm ci",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "cleanUrls": true,
+  "env": {
+    "CI": "true",
+    "FORCE_COLOR": "0",
+    "PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD": "1",
+    "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": "true",
+    "SLIDEV_FORCE_COLOR": "0"
+  }
+}

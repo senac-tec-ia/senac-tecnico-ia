@@ -1,0 +1,25 @@
+{
+  "name": "neural-slides-template",
+  "version": "1.0.0",
+  "description": "Template oficial do Neural Slides para o Técnico em Inteligência Artificial — Senac",
+  "private": true,
+  "scripts": {
+    "dev": "slidev slides.md --open",
+    "dev:demo": "slidev slides-demo.md --open",
+    "build": "slidev build slides.md --out dist",
+    "export": "slidev export slides.md --format pdf --output aula-export.pdf",
+    "export:pptx": "slidev export slides.md --format pptx --output aula-export.pptx",
+    "publish": "npm run build && node .github/scripts/publish.mjs"
+  },
+  "slidev": {
+    "colorSchema": "dark"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^0.49.0",
+    "@slidev/types": "^0.49.0",
+    "autoprefixer": "^10.0.0",
+    "postcss": "^8.0.0",
+    "tailwindcss": "^3.0.0",
+    "vue": "^3.0.0"
+  }
+}
