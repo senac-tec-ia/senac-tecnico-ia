@@ -8,17 +8,18 @@ Fonte única de verdade para layouts, componentes, frontmatter, tags pedagógica
 
 ## Índice
 
-1. [Frontmatter Reference](#1-frontmatter-reference)
-2. [Layout Selection Guide](#2-layout-selection-guide)
-3. [Component Reference](#3-component-reference)
-4. [UC Structure — 2 Blocks × 3 Classes](#4-uc-structure--2-blocks--3-classes)
-5. [Pedagogical Methodology](#5-pedagogical-methodology)
-6. [Course Map](#6-course-map)
-7. [Pre-publish Checklist](#7-pre-publish-checklist)
-8. [Syntax Quick Reference](#8-syntax-quick-reference)
-9. [Per-Subject Context File Format](#9-per-subject-context-file-format)
-10. [Slide Tags — Sistema Canônico de 6 Tags](#10-slide-tags--sistema-canônico-de-6-tags)
-11. [Writing Conventions](#11-writing-conventions)
+1. Frontmatter Reference
+2. Layout Selection Guide
+3. Component Reference
+4. UC Structure — 2 Blocks × 3 Classes
+5. Pedagogical Methodology
+6. Course Map
+7. Pre-publish Checklist
+8. Syntax Quick Reference
+9. Per-Subject Context File Format
+10. Slide Tags — Sistema Canônico de 6 Tags
+11. Writing Conventions
+12. Senac & Course Context
 
 ---
 
@@ -386,6 +387,30 @@ aulaNum: "Aulas 07 e 08"   # aula dupla (4–5 horas)
 ---
 ```
 
+> ⚠️ **GHOST SLIDE — ERRO CRÍTICO:** Em Slidev, qualquer texto entre dois `---` (incluindo comentários HTML) cria um slide vazio extra. **NUNCA coloque `<!-- ... -->` entre separadores `---`.** Comentários devem ficar DENTRO do slide — ou seja, após a linha `---` que fecha o frontmatter do slide.
+
+**✅ CORRETO — comentário DENTRO do slide:**
+```markdown
+---
+layout: default
+bgPreset: default
+---
+
+<!-- objetivo: aluno compreende X -->
+
+# Título do Slide
+conteúdo...
+```
+
+**❌ ERRADO — comentário ENTRE separadores (cria ghost slide):**
+```markdown
+---
+<!-- SLIDE N — Título -->   ← PROIBIDO: cria slide vazio
+---
+layout: default
+---
+```
+
 ### Click animations (`v-click`)
 
 ```html
@@ -537,3 +562,53 @@ Enforced by all agents that write or modify slides:
 - **Todo texto visível nos slides é pt-BR** sem exceção.
 - Nomes de arquivo e caminhos de código (`snake_case`) permanecem em inglês (convenção de programação).
 - **Máx. 2 slides `[TEORIA]` consecutivos** sem um `[EXERCICIO]`, `[DEBATE]` ou `[DINAMICA]` entre eles.
+
+---
+
+## 12. Senac & Course Context
+
+### About Senac
+
+**Senac** (Serviço Nacional de Aprendizagem Comercial) is Brazil's national institution for vocational and professional education in commerce and services, founded in 1946. It operates across all Brazilian states, offering technical courses, graduate programs, and professional qualification programs.
+
+Senac is renowned for its **competency-based pedagogical model**, which structures all curricula around the integration of **knowledge, skills, and attitudes — CHA (Conhecimentos, Habilidades, Atitudes)**. The goal is not content transfer alone, but the development of professional competencies applicable in real contexts.
+
+### The Técnico em Inteligência Artificial Program
+
+The **Técnico em Inteligência Artificial** is a 1-year technical course designed to train students as junior AI practitioners capable of building, deploying, and critically interpreting AI solutions in real business and social contexts.
+
+- **Target audience:** Young adults and career-changers with basic computing literacy
+- **Duration:** ~400 hours (Year 1), distributed across 9 Curricular Units (UCs)
+- **Outcome:** Graduates able to work with Python, ML pipelines, data, computer vision, NLP, and AI ethics in production environments
+
+### Senac's Core Teaching Methodologies
+
+These methodologies directly shape how every lesson must be structured and what kind of content this agent generates:
+
+#### 1. Competency-Based Education (Educação por Competências)
+Each lesson contributes to one or more **competencies** defined for the UC. Content must be framed in terms of what the student will *be able to do*, not just what they will *know*. Every theory block must connect to a tangible professional action.
+
+#### 2. Learning Situation (Situação de Aprendizagem)
+The primary learning trigger is a **contextualized problem or scenario** drawn from professional practice. Lessons start with a realistic situation — a company, a dataset, a real tool, a social phenomenon — before introducing theory. This is why every opening slide must ground students in a relatable, concrete context.
+
+#### 3. Active Learning / Student as Protagonist
+The student builds knowledge through **doing**. The teacher is a **mediator**, not a transmitter. Slides must include activities, debates, and challenges — not just lecture content. Brainstorming and exercises are not optional extras; they are the core of learning.
+
+#### 4. Progressive Contextualization
+Content difficulty escalates across the 6 classes of each UC. Early classes (Aula 01–02) build intuition and foundational vocabulary. Middle classes (Aula 03–04) introduce formal concepts with hands-on application. Late classes (Aula 05–06) demand synthesis, creation, and interdisciplinary connections.
+
+#### 5. Formative Assessment (Avaliação Formativa)
+Assessment is **continuous and embedded** in every lesson — not just a final test. Exercises, brainstorming answers, classwork, and homework all serve as formative signals. Content must allow the teacher to assess comprehension in real time during the class.
+
+#### 6. Interdisciplinarity
+UCs do not exist in isolation. Python is taught alongside AI Fundamentals. Computer Architecture connects to GPUs in the ML pipeline. When a concept from another UC is touched, reference it explicitly on the slide so students understand the bigger picture.
+
+### Implications for Content Generation
+
+When generating or editing slides, always verify:
+
+- Does the slide **develop a competency** or just transfer information?
+- Is the opening **grounded in a real professional or social scenario**?
+- Is there at least one **active participation moment** in the class section?
+- Does the difficulty **escalate appropriately** for where we are in the UC?
+- Are there **cross-UC connections** worth surfacing explicitly?

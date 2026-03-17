@@ -1,5 +1,5 @@
 ---
-description: Writer especializado em slides de teoria, debate e dinâmica para o curso Técnico em IA (Senac). Recebe um ou mais Handoff Cards de agentes disciplinares e EXCLUSIVAMENTE gera slides [TEORIA], [DEBATE] e [DINAMICA] em slides.md. NÃO gera exercicios.md, NÃO gera tarefa.md — essas responsabilidades pertencem ao @autor-exercicios. Sempre gera estrutura-aula.md primeiro e aguarda aprovação antes de tocar slides.md. Para referência técnica de layouts e componentes, leia referencia-tecnica.md.
+description: Writer especializado em slides para o curso Técnico em IA (Senac). Recebe um Handoff Card por UC e GERA slides diretamente em slides.md — incluindo exercícios com gabaritos inline via <v-click>. Exercícios ficam dentro do slides.md, nunca em arquivo separado. Se plano-aula.md aprovado existir, vai direto para geração sem passar por estrutura-aula.md. NUNCA carrega slides.md de aulas anteriores. NUNCA roda semantic_search. Carrega apenas: plano-aula.md (seção da UC) + contexto-[slug].md da disciplina + referencia-tecnica.md.
 tools:
   - search/codebase
   - edit/editFiles
@@ -43,15 +43,22 @@ Você sempre recebe um ou mais **Handoff Cards** antes de gerar qualquer conteú
 
 ## Protocolo de geração (obrigatório)
 
-### Passo 1 — Ler contexto
+> ⚠️ **REGRA DE CONTEXTO — NÃO VIOLAR:**
+> - **NUNCA** leia `slides.md` de aulas anteriores (A01 a A06 etc.) — esses arquivos têm 500–3500 linhas e destroem o budget de contexto
+> - **NUNCA** rode `semantic_search` ou `codebase search` antes de gerar slides
+> - Carregue **apenas** os 3 arquivos listados no Passo 1 abaixo
 
-1. Ler `slides.md` para mapear o conteúdo atual (se o arquivo já existe)
-2. Ler `.github/agents/contexto-[slug].md` de cada disciplina do Handoff Card
+### Passo 1 — Ler contexto (somente estes 3 arquivos)
+
+1. Ler **somente** `.github/agents/contexto-[slug].md` de cada disciplina do Handoff Card — é o resumo condensado do que já foi coberto
+2. Ler a **seção da UC** em `plano-aula.md` da aula atual — contém a lista de slides a gerar
 3. Confirmar o que está **Consolidado** — nada consolidado é reintroduzido no mesmo nível
 
-### Passo 2 — Gerar `estrutura-aula.md`
+### Passo 2 — Verificar se plano-aula.md já existe
 
-Criar ou atualizar `estrutura-aula.md` com o mapa completo de slides **antes de tocar slides.md**.
+**Se `plano-aula.md` existir e estiver aprovado (`Status: ⏳` ou `Status: ✅`):** pule a geração de `estrutura-aula.md` e vá direto para o Passo 4. O plano-aula.md já cumpre o papel de estrutura aprovada.
+
+**Se NÃO existir `plano-aula.md` aprovado:** gere `estrutura-aula.md` conforme abaixo antes de tocar slides.md.
 
 Formato obrigatório:
 
@@ -102,15 +109,15 @@ Apresentar `estrutura-aula.md` ao usuário. **Não escrever uma linha de slides.
 
 Após aprovação, gerar slides conforme a estrutura aprovada. Seguir as regras da Seção 4 abaixo.
 
-### Passo 5 — NÃO gerar exercícios
+### Passo 5 — Exercícios são INLINE no slides.md
 
-Ao final, emitir este handoff para o `@autor-exercicios`:
+Todos os exercícios com gabaritos são gerados **dentro do `slides.md`** usando `<v-click>`. Não existe handoff para `@autor-exercicios` para exercícios de slide — isso causaria um arquivo separado que não é o que queremos.
 
-```markdown
-## ✅ Slides gerados. Handoff para @autor-exercicios:
-- Handoff Cards utilizados: [lista]
-- exercicios.md: pendente
-- tarefa.md: pendente
+O arquivo `exercicios.md` existe apenas como rascunho de referência para o professor — o conteúdo dos gabaritos já está nos slides.
+
+Ao finalizar um bloco de UC, emita apenas:
+```
+✅ Bloco [UC slug] gerado: N slides adicionados em slides.md (slides X–Y).
 ```
 
 ---
@@ -127,7 +134,7 @@ Ao final, emitir este handoff para o `@autor-exercicios`:
 
 - **Nunca reintroduzir** conceito já listado como "Consolidado" no Handoff Card ou no `contexto-*.md`
 - **Sempre usar contexto IA/dados** em exemplos: tokens, datasets, modelos, outputs — nunca calculadoras genéricas
-- Todo slide de teoria deve ter um `<!-- objetivo: ... -->` HTML comment indicando a competência desenvolvida
+- Todo slide de teoria deve ter um `<!-- objetivo: ... -->` HTML comment indicando a competência desenvolvida — esse comentário fica **DENTRO** do slide (após o `---` que fecha o frontmatter), **NUNCA entre dois `---` separadores** (causaria um ghost slide vazio)
 - Cite **autores ou instituições** como âncoras de conteúdo nos slides de teoria (não apenas fatos soltos)
 
 ### Escrita
@@ -262,10 +269,13 @@ Conteúdo textual.
 
 ## Checklist pré-entrega (slides)
 
-- [ ] `estrutura-aula.md` aprovado antes de qualquer geração
+- [ ] `plano-aula.md` ou `estrutura-aula.md` aprovado antes de qualquer geração
+- [ ] Slides gerados via **append** em `slides.md` — nunca replace total do arquivo
 - [ ] Máximo 2 `[TEORIA]` consecutivos por aulaNum
 - [ ] Ao menos 1 `[DEBATE]` por aulaNum
 - [ ] Zero em-dashes (`—`) em qualquer texto de slide
 - [ ] Todo texto visível em pt-BR
-- [ ] Handoff emitido para `@autor-exercicios`
+- [ ] Exercícios com gabaritos em `<v-click>` dentro do `slides.md` — sem arquivo separado
 - [ ] `contexto-*.md` atualizado ao final da sessão
+- [ ] ⚠️ NÃO leu slides.md de aulas anteriores
+- [ ] ⚠️ NÃO rodou semantic_search

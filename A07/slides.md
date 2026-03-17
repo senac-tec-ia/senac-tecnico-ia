@@ -1,4 +1,4 @@
-﻿---
+---
 # ─────────────────────────────────────────────────────────────────
 #  A07 — 19/03/2026 (Quinta-feira) — Semana 2
 #  BLOCO 1: UC07 · Transformação Digital — Ferramentas de IA (3 HA)
@@ -7,6 +7,7 @@
 # ─────────────────────────────────────────────────────────────────
 theme: ./
 colorSchema: dark
+transition: slide-left
 title: "Técnico em IA — Aula 07"
 author: Leonardo Zanini
 courseTitle: Técnico em Inteligência Artificial
@@ -15,30 +16,32 @@ bgPreset: palette
 # ─────────────────────────────────────────────────────────────────
 ---
 
+<!-- ============================================================
+     BLOCO 1 — UC07 · TRANSFORMAÇÃO DIGITAL (slides 1–18)
+     Ferramentas de IA · Prompt Engineering · LGPD básico
+     ============================================================ -->
+
 ---
 layout: cover
 bgPreset: palette
 ---
 
-<!-- capa da aula -->
+# Ferramentas de IA na Prática
 
-# Aula 07
-## Ferramentas de IA na Prática · Word · Inglês
-
-*19 de março de 2026 · Quinta-feira*
+## Aula 07 · 19/03/2026 · Quinta-feira
+**UC07 · Transformação Digital · UC01 · Fundamentos da Computação · UC02 · Inglês Instrumental**
 
 ---
-layout: center
-card: true
+layout: cover
 bgPreset: animate
 ---
 
-<!-- divisor bloco 1 -->
+# Bloco 1 · Transformação Digital
 
-# Bloco 1
-## Transformação Digital — Ferramentas de IA
+## 7h10 – 9h35 · 3 horas-aula
+**Ferramentas de IA · Prompt Engineering · Cases 2025 · LGPD Básico**
 
-*UC07 · 7h10 – 9h35 · Indicadores 2 e 3*
+> Indicadores: Ind.2 — utiliza ferramentas digitais de IA conforme boas práticas · Ind.3 — considera segurança digital na transformação digital
 
 ---
 layout: brainstorm
@@ -46,784 +49,852 @@ bgPreset: palette
 pulse: true
 ---
 
-<!-- [DEBATE] revisao da ultima vez -->
+<!-- objetivo: aluno reativa conhecimento de A01/A02 sobre 4ª Revolução e IA setorial (WEF, 2016) -->
 
-# Revisão: o que você já sabe sobre IA no mundo?
+# O Que Você Já Sabe?
 
-**Pense nas duas primeiras aulas que tivemos juntos...**
+## Revisão rápida — responda em voz alta
 
-- Qual revolução industrial está acontecendo agora?
-- O que são os 5 Vs do **Big Data**?
-- Em qual empresa tem **700 robôs** trabalhando num armazém?
-- Quais **setores da economia** a IA está transformando?
+- 🏭 O que é a **4ª Revolução Industrial**?
+- 📊 O que é **Big Data** — dê um exemplo do seu cotidiano
+- 🏥 **IA em qual setor** você mais lembra das aulas anteriores?
+- 💼 Qual profissão você viu que **IA está transformando**?
 
-*Não é prova — é aquecimento. Fale sem medo!*
+> 💡 Não há resposta errada. O objetivo é lembrar — não repetir.
 
 ---
 layout: brainstorm
-bgPreset: animate
+bgPreset: palette
 pulse: true
 ---
 
-<!-- [DEBATE] voce usou ia hoje -->
+<!-- objetivo: aluno conecta uso cotidiano de IA com conceito formal de transformação digital -->
 
-# Você usou IA hoje — e provavelmente nem percebeu
+# Você Usou IA Hoje?
 
-**Nos últimos 60 minutos da sua manhã...**
+## Antes de chegar aqui, quantas IAs você já ativou?
 
-- O **Spotify** escolheu músicas para você: algoritmo de recomendação = IA
-- O **Google Maps** calculou a rota mais rápida: IA em tempo real
-- O **TikTok** sabia exatamente qual vídeo segurar sua atenção: IA
-- O **Google Fotos** reconheceu o rosto da sua mãe automaticamente: IA
+- 📱 **WhatsApp** → sugestão de resposta automática
+- 🎵 **Spotify / YouTube** → playlist recomendada pra você
+- 📸 **Google Photos / TikTok** → reconhecimento de rosto
+- 🗺️ **Waze / Google Maps** → rota inteligente com trânsito em tempo real
+- 🛒 **iFood / Magazine Luiza** → "você também pode gostar de..."
 
-> IA não é coisa de filme de ficção científica. É a tecnologia que já está no seu celular, no seu playlist, na câmera do seu celular.
-
-**Pergunta:** qual ferramenta de IA você JÁ usou de propósito, sabendo que era IA?
+> A IA não é tecnologia do futuro — **é o que está ligado agora enquanto você lê isso.**
 
 ---
 layout: default
-card: true
 bgPreset: palette
+card: true
 ---
 
-<!-- [TEORIA] as 4 familias de ferramentas de IA -->
+<!-- objetivo: aluno categoriza ferramentas de IA em 4 famílias funcionais (OpenAI, Anthropic, Adobe, ElevenLabs, 2024) -->
 
 # As 4 Famílias de Ferramentas de IA
 
-Hoje existem centenas de IAs disponíveis. Para não se perder, pense em **4 famílias**:
+## Um mapa para não se perder
 
 | Família | O que faz | Exemplos |
 |---|---|---|
-| 💬 **Texto** | Escreve, responde, resume, cria | ChatGPT, Claude, Gemini, Copilot |
-| 🖼️ **Imagem** | Gera e edita imagens a partir de texto | Midjourney, DALL-E, Firefly |
-| 💻 **Código** | Sugere, completa e corrige código | GitHub Copilot, Cursor, Tabnine |
-| 🎵 **Voz e Áudio** | Clona voz, compõe música, transcreve | ElevenLabs, Suno, Whisper |
+| 📝 **Texto** | Escreve, resume, responde, explica | ChatGPT · Claude · Gemini · Copilot |
+| 🖼️ **Imagem** | Cria e edita imagens a partir de texto | Midjourney · DALL-E · Firefly |
+| 💻 **Código** | Escreve, sugere e corrige código | GitHub Copilot · Cursor · Tabnine |
+| 🎙️ **Voz / Áudio** | Clona voz, cria música, transcreve | ElevenLabs · Suno · Whisper |
 
-> Toda ferramenta de IA que você encontrar cabe em uma (ou mais) dessas famílias. É o mapa que você usa pra navegar nesse mercado.
+> Toda ferramenta de IA que você vai encontrar no mercado cabe em uma dessas 4 caixas.
+
+---
+layout: default
+bgPreset: default
+card: true
+---
+
+<!-- objetivo: aluno identifica ferramentas de IA de texto e seus casos de uso reais -->
+
+# 📝 Família Texto
+
+## ChatGPT · Claude · Gemini · Microsoft Copilot
+
+**O que fazem:**
+- Respondem perguntas em linguagem natural
+- Resumem textos longos (artigos, contratos, relatórios)
+- Redigem e-mails, relatórios, código, roteiros
+- Explicam conceitos em qualquer nível de complexidade
+
+**Quem usa:**
+- Estudantes → resumos e explicações de matéria
+- Profissionais de RH → triagem de currículos
+- Jornalistas → esboços de artigos
+- Você → para ajudar nos exercícios **deste curso**
+
+> 🔗 **Conexão futura:** em Python (A08+) você vai aprender a chamar essas APIs programaticamente.
+
+---
+layout: default
+bgPreset: default
+card: true
+---
+
+<!-- objetivo: aluno compreende como ferramentas de geração de imagem funcionam via texto (prompt-to-image) -->
+
+# 🖼️ Família Imagem
+
+## Midjourney · DALL-E 3 · Adobe Firefly
+
+**Como funciona:**
+1. Você escreve um **texto descritivo** (prompt)
+2. A IA interpreta cores, estilos, composição
+3. Gera imagens originais em segundos
+
+**Casos de uso reais:**
+- 🎨 Criação de capas para portfólios e apresentações
+- 📣 Material para redes sociais (posts, thumbnails)
+- 🏗️ Visualização de produtos antes de existirem
+- 📚 Ilustrações para materiais didáticos
+
+**Detalhe importante:** as imagens geradas são **originais** — não são cópias de imagens existentes.
+
+> 💡 Adobe Firefly usa apenas conteúdo licenciado para treino — é o mais seguro para uso profissional.
+
+---
+layout: default
+bgPreset: default
+card: true
+---
+
+<!-- objetivo: aluno reconhece que ferramentas de IA de código aceleram programação mesmo para iniciantes -->
+
+# 💻 Família Código
+
+## GitHub Copilot · Cursor · Tabnine
+
+**O que fazem:**
+- Sugerem a próxima linha de código enquanto você digita
+- Completam funções inteiras a partir de um comentário
+- Explicam o que um código faz em português
+- Identificam e corrigem erros automaticamente
+
+**Por que importa para você:**
+- Você vai usar **Python** neste curso a partir da A08
+- GitHub Copilot está disponível **grátis** para estudantes
+- Cursor é um editor de código com IA integrada
+
+**Analogia:** é como ter um programador sênior sentado ao lado, sugerindo soluções em tempo real.
+
+> 🔗 Vocês vão configurar o Copilot no VS Code ainda neste trimestre.
+
+---
+layout: default
+bgPreset: default
+card: true
+---
+
+<!-- objetivo: aluno conhece ferramentas de IA de voz/áudio e seus casos de uso e riscos éticos -->
+
+# 🎙️ Família Voz / Áudio
+
+## ElevenLabs · Suno · OpenAI Whisper
+
+**ElevenLabs — Clonagem de Voz:**
+- Replica voz humana com qualidade profissional
+- Usado em audiolivros, podcast, dublagem
+- ⚠️ Risco: deepfake de voz — saber identificar é essencial
+
+**Suno — Geração de Música:**
+- Cria músicas completas (letra + melodia) a partir de texto
+- "Crie uma música de reggae sobre banco de dados"
+- 2025: mais de 10 milhões de músicas geradas por dia
+
+**OpenAI Whisper — Transcrição:**
+- Converte fala em texto com alta precisão
+- Suporta português do Brasil
+- Usado em legendas automáticas e acessibilidade
+
+> 🧠 O próximo slide tem um fato sobre o Suno que vai te surpreender.
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno aplica categorização das 4 famílias a situações do cotidiano -->
+
+# ✏️ Exercício N1 — Qual Família Usaria?
+
+## Leia cada situação e identifique a família correta
+
+*Famílias: 📝 Texto · 🖼️ Imagem · 💻 Código · 🎙️ Voz-Áudio*
+
+1. Você precisa criar uma capa bonita para seu portfólio do curso de IA.
+2. Você quer que a IA te ajude a corrigir um erro no seu código Python.
+3. Você gravou um áudio de 10 minutos e quer converter em texto escrito.
+4. Você quer que a IA escreva um e-mail formal para um professor.
+5. Você quer criar uma vinheta musical para o seu canal do YouTube.
+
+<v-click>
+
+> **Gabarito:**
+> 1. 🖼️ Imagem
+> 2. 💻 Código
+> 3. 🎙️ Voz-Áudio (Whisper)
+> 4. 📝 Texto
+> 5. 🎙️ Voz-Áudio (Suno)
+
+</v-click>
+
+---
+layout: center
+bgPreset: animate
+card: true
+pulse: true
+---
+
+<!-- objetivo: quebra cognitiva — aluno processa escala real da criação musical por IA -->
+
+# 💡 Fato Curioso
+
+## Suno AI — 2025
+
+### Em **um único dia**, o Suno gera mais músicas do que toda a indústria fonográfica mundial produziu **em um século**.
+
+> 🎵 10 milhões de músicas por dia.
+> A Sony Music lançou ~300.000 faixas em toda a sua história.
+
+**O que isso muda?**
+Não é o fim da música — é o fim da escassez de produção.
+O valor migra da *execução técnica* para a *curadoria e identidade*.
+
+---
+layout: default
+bgPreset: default
+card: true
+---
+
+<!-- objetivo: aluno compreende que a qualidade do output da IA depende diretamente da qualidade do input (prompt) -->
+
+# Prompt Engineering
+
+## O que separa um resultado medíocre de um resultado excelente?
+
+**Analogia:** Pedir para a IA fazer algo é como **dar instrução para um estagiário brilhante que não conhece nada do seu contexto.**
+
+| Instrução vaga | Instrução clara |
+|---|---|
+| "Me explica banco de dados" | "Você é professor de TI. Explique banco de dados para um aluno de 16 anos que nunca programou. Use uma analogia com agenda de contatos. Máximo 5 linhas." |
+
+**O que acontece com instrução vaga:**
+- Resposta genérica demais
+- Nível errado (muito técnico ou muito simples)
+- Formato inadequado para o que você precisa
+
+> A IA não lê a sua mente — **ela usa exatamente o que você escreve.**
+
+---
+layout: default
+bgPreset: default
+card: true
+---
+
+<!-- objetivo: aluno memoriza os 4 componentes do prompt estruturado e aplica em situações reais -->
+
+# Anatomia do Prompt
+
+## 4 componentes que garantem um resultado profissional
+
+**🎭 Papel** — Defina quem a IA deve ser
+> "Você é um professor de Python para iniciantes..."
+
+**📋 Contexto** — Dê o cenário
+> "...estou aprendendo a programar, tenho 17 anos, nunca vi código antes..."
+
+**🎯 Tarefa** — Diga exatamente o que quer
+> "...explique o que é uma lista em Python..."
+
+**📐 Formato** — Especifique como quer a resposta
+> "...use 3 exemplos do cotidiano, máximo 10 linhas, sem jargão técnico."
+
+**Prompt completo:**
+> "Você é um professor de Python para iniciantes. Estou aprendendo a programar, tenho 17 anos, nunca vi código antes. Explique o que é uma lista em Python usando 3 exemplos do cotidiano, máximo 10 linhas, sem jargão técnico."
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno reescreve prompts ruins aplicando a estrutura Papel·Contexto·Tarefa·Formato -->
+
+# ✏️ Exercício N2 — Melhore Este Prompt
+
+## Reescreva usando: 🎭 Papel · 📋 Contexto · 🎯 Tarefa · 📐 Formato
+
+**Prompt ruim 1:**
+> "Me explica banco de dados"
+
+**Prompt ruim 2:**
+> "Faz um texto sobre transformação digital"
+
+Reescreva cada um com os 4 componentes. Use o modelo do slide anterior.
+
+<v-click>
+
+> **Gabarito sugerido — Prompt 1:**
+> "Você é um professor de TI do Senac. Sou aluno do curso Técnico em IA, ja vi o que é hardware e software. Explique banco de dados usando a analogia de uma planilha do Excel, em no máximo 8 linhas, com 2 exemplos práticos."
+
+> **Gabarito sugerido — Prompt 2:**
+> "Você é um consultor de tecnologia. Preciso apresentar transformação digital para colegas do meu curso técnico de 16-18 anos. Escreva um parágrafo de abertura (5–6 linhas) mostrando como IA mudou o varejo, com pelo menos 1 exemplo brasileiro."
+
+</v-click>
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno cria prompt estruturado autônomo para situação real do seu cotidiano -->
+
+# ✏️ Exercício N3 — Prompt do Zero
+
+## Escolha uma situação e escreva um prompt completo (mínimo 4 linhas)
+
+- [ ] **A)** Prompt para IA te ajudar a estudar funções matemáticas
+- [ ] **B)** Prompt para criar roteiro de vídeo do TikTok sobre seu curso técnico
+- [ ] **C)** Prompt para IA explicar um erro de Python que você não entendeu
+- [ ] **D)** Prompt para criar apresentação sobre IA para sua família
+
+**Use obrigatoriamente os 4 componentes:**
+🎭 Papel · 📋 Contexto · 🎯 Tarefa · 📐 Formato
+
+<v-click>
+
+> **Critério de avaliação:** o prompt precisa ter os 4 componentes identificáveis. Não há um único gabarito correto — a qualidade está na estrutura e especificidade. Um bom prompt permite que qualquer pessoa saiba exatamente o que você quer.
+
+</v-click>
 
 ---
 layout: two-cols-text
-bgPreset: animate
+bgPreset: default
 ---
 
-<!-- [TEORIA] familia texto -->
+<!-- objetivo: aluno relaciona ferramentas de IA com transformação digital em empresas brasileiras reais -->
 
-# Família Texto: as IAs que "conversam"
+# IA no Brasil — Cases 2025
 
-**ChatGPT** · **Claude** · **Gemini** · **Copilot**
+## Empresas brasileiras que já transformaram operações com IA
 
-São chamadas de **LLMs** — Large Language Models (Modelos de Linguagem Grande). Foi treinada em bilhões de textos e aprenderam a completar frases de forma coerente.
+**🍔 iFood — Rota Inteligente**
 
-**Para que serve no dia a dia:**
-- Tirar dúvidas ("explica pra mim como funciona a fotossíntese")
-- Resumir textos longos
-- Criar rascunhos (e-mail, redação, apresentação)
-- Traduzir e corrigir gramática
-- Explicar código e erros de programação
+O iFood usa IA para calcular a rota de entrega em tempo real, considerando trânsito, clima, capacidade do entregador e pedidos simultâneos. Resultado: **redução de 18% no tempo médio de entrega** em 2024.
+
+A IA do iFood processa mais de **1,5 milhão de pedidos por dia** — nenhum humano conseguiria rotear isso manualmente.
 
 ::right::
 
-## Mas não é mágica
+**🏛️ GOV.BR — Atendimento por IA**
 
-**A IA de texto NÃO:**
-- Sabe o que aconteceu ontem (tem data de corte)
-- Tem certeza absoluta — pode "alucinar" (inventar fatos)
-- Pesquisa na internet por padrão
-- Guarda suas conversas para sempre
+O portal GOV.BR implementou assistente virtual com IA para atender cidadãos em serviços como CPF, INSS e Título de Eleitor.
 
-**Regra de ouro:**
-> Sempre verifique informações importantes em fontes confiáveis. IA de texto é um assistente genial, mas não é enciclopédia.
+- **12 milhões** de atendimentos/mês em 2025
+- Redução de **40%** na fila de atendimento humano
+- Disponível 24h — sem horário de expediente
+
+> 💡 Ambos os cases mostram IA resolvendo problema de **escala** — fazer muito mais com os mesmos recursos humanos.
 
 ---
 layout: default
+bgPreset: default
 card: true
+---
+
+<!-- objetivo: aluno aplica princípios básicos da LGPD ao uso cotidiano de ferramentas de IA (ANPD, Lei 13.709/2018) -->
+
+# 🔒 LGPD Básico ao Usar IA
+
+## O que você **não deve** colocar em ChatGPT, Claude ou qualquer IA
+
+**⛔ Dados pessoais sensíveis:**
+- CPF · RG · número de cartão · senha
+- Endereço completo · data de nascimento completa
+- Dados de saúde · diagnósticos · laudos
+
+**⛔ Dados de terceiros sem consentimento:**
+- Informações de colegas, familiares ou clientes
+- Fotos de pessoas sem autorização
+
+**✅ O que é seguro:**
+- Textos genéricos · conceitos · dúvidas técnicas
+- Código sem dados reais · resumos de conteúdo público
+
+**Por quê?** As IAs gratuitas podem usar seus inputs para treinar futuros modelos. Você consente com isso nos Termos de Uso — mas **você não pode consentir pelos dados de outras pessoas.**
+
+> 📜 LGPD (Lei 13.709/2018) — Princípio da **Finalidade**: dados só podem ser usados para o fim pelo qual foram coletados.
+
+---
+layout: brainstorm
 bgPreset: palette
+pulse: true
 ---
 
-<!-- [TEORIA] familia imagem -->
+<!-- objetivo: aluno formula posição argumentada sobre uso ético de IA em contexto educacional -->
 
-# Família Imagem: desenho por texto
+# IA é Trapaça ou Ferramenta?
 
-**Midjourney** · **DALL-E** · **Adobe Firefly** · **Stable Diffusion**
+## Debate Estruturado — 10 minutos
 
-Você escreve uma descrição e a IA **gera a imagem**.
+**Grupo A — Trapaça:** *"Usar IA para fazer trabalho escolar é trapaça porque o aluno não aprende."*
 
-**Exemplos de prompt:**
-- *"Um robô tocando violão numa favela colorida, estilo aquarela"*
-- *"Logo minimalista para uma startup de tecnologia agrícola"*
-- *"Foto realista de um gato usando gravata borboleta"*
+**Grupo B — Ferramenta:** *"Usar IA é uma habilidade do século XXI — proibir é como proibir calculadora."*
 
-**Usos profissionais reais:**
-- Mockups de produto antes de produzir
-- Criação de capas de apresentação
-- Publicidade e redes sociais
-- Prototipagem rápida de design
+### Regras:
+1. Cada grupo tem **3 minutos** para preparar 2 argumentos
+2. Apresentação: **1 minuto** por grupo
+3. Réplica: **30 segundos** cada
+4. Professor media e conclui
 
-> No Brasil, empresas de comunicação e marketing já usam IA de imagem no lugar de bancos de fotos. É uma habilidade que vale salário.
+> 🔗 **Próximo:** Intervalo 9h35 → Bloco 2 (Word no VS Code) às 9h50
+
+<!-- ============================================================
+     BLOCO 2 — UC01 · FUNDAMENTOS DA COMPUTAÇÃO (slides 19–29)
+     Word: Interface · Criar e Salvar · Formatação · Margens ABNT
+     ============================================================ -->
 
 ---
-layout: default
-card: true
+layout: cover
 bgPreset: animate
 ---
 
-<!-- [TEORIA] familia codigo -->
+# Bloco 2 · Fundamentos da Computação
 
-# Família Código: o "autocomplete" que sabe programar
+## 9h50 – 11h30 · 2 horas-aula
+**Word: Interface · Criar e Salvar · Formatação · Margens ABNT**
 
-**GitHub Copilot** · **Cursor** · **Tabnine**
-
-Você começa a escrever uma função e a IA **termina para você** — ou escreve a partir de um comentário em português.
-
-**Exemplo real no VS Code com Copilot:**
-
-```python
-# calcule a média de uma lista de notas e retorne "aprovado" ou "reprovado"
-def verificar_aprovacao(notas):
-    # ← Copilot completa o resto da função automaticamente
-```
-
-**Por que isso importa para vocês:**
-- Vocês já usam o VS Code desde as primeiras aulas
-- GitHub Copilot tem **plano gratuito para estudantes**
-- Acelera aprendizado: você lê código da IA, entende, e vai evoluindo
-
-> Usaremos GitHub Copilot nas próximas aulas de Python. Preparem-se!
+> Indicador: Ind.3 — cria, nomeia e formata documentos digitais conforme padrões profissionais
 
 ---
-layout: default
-card: true
+layout: brainstorm
 bgPreset: palette
 ---
 
-<!-- [TEORIA] familia voz audio -->
+<!-- objetivo: aluno confirma domínio de comandos mkdir e cd no terminal integrado do VSCode -->
 
-# Família Voz e Áudio: a IA que ouve e fala
+# 🛠 Hands-on: Terminal no VSCode
 
-**ElevenLabs** · **Suno** · **Whisper** · **Adobe Podcast**
+## Abram o VS Code → Terminal → New Terminal
 
-| Ferramenta | O que faz |
-|---|---|
-| **ElevenLabs** | Clona sua voz ou gera voz realista de texto |
-| **Suno** | Compõe músicas completas a partir de descrição |
-| **Whisper** | Transcreve áudio em texto com alta precisão (usado no YouTube) |
-| **Adobe Podcast** | Remove ruído de fundo de gravações |
+**Missão em 5 minutos:**
 
-**Caso real:** podcasters brasileiros usam Whisper para gerar legendas automáticas.  
-**Caso real:** dublagem automática de cursos em inglês para português com ElevenLabs.
+1. `mkdir relatorios` — crie uma pasta nova
+2. `cd relatorios` — entre nela
+3. `dir` — confirme que está vazia
+4. `cd ..` — volte para a pasta anterior
 
-> Atenção: clonar a voz de alguém sem permissão é crime no Brasil desde a Lei 14.655/2023.
+**Quem terminar primeiro:** digita o caminho completo da nova pasta no chat da turma.
 
----
-layout: default
-card: true
-bgPreset: animate
----
-
-<!-- [EXERCICIO] N1 — qual ferramenta usaria -->
-
-# Exercício 01 — Qual família de IA usaria aqui?
-
-**Para cada situação abaixo, diga qual das 4 famílias seria mais útil:**
-
-1. Você precisa criar uma **capa bonita** para o seu portfólio do curso
-2. Você quer que a IA te ajude a **corrigir um erro** no seu código Python
-3. Você gravou um áudio de 10 minutos e quer converter em **texto escrito**
-4. Você precisa escrever um **e-mail formal** pedindo estágio em uma empresa de IA
-5. Você quer criar uma **música** para uma apresentação sua
-
-> Não tem resposta única certa para todas — o importante é justificar a escolha!
+> 🔑 Lembrete: `Tab` autocompleta o nome da pasta. `cls` limpa o terminal.
 
 ---
-layout: default
-card: true
+layout: brainstorm
 bgPreset: palette
+pulse: true
 ---
 
-<!-- [TEORIA] prompt engineering o que e -->
+<!-- objetivo: aluno conecta ferramenta Word a situações reais do seu cotidiano profissional -->
 
-# Prompt Engineering: a arte de dar instruções claras
+# Para Que Serve o Word?
 
-**Prompt** é a mensagem que você manda para a IA.
+## Antes de usar, entenda quando usar
 
-A qualidade da resposta depende **diretamente** da qualidade do prompt.
+**Pergunta para a turma:**
+> Quando foi a última vez que alguém te pediu um documento escrito?
 
-**Analogia:** imagine que você contratou um estagiário super inteligente que acabou de chegar. Ele sabe **muito**, mas não sabe **nada sobre você**, sua empresa ou o que você precisa. Quanto mais claro você for, melhor o trabalho dele.
+**Situações reais onde Word é necessário:**
+- 📄 **Currículo** — na maioria das vagas ainda se pede .docx ou .pdf
+- 📊 **Relatório técnico** — resultado de projeto, trabalho escolar
+- 📑 **Contrato** — freelance, estágio, prestação de serviços
+- 🎓 **TCC / Monografia** — regras ABNT que o Word suporta nativamente
+- 📧 **Ofício / Carta formal** — comunicações institucionais
 
----
-
-**Prompt ruim:**
-> "Escreve uma coisa sobre IA"
-
-**Prompt bom:**
-> "Você é professor de tecnologia para alunos de 14 anos do ensino médio técnico. Escreva um parágrafo explicando o que é Inteligência Artificial usando uma analogia com um jogo de videogame. Use linguagem simples, sem termos técnicos."
-
-*A diferença não é o tamanho — é a **clareza**.*
+> O Word não é "velho" — é o idioma do mundo corporativo. Saber usar é diferencial.
 
 ---
 layout: default
+bgPreset: default
 card: true
-bgPreset: animate
 ---
 
-<!-- [TEORIA] anatomia do prompt -->
+<!-- objetivo: aluno navega pelas abas principais da Faixa de Opções com vocabulário correto -->
 
-# Anatomia de um Bom Prompt
+# Interface do Word — Faixa de Opções
 
-Um prompt completo tem **4 componentes**:
+## O que fica em cada aba (Ribbon)
 
-| Componente | O que define | Exemplo |
+| Aba | Nome em inglês | O que tem dentro |
 |---|---|---|
-| 🎭 **Papel** | Qual papel a IA deve assumir | "Você é um nutricionista..." |
-| 📋 **Contexto** | Situação atual e informações necessárias | "...para adolescentes de 14 anos..." |
-| 🎯 **Tarefa** | O que exatamente você quer | "...crie uma lista de 5 lanches saudáveis..." |
-| 📐 **Formato** | Como a resposta deve ser estruturada | "...em formato de tabela com calorias" |
-
-**Exemplo completo:**
-> "Você é um tutor de Python para iniciantes. Tenho 14 anos e nunca programei. Explique o que é uma variável usando uma analogia com o WhatsApp. Responda em no máximo 5 linhas."
-
----
-layout: default
-card: true
-bgPreset: palette
----
-
-<!-- [EXERCICIO] N2 melhore este prompt -->
-
-# Exercício 02 — Melhore Estes Prompts
-
-**Reescreva cada prompt usando a estrutura: Papel · Contexto · Tarefa · Formato**
-
-**Prompt 1 (ruim):**
-> "Me explica banco de dados"
-
-**Prompt 2 (ruim):**
-> "Faz um texto sobre transformação digital"
-
----
-
-*Dica: não existe resposta única. O objetivo é praticar a estrutura dos 4 componentes.*
-
-*Na hora de reescrever, pergunte-se:*
-- *Quem é a IA neste contexto?*
-- *O que eu já sei / qual o cenário?*
-- *O que exato eu preciso?*
-- *Como eu quero que a resposta apareça?*
-
----
-layout: default
-card: true
-bgPreset: animate
----
-
-<!-- [EXERCICIO] N3 escreva um prompt do zero -->
-
-# Exercício 03 — Escreva um Prompt do Zero
-
-**Escolha UMA das situações abaixo e escreva um prompt completo (Papel · Contexto · Tarefa · Formato):**
-
-1. Você precisa que a IA te ajude a estudar para uma prova de matemática sobre funções
-2. Você quer criar uma apresentação sobre IA para mostrar para sua família
-3. Você quer que a IA explique por que deu erro no código Python que você escreveu
-4. Você precisa criar um roteiro para um vídeo curto do TikTok sobre o seu curso técnico
-
-> Escreva o prompt completo. Depois, quem quiser, compartilhe com a turma e vamos avaliar juntos!
-
----
-layout: default
-card: true
-bgPreset: palette
----
-
-<!-- [TEORIA] IA no Brasil Nubank e Embrapa -->
-
-# IA no Brasil: dois casos que você precisa conhecer
-
-**🟣 Nubank — Credit Scoring com IA**
-
-O Nubank usa modelos de Machine Learning para decidir **em segundos** se libera crédito para um novo cliente — sem burocracia, sem papelada. O modelo analisa centenas de variáveis (comportamento de pagamento, movimentação, padrões) e calcula a probabilidade de inadimplência.
-
-> Resultado: mais de 85 milhões de clientes atendidos onde bancos tradicionais não chegavam.
-
----
-
-**🌿 Embrapa — IA no Campo**
-
-A Embrapa (empresa de pesquisa agrícola brasileira) usa IA para:
-- **Diagnóstico de doenças** em plantações via foto de celular
-- **Previsão de safra** com modelos climáticos + sensores de solo
-- **Drones autônomos** mapeando lavouras em tempo real
-
-> O Brasil é uma potência agrícola. IA no agro não é futuro — já é presente.
-
----
-layout: default
-card: true
-bgPreset: animate
----
-
-<!-- [TEORIA] LGPD e privacidade ao usar IA -->
-
-# Privacidade ao Usar IA: o que você NÃO deve fazer
-
-Cada vez que você usa uma IA pública (ChatGPT, Claude, Gemini), seus prompts podem ser **usados para treinamento futuro** dependendo das configurações da plataforma.
-
-**Nunca coloque em um prompt de IA pública:**
-
-- 🚫 CPF, RG, CNH ou dados de identidade
-- 🚫 Senhas, PINs ou códigos de acesso
-- 🚫 Dados de terceiros sem consentimento (notas de alunos, dados de clientes, fichas médicas)
-- 🚫 Informações confidenciais da empresa onde trabalha
-
-**A LGPD (Lei Geral de Proteção de Dados) determina:**
-- Dado pessoal só pode ser coletado com **finalidade clara e consentimento**
-- Vazamento de dados gera multa de até **2% do faturamento da empresa** (R$ 50 MM de teto)
-
-> Regra simples: **se você não colocaria num grupo de WhatsApp com estranhos, não coloca no ChatGPT.**
-
----
-layout: brainstorm
-bgPreset: palette
-pulse: true
----
-
-<!-- [DEBATE] IA e trapaca ou ferramenta -->
-
-# Debate: IA é trapaça ou ferramenta?
-
-**Um aluno do ensino médio usou ChatGPT para escrever uma redação do ENEM e tirou nota máxima.**
-
-**Lados do debate:**
-
-- 👹 "Isso é trapaça! Ele não aprendeu nada, foi a IA que escreveu."
-- 🤝 "Não é trapaça — é usar a ferramenta disponível. O arquiteto usa AutoCAD, o contador usa Excel..."
-- 🤔 "Depende: se ele entende o que foi escrito e pode defender, é diferente de copiar cegamente."
-
-**Pergunta central:**
-> Qual é o limite entre usar IA como ferramenta e deixar a IA pensar por você?
-
-*Discutam em duplas por 3 minutos, depois compartilhamos com a turma.*
-
----
-layout: default
-card: true
-bgPreset: animate
----
-
-<!-- fechamento bloco 1 + intervalo -->
-
-# O Que Você Aprendeu Hoje — Bloco 1
-
-✅ **4 famílias de ferramentas de IA:** Texto · Imagem · Código · Voz  
-✅ **Prompt Engineering:** Papel · Contexto · Tarefa · Formato  
-✅ **IA no Brasil:** Nubank (credit scoring), Embrapa (agro inteligente)  
-✅ **LGPD básico:** nunca coloque dados pessoais em IAs públicas
-
----
-
-# ☕ INTERVALO
-## 9h35 — 9h50
-
-*Descanse, beba água e volte com energia para o Word!*
-
----
-layout: center
-card: true
-bgPreset: animate
----
-
-<!-- divisor bloco 2 -->
-
-# Bloco 2
-## Fundamentos da Computação — Microsoft Word
-
-*UC01 · 9h50 – 11h30 · Indicador 2*
-
----
-layout: brainstorm
-bgPreset: palette
-pulse: true
----
-
-<!-- [DINAMICA] revisao relampago terminal -->
-
-# Quiz Relâmpago: Terminal!
-
-**Sem olhar pro caderno — o que esse comando faz?**
-
-| Comando | O que faz? |
-|---|---|
-| `cd Documentos` | ?? |
-| `dir` | ?? |
-| `mkdir nova-pasta` | ?? |
-| `cls` | ?? |
-
-*Quem responder tudo certo ganha um ponto imaginário de honra.*
-
-> Terminal consolidado em A04. Próximo passo? Aprender a **criar documentos profissionais** — e isso começa com o **Word**.
-
----
-layout: brainstorm
-bgPreset: animate
-pulse: true
----
-
-<!-- [DEBATE] para que serve o word -->
-
-# Para que serve o Word no mundo real?
-
-**Você vai precisar do Word (ou Writer) para...**
-
-- Escrever seu **primeiro currículo** — e recrutar atenção em 6 segundos
-- Criar **relatórios técnicos** no estágio e no trabalho
-- Digitar **contratos** e documentos legais
-- Escrever o **TCC** no terceiro ano do curso
-- Criar **tutoriais e manuais** para sistemas que você vai desenvolver
-
-> Programadores não só codificam — eles documentam. Um desenvolvedor que não sabe escrever um documento decente perde oportunidades de emprego.
-
-**Pergunta:** qual o documento mais importante que você já precisou criar ou vai precisar?
-
----
-layout: default
-card: true
-bgPreset: palette
----
-
-<!-- [TEORIA] anatomia do word -->
-
-# Anatomia do Word: você já conhece esse lugar
-
-O Word (e o equivalente LibreOffice Writer) tem uma estrutura fixa chamada **Faixa de Opções** (Ribbon):
-
-| Aba | Em Inglês | O que tem dentro |
-|---|---|---|
-| **Página Inicial** | Home | Fonte, parágrafo, estilos, área de transferência |
+| **Página Inicial** | Home | Fonte, tamanho, negrito, itálico, alinhamento, marcadores |
 | **Inserir** | Insert | Tabelas, imagens, cabeçalho, rodapé, número de página |
 | **Layout** | Layout | Margens, orientação, tamanho do papel, colunas |
-| **Exibir** | View | Zoom, régua, modos de visualização |
+| **Referências** | References | Sumário automático, notas de rodapé, citações |
+| **Exibir** | View | Zoom, régua, modo de leitura, painel de navegação |
 
-**Vocabulário em inglês que você já conhece:**
-- **File** (Arquivo) → Salvar, Abrir, Imprimir
-- **Format** (Formatar) → alterar aparência do texto
-- **Print** (Imprimir) → mandar para a impressora
+**Dica:** quando não sabe onde está algo, use a **barra de pesquisa** no topo (`Alt+Q`).
 
-> A interface do Word é **quase idêntica** em inglês e português. Aprender o nome em inglês agora vai facilitar sua vida quando precisar usar um computador configurado em inglês.
+> 📌 Foco desta aula: **Página Inicial** e **Layout**.
 
 ---
 layout: default
+bgPreset: default
 card: true
-bgPreset: animate
 ---
 
-<!-- [TEORIA] criar salvar nomear -->
+<!-- objetivo: aluno cria e salva documento Word com nomenclatura profissional em snake_case -->
 
-# Criar, Salvar e Nomear Corretamente
+# Criar, Salvar e Nomear
 
-**Criar um documento:**
-1. Abra o Word (ou LibreOffice Writer)
-2. `Ctrl + N` → novo documento em branco
-3. Comece a digitar
+## As 4 regras de um documento profissional
 
-**Salvar — dois modos:**
-- `Ctrl + S` → salva no local já definido (salvar rascunho rápido)
-- `Ctrl + Shift + S` → "Salvar como" — escolher pasta e nome
+**1. 💾 Ctrl+S — salve agora e salve sempre**
+> Hábito: a cada parágrafo concluído, Ctrl+S. O Word trava. O servidor cai. O notebook fecha.
 
-**Nomear com snake_case (que você já sabe!):**
+**2. 📁 snake_case no nome do arquivo**
+> ✅ `relatorio_ia_joao_silva.docx`
+> ❌ `Relatório IA João Silva final (1) NOVO.docx`
 
-| ❌ Errado | ✅ Correto |
+**3. 📄 Extensão certa**
+> `.docx` → para edição | `.pdf` → para envio
+
+**4. 📂 Pasta correta**
+> `SENAC-TecIA/Aula-07/` — estrutura que vamos usar em Python também
+
+**Salvar Como:** Arquivo → Salvar Como → navegar até a pasta → nomear → Salvar
+
+---
+layout: default
+bgPreset: default
+card: true
+---
+
+<!-- objetivo: aluno configura margens ABNT no Word seguindo norma técnica brasileira (ABNT NBR 14724) -->
+
+# Configurar Página — Margens ABNT
+
+## Caminho: Layout → Margens → Personalizar Margens
+
+**Margens padrão ABNT NBR 14724:**
+
+| Margem | Medida |
 |---|---|
-| `relatorio final v2.docx` | `relatorio_tecnico_a07_v1.docx` |
-| `TRABALHO DE IA.docx` | `trabalho_transformacao_digital_2026.docx` |
-| `doc3.docx` | `curriculo_nome_sobrenome.docx` |
+| Superior | 3 cm |
+| Esquerda | 3 cm |
+| Inferior | 2 cm |
+| Direita | 2 cm |
 
-**Extensões que você já conhece:**
-- `.docx` → documento editável (Word)
-- `.pdf` → documento travado para leitura e envio formal
+**Demais configurações:**
+- **Orientação:** Retrato (Portrait) — padrão para relatórios
+- **Tamanho do papel:** A4 (21 × 29,7 cm)
+- **Espaçamento entre linhas:** 1,5 — definir em Parágrafo → Espaçamento
+
+> 💡 Salve um modelo `.dotx` com as configurações ABNT e reutilize em todos os trabalhos.
 
 ---
 layout: default
+bgPreset: default
 card: true
-bgPreset: palette
 ---
 
-<!-- [TEORIA] configurar pagina -->
+<!-- objetivo: aluno aplica formatação básica de texto e alinhamento conforme documento técnico -->
 
-# Configurar Página: antes de escrever, ajuste o espaço
+# Formatação de Texto
 
-**Caminho:** Aba **Layout** → grupo **Configurar Página**
+## Aba Página Inicial — os controles que você mais vai usar
 
-| Configuração | Padrão ABNT (comum no Brasil) | Onde fica |
+| Ação | Atalho | Quando usar |
 |---|---|---|
-| **Margens** | Superior e Esquerda: 3 cm / Inferior e Direita: 2 cm | Layout > Margens > Personalizar |
-| **Orientação** | Retrato (vertical) | Layout > Orientação |
-| **Tamanho do papel** | A4 (21 × 29,7 cm) | Layout > Tamanho |
+| **Negrito** | Ctrl+B | Termos técnicos, títulos internos, ênfase |
+| **Itálico** | Ctrl+I | Estrangeirismos, títulos de obras, destaque suave |
+| **Sublinhado** | Ctrl+U | Evite — parece link. Use negrito no lugar |
+| **Centralizado** | Ctrl+E | Títulos, cabeçalhos |
+| **Justificado** | Ctrl+J | Corpo do texto — padrão ABNT |
+| **Espaçamento** | Parágrafo → 1,5 | ABNT para texto corrido |
 
-**Por que isso importa:**
-- Um documento com margens erradas parece amateur quando impresso
-- Currículo com margens de 1 cm parece amassado
-- TCC exige ABNT — se as margens estiverem erradas, você **reprova**
+**Fonte padrão:**
+- Corpo do texto: **Arial ou Times New Roman, 12pt**
+- Títulos: **14pt ou 16pt, negrito**
 
-> **Dica:** antes de criar qualquer documento importante, configure as margens primeiro. É 20 segundos que evitam retrabalho de horas.
-
----
-layout: default
-card: true
-bgPreset: animate
----
-
-<!-- [TEORIA] formatacao de texto -->
-
-# Formatação de Texto: deixar o documento legível
-
-**Atalhos essenciais (Aba Página Inicial → grupo Fonte):**
-
-| Efeito | Atalho | Quando usar |
-|---|---|---|
-| **Negrito** | `Ctrl + N` | Termos importantes, títulos, destaque |
-| *Itálico* | `Ctrl + I` | Termos estrangeiros, citações, exemplos |
-| Sublinhado | `Ctrl + U` | Links, atenção especial |
-| Tamanho da fonte | Seletor na barra | Título: 14–16pt · Corpo: 11–12pt |
-
-**Alinhamento (grupo Parágrafo):**
-
-| Atalho | Resultado | Uso típico |
-|---|---|---|
-| `Ctrl + E` | ⬛ Centralizado | Títulos, capas |
-| `Ctrl + J` | ⬛ Justificado | Corpo de texto (relatórios, TCC) |
-| `Ctrl + L` | ⬛ À esquerda | Padrão geral |
-
-**Espaçamento entre linhas:**  
-Clique com o botão direito → Parágrafo → Espaçamento entre linhas: **1,5** (padrão para documentos profissionais)
+> 🚫 Evite: Comic Sans, letras coloridas, múltiplos tamanhos, tudo em maiúsculas.
 
 ---
 layout: default
+bgPreset: default
 card: true
+---
+
+<!-- objetivo: aluno entende diferença entre .docx (edição) e .pdf (envio) e executa exportação -->
+
+# Por Que Exportar em PDF?
+
+## Arquivo → Exportar → Criar PDF/XPS
+
+**O problema do .docx enviado:**
+- Fonte diferente no destinatário → layout quebra
+- Margens podem mudar conforme versão do Word
+- O destinatário pode editar (proposital ou acidental)
+
+**O PDF resolve tudo:**
+- ✅ Layout preservado em qualquer dispositivo
+- ✅ Não editável sem querer
+- ✅ Menor tamanho para envio
+- ✅ Impressão idêntica ao que você vê
+
+**Regra prática:**
+> Trabalhe em `.docx`. Antes de enviar, exporte para `.pdf`.
+> Entregue o `.pdf`. Guarde o `.docx` para revisões futuras.
+
+**Atalho alternativo:** `F12` → Salvar Como → tipo "PDF"
+
+---
+layout: default
 bgPreset: palette
+card: true
 ---
 
-<!-- [EXERCICIO] N1 — leia e identifique os erros -->
+<!-- objetivo: aluno cria documento técnico completo com estrutura, formatação ABNT e exportação em PDF -->
 
-# Exercício 04 — Leia e Identifique (N1)
+# ✏️ Exercício N3 — Crie Seu Primeiro Relatório Técnico
 
-**O documento abaixo tem 5 problemas de formatação. Identifique cada um sem corrigir:**
+## Você tem 15 minutos. Abra o Word e crie:
 
----
+**Estrutura obrigatória:**
+1. **Título** — "Ferramentas de IA que Eu Usaria" (14pt, negrito, centralizado)
+2. **Seu nome e data** (12pt, centralizado, abaixo do título)
+3. **Seção 1 — Introdução** (12pt, negrito): 2 frases sobre o que é IA
+4. **Seção 2 — Ferramentas** (12pt, negrito): 2 ferramentas com 1 frase cada
+5. **Seção 3 — Conclusão** (12pt, negrito): 1 frase sobre o que aprendeu hoje
 
-*relatorio de estagio*
+**Requisitos:** margens ABNT (3-3-2-2) · Arial/TNR 12pt · espaçamento 1,5 · exportar como `relatorio_ia_seunome.pdf`
 
-*nome:LUCAS SANTOS data:19/03/2026*
+<v-click>
 
-*O objetivo deste estágio foi aprender sobre inteligência artificial. durante o período de 3 meses aprendi sobre machine learning, deep learning, e redes neurais. o ambiente de trabalho foi muito bom*
+> **Critério de avaliação:**
+> - Estrutura completa (título + 3 seções): 4 pts
+> - Formatação correta (fonte, tamanho, espaçamento): 3 pts
+> - Margens ABNT: 2 pts
+> - Nome do arquivo em snake_case: 1 pt
+>
+> **Total: 10 pts** — base para a Tarefa de Casa
 
-*CONCLUSAO: O ESTÁGIO FOI MUITO PRODUTIVO E APRENDI MUITA COISA NOVA SOBRE IA E TECNOLOGIA.*
-
----
-
-**Escreva os 5 problemas no papel:**
-
-1. _______________
-2. _______________
-3. _______________
-4. _______________
-5. _______________
+</v-click>
 
 ---
 layout: default
+bgPreset: default
 card: true
-bgPreset: animate
 ---
 
-<!-- [EXERCICIO] N2 — formate conforme o modelo -->
+<!-- objetivo: aluno aplica convenções de versionamento e backup para documentos profissionais -->
 
-# Exercício 05 — Formate Conforme o Modelo (N2)
+# Boas Práticas: Versionar e Nomear com Data
 
-**Abra o Word e reproduza este documento — mesma formatação, mesmo espaçamento:**
+## A diferença entre amador e profissional está na organização
 
----
+**❌ Como a maioria faz:**
 
-# **Relatório Técnico — Aula 07**
-*Técnico em Inteligência Artificial · 19/03/2026*
+```
+relatorio.docx
+relatorio_final.docx
+relatorio_final_v2.docx
+relatorio_FINAL_DE_VERDADE.docx
+```
 
----
+**✅ Como profissional faz:**
 
-**Aluno:** Seu Nome Aqui  
-**Turma:** Técnico em IA — 1º Ano  
-**Data:** 19 de março de 2026
+```
+relatorio_ia_2026-03-19_v1.docx
+relatorio_ia_2026-03-19_v2.docx
+relatorio_ia_2026-03-19_final.pdf
+```
 
----
+**3 regras:**
+1. **Data no formato ISO:** `YYYY-MM-DD` — ordena cronologicamente
+2. **Versão no final:** `_v1`, `_v2` — nunca "final_v2"
+3. **Backup em nuvem:** OneDrive, Google Drive — antes de dormir
 
-**Objetivo:** Este documento foi criado durante a aula de Fundamentos da Computação para praticar formatação de texto no Microsoft Word / LibreOffice Writer.
-
----
-
-*Configurações utilizadas: margens ABNT, fonte Calibri 12pt, espaçamento 1,5, justificado.*
-
----
-
-> Atenção: salve com o nome `relatorio_a07_seu_nome.docx` na pasta `SENAC-TecIA/Aula-07/`
-
----
-layout: default
-card: true
-bgPreset: palette
----
-
-<!-- [EXERCICIO] N3 — crie seu primeiro relatorio tecnico -->
-
-# Exercício 06 — Seu Primeiro Relatório Técnico (N3)
-
-**Crie um documento do zero com a seguinte estrutura:**
-
-**Título:** "O Que É Inteligência Artificial" — com fonte 16pt, negrito, centralizado
-
-**Seção 1 — Definição** (2 parágrafos de pelo menos 3 linhas cada):
-- O que é IA com suas próprias palavras (baseado no que aprendeu nas aulas)
-
-**Seção 2 — Ferramentas que Eu Já Usei** (lista com marcadores):
-- Liste pelo menos 3 ferramentas de IA que já usou ou gostaria de usar
-
-**Seção 3 — Minha Opinião** (1 parágrafo):
-- O que você acha do impacto da IA na sua geração
-
-**Configurações obrigatórias:**
-- Margens ABNT (3-3-2-2)
-- Espaçamento 1,5
-- Corpo do texto justificado
-- Nome do arquivo: `relatorio_ia_seu_nome.docx`
-
----
-layout: default
-card: true
-bgPreset: animate
----
-
-<!-- [TEORIA] boas praticas documento digital -->
-
-# Boas Práticas de Documento Digital
-
-**Antes de enviar qualquer documento:**
-
-1. 🔍 **Revise ortografia:** `F7` no Word abre o corretor ortográfico
-2. 📄 **Exporte como PDF:** documentos formais se enviam em PDF — `Ctrl + P` → "Salvar como PDF" ou `Arquivo > Exportar`
-3. 💾 **Salve versões:** `relatorio_v1.docx`, `relatorio_v2.docx` — nunca sobreescreva o original
-4. 📁 **Nomeie com data ou versão:** `curriculo_2026-03.docx` é melhor que `curriculo_novo.docx`
-5. ✉️ **Confira o anexo antes de enviar:** clique no arquivo, veja se abre, verifique se é o certo
-
-> Parece básico, mas 90% dos problemas com documentos no mercado de trabalho vêm de um desses 5 pontos.
-
----
-layout: default
-card: true
-bgPreset: palette
----
-
-<!-- fechamento bloco 2 -->
-
-# O Que Você Aprendeu Hoje — Bloco 2
-
-✅ **Interface do Word:** Faixa de Opções, abas e grupos  
-✅ **Criar, salvar e nomear:** snake_case, Ctrl+S, .docx vs .pdf  
-✅ **Configurar página:** margens ABNT, orientação, A4  
-✅ **Formatação:** negrito, itálico, alinhamento, espaçamento 1,5
-
-**Próximo encontro (Bloco de Word):**
-- Inserir tabelas, imagens e número de página
-- Cabeçalho e rodapé profissional
-- Impressão e geração de PDF formatado
+> 💡 Você vai usar essa convenção nos projetos Python também.
 
 ---
 layout: center
-card: true
+bgPreset: default
+---
+
+<!-- objetivo: aluno consolida aprendizado do Bloco 2 e recebe gancho para próxima aula -->
+
+# Resumo do Bloco 2
+
+## O que você aprendeu sobre documentos digitais
+
+- 📁 **Criar e nomear** com snake_case
+- 📐 **Margens ABNT** — 3 cm sup/esq · 2 cm inf/dir
+- ✏️ **Formatar** — Arial 12pt · 1,5 · justificado
+- 💾 **Exportar** .docx → .pdf antes de enviar
+- 🔢 **Versionar** — `_v1`, `_v2`, data ISO
+
+> 🔗 **A08 (20/03):** tabela no Word + cabeçalho e rodapé
+> 🔗 **Agora:** Inglês Instrumental às 11h30
+
+<!-- ============================================================
+     BLOCO 3 — UC02 · INGLÊS INSTRUMENTAL (slides 30–36)
+     Fixação Bloco 3 — 10 Termos de IA em Inglês
+     ============================================================ -->
+
+---
+layout: cover
 bgPreset: animate
 ---
 
-<!-- divisor bloco 3 -->
+# Bloco 3 · Inglês Instrumental
 
-# Bloco 3
-## Inglês Instrumental — Vocabulário de IA
+## 11h30 – 12h20 · 1 hora-aula
+**Fixação Bloco 3 — 10 Termos de IA em Inglês**
 
-*UC02 · 11h30 – 12h20 · Indicador 1*
+> Indicador: Ind.1 — reconhece e usa vocabulário técnico de IA em inglês em contexto real
 
 ---
 layout: default
+bgPreset: default
 card: true
-bgPreset: palette
 ---
 
-<!-- [TEORIA] flash cards revisao bloco 3 -->
+<!-- objetivo: aluno localiza os 10 termos de IA no fluxo real de um projeto de machine learning -->
 
-# Flash Cards: Vocabulário de IA (A04)
+# O Pipeline de IA — Onde Vivem os Termos
 
-*Na aula 04 você conheceu 10 termos essenciais. Vamos revisar:*
+## Um projeto de ML passa por estas etapas — e cada termo aparece aqui
 
-| # | Termo | Definição |
+| Etapa | O que acontece | Termos desta aula |
 |---|---|---|
-| 1 | **token** | menor unidade de texto processada pelo modelo |
-| 2 | **epoch** | uma passagem completa pelos dados de treino |
-| 3 | **embedding** | representação vetorial de um dado (texto, imagem…) |
-| 4 | **loss** | erro do modelo — quanto ele "errou" na previsão |
-| 5 | **gradient** | direção e intensidade do ajuste a fazer nos pesos |
-| 6 | **neural network** | arquitetura de ML inspirada nos neurônios do cérebro |
-| 7 | **layer** | camada de neurônios em uma rede neural |
-| 8 | **weight** | parâmetro ajustável da rede — o que o modelo "aprende" |
-| 9 | **model** | resultado do treinamento — o que você usa para fazer previsões |
-| 10 | **pipeline** | sequência de etapas de processamento de dados |
+| **1. Dados** | Textos/imagens viram números | **token**, **embedding** |
+| **2. Arquitetura** | Definição das camadas do modelo | **neural network**, **layer**, **weight** |
+| **3. Treino** | Modelo aprende com exemplos | **epoch**, **gradient**, **loss** |
+| **4. Avaliação** | Medição da qualidade | **model**, **pipeline** |
+
+> Cada termo dos flash cards aparece numa dessas caixas.
+> Em Python, você vai escrever todos eles no código.
 
 ---
 layout: default
-card: true
-bgPreset: animate
----
-
-<!-- [DINAMICA] quizao levante a mao -->
-
-# Quizão: Levante a Mão!
-
-**Levante a mão se a afirmação estiver CORRETA. Abaixe se estiver ERRADA.**
-
-1. *"Um **token** é sempre igual a uma palavra"*
-2. *"Quando o **loss** é alto, significa que o modelo está errando muito"*
-3. *"**Embedding** é o processo de adicionar emoção ao texto"*
-4. *"Um **epoch** completo = o modelo viu todos os dados de treino uma vez"*
-5. *"**Layer** significa camadas — quanto mais camadas, mais 'deep' é o deep learning"*
-6. *"**Weight** é o peso em quilos do servidor que roda a IA"*
-7. *"Um **pipeline** de ML inclui etapas como coleta de dados, treino e avaliação"*
-8. *"O **model** é o resultado final que você usa para fazer previsões"*
-
-> Respostas: V · V · F · V · V · F · V · V
-
----
-layout: default
-card: true
 bgPreset: palette
+card: true
 ---
 
-<!-- [TEORIA] preview bloco 4 encerramento -->
+<!-- objetivo: aluno memoriza definição funcional dos 10 termos de IA em inglês (vocabulário Bloco 3) -->
 
-# Preview: Próxima Vez em Inglês Instrumental...
+# Flash Cards — 10 Termos de IA
 
-**Bloco 4 — Vocabulário de Programação (Python)**
+## Leia, repita em voz alta, guarde o conceito
 
-Você já escreveu código Python nas últimas aulas. Agora vamos aprender os **nomes corretos em inglês** para o que você já usa:
+| Termo | Definição funcional |
+|---|---|
+| **token** | Unidade mínima de texto que a IA processa (≈ palavra ou pedaço de palavra) |
+| **embedding** | Representação numérica de uma palavra — IA vê números, não letras |
+| **neural network** | Sistema de camadas que imita neurônios para aprender padrões |
+| **layer** | Uma camada dentro da rede neural — entrada, oculta ou saída |
+| **weight** | Peso ajustável que determina a importância de cada conexão |
+| **epoch** | Uma passagem completa pelo conjunto de dados de treino |
+| **gradient** | Direção e intensidade do ajuste dos pesos durante o treino |
+| **loss** | Erro do modelo — quanto mais baixo, melhor o aprendizado |
+| **model** | O resultado treinado: o arquivo que faz as previsões |
+| **pipeline** | Sequência de etapas: dados → pré-processamento → modelo → resultado |
 
-| Termo | Você já viu? | Contexto |
+---
+layout: brainstorm
+bgPreset: palette
+pulse: true
+---
+
+<!-- objetivo: aluno reconhece definição de termos de IA em inglês via dinâmica oral competitiva -->
+
+# Quizão — "Levante a Mão" (1/2)
+
+## Professor lê a definição — quem souber o termo levanta a mão primeiro
+
+**Pergunta 1:** *"Número que mede o erro do modelo — quanto menor, melhor o aprendizado."*
+<v-click>
+> ✅ **loss**
+</v-click>
+
+**Pergunta 2:** *"Fazer uma passagem completa por todos os dados de treino. Treinar por 10 ___ significa repetir isso 10 vezes."*
+<v-click>
+> ✅ **epochs**
+</v-click>
+
+**Pergunta 3:** *"Uma camada de processamento dentro de uma rede neural."*
+<v-click>
+> ✅ **layer**
+</v-click>
+
+**Pergunta 4:** *"A sequência completa de etapas de um projeto de IA — do dado bruto ao resultado."*
+<v-click>
+> ✅ **pipeline**
+</v-click>
+
+---
+layout: brainstorm
+bgPreset: palette
+pulse: true
+---
+
+<!-- objetivo: aluno identifica termos de IA em inglês a partir de exemplo concreto de uso -->
+
+# Quizão — "Levante a Mão" (2/2)
+
+## Agora com exemplos de uso real
+
+**Pergunta 5:** *"O ChatGPT divide seu texto em pedaços chamados ___ antes de processar."*
+<v-click>
+> ✅ **tokens**
+</v-click>
+
+**Pergunta 6:** *"O arquivo que você baixa quando usa um modelo pré-treinado como o GPT-4 — é o ___ treinado."*
+<v-click>
+> ✅ **model**
+</v-click>
+
+**Pergunta 7:** *"Parâmetro numérico ajustado durante o treino — a rede tem bilhões desses."*
+<v-click>
+> ✅ **weight**
+</v-click>
+
+**Pergunta 8:** *"Vetor numérico que representa o significado de uma palavra — permite calcular que 'rei' − 'homem' + 'mulher' ≈ 'rainha'."*
+<v-click>
+> ✅ **embedding**
+</v-click>
+
+---
+layout: default
+bgPreset: default
+card: true
+---
+
+<!-- objetivo: aluno reconhece palavras-chave do Python antes da primeira aula de programação (A08) -->
+
+# Preview: Python Keywords (A08 — amanhã)
+
+## Você vai usar esses termos em código na próxima aula
+
+| Keyword | O que faz | Exemplo |
 |---|---|---|
-| **variable** | ✅ `nome = "Ana"` | armazena um valor |
-| **function** | ✅ `def calcular():` | bloco de código reutilizável |
-| **loop** | 🔜 (próximas aulas) | repetição automática |
-| **list** | 🔜 | coleção ordenada de valores |
-| **string** | ✅ `"texto entre aspas"` | sequência de caracteres |
-| **integer** | ✅ `int(input())` | número inteiro |
-| **return** | 🔜 | valor que a função devolve |
+| `print` | Exibe resultado na tela | `print("Olá, mundo!")` |
+| `if` | Condição — "se isso, faça aquilo" | `if nota >= 7:` |
+| `for` | Repetição sobre uma sequência | `for item in lista:` |
+| `def` | Define uma função reutilizável | `def calcular():` |
+| `import` | Importa biblioteca externa | `import pandas as pd` |
+
+**Conexão com os termos de hoje:**
+> Em Python você vai escrever `model.fit(X, y, epochs=10)` para treinar por 10 **epochs** e avaliar o **loss** a cada rodada.
+
+> 🔗 **A08 — 20/03 (amanhã):** primeiro código Python — `print()`, variáveis e tipos de dados.
 
 ---
-
-# Fim da Aula 07! 🎯
-
-**Resumo do dia:**
-- 🤖 **UC07:** 4 famílias de IA · Prompt Engineering · LGPD básico
-- 📝 **UC01:** Word — criar, salvar, formatar, configurar página
-- 🇬🇧 **UC02:** Vocabulário de IA consolidado (10 termos)
-
-**Tarefa:** criar um documento Word seguindo as configurações da aula. Detalhes no `tarefa.md`.
+layout: end
+---

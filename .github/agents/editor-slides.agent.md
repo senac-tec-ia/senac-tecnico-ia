@@ -103,7 +103,7 @@ Aguardar a resposta antes de qualquer escrita.
 ### Passo 4 — Executar após aprovação
 
 - Criar todos os slides resultantes com frontmatter completo
-- Numerar os comentários `<!-- SLIDE N -->` em sequência
+- Numerar os comentários `<!-- SLIDE N -->` em sequência — esses comentários ficam **DENTRO** do slide (após o `---` que fecha o frontmatter), nunca entre dois `---` separadores
 - Ajustar os números dos slides seguintes nos comentários
 - **Manter 100% do conteúdo original** distribuído entre os novos slides
 
@@ -285,6 +285,6 @@ Antes de encerrar a sessão de edição, verificar:
 - [ ] Frontmatter de cada slide editado é válido (layout existe em `referencia-tecnica.md`)
 - [ ] Código novo usa contexto IA/dados
 - [ ] Starter code presente em exercícios Python novos
-- [ ] Comentários `<!-- SLIDE N -->` renumerados em sequência após expansões
+- [ ] Comentários `<!-- SLIDE N -->` renumerados em sequência após expansões — verificar que estão **dentro** do slide, nunca entre dois `---`
 - [ ] Relatório de edição emitido com lista de slides alterados
 - [ ] Sugestão de `@auditor-estrutura` emitida ao usuário se blocos foram movidos
