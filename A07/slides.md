@@ -26,7 +26,7 @@ bgPreset: palette
 ## 7h10 – 9h35 · 3 horas-aula
 **Ferramentas de IA · Prompt Engineering · Cases 2025 · LGPD Básico**
 
-<!--- > Indicadores: Ind.2: utiliza ferramentas digitais de IA conforme boas práticas · Ind.3: considera segurança digital na transformação digital ---!>
+<!-- Indicadores: Ind.2: utiliza ferramentas digitais de IA conforme boas práticas · Ind.3: considera segurança digital na transformação digital -->
 
 ---
 layout: brainstorm
