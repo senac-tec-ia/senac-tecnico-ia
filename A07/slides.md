@@ -51,23 +51,78 @@ pulse: true
 ---
 layout: brainstorm
 bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno conecta os conceitos reativados com evidências reais de 2025 -->
+
+# Isso Não É Passado: É Agora
+
+## O que você lembrou já está mudando o mundo
+
+- <carbon-industry /> **4ª Revolução:** fábricas da Tesla operam com robôs coordenados por IA — sem operário na linha de montagem
+- <carbon-analytics /> **Big Data:** o Spotify processa **600 bilhões de eventos por dia** para montar a próxima música da sua fila
+- <carbon-hospital /> **IA na saúde:** sistema aprovado pela FDA detecta câncer de mama com 94% de precisão — acima da média dos radiologistas
+- <carbon-portfolio /> **Profissões:** 65% das crianças que estão na escola hoje vão trabalhar em funções que ainda não existem *(WEF)*
+
+> Você não está estudando história. Você está estudando o que vai decidir sua empregabilidade.
+
+---
+layout: brainstorm
+bgPreset: palette
 pulse: true
 card: true
 ---
 
-<!-- objetivo: aluno conecta uso cotidiano de IA com conceito formal de transformação digital -->
+<!-- objetivo: aluno mapeia presença de IA no cotidiano do dia anterior com olhar mais crítico -->
 
-# Você Usou IA Hoje?
+# Que IAs Você Usou **Ontem**?
 
-## Antes de chegar aqui, quantas IAs você já ativou?
+## Você chegou aqui às 7h10 — vamos contar o dia de ontem
 
-- <carbon-phone /> **WhatsApp** → sugestão de resposta automática
-- <carbon-music /> **Spotify / YouTube** → playlist recomendada pra você
-- <carbon-camera /> **Google Photos / TikTok** → reconhecimento de rosto
-- <carbon-map /> **Waze / Google Maps** → rota inteligente com trânsito em tempo real
-- <carbon-shopping-cart /> **iFood / Magazine Luiza** → "você também pode gostar de..."
+- <carbon-phone /> **WhatsApp** → sugestão de resposta, spam filtrado sem você pedir
+- <carbon-music /> **Spotify / YouTube** → o algoritmo escolheu o que você ouviu, não você
+- <carbon-camera /> **Instagram / TikTok** → cada post que apareceu foi selecionado por IA
+- <carbon-map /> **Waze / Google Maps** → IA recalculou sua rota em tempo real sem você notar
+- <carbon-shopping-cart /> **iFood / Mercado Livre** → "você pode gostar de..." baseado no seu histórico
 
-> A IA não é tecnologia do futuro: **é o que está ligado agora enquanto você lê isso.**
+> Você não precisou *usar* IA ontem. A IA usou **você**.
+
+---
+layout: brainstorm
+bgPreset: palette
+card: true
+pulse: true
+---
+
+<!-- objetivo: aluno confronta implicações éticas da IA invisível que opera sobre ele -->
+
+# A IA Que Você Não Vê
+
+## É a mais poderosa
+
+Toda vez que você rola o feed, a IA aprende o que te prende.
+Toda vez que você clica, ela ajusta o que vai te mostrar depois.
+
+**Nos próximos anos, isso escala para:**
+- <carbon-document /> **Processos seletivos** → IA triando currículos antes de qualquer humano ver
+- <carbon-finance /> **Crédito e seguros** → score calculado pelo seu comportamento digital
+- <carbon-network-2 /> **Notícias** → você vê o que o algoritmo decidiu que você deve ver
+
+---
+layout: default
+bgPreset: palette
+card: true
+pulse: true
+---
+
+<!-- objetivo: aluno reflete sobre autonomia de consumo e literacia digital -->
+
+# A Pergunta Que Ninguém Faz
+
+> Quando foi a última vez que você escolheu o que consumir — sem que um algoritmo tivesse te preparado pra isso?
+
+Saber usar IA com consciência não é diferencial: **é literacia do século XXI.**
 
 ---
 layout: default
@@ -96,7 +151,7 @@ bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno identifica ferramentas de IA de texto e seus casos de uso reais -->
+<!-- objetivo: aluno identifica ferramentas de IA de texto e suas capacidades principais -->
 
 # <carbon-document /> Família Texto
 
@@ -108,11 +163,22 @@ card: true
 - Redigem e-mails, relatórios, código, roteiros
 - Explicam conceitos em qualquer nível de complexidade
 
-**Quem usa:**
-- Estudantes → resumos e explicações de matéria
-- Profissionais de RH → triagem de currículos
-- Jornalistas → esboços de artigos
-- Você → para ajudar nos exercícios **deste curso**
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno identifica quem usa ferramentas de IA de texto e conexão com Python -->
+
+# <carbon-document /> Família Texto: Quem Usa
+
+## Casos de uso reais no dia a dia
+
+- <carbon-education /> **Estudantes** → resumos e explicações de matéria
+- <carbon-group /> **Profissionais de RH** → triagem de currículos
+- <carbon-pen /> **Jornalistas** → esboços de artigos
+- <carbon-user /> **Você** → para ajudar nos exercícios **deste curso**
 
 > **Conexão futura:** em Python (A08+) você vai aprender a chamar essas APIs programaticamente.
 
@@ -153,6 +219,77 @@ card: true
 - <carbon-camera /> **Marketing:** campanhas personalizadas em minutos
 
 > Ferramenta sugerida para iniciantes: **DALL-E 3** via ChatGPT ou **Firefly** via Adobe Express (plano gratuito).
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno aprende as variáveis que controlam a qualidade de uma imagem gerada por IA -->
+
+# <carbon-image /> Gerar Imagens: O Que Faz Diferença
+
+## O prompt de imagem tem 4 dimensões
+
+- <carbon-view /> **Perspectiva:** *"vista aérea"*, *"close extremo"*, *"ângulo de câmera baixa"*
+- <carbon-light /> **Iluminação:** *"luz de neon roxa"*, *"golden hour"*, *"estúdio com anel de luz"*
+- <carbon-palette /> **Estilo:** *"fotorrealista 8K"*, *"pintura a óleo"*, *"pixel art anos 80"*
+- <carbon-star /> **Detalhe técnico:** *"profundidade de campo rasa"*, *"bokeh"*, *"ultra nítido"*
+
+**Regra de ouro:** quanto mais específico o prompt, menos surpresas.
+
+> "Um carro na lua" gera qualquer coisa.
+> "Ferrari vermelha abandonada na superfície lunar, fotorrealista 8K, iluminação da Terra ao fundo, ficção científica, profundidade de campo" gera exatamente o que você imaginou.
+
+---
+layout: brainstorm
+bgPreset: palette
+card: true
+pulse: true
+---
+
+<!-- objetivo: aluno pratica geração de imagem com prompt descritivo e vocabulário de perspectiva/estilo -->
+
+# <carbon-image /> Exercício: Sua Primeira Imagem com IA
+
+## Acesse o **Nanobanana** (link no chat da turma)
+
+**Missão:**
+
+> Gere uma imagem **ultra realista** de um objeto da sua escolha **na superfície da Lua**, com perspectiva de **ficção científica cinematográfica**.
+
+**Dicas para o prompt:**
+- Escolha um objeto do cotidiano (tênis, cadeira, geladeira, moto...)
+- Adicione: *"superfície lunar, cratera ao fundo, Terra visível no céu, iluminação solar rasante, fotorrealista 8K, ficção científica"*
+- Teste 2 versões mudando só a perspectiva: *"vista frontal"* vs. *"ângulo de câmera baixa dramático"*
+
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno compreende a diferença entre geração por texto puro e geração guiada por imagens de referência -->
+
+# <carbon-image /> Demo: Duas Fotos + Prompt = Controle Total
+
+## O que a IA faz quando você entrega imagens de referência
+
+**Texto puro → resultado imprevisível**
+> "Ferrari na Lua" → modelo inventa o carro, inventa a superfície, inventa tudo
+
+**Foto do carro + foto da Lua → resultado controlado**
+> A IA usa a geometria e textura reais das duas fotos como âncora
+> Você só pede a fusão: *"coloque este carro nesta superfície, iluminação coerente, fotorrealista"*
+
+**Por que isso importa:**
+- <carbon-checkmark-filled /> Preserva proporções e identidade do objeto
+- <carbon-checkmark-filled /> Consistência de iluminação automática
+- <carbon-checkmark-filled /> Resultado 10x mais próximo do que você imaginava
+
+> Ferramentas que aceitam múltiplas imagens: **DALL-E 3** (via ChatGPT Plus), **Gemini**, **Adobe Firefly** (Generative Fill).
 
 ---
 layout: default
