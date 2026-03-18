@@ -234,13 +234,12 @@ card: true
 
 - <carbon-view /> **Perspectiva:** *"vista aérea"*, *"close extremo"*, *"ângulo de câmera baixa"*
 - <carbon-light /> **Iluminação:** *"luz de neon roxa"*, *"golden hour"*, *"estúdio com anel de luz"*
-- <carbon-palette /> **Estilo:** *"fotorrealista 8K"*, *"pintura a óleo"*, *"pixel art anos 80"*
+- <carbon-color-palette /> **Estilo:** *"fotorrealista 8K"*, *"pintura a óleo"*, *"pixel art anos 80"*
 - <carbon-star /> **Detalhe técnico:** *"profundidade de campo rasa"*, *"bokeh"*, *"ultra nítido"*
 
-**Regra de ouro:** quanto mais específico o prompt, menos surpresas.
+Regra de ouro: quanto mais específico o prompt, menos surpresas.
 
-> "Um carro na lua" gera qualquer coisa.
-> "Ferrari vermelha abandonada na superfície lunar, fotorrealista 8K, iluminação da Terra ao fundo, ficção científica, profundidade de campo" gera exatamente o que você imaginou.
+"Um carro na lua" gera qualquer coisa. "Ferrari vermelha abandonada na superfície lunar, fotorrealista 8K, iluminação da Terra ao fundo, ficção científica, profundidade de campo" gera exatamente o que você imaginou.
 
 ---
 layout: brainstorm
@@ -251,13 +250,9 @@ pulse: true
 
 <!-- objetivo: aluno pratica geração de imagem com prompt descritivo e vocabulário de perspectiva/estilo -->
 
-# <carbon-image /> Exercício: Sua Primeira Imagem com IA
+# <carbon-image /> Exercício: NANOBANANA e geração de imagens
 
-## Acesse o **Nanobanana** (link no chat da turma)
-
-**Missão:**
-
-> Gere uma imagem **ultra realista** de um objeto da sua escolha **na superfície da Lua**, com perspectiva de **ficção científica cinematográfica**.
+Gere uma imagem **ultra realista** de um objeto da sua escolha **na superfície da Lua**, com perspectiva de **ficção científica cinematográfica**.
 
 **Dicas para o prompt:**
 - Escolha um objeto do cotidiano (tênis, cadeira, geladeira, moto...)
@@ -271,25 +266,23 @@ bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno compreende a diferença entre geração por texto puro e geração guiada por imagens de referência -->
+<!-- objetivo: aluno entende por que texto puro não controla o output e por que imagem de referência muda isso -->
 
-# <carbon-image /> Demo: Duas Fotos + Prompt = Controle Total
+# <carbon-image /> Demo: O Problema do Prompt Só em Texto
 
-## O que a IA faz quando você entrega imagens de referência
+## Texto puro deixa a IA inventar tudo
 
-**Texto puro → resultado imprevisível**
-> "Ferrari na Lua" → modelo inventa o carro, inventa a superfície, inventa tudo
+**O que acontece com só texto:**
+> *"Ferrari na Lua"* → modelo inventa o modelo do carro, inventa a superfície, inventa a iluminação, inventa a perspectiva
 
-**Foto do carro + foto da Lua → resultado controlado**
-> A IA usa a geometria e textura reais das duas fotos como âncora
-> Você só pede a fusão: *"coloque este carro nesta superfície, iluminação coerente, fotorrealista"*
+Nenhum detalhe é seu: é o que o modelo achou mais provável.
 
-**Por que isso importa:**
-- <carbon-checkmark-filled /> Preserva proporções e identidade do objeto
-- <carbon-checkmark-filled /> Consistência de iluminação automática
-- <carbon-checkmark-filled /> Resultado 10x mais próximo do que você imaginava
+**O que muda quando você entrega fotos de referência:**
+> Você envia: foto do seu carro + foto da superfície lunar
+> A IA usa a geometria e textura reais das duas imagens como âncora
+> Você só instrui a fusão: *"coloque este objeto nesta superfície, iluminação coerente, fotorrealista"*
 
-> Ferramentas que aceitam múltiplas imagens: **DALL-E 3** (via ChatGPT Plus), **Gemini**, **Adobe Firefly** (Generative Fill).
+O resultado agora tem a identidade do seu objeto, não a versão imaginada pela IA.
 
 ---
 layout: default
@@ -297,38 +290,37 @@ bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno reconhece que ferramentas de IA de código aceleram programação mesmo para iniciantes -->
+<!-- objetivo: aluno conhece as ferramentas que aceitam múltiplas imagens e as vantagens concretas do uso -->
+
+# <carbon-image /> Demo: Por Que Referências Importam
+
+## O que você ganha ao usar imagens de entrada
+
+- <carbon-checkmark-filled /> **Proporções preservadas:** o carro continua sendo o seu carro
+- <carbon-checkmark-filled /> **Iluminação coerente:** luz da superfície lunar bate no objeto de forma realista
+- <carbon-checkmark-filled /> **Controle criativo real:** você dirige o resultado, a IA executa
+
+> Isso é o que vamos fazer ao vivo agora: foto da Lua + foto de um carro → resultado na tela.
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno reconhece que ferramentas de IA de código hoje vão muito além de autocomplete -->
 
 # <carbon-code /> Família Código
 
-## GitHub Copilot · Cursor · Tabnine
+## GitHub Copilot · Claude Code · Cursor · Gemini CLI
 
-**O que essas ferramentas fazem:**
-- Sugerem a próxima linha de código enquanto você digita
-- Completam funções inteiras a partir de um comentário
-- Explicam o que um código faz em português
-- Identificam e corrigem erros automaticamente
+**O que essas ferramentas fazem em 2026:**
+- Escrevem **projetos inteiros** a partir de uma descrição em linguagem natural
+- Refatoram, depuram e testam código autonomamente
+- Operam como **agentes**: leem arquivos, rodam comandos, corrigem erros sozinhos
+- Explicam qualquer trecho de código em português, linha por linha
 
-> Analogia: é como ter um programador sênior ao lado, sugerindo soluções em tempo real.
-
----
-layout: default
-bgPreset: palette
-card: true
----
-
-<!-- objetivo: aluno entende por que ferramentas de IA de código são relevantes para o seu percurso neste curso -->
-
-# <carbon-code /> Família Código: Por Que Importa
-
-## Você vai usar isso nas próximas aulas
-
-- Você vai usar **Python** neste curso a partir da A08
-- GitHub Copilot está disponível **grátis** para estudantes
-- Cursor é um editor completo com IA integrada ao fluxo
-- Tabnine funciona offline, ideal para ambientes sem internet
-
-> Vocês vão configurar o Copilot no VS Code ainda neste trimestre.
+Em 2026, não é mais autocomplete: é um agente que recebe uma tarefa e entrega o código funcionando.
 
 ---
 layout: default
@@ -336,23 +328,61 @@ bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno conhece ElevenLabs e os riscos reais de deepfake de voz -->
+<!-- objetivo: aluno conhece o estado atual dos agentes de código e sua relevância no mercado -->
+
+# <carbon-code /> Família Código: O Que Mudou
+
+## De autocomplete para agente autônomo
+
+| Ferramenta | O que faz de diferente |
+|---|---|
+| **GitHub Copilot** | Agente no VS Code: abre arquivos, roda testes, cria PRs |
+| **Claude Code** | Terminal-first: recebe tarefa, lê o projeto inteiro, entrega solução |
+| **Cursor** | Editor completo com IA: refatora, migra versões, gera testes automaticamente |
+| **Gemini CLI** | Agente via linha de comando integrado ao ecossistema Google |
+
+**Antes:** você digitava, a IA completava.
+**Hoje:** você descreve o que quer, a IA escreve, testa e corrige.
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno conhece ElevenLabs e suas capacidades de clonagem de voz -->
 
 # <carbon-microphone /> Família Voz: ElevenLabs
 
 ## Clonagem de Voz com Qualidade Profissional
 
-**O que faz:**
-- Replica qualquer voz humana com alta fidelidade
-- Usado em audiolivros, podcast, dublagem e acessibilidade
-- Gera fala em português, inglês e mais de 30 idiomas
+- <carbon-voice-activate /> Replica qualquer voz humana com alta fidelidade
+- <carbon-headphones /> Usado em audiolivros, podcast, dublagem e acessibilidade
+- <carbon-translate /> Gera fala em português, inglês e mais de 30 idiomas
+- <carbon-user-avatar /> Com 10 segundos de áudio você clona uma voz — qualquer voz
 
-**Alerta ético:**
+> O mesmo modelo que gera audiolivros profissionais pode gerar um áudio seu falando coisas que você nunca disse.
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno entende os riscos reais de deepfake de voz e como se proteger -->
+
+# <carbon-microphone /> ElevenLabs: Alerta Ético
+
+## O outro lado da clonagem de voz
+
 - Deepfake de voz é uma ameaça real em 2025
 - Áudios falsos de políticos e familiares já circulam nas redes
-- Saber identificar voz sintética é competência do século XXI
+- Golpes de "sequestro falso" usam voz clonada de parentes
 
-> Se receber um áudio suspeito pedindo dinheiro ou dados: ligue para a pessoa por outro canal antes de agir.
+**Como se proteger:**
+Se receber um áudio suspeito pedindo dinheiro ou dados: ligue para a pessoa por outro canal antes de agir.
+
+Saber identificar voz sintética é competência do século XXI.
 
 ---
 layout: default
@@ -376,19 +406,15 @@ card: true
 - Suporta português do Brasil nativamente
 - Usado em legendas automáticas e ferramentas de acessibilidade
 
-> O próximo slide tem um fato sobre o Suno que vai te surpreender.
-
 ---
 layout: default
 bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno aplica categorização das 4 famílias a situações do cotidiano -->
+<!-- objetivo: aluno aplica categorização das 4 famílias e percebe que elas se combinam -->
 
 # <carbon-edit /> Exercício N1: Qual Família Usaria?
-
-## Leia cada situação e identifique a família correta
 
 *Famílias: Texto · Imagem · Código · Voz-Áudio*
 
@@ -398,7 +424,7 @@ card: true
 4. Você quer que a IA escreva um e-mail formal para um professor.
 5. Você quer criar uma vinheta musical para o seu canal do YouTube.
 
-> O gabarito está no próximo slide.
+Depois de responder: existe alguma situação onde duas famílias poderiam resolver o mesmo problema?
 
 ---
 layout: center
@@ -406,15 +432,17 @@ bgPreset: palette
 card: true
 ---
 
-<!-- gabarito exercício N1 -->
+<!-- gabarito exercício N1 + intercambiabilidade -->
 
 # <carbon-checkmark /> Gabarito: Qual Família Usaria?
 
-1. **Imagem** (capa para portfólio)
-2. **Código** (correção de Python)
-3. **Voz-Áudio / Whisper** (transcrição de áudio)
-4. **Texto** (e-mail formal)
-5. **Voz-Áudio / Suno** (vinheta musical)
+1. Imagem (capa para portfólio) — *ou* Código, se você gerar a capa como uma página HTML
+2. Código (correção de Python)
+3. Voz-Áudio / Whisper (transcrição)
+4. Texto (e-mail formal)
+5. Voz-Áudio / Suno (vinheta musical)
+
+As famílias não são silos. Um site gerado em Código pode ser capturado como imagem. Um roteiro escrito em Texto pode ser narrado por Voz. Na prática, projetos reais combinam 2 ou 3 famílias.
 
 ---
 layout: center
@@ -428,14 +456,11 @@ card: true
 
 ## Suno AI · 2025
 
-### Em **um único dia**, o Suno gera mais músicas do que toda a indústria fonográfica mundial produziu **em um século**.
+Em um único dia, o Suno gera mais músicas do que toda a indústria fonográfica mundial produziu em um século.
 
-> 10 milhões de músicas por dia.
-> A Sony Music lançou ~300.000 faixas em toda a sua história.
+10 milhões de músicas por dia. A Sony Music lançou ~300.000 faixas em toda a sua história.
 
-**O que isso muda?**
-Não é o fim da música: é o fim da escassez de produção.
-O valor migra da *execução técnica* para a *curadoria e identidade*.
+Não é o fim da música: é o fim da escassez de produção. O valor migra da *execução técnica* para a *curadoria e identidade*.
 
 ---
 layout: default
@@ -495,21 +520,25 @@ bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno reescreve prompts ruins aplicando a estrutura Papel·Contexto·Tarefa·Formato -->
+<!-- objetivo: aluno vê empiricamente a diferença entre prompt vago e prompt estruturado no mesmo modelo -->
 
-# <carbon-edit /> Exercício N2: Melhore Este Prompt
+# <carbon-edit /> Exercício N2: Compare os Outputs
 
-## Reescreva usando: Papel · Contexto · Tarefa · Formato
+## Abra o ChatGPT (ou Claude). Você vai rodar 2 prompts e comparar o que sai.
 
-**Prompt ruim 1:**
-> "Me explica banco de dados"
+**Rodada 1 — prompt vago (copie exatamente):**
+> *"Me explica banco de dados"*
 
-**Prompt ruim 2:**
-> "Faz um texto sobre transformação digital"
+Anote: nível do texto, tamanho, se tem exemplo, se serve pra você.
 
-Reescreva cada um com os 4 componentes. Use o modelo do slide anterior.
+**Rodada 2 — mesmo modelo, mesmo chat, prompt estruturado:**
+> *"Você é professor de TI do Senac. Sou aluno de 14 anos, nunca programei. Explique banco de dados usando analogias, e também não sei o que é Excel, que meu professor falou na última aula. Máximo 6 linhas, 2 exemplos práticos, sem jargão técnico."*
 
-> O gabarito está no próximo slide.
+**Compare as duas respostas e responda:**
+- Qual ficou mais útil para você?
+- O que mudou no output quando você adicionou Papel + Contexto + Formato?
+
+> Objetivo: não é reescrever no papel é **ver a diferença acontecendo** na tela.
 
 ---
 layout: default
@@ -517,15 +546,23 @@ bgPreset: palette
 card: true
 ---
 
-<!-- gabarito exercício N2 -->
+<!-- o que os alunos costumam observar na comparação do exercício N2 -->
 
-# <carbon-checkmark /> Gabarito: Melhore Este Prompt
+# <carbon-checkmark /> O Que Você Deve Ter Observado
 
-**Prompt 1 reescrito:**
-> "Você é um professor de TI do Senac. Sou aluno do curso Técnico em IA, já vi o que é hardware e software. Explique banco de dados usando a analogia de uma planilha do Excel, em no máximo 8 linhas, com 2 exemplos práticos."
+## Comparação típica dos outputs
 
-**Prompt 2 reescrito:**
-> "Você é um consultor de tecnologia. Preciso apresentar transformação digital para colegas do meu curso técnico de 16-18 anos. Escreva um parágrafo de abertura (5-6 linhas) mostrando como IA mudou o varejo, com pelo menos 1 exemplo brasileiro."
+| | Prompt vago | Prompt estruturado |
+|---|---|---|
+| **Nível** | Genérico, técnico demais ou de menos | Ajustado para 14 anos, sem jargão |
+| **Tamanho** | Longo sem controle | Dentro do limite pedido |
+| **Exemplo** | Nenhum ou aleatório | Planilha do Excel (contexto seu) |
+| **Utilidade** | Precisaria reescrever | Usável direto |
+
+**O que mudou:** você não ficou mais inteligente entre a Rodada 1 e a 2.
+A IA também não. O que mudou foi **a qualidade da instrução**.
+
+> Isso é Prompt Engineering: controle de output via controle de input.
 
 ---
 layout: default
@@ -630,7 +667,7 @@ pulse: true
 **Grupo B: Ferramenta:** *"Usar IA é uma habilidade do século XXI: proibir é como proibir calculadora."*
 
 ### Regras:
-1. Cada grupo tem **3 minutos** para preparar 2 argumentos
+1. Cada grupo prepara 2 argumentos para defender
 2. Apresentação: **1 minuto** por grupo
 3. Réplica: **30 segundos** cada
 4. Professor media e conclui
