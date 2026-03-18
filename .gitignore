@@ -35,4 +35,4 @@ pnpm-debug.log*
 # Sub-repos com repositórios GitHub próprios
 # (gerencie cada um separadamente)
 slidev-theme-neural/
-senac-planning-ai-tech/
+senac-planning-ai-tech/'    '

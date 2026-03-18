@@ -187,7 +187,7 @@ Peso de cada disciplina:
 | 1 | 7h10–9h35 | UC07 Transformação Digital | 4 famílias de ferramentas de IA (Texto/Imagem/Código/Voz), Prompt Engineering (Papel·Contexto·Tarefa·Formato), IA no Brasil (Nubank, Embrapa), LGPD básico ao usar IA, debate "IA é trapaça ou ferramenta?" | 3 |
 | 2 | 9h50–11h30 | UC01 Fund. Computação | Word: interface (Faixa de Opções), criar/salvar/nomear (snake_case+extensões), configurar página (margens ABNT), formatação de texto (negrito/itálico/alinhamento/espaçamento), exercícios N1→N3 | 2 |
 | 3 | 11h30–12h20 | UC02 Inglês Instrumental | Fixação Bloco 3 (10 termos de IA: token, epoch, embedding…), quizão "Levante a mão", preview Bloco 4 (Python keywords) | 1 |
-### A08 — 20/03 (Sex) ⏳ A definir
+### A08-19-03 — 19/03 (Qui) ⏳ Planejando
 ### A09 — 26/03 (Qui) ⏳ A definir
 ### A10 — 27/03 (Sex) ⏳ A definir
 
