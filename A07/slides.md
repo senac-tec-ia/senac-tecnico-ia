@@ -89,7 +89,7 @@ card: true
 > Você não precisou *usar* IA ontem. A IA usou **você**.
 
 ---
-layout: brainstorm
+layout: default
 bgPreset: palette
 card: true
 pulse: true
@@ -97,9 +97,7 @@ pulse: true
 
 <!-- objetivo: aluno confronta implicações éticas da IA invisível que opera sobre ele -->
 
-# A IA Que Você Não Vê
-
-## É a mais poderosa
+# A IA Que Você Não Vê É a Mais Poderosa
 
 Toda vez que você rola o feed, a IA aprende o que te prende.
 Toda vez que você clica, ela ajusta o que vai te mostrar depois.
@@ -480,7 +478,18 @@ card: true
 |---|---|
 | "Me explica banco de dados" | "Você é professor de TI. Explique banco de dados para um aluno de 16 anos que nunca programou. Use uma analogia com agenda de contatos. Máximo 5 linhas." |
 
-**O que acontece com instrução vaga:**
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno identifica o que acontece quando a instrução para a IA é vaga ou incompleta -->
+
+# Prompt Engineering: O Custo da Vagueza
+
+## O que acontece com instrução vaga
+
 - Resposta genérica demais
 - Nível errado (muito técnico ou muito simples)
 - Formato inadequado para o que você precisa
@@ -660,24 +669,31 @@ pulse: true
 
 # IA é Trapaça ou Ferramenta?
 
-## Debate Estruturado: 10 minutos
+## Dinâmica em 3 fases · 12 minutos
 
-**Grupo A: Trapaça:** *"Usar IA para fazer trabalho escolar é trapaça porque o aluno não aprende."*
+Fase 1 — Duplas (2 min): converse com o colega ao lado e cada um escolhe um lado para defender.
 
-**Grupo B: Ferramenta:** *"Usar IA é uma habilidade do século XXI: proibir é como proibir calculadora."*
+Fase 2 — Times (3 min): duplas que escolheram o mesmo lado se unem em um time. Cada time elege 1 porta-voz e prepara 2 argumentos.
 
-### Regras:
-1. Cada grupo prepara 2 argumentos para defender
-2. Apresentação: **1 minuto** por grupo
-3. Réplica: **30 segundos** cada
-4. Professor media e conclui
+Fase 3 — Debate (5 min): porta-vozes falam 1 min. Réplica: 30s cada. Professor sintetiza.
 
-> **Próximo:** Intervalo 9h35 → Bloco 2 (Word no VS Code) às 9h50
+---
+layout: brainstorm
+bgPreset: palette
+card: true
+pulse: true
+---
 
-<!-- ============================================================
-     BLOCO 2 — UC01 · FUNDAMENTOS DA COMPUTAÇÃO (slides 19–29)
-     Word: Interface · Criar e Salvar · Formatação · Margens ABNT
-     ============================================================ -->
+Time Trapaça — o lado difícil, e por isso mais interessante:
+
+*"Se a IA escreve o trabalho por você, o que exatamente você aprendeu? Numa prova, numa entrevista, num dia sem internet — é você quem resolve, ou é sua assinatura do ChatGPT?"*
+
+Time Ferramenta — o lado óbvio. Mas prove que não é só preguiça:
+
+*"Tudo bem, mas então como você usa IA para aprender mais, não menos? Onde está o limite?"*
+
+<!-- Próximo: Intervalo 9h35 → Bloco 2 (Word no VS Code) às 9h50 -->
+
 
 ---
 layout: cover
@@ -769,11 +785,11 @@ bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno cria e salva documento Word com nomenclatura profissional em snake_case -->
+<!-- objetivo: aluno adota hábito de salvar e nomeia arquivos profissionalmente em snake_case -->
 
-# Criar, Salvar e Nomear
+# Criar, Salvar e Nomear (1/2)
 
-## As 4 regras de um documento profissional
+## Regras 1 e 2
 
 **1. <carbon-save /> Ctrl+S: salve agora e salve sempre**
 > Hábito: a cada parágrafo concluído, Ctrl+S. O Word trava. O servidor cai. O notebook fecha.
@@ -781,6 +797,18 @@ card: true
 **2. <carbon-folder /> snake_case no nome do arquivo**
 > `relatorio_ia_joao_silva.docx` (correto)
 > `Relatório IA João Silva final (1) NOVO.docx` (errado)
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno escolhe a extensão certa e salva na pasta correta -->
+
+# Criar, Salvar e Nomear (2/2)
+
+## Regras 3 e 4
 
 **3. <carbon-document /> Extensão certa**
 > `.docx` → para edição | `.pdf` → para envio
@@ -863,11 +891,9 @@ bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno entende diferença entre .docx (edição) e .pdf (envio) e executa exportação -->
+<!-- objetivo: aluno entende diferença entre .docx (edição) e .pdf (envio) -->
 
 # Por Que Exportar em PDF?
-
-## Arquivo → Exportar → Criar PDF/XPS
 
 **O problema do .docx enviado:**
 - Fonte diferente no destinatário → layout quebra
@@ -879,6 +905,18 @@ card: true
 - Não editável sem querer
 - Menor tamanho para envio
 - Impressão idêntica ao que você vê
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno executa exportação para PDF com caminho e atalho corretos -->
+
+# Exportar em PDF: Como Fazer
+
+## Arquivo → Exportar → Criar PDF/XPS
 
 **Regra prática:**
 > Trabalhe em `.docx`. Antes de enviar, exporte para `.pdf`.
@@ -892,53 +930,31 @@ bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno cria documento técnico completo com estrutura, formatação ABNT e exportação em PDF -->
+<!-- objetivo: aluno aplica formatação Word e prompt engineering no mesmo artefato -->
 
-# <carbon-edit /> Exercício N3: Crie Seu Primeiro Relatório Técnico
+# <carbon-edit /> Exercício N3: Documento de Prompts
 
-## Você tem 15 minutos. Abra o Word e crie:
+## Pegue o prompt que você escreveu no Exercício N3 (Prompt do Zero) e abra o Word.
 
 **Estrutura obrigatória:**
-1. **Título:** "Ferramentas de IA que Eu Usaria" (14pt, negrito, centralizado)
+1. **Título:** "Meus Prompts de IA" (14pt, negrito, centralizado)
 2. **Seu nome e data** (12pt, centralizado, abaixo do título)
-3. **Seção 1: Introdução** (12pt, negrito): 2 frases sobre o que é IA
-4. **Seção 2: Ferramentas** (12pt, negrito): 2 ferramentas com 1 frase cada
-5. **Seção 3: Conclusão** (12pt, negrito): 1 frase sobre o que aprendeu hoje
-
-**Requisitos:** margens ABNT (3-3-2-2) · Arial/TNR 12pt · espaçamento 1,5 · exportar como `relatorio_ia_seunome.pdf`
+3. **Seção 1: Prompt** (12pt, negrito): cole o prompt que você escreveu — os 4 componentes devem estar visíveis
+4. **Seção 2: Output** (12pt, negrito): copie o resultado que a IA gerou
+5. **Seção 3: Avaliação** (12pt, negrito): 2 frases — o que funcionou, o que você mudaria
 
 > O critério de avaliação está no próximo slide.
 
+
 ---
-layout: default
+layout: two-cols-text
 bgPreset: palette
 card: true
 ---
 
-<!-- critério de avaliação exercício N3 Word -->
+<!-- objetivo: aluno contrasta nomenclatura errada vs correta para arquivos profissionais -->
 
-# <carbon-checkmark /> Critério de Avaliação
-
-| Critério | Pontos |
-|---|---|
-| Estrutura completa (título + 3 seções) | 4 pts |
-| Formatação correta (fonte, tamanho, espaçamento) | 3 pts |
-| Margens ABNT | 2 pts |
-| Nome do arquivo em snake_case | 1 pt |
-
-**Total: 10 pts** (base para a Tarefa de Casa)
-
----
-layout: default
-bgPreset: palette
-card: true
----
-
-<!-- objetivo: aluno aplica convenções de versionamento e backup para documentos profissionais -->
-
-# Boas Práticas: Versionar e Nomear com Data
-
-## A diferença entre amador e profissional está na organização
+# Boas Práticas: Nomear com Data
 
 **Errado:**
 
@@ -949,20 +965,33 @@ relatorio_final_v2.docx
 relatorio_FINAL_DE_VERDADE.docx
 ```
 
+::right::
+
 **Certo:**
 
 ```
-relatorio_ia_2026-03-19_v1.docx
-relatorio_ia_2026-03-19_v2.docx
-relatorio_ia_2026-03-19_final.pdf
+prompts_ia_2026-03-19_v1.docx
+prompts_ia_2026-03-19_v2.docx
+prompts_ia_2026-03-19_final.pdf
 ```
 
-**3 regras:**
-1. **Data no formato ISO:** `YYYY-MM-DD` (ordena cronologicamente)
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno memoriza as 3 regras de versionamento e as aplica em documentos e prompts -->
+
+# Boas Práticas: As 3 Regras
+
+## Valem para documentos Word e para arquivos de prompt
+
+1. **Data no formato ISO:** `YYYY-MM-DD` (ordena cronologicamente em qualquer pasta)
 2. **Versão no final:** `_v1`, `_v2`, nunca "final_v2"
 3. **Backup em nuvem:** OneDrive, Google Drive, antes de dormir
 
-> Você vai usar essa convenção nos projetos Python também.
+> Você vai usar essa convenção nos projetos Python e nos arquivos de prompt também.
 
 ---
 layout: center
@@ -982,13 +1011,6 @@ card: true
 - <carbon-save /> **Exportar** .docx → .pdf antes de enviar
 - <carbon-redo /> **Versionar:** `_v1`, `_v2`, data ISO
 
-> **A08 (20/03):** tabela no Word + cabeçalho e rodapé
-> **Agora:** Inglês Instrumental às 11h30
-
-<!-- ============================================================
-     BLOCO 3 — UC02 · INGLÊS INSTRUMENTAL (slides 30–36)
-     Fixação Bloco 3 — 10 Termos de IA em Inglês
-     ============================================================ -->
 
 ---
 layout: cover
@@ -1163,7 +1185,3 @@ card: true
 > Em Python você vai escrever `model.fit(X, y, epochs=10)` para treinar por 10 **epochs** e avaliar o **loss** a cada rodada.
 
 > **A08 · 20/03 (amanhã):** primeiro código Python: `print()`, variáveis e tipos de dados.
-
----
-layout: end
----
