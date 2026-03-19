@@ -51,23 +51,76 @@ pulse: true
 ---
 layout: brainstorm
 bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno conecta os conceitos reativados com evidências reais de 2025 -->
+
+# Isso Não É Passado: É Agora
+
+## O que você lembrou já está mudando o mundo
+
+- <carbon-industry /> **4ª Revolução:** fábricas da Tesla operam com robôs coordenados por IA — sem operário na linha de montagem
+- <carbon-analytics /> **Big Data:** o Spotify processa **600 bilhões de eventos por dia** para montar a próxima música da sua fila
+- <carbon-hospital /> **IA na saúde:** sistema aprovado pela FDA detecta câncer de mama com 94% de precisão — acima da média dos radiologistas
+- <carbon-portfolio /> **Profissões:** 65% das crianças que estão na escola hoje vão trabalhar em funções que ainda não existem *(WEF)*
+
+> Você não está estudando história. Você está estudando o que vai decidir sua empregabilidade.
+
+---
+layout: brainstorm
+bgPreset: palette
 pulse: true
 card: true
 ---
 
-<!-- objetivo: aluno conecta uso cotidiano de IA com conceito formal de transformação digital -->
+<!-- objetivo: aluno mapeia presença de IA no cotidiano do dia anterior com olhar mais crítico -->
 
-# Você Usou IA Hoje?
+# Que IAs Você Usou **Ontem**?
 
-## Antes de chegar aqui, quantas IAs você já ativou?
+## Você chegou aqui às 7h10 — vamos contar o dia de ontem
 
-- <carbon-phone /> **WhatsApp** → sugestão de resposta automática
-- <carbon-music /> **Spotify / YouTube** → playlist recomendada pra você
-- <carbon-camera /> **Google Photos / TikTok** → reconhecimento de rosto
-- <carbon-map /> **Waze / Google Maps** → rota inteligente com trânsito em tempo real
-- <carbon-shopping-cart /> **iFood / Magazine Luiza** → "você também pode gostar de..."
+- <carbon-phone /> **WhatsApp** → sugestão de resposta, spam filtrado sem você pedir
+- <carbon-music /> **Spotify / YouTube** → o algoritmo escolheu o que você ouviu, não você
+- <carbon-camera /> **Instagram / TikTok** → cada post que apareceu foi selecionado por IA
+- <carbon-map /> **Waze / Google Maps** → IA recalculou sua rota em tempo real sem você notar
+- <carbon-shopping-cart /> **iFood / Mercado Livre** → "você pode gostar de..." baseado no seu histórico
 
-> A IA não é tecnologia do futuro: **é o que está ligado agora enquanto você lê isso.**
+> Você não precisou *usar* IA ontem. A IA usou **você**.
+
+---
+layout: default
+bgPreset: palette
+card: true
+pulse: true
+---
+
+<!-- objetivo: aluno confronta implicações éticas da IA invisível que opera sobre ele -->
+
+# A IA Que Você Não Vê É a Mais Poderosa
+
+Toda vez que você rola o feed, a IA aprende o que te prende.
+Toda vez que você clica, ela ajusta o que vai te mostrar depois.
+
+**Nos próximos anos, isso escala para:**
+- <carbon-document /> **Processos seletivos** → IA triando currículos antes de qualquer humano ver
+- <carbon-finance /> **Crédito e seguros** → score calculado pelo seu comportamento digital
+- <carbon-network-2 /> **Notícias** → você vê o que o algoritmo decidiu que você deve ver
+
+---
+layout: default
+bgPreset: palette
+card: true
+pulse: true
+---
+
+<!-- objetivo: aluno reflete sobre autonomia de consumo e literacia digital -->
+
+# A Pergunta Que Ninguém Faz
+
+> Quando foi a última vez que você escolheu o que consumir — sem que um algoritmo tivesse te preparado pra isso?
+
+Saber usar IA com consciência não é diferencial: **é literacia do século XXI.**
 
 ---
 layout: default
@@ -96,7 +149,7 @@ bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno identifica ferramentas de IA de texto e seus casos de uso reais -->
+<!-- objetivo: aluno identifica ferramentas de IA de texto e suas capacidades principais -->
 
 # <carbon-document /> Família Texto
 
@@ -108,11 +161,22 @@ card: true
 - Redigem e-mails, relatórios, código, roteiros
 - Explicam conceitos em qualquer nível de complexidade
 
-**Quem usa:**
-- Estudantes → resumos e explicações de matéria
-- Profissionais de RH → triagem de currículos
-- Jornalistas → esboços de artigos
-- Você → para ajudar nos exercícios **deste curso**
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno identifica quem usa ferramentas de IA de texto e conexão com Python -->
+
+# <carbon-document /> Família Texto: Quem Usa
+
+## Casos de uso reais no dia a dia
+
+- <carbon-education /> **Estudantes** → resumos e explicações de matéria
+- <carbon-group /> **Profissionais de RH** → triagem de currículos
+- <carbon-pen /> **Jornalistas** → esboços de artigos
+- <carbon-user /> **Você** → para ajudar nos exercícios **deste curso**
 
 > **Conexão futura:** em Python (A08+) você vai aprender a chamar essas APIs programaticamente.
 
@@ -160,38 +224,101 @@ bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno reconhece que ferramentas de IA de código aceleram programação mesmo para iniciantes -->
+<!-- objetivo: aluno aprende as variáveis que controlam a qualidade de uma imagem gerada por IA -->
+
+# <carbon-image /> Gerar Imagens: O Que Faz Diferença
+
+## O prompt de imagem tem 4 dimensões
+
+- <carbon-view /> **Perspectiva:** *"vista aérea"*, *"close extremo"*, *"ângulo de câmera baixa"*
+- <carbon-light /> **Iluminação:** *"luz de neon roxa"*, *"golden hour"*, *"estúdio com anel de luz"*
+- <carbon-color-palette /> **Estilo:** *"fotorrealista 8K"*, *"pintura a óleo"*, *"pixel art anos 80"*
+- <carbon-star /> **Detalhe técnico:** *"profundidade de campo rasa"*, *"bokeh"*, *"ultra nítido"*
+
+Regra de ouro: quanto mais específico o prompt, menos surpresas.
+
+"Um carro na lua" gera qualquer coisa. "Ferrari vermelha abandonada na superfície lunar, fotorrealista 8K, iluminação da Terra ao fundo, ficção científica, profundidade de campo" gera exatamente o que você imaginou.
+
+---
+layout: brainstorm
+bgPreset: palette
+card: true
+pulse: true
+---
+
+<!-- objetivo: aluno pratica geração de imagem com prompt descritivo e vocabulário de perspectiva/estilo -->
+
+# <carbon-image /> Exercício: NANOBANANA e geração de imagens
+
+Gere uma imagem **ultra realista** de um objeto da sua escolha **na superfície da Lua**, com perspectiva de **ficção científica cinematográfica**.
+
+**Dicas para o prompt:**
+- Escolha um objeto do cotidiano (tênis, cadeira, geladeira, moto...)
+- Adicione: *"superfície lunar, cratera ao fundo, Terra visível no céu, iluminação solar rasante, fotorrealista 8K, ficção científica"*
+- Teste 2 versões mudando só a perspectiva: *"vista frontal"* vs. *"ângulo de câmera baixa dramático"*
+
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno entende por que texto puro não controla o output e por que imagem de referência muda isso -->
+
+# <carbon-image /> Demo: O Problema do Prompt Só em Texto
+
+## Texto puro deixa a IA inventar tudo
+
+**O que acontece com só texto:**
+> *"Ferrari na Lua"* → modelo inventa o modelo do carro, inventa a superfície, inventa a iluminação, inventa a perspectiva
+
+Nenhum detalhe é seu: é o que o modelo achou mais provável.
+
+**O que muda quando você entrega fotos de referência:**
+> Você envia: foto do seu carro + foto da superfície lunar
+> A IA usa a geometria e textura reais das duas imagens como âncora
+> Você só instrui a fusão: *"coloque este objeto nesta superfície, iluminação coerente, fotorrealista"*
+
+O resultado agora tem a identidade do seu objeto, não a versão imaginada pela IA.
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno conhece as ferramentas que aceitam múltiplas imagens e as vantagens concretas do uso -->
+
+# <carbon-image /> Demo: Por Que Referências Importam
+
+## O que você ganha ao usar imagens de entrada
+
+- <carbon-checkmark-filled /> **Proporções preservadas:** o carro continua sendo o seu carro
+- <carbon-checkmark-filled /> **Iluminação coerente:** luz da superfície lunar bate no objeto de forma realista
+- <carbon-checkmark-filled /> **Controle criativo real:** você dirige o resultado, a IA executa
+
+> Isso é o que vamos fazer ao vivo agora: foto da Lua + foto de um carro → resultado na tela.
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno reconhece que ferramentas de IA de código hoje vão muito além de autocomplete -->
 
 # <carbon-code /> Família Código
 
-## GitHub Copilot · Cursor · Tabnine
+## GitHub Copilot · Claude Code · Cursor · Gemini CLI
 
-**O que essas ferramentas fazem:**
-- Sugerem a próxima linha de código enquanto você digita
-- Completam funções inteiras a partir de um comentário
-- Explicam o que um código faz em português
-- Identificam e corrigem erros automaticamente
+**O que essas ferramentas fazem em 2026:**
+- Escrevem **projetos inteiros** a partir de uma descrição em linguagem natural
+- Refatoram, depuram e testam código autonomamente
+- Operam como **agentes**: leem arquivos, rodam comandos, corrigem erros sozinhos
+- Explicam qualquer trecho de código em português, linha por linha
 
-> Analogia: é como ter um programador sênior ao lado, sugerindo soluções em tempo real.
-
----
-layout: default
-bgPreset: palette
-card: true
----
-
-<!-- objetivo: aluno entende por que ferramentas de IA de código são relevantes para o seu percurso neste curso -->
-
-# <carbon-code /> Família Código: Por Que Importa
-
-## Você vai usar isso nas próximas aulas
-
-- Você vai usar **Python** neste curso a partir da A08
-- GitHub Copilot está disponível **grátis** para estudantes
-- Cursor é um editor completo com IA integrada ao fluxo
-- Tabnine funciona offline, ideal para ambientes sem internet
-
-> Vocês vão configurar o Copilot no VS Code ainda neste trimestre.
+Em 2026, não é mais autocomplete: é um agente que recebe uma tarefa e entrega o código funcionando.
 
 ---
 layout: default
@@ -199,23 +326,61 @@ bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno conhece ElevenLabs e os riscos reais de deepfake de voz -->
+<!-- objetivo: aluno conhece o estado atual dos agentes de código e sua relevância no mercado -->
+
+# <carbon-code /> Família Código: O Que Mudou
+
+## De autocomplete para agente autônomo
+
+| Ferramenta | O que faz de diferente |
+|---|---|
+| **GitHub Copilot** | Agente no VS Code: abre arquivos, roda testes, cria PRs |
+| **Claude Code** | Terminal-first: recebe tarefa, lê o projeto inteiro, entrega solução |
+| **Cursor** | Editor completo com IA: refatora, migra versões, gera testes automaticamente |
+| **Gemini CLI** | Agente via linha de comando integrado ao ecossistema Google |
+
+**Antes:** você digitava, a IA completava.
+**Hoje:** você descreve o que quer, a IA escreve, testa e corrige.
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno conhece ElevenLabs e suas capacidades de clonagem de voz -->
 
 # <carbon-microphone /> Família Voz: ElevenLabs
 
 ## Clonagem de Voz com Qualidade Profissional
 
-**O que faz:**
-- Replica qualquer voz humana com alta fidelidade
-- Usado em audiolivros, podcast, dublagem e acessibilidade
-- Gera fala em português, inglês e mais de 30 idiomas
+- <carbon-voice-activate /> Replica qualquer voz humana com alta fidelidade
+- <carbon-headphones /> Usado em audiolivros, podcast, dublagem e acessibilidade
+- <carbon-translate /> Gera fala em português, inglês e mais de 30 idiomas
+- <carbon-user-avatar /> Com 10 segundos de áudio você clona uma voz — qualquer voz
 
-**Alerta ético:**
+> O mesmo modelo que gera audiolivros profissionais pode gerar um áudio seu falando coisas que você nunca disse.
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno entende os riscos reais de deepfake de voz e como se proteger -->
+
+# <carbon-microphone /> ElevenLabs: Alerta Ético
+
+## O outro lado da clonagem de voz
+
 - Deepfake de voz é uma ameaça real em 2025
 - Áudios falsos de políticos e familiares já circulam nas redes
-- Saber identificar voz sintética é competência do século XXI
+- Golpes de "sequestro falso" usam voz clonada de parentes
 
-> Se receber um áudio suspeito pedindo dinheiro ou dados: ligue para a pessoa por outro canal antes de agir.
+**Como se proteger:**
+Se receber um áudio suspeito pedindo dinheiro ou dados: ligue para a pessoa por outro canal antes de agir.
+
+Saber identificar voz sintética é competência do século XXI.
 
 ---
 layout: default
@@ -239,19 +404,15 @@ card: true
 - Suporta português do Brasil nativamente
 - Usado em legendas automáticas e ferramentas de acessibilidade
 
-> O próximo slide tem um fato sobre o Suno que vai te surpreender.
-
 ---
 layout: default
 bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno aplica categorização das 4 famílias a situações do cotidiano -->
+<!-- objetivo: aluno aplica categorização das 4 famílias e percebe que elas se combinam -->
 
 # <carbon-edit /> Exercício N1: Qual Família Usaria?
-
-## Leia cada situação e identifique a família correta
 
 *Famílias: Texto · Imagem · Código · Voz-Áudio*
 
@@ -261,7 +422,7 @@ card: true
 4. Você quer que a IA escreva um e-mail formal para um professor.
 5. Você quer criar uma vinheta musical para o seu canal do YouTube.
 
-> O gabarito está no próximo slide.
+Depois de responder: existe alguma situação onde duas famílias poderiam resolver o mesmo problema?
 
 ---
 layout: center
@@ -269,15 +430,17 @@ bgPreset: palette
 card: true
 ---
 
-<!-- gabarito exercício N1 -->
+<!-- gabarito exercício N1 + intercambiabilidade -->
 
 # <carbon-checkmark /> Gabarito: Qual Família Usaria?
 
-1. **Imagem** (capa para portfólio)
-2. **Código** (correção de Python)
-3. **Voz-Áudio / Whisper** (transcrição de áudio)
-4. **Texto** (e-mail formal)
-5. **Voz-Áudio / Suno** (vinheta musical)
+1. Imagem (capa para portfólio) — *ou* Código, se você gerar a capa como uma página HTML
+2. Código (correção de Python)
+3. Voz-Áudio / Whisper (transcrição)
+4. Texto (e-mail formal)
+5. Voz-Áudio / Suno (vinheta musical)
+
+As famílias não são silos. Um site gerado em Código pode ser capturado como imagem. Um roteiro escrito em Texto pode ser narrado por Voz. Na prática, projetos reais combinam 2 ou 3 famílias.
 
 ---
 layout: center
@@ -291,14 +454,11 @@ card: true
 
 ## Suno AI · 2025
 
-### Em **um único dia**, o Suno gera mais músicas do que toda a indústria fonográfica mundial produziu **em um século**.
+Em um único dia, o Suno gera mais músicas do que toda a indústria fonográfica mundial produziu em um século.
 
-> 10 milhões de músicas por dia.
-> A Sony Music lançou ~300.000 faixas em toda a sua história.
+10 milhões de músicas por dia. A Sony Music lançou ~300.000 faixas em toda a sua história.
 
-**O que isso muda?**
-Não é o fim da música: é o fim da escassez de produção.
-O valor migra da *execução técnica* para a *curadoria e identidade*.
+Não é o fim da música: é o fim da escassez de produção. O valor migra da *execução técnica* para a *curadoria e identidade*.
 
 ---
 layout: default
@@ -318,7 +478,18 @@ card: true
 |---|---|
 | "Me explica banco de dados" | "Você é professor de TI. Explique banco de dados para um aluno de 16 anos que nunca programou. Use uma analogia com agenda de contatos. Máximo 5 linhas." |
 
-**O que acontece com instrução vaga:**
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno identifica o que acontece quando a instrução para a IA é vaga ou incompleta -->
+
+# Prompt Engineering: O Custo da Vagueza
+
+## O que acontece com instrução vaga
+
 - Resposta genérica demais
 - Nível errado (muito técnico ou muito simples)
 - Formato inadequado para o que você precisa
@@ -358,21 +529,25 @@ bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno reescreve prompts ruins aplicando a estrutura Papel·Contexto·Tarefa·Formato -->
+<!-- objetivo: aluno vê empiricamente a diferença entre prompt vago e prompt estruturado no mesmo modelo -->
 
-# <carbon-edit /> Exercício N2: Melhore Este Prompt
+# <carbon-edit /> Exercício N2: Compare os Outputs
 
-## Reescreva usando: Papel · Contexto · Tarefa · Formato
+## Abra o ChatGPT (ou Claude). Você vai rodar 2 prompts e comparar o que sai.
 
-**Prompt ruim 1:**
-> "Me explica banco de dados"
+**Rodada 1 — prompt vago (copie exatamente):**
+> *"Me explica banco de dados"*
 
-**Prompt ruim 2:**
-> "Faz um texto sobre transformação digital"
+Anote: nível do texto, tamanho, se tem exemplo, se serve pra você.
 
-Reescreva cada um com os 4 componentes. Use o modelo do slide anterior.
+**Rodada 2 — mesmo modelo, mesmo chat, prompt estruturado:**
+> *"Você é professor de TI do Senac. Sou aluno de 14 anos, nunca programei. Explique banco de dados usando analogias, e também não sei o que é Excel, que meu professor falou na última aula. Máximo 6 linhas, 2 exemplos práticos, sem jargão técnico."*
 
-> O gabarito está no próximo slide.
+**Compare as duas respostas e responda:**
+- Qual ficou mais útil para você?
+- O que mudou no output quando você adicionou Papel + Contexto + Formato?
+
+> Objetivo: não é reescrever no papel é **ver a diferença acontecendo** na tela.
 
 ---
 layout: default
@@ -380,15 +555,23 @@ bgPreset: palette
 card: true
 ---
 
-<!-- gabarito exercício N2 -->
+<!-- o que os alunos costumam observar na comparação do exercício N2 -->
 
-# <carbon-checkmark /> Gabarito: Melhore Este Prompt
+# <carbon-checkmark /> O Que Você Deve Ter Observado
 
-**Prompt 1 reescrito:**
-> "Você é um professor de TI do Senac. Sou aluno do curso Técnico em IA, já vi o que é hardware e software. Explique banco de dados usando a analogia de uma planilha do Excel, em no máximo 8 linhas, com 2 exemplos práticos."
+## Comparação típica dos outputs
 
-**Prompt 2 reescrito:**
-> "Você é um consultor de tecnologia. Preciso apresentar transformação digital para colegas do meu curso técnico de 16-18 anos. Escreva um parágrafo de abertura (5-6 linhas) mostrando como IA mudou o varejo, com pelo menos 1 exemplo brasileiro."
+| | Prompt vago | Prompt estruturado |
+|---|---|---|
+| **Nível** | Genérico, técnico demais ou de menos | Ajustado para 14 anos, sem jargão |
+| **Tamanho** | Longo sem controle | Dentro do limite pedido |
+| **Exemplo** | Nenhum ou aleatório | Planilha do Excel (contexto seu) |
+| **Utilidade** | Precisaria reescrever | Usável direto |
+
+**O que mudou:** você não ficou mais inteligente entre a Rodada 1 e a 2.
+A IA também não. O que mudou foi **a qualidade da instrução**.
+
+> Isso é Prompt Engineering: controle de output via controle de input.
 
 ---
 layout: default
@@ -486,24 +669,31 @@ pulse: true
 
 # IA é Trapaça ou Ferramenta?
 
-## Debate Estruturado: 10 minutos
+## Dinâmica em 3 fases · 12 minutos
 
-**Grupo A: Trapaça:** *"Usar IA para fazer trabalho escolar é trapaça porque o aluno não aprende."*
+Fase 1 — Duplas (2 min): converse com o colega ao lado e cada um escolhe um lado para defender.
 
-**Grupo B: Ferramenta:** *"Usar IA é uma habilidade do século XXI: proibir é como proibir calculadora."*
+Fase 2 — Times (3 min): duplas que escolheram o mesmo lado se unem em um time. Cada time elege 1 porta-voz e prepara 2 argumentos.
 
-### Regras:
-1. Cada grupo tem **3 minutos** para preparar 2 argumentos
-2. Apresentação: **1 minuto** por grupo
-3. Réplica: **30 segundos** cada
-4. Professor media e conclui
+Fase 3 — Debate (5 min): porta-vozes falam 1 min. Réplica: 30s cada. Professor sintetiza.
 
-> **Próximo:** Intervalo 9h35 → Bloco 2 (Word no VS Code) às 9h50
+---
+layout: brainstorm
+bgPreset: palette
+card: true
+pulse: true
+---
 
-<!-- ============================================================
-     BLOCO 2 — UC01 · FUNDAMENTOS DA COMPUTAÇÃO (slides 19–29)
-     Word: Interface · Criar e Salvar · Formatação · Margens ABNT
-     ============================================================ -->
+Time Trapaça — o lado difícil, e por isso mais interessante:
+
+*"Se a IA escreve o trabalho por você, o que exatamente você aprendeu? Numa prova, numa entrevista, num dia sem internet — é você quem resolve, ou é sua assinatura do ChatGPT?"*
+
+Time Ferramenta — o lado óbvio. Mas prove que não é só preguiça:
+
+*"Tudo bem, mas então como você usa IA para aprender mais, não menos? Onde está o limite?"*
+
+<!-- Próximo: Intervalo 9h35 → Bloco 2 (Word no VS Code) às 9h50 -->
+
 
 ---
 layout: cover
@@ -595,11 +785,11 @@ bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno cria e salva documento Word com nomenclatura profissional em snake_case -->
+<!-- objetivo: aluno adota hábito de salvar e nomeia arquivos profissionalmente em snake_case -->
 
-# Criar, Salvar e Nomear
+# Criar, Salvar e Nomear (1/2)
 
-## As 4 regras de um documento profissional
+## Regras 1 e 2
 
 **1. <carbon-save /> Ctrl+S: salve agora e salve sempre**
 > Hábito: a cada parágrafo concluído, Ctrl+S. O Word trava. O servidor cai. O notebook fecha.
@@ -607,6 +797,18 @@ card: true
 **2. <carbon-folder /> snake_case no nome do arquivo**
 > `relatorio_ia_joao_silva.docx` (correto)
 > `Relatório IA João Silva final (1) NOVO.docx` (errado)
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno escolhe a extensão certa e salva na pasta correta -->
+
+# Criar, Salvar e Nomear (2/2)
+
+## Regras 3 e 4
 
 **3. <carbon-document /> Extensão certa**
 > `.docx` → para edição | `.pdf` → para envio
@@ -689,11 +891,9 @@ bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno entende diferença entre .docx (edição) e .pdf (envio) e executa exportação -->
+<!-- objetivo: aluno entende diferença entre .docx (edição) e .pdf (envio) -->
 
 # Por Que Exportar em PDF?
-
-## Arquivo → Exportar → Criar PDF/XPS
 
 **O problema do .docx enviado:**
 - Fonte diferente no destinatário → layout quebra
@@ -705,6 +905,18 @@ card: true
 - Não editável sem querer
 - Menor tamanho para envio
 - Impressão idêntica ao que você vê
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno executa exportação para PDF com caminho e atalho corretos -->
+
+# Exportar em PDF: Como Fazer
+
+## Arquivo → Exportar → Criar PDF/XPS
 
 **Regra prática:**
 > Trabalhe em `.docx`. Antes de enviar, exporte para `.pdf`.
@@ -718,53 +930,31 @@ bgPreset: palette
 card: true
 ---
 
-<!-- objetivo: aluno cria documento técnico completo com estrutura, formatação ABNT e exportação em PDF -->
+<!-- objetivo: aluno aplica formatação Word e prompt engineering no mesmo artefato -->
 
-# <carbon-edit /> Exercício N3: Crie Seu Primeiro Relatório Técnico
+# <carbon-edit /> Exercício N3: Documento de Prompts
 
-## Você tem 15 minutos. Abra o Word e crie:
+## Pegue o prompt que você escreveu no Exercício N3 (Prompt do Zero) e abra o Word.
 
 **Estrutura obrigatória:**
-1. **Título:** "Ferramentas de IA que Eu Usaria" (14pt, negrito, centralizado)
+1. **Título:** "Meus Prompts de IA" (14pt, negrito, centralizado)
 2. **Seu nome e data** (12pt, centralizado, abaixo do título)
-3. **Seção 1: Introdução** (12pt, negrito): 2 frases sobre o que é IA
-4. **Seção 2: Ferramentas** (12pt, negrito): 2 ferramentas com 1 frase cada
-5. **Seção 3: Conclusão** (12pt, negrito): 1 frase sobre o que aprendeu hoje
-
-**Requisitos:** margens ABNT (3-3-2-2) · Arial/TNR 12pt · espaçamento 1,5 · exportar como `relatorio_ia_seunome.pdf`
+3. **Seção 1: Prompt** (12pt, negrito): cole o prompt que você escreveu — os 4 componentes devem estar visíveis
+4. **Seção 2: Output** (12pt, negrito): copie o resultado que a IA gerou
+5. **Seção 3: Avaliação** (12pt, negrito): 2 frases — o que funcionou, o que você mudaria
 
 > O critério de avaliação está no próximo slide.
 
+
 ---
-layout: default
+layout: two-cols-text
 bgPreset: palette
 card: true
 ---
 
-<!-- critério de avaliação exercício N3 Word -->
+<!-- objetivo: aluno contrasta nomenclatura errada vs correta para arquivos profissionais -->
 
-# <carbon-checkmark /> Critério de Avaliação
-
-| Critério | Pontos |
-|---|---|
-| Estrutura completa (título + 3 seções) | 4 pts |
-| Formatação correta (fonte, tamanho, espaçamento) | 3 pts |
-| Margens ABNT | 2 pts |
-| Nome do arquivo em snake_case | 1 pt |
-
-**Total: 10 pts** (base para a Tarefa de Casa)
-
----
-layout: default
-bgPreset: palette
-card: true
----
-
-<!-- objetivo: aluno aplica convenções de versionamento e backup para documentos profissionais -->
-
-# Boas Práticas: Versionar e Nomear com Data
-
-## A diferença entre amador e profissional está na organização
+# Boas Práticas: Nomear com Data
 
 **Errado:**
 
@@ -775,20 +965,33 @@ relatorio_final_v2.docx
 relatorio_FINAL_DE_VERDADE.docx
 ```
 
+::right::
+
 **Certo:**
 
 ```
-relatorio_ia_2026-03-19_v1.docx
-relatorio_ia_2026-03-19_v2.docx
-relatorio_ia_2026-03-19_final.pdf
+prompts_ia_2026-03-19_v1.docx
+prompts_ia_2026-03-19_v2.docx
+prompts_ia_2026-03-19_final.pdf
 ```
 
-**3 regras:**
-1. **Data no formato ISO:** `YYYY-MM-DD` (ordena cronologicamente)
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- objetivo: aluno memoriza as 3 regras de versionamento e as aplica em documentos e prompts -->
+
+# Boas Práticas: As 3 Regras
+
+## Valem para documentos Word e para arquivos de prompt
+
+1. **Data no formato ISO:** `YYYY-MM-DD` (ordena cronologicamente em qualquer pasta)
 2. **Versão no final:** `_v1`, `_v2`, nunca "final_v2"
 3. **Backup em nuvem:** OneDrive, Google Drive, antes de dormir
 
-> Você vai usar essa convenção nos projetos Python também.
+> Você vai usar essa convenção nos projetos Python e nos arquivos de prompt também.
 
 ---
 layout: center
@@ -808,13 +1011,6 @@ card: true
 - <carbon-save /> **Exportar** .docx → .pdf antes de enviar
 - <carbon-redo /> **Versionar:** `_v1`, `_v2`, data ISO
 
-> **A08 (20/03):** tabela no Word + cabeçalho e rodapé
-> **Agora:** Inglês Instrumental às 11h30
-
-<!-- ============================================================
-     BLOCO 3 — UC02 · INGLÊS INSTRUMENTAL (slides 30–36)
-     Fixação Bloco 3 — 10 Termos de IA em Inglês
-     ============================================================ -->
 
 ---
 layout: cover
@@ -989,7 +1185,3 @@ card: true
 > Em Python você vai escrever `model.fit(X, y, epochs=10)` para treinar por 10 **epochs** e avaliar o **loss** a cada rodada.
 
 > **A08 · 20/03 (amanhã):** primeiro código Python: `print()`, variáveis e tipos de dados.
-
----
-layout: end
----
