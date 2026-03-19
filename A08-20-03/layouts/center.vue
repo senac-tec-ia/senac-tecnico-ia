@@ -80,7 +80,7 @@ const bgOpacity = computed(() =>
   font-weight: 600;
   margin-top: 8px;
   margin-bottom: 8px;
-  color: #cbd5e1;
+  color: var(--slidev-theme-primary);
 }
 
 /* Parágrafos */

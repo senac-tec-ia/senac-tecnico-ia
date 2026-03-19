@@ -1,43 +1,43 @@
-﻿{
-    "name":  "senac-tecnico-ia",
-    "version":  "1.0.0",
-    "private":  true,
-    "description":  "Monorepo de apresentações Slidev para o curso Técnico em IA — SENAC",
-    "workspaces":  [
-                       "slidev-theme-neural",
-                       "aula-*",
-                       "A*"
-                   ],
-    "scripts":  {
-                    "dev:aula-01":  "npm run dev --workspace=aula-01",
-                    "dev:aula-02":  "npm run dev --workspace=aula-02",
-                    "dev:aula-03":  "npm run dev --workspace=aula-03",
-                    "dev:aula-04":  "npm run dev --workspace=aula-04",
-                    "dev:aula-04-conceitos-de-ia":  "npm run dev --workspace=aula-04-conceitos-de-ia",
-                    "dev:aula-05":  "npm run dev --workspace=aula-05",
-                    "build:aula-01":  "npm run build --workspace=aula-01",
-                    "build:aula-02":  "npm run build --workspace=aula-02",
-                    "build:aula-03":  "npm run build --workspace=aula-03",
-                    "build:aula-04":  "npm run build --workspace=aula-04",
-                    "build:aula-04-conceitos-de-ia":  "npm run build --workspace=aula-04-conceitos-de-ia",
-                    "build:aula-05":  "npm run build --workspace=aula-05",
-                    "export:aula-01":  "npm run export --workspace=aula-01",
-                    "export:aula-02":  "npm run export --workspace=aula-02",
-                    "export:aula-03":  "npm run export --workspace=aula-03",
-                    "export:aula-04":  "npm run export --workspace=aula-04",
-                    "export:aula-04-conceitos-de-ia":  "npm run export --workspace=aula-04-conceitos-de-ia",
-                    "export:aula-05":  "npm run export --workspace=aula-05",
-                    "theme:dev":  "npm run dev --workspace=slidev-theme-neural",
-                    "theme:build":  "npm run build --workspace=slidev-theme-neural",
-                    "nova-aula":  "powershell -ExecutionPolicy Bypass -File scripts/nova-aula.ps1",
-                    "dev:a07":  "npm run dev --workspace=a07",
-                    "build:a07":  "npm run build --workspace=a07",
-                    "export:a07":  "npm run export --workspace=a07",
-                    "dev:a08-20-03":  "npm run dev --workspace=a08-20-03",
-                    "build:a08-20-03":  "npm run build --workspace=a08-20-03",
-                    "export:a08-20-03":  "npm run export --workspace=a08-20-03"
-                },
-    "devDependencies":  {
-                            "@slidev/cli":  "^0.49.0"
-                        }
+{
+  "name": "senac-tecnico-ia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo de apresentações Slidev para o curso Técnico em IA — SENAC",
+  "workspaces": [
+    "slidev-theme-neural",
+    "aula-*",
+    "A*"
+  ],
+  "scripts": {
+    "dev:aula-01": "npm run dev --workspace=aula-01",
+    "dev:aula-02": "npm run dev --workspace=aula-02",
+    "dev:aula-03": "npm run dev --workspace=aula-03",
+    "dev:aula-04": "npm run dev --workspace=aula-04",
+    "dev:aula-04-conceitos-de-ia": "npm run dev --workspace=aula-04-conceitos-de-ia",
+    "dev:aula-05": "npm run dev --workspace=aula-05",
+    "build:aula-01": "npm run build --workspace=aula-01",
+    "build:aula-02": "npm run build --workspace=aula-02",
+    "build:aula-03": "npm run build --workspace=aula-03",
+    "build:aula-04": "npm run build --workspace=aula-04",
+    "build:aula-04-conceitos-de-ia": "npm run build --workspace=aula-04-conceitos-de-ia",
+    "build:aula-05": "npm run build --workspace=aula-05",
+    "export:aula-01": "npm run export --workspace=aula-01",
+    "export:aula-02": "npm run export --workspace=aula-02",
+    "export:aula-03": "npm run export --workspace=aula-03",
+    "export:aula-04": "npm run export --workspace=aula-04",
+    "export:aula-04-conceitos-de-ia": "npm run export --workspace=aula-04-conceitos-de-ia",
+    "export:aula-05": "npm run export --workspace=aula-05",
+    "theme:dev": "npm run dev --workspace=slidev-theme-neural",
+    "theme:build": "npm run build --workspace=slidev-theme-neural",
+    "nova-aula": "powershell -ExecutionPolicy Bypass -File scripts/nova-aula.ps1",
+    "dev:a07": "npm run dev --workspace=a07",
+    "build:a07": "npm run build --workspace=a07",
+    "export:a07": "npm run export --workspace=a07",
+    "dev:a08-20-03": "npm run dev --workspace=a08-20-03",
+    "build:a08-20-03": "npm run build --workspace=a08-20-03",
+    "export:a08-20-03": "npm run export --workspace=a08-20-03"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^0.49.0"
+  }
 }

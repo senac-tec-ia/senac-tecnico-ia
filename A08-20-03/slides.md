@@ -1,5 +1,4 @@
-﻿---
-# ─────────────────────────────────────────────────────────────────
+---
 #  AULA 08 — 20/03/2026 (Sexta-feira)
 #  BLOCO 1: UC05 · Python — Primeiro if/elif       (7h10–9h10)
 #  BLOCO 2: UC08 · Banco de Dados — DDL/CREATE     (9h25–11h25)
@@ -24,7 +23,7 @@ layout: cover
 *20 de março de 2026 · Python · Banco de Dados · Arquitetura*
 
 <!-- ============================================================
-     BLOCO 1 — UC05 · PYTHON (slides 2–13)
+     BLOCO 1 — UC05 · PYTHON (slides 2–17)
      Estreia do if/elif — escalando de comparações a classificadores
      ============================================================ -->
 
@@ -44,8 +43,9 @@ card: true
 > **Fio condutor do dia:** Python **manipula** dados · BD **organiza** dados · GPU **processa** dados
 
 ---
-layout: brainstorm
-bgPreset: animate
+layout: default
+card: true
+bgPreset: palette
 pulse: true
 ---
 
@@ -54,8 +54,6 @@ pulse: true
 # <carbon-flash /> Revisão Relâmpago
 
 ## O que você ainda lembra da última aula de Python?
-
-Responda em voz alta — sem consultar caderno:
 
 1. Como se lê um valor digitado pelo usuário em Python?
 2. O que `int("7")` faz? E `float("3.5")`?
@@ -67,10 +65,60 @@ Responda em voz alta — sem consultar caderno:
 ---
 layout: default
 card: true
-bgPreset: default
+bgPreset: palette
 ---
 
-<!-- SLIDE 4 — O Que é uma Condição? -->
+<!-- SLIDE 4 — Tabela Verdade -->
+
+# Tabela Verdade: `and`, `or`, `not`
+
+| `A` | `B` | `A and B` | `A or B` | `not A` |
+|---|---|---|---|---|
+| `True` | `True` | `True` | `True` | `False` |
+| `True` | `False` | `False` | `True` | `False` |
+| `False` | `True` | `False` | `True` | `True` |
+| `False` | `False` | `False` | `False` | `True` |
+
+> **and** só é `True` quando os **dois** são `True` · **or** é `True` quando **pelo menos um** é · **not** inverte o valor
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 5 — Tabela Verdade na Prática -->
+
+# Tabela Verdade na Prática
+
+## Combinando `and`, `or`, `not` no `if`
+
+```python
+nota = float(input('Nota: '))
+frequencia = int(input('Frequência (%): '))
+
+# and — precisa de nota E frequência altas
+if nota >= 6 and frequencia >= 75:
+    print('Aprovado ✅')
+
+# or — basta um critério falhar
+if nota < 6 or frequencia < 75:
+    print('Requer atenção ⚠️')
+
+# not — inverte o booleano
+if not (frequencia >= 75):
+    print('Frequência insuficiente')
+```
+
+> Python avalia cada comparação para `True`/`False` e depois aplica `and`/`or`/`not` exatamente como a tabela acima.
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 6 — O Que é uma Condição? -->
 
 # O Que é uma Condição?
 
@@ -80,10 +128,10 @@ bgPreset: default
 
 | Situação do dia a dia | A condição |
 |---|---|
-| Semáforo 🚦 | Verde? → passa. Vermelho? → para. |
-| Nota na escola 📚 | Tirou 6 ou mais? → passou. Menos? → recuperação. |
-| App de banco 💳 | Saldo suficiente? → aprova. Sem saldo? → recusa. |
-| Login 🔐 | Senha correta? → entra. Errada? → bloqueia. |
+| Semáforo | Verde? → passa. Vermelho? → para. |
+| Nota na escola | Tirou 6 ou mais? → passou. Menos? → recuperação. |
+| App de banco | Saldo suficiente? → aprova. Sem saldo? → recusa. |
+| Login | Senha correta? → entra. Errada? → bloqueia. |
 
 </v-click>
 
@@ -96,10 +144,10 @@ bgPreset: default
 ---
 layout: default
 card: true
-bgPreset: default
+bgPreset: palette
 ---
 
-<!-- SLIDE 5 — if/else Sintaxe -->
+<!-- SLIDE 7 — if/else Sintaxe -->
 
 # `if` / `else` — O Programa Decide
 
@@ -135,7 +183,7 @@ card: true
 bgPreset: palette
 ---
 
-<!-- SLIDE 6 — EX01 Aprovado ou Reprovado -->
+<!-- SLIDE 8 — EX01 Aprovado ou Reprovado -->
 
 # <carbon-terminal /> EX01 — Aprovado ou Reprovado?
 
@@ -156,28 +204,89 @@ nota = float(input("Digite sua nota (0 a 10): "))
 ```
 
 Teste com pelo menos 3 valores: `5.5`, `6.0`, `8.2`
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+
+ **Gabarito:**
+ ```python
+ if nota = 6:
+     print("Aprovado!")
+ else:
+     print("Recuperação.")
+ ```
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 9 — Indentação: Como Funciona -->
+
+# Indentação: Python Usa Espaços para Pensar
+
+Em Python, **indentação define o que pertence a cada bloco**.
+
+```python
+nota = 8.5
+
+if nota >= 7:
+    print("Aprovado!")    # 4 espaços: só roda se nota >= 7
+    print("Boa nota!")    # 4 espaços: também pertence ao if
+
+print("Avaliação concluída.")  # 0 espaços: roda SEMPRE
+```
 
 <v-click>
 
-> **Gabarito:**
-> ```python
-> if nota >= 6:
->     print("Aprovado!")
-> else:
->     print("Recuperação.")
-> ```
+**Regra de ouro:** tudo dentro de `if`, `else` ou `elif` precisa de **4 espaços** de recuo. Esquecer causa `IndentationError` — o programa não roda.
 
 </v-click>
 
 ---
 layout: default
 card: true
-bgPreset: default
+bgPreset: palette
 ---
 
-<!-- SLIDE 7 — elif -->
+<!-- SLIDE 10 — Indentação: Mapa do if/elif/else -->
 
-# `elif` — Quando Há Mais de 2 Caminhos
+# Mapa de Indentação: if / elif / else
+
+```python
+nota = float(input("Nota: "))
+
+if nota >= 9:              # coluna 0
+    print("Conceito A")   # 4 espaços — dentro do if
+elif nota >= 7:            # coluna 0 — mesmo nível do if
+    print("Conceito B")   # 4 espaços — dentro do elif
+elif nota >= 5:            # coluna 0
+    print("Conceito C")   # 4 espaços — dentro do elif
+else:                      # coluna 0
+    print("Reprovado")    # 4 espaços — dentro do else
+
+print("Avaliação concluída.")  # coluna 0 — fora de tudo, sempre executa
+```
+
+<v-click>
+
+- `if` / `elif` / `else` → **coluna 0**, sem nenhum espaço antes
+- Código de cada bloco → **4 espaços** de recuo
+- Código após o bloco → volta à **coluna 0**, sempre executa
+
+</v-click>
+
+---
+layout: two-cols
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 11 — elif: Quando Há Mais de 2 Caminhos -->
+# elif: Quando Há Mais de 2 Caminhos
 
 ## "Se não for A, mas for B, então..."
 
@@ -193,7 +302,7 @@ elif nota >= 5:
 else:
     print("Reprovado ❌")
 ```
-
+::right::
 <v-click>
 
 **Como Python lê isso:**
@@ -205,13 +314,14 @@ else:
 
 </v-click>
 
+
 ---
 layout: default
 card: true
 bgPreset: palette
 ---
 
-<!-- SLIDE 8 — EX02 Classificador de Notas -->
+<!-- SLIDE 12 — EX02 Classificador de Notas -->
 
 # <carbon-terminal /> EX02 — Classificador de Notas
 
@@ -254,10 +364,10 @@ Teste com: `9.5`, `7.3`, `5.0`, `4.9`
 ---
 layout: default
 card: true
-bgPreset: default
+bgPreset: palette
 ---
 
-<!-- SLIDE 9 — Juntando Tudo: input + conversão + if/elif/else -->
+<!-- SLIDE 13 — Juntando Tudo: input + conversão + if/elif/else -->
 
 # Juntando Tudo: o Fluxo Completo
 
@@ -296,7 +406,7 @@ card: true
 bgPreset: palette
 ---
 
-<!-- SLIDE 10 — EX03 Classificador Completo (dupla) -->
+<!-- SLIDE 14 — EX03 Classificador Completo (dupla) -->
 
 # <carbon-user-multiple /> EX03 — Classificador Completo
 
@@ -335,12 +445,12 @@ bgPreset: palette
 </v-click>
 
 ---
-layout: brainstorm
+layout: default
+card: true
 bgPreset: animate
-pulse: true
 ---
 
-<!-- SLIDE 11 — Dinâmica Caça ao Bug -->
+<!-- SLIDE 15 — Dinâmica Caça ao Bug -->
 
 # <carbon-debug /> Dinâmica — Caça ao Bug!
 
@@ -371,10 +481,10 @@ else
 ---
 layout: default
 card: true
-bgPreset: default
+bgPreset: palette
 ---
 
-<!-- SLIDE 12 — Síntese Python + Gancho BD -->
+<!-- SLIDE 16 — Síntese Python + Gancho BD -->
 
 # Você Ensinou o Python a Decidir!
 
@@ -397,20 +507,20 @@ bgPreset: default
 
 ---
 layout: center
-bgPreset: default
+bgPreset: palette
 card: true
 ---
 
-<!-- SLIDE 13 — INTERVALO -->
+<!-- SLIDE 17 — INTERVALO -->
 
-# ☕ Intervalo
+# Intervalo
 
 *9h10 – 9h25*
 
 > Próximo bloco: **Banco de Dados** — você vai criar sua primeira tabela SQL do zero.
 
 <!-- ============================================================
-     BLOCO 2 — UC08 · BANCO DE DADOS (slides 14–24)
+     BLOCO 2 — UC08 · BANCO DE DADOS (slides 18–28)
      DDL: CREATE TABLE, tipos SQL, constraints, INSERT INTO
      ============================================================ -->
 
@@ -420,7 +530,7 @@ bgPreset: palette
 card: true
 ---
 
-<!-- SLIDE 14 — Divisor Bloco 2 -->
+<!-- SLIDE 18 — Divisor Bloco 2 -->
 
 # Bloco 2
 ## Banco de Dados: criando estrutura
@@ -430,12 +540,12 @@ card: true
 > **Fio condutor:** BD **organiza** dados
 
 ---
-layout: brainstorm
+layout: default
+card: true
 bgPreset: animate
-pulse: true
 ---
 
-<!-- SLIDE 15 — Flash Revisão SELECT -->
+<!-- SLIDE 19 — Flash Revisão SELECT -->
 
 # <carbon-flash /> Flash Revisão — SQL que Você Já Sabe
 
@@ -459,11 +569,11 @@ pulse: true
 
 ---
 layout: two-cols
-bgPreset: default
+bgPreset: palette
 card: true
 ---
 
-<!-- SLIDE 16 — DDL vs DML -->
+<!-- SLIDE 20 — DDL vs DML -->
 
 # DDL vs DML — Dois Mundos do SQL
 
@@ -491,10 +601,10 @@ card: true
 ---
 layout: default
 card: true
-bgPreset: default
+bgPreset: palette
 ---
 
-<!-- SLIDE 17 — CREATE TABLE Sintaxe -->
+<!-- SLIDE 21 — CREATE TABLE Sintaxe -->
 
 # `CREATE TABLE` — Sintaxe Completa
 
@@ -524,11 +634,11 @@ CREATE TABLE nome_da_tabela (
 
 ---
 layout: two-cols
-bgPreset: default
+bgPreset: palette
 card: true
 ---
 
-<!-- SLIDE 18 — Tipos SQL vs Python -->
+<!-- SLIDE 22 — Tipos SQL vs Python -->
 
 # Tipos SQL vs Python — Mesma Ideia, Outro Nome
 
@@ -562,10 +672,10 @@ card: true
 ---
 layout: default
 card: true
-bgPreset: default
+bgPreset: palette
 ---
 
-<!-- SLIDE 19 — Constraints PK e NOT NULL -->
+<!-- SLIDE 23 — Constraints PK e NOT NULL -->
 
 # Constraints — As Regras da Tabela
 
@@ -602,10 +712,10 @@ nome  VARCHAR(100)  NOT NULL
 ---
 layout: default
 card: true
-bgPreset: default
+bgPreset: palette
 ---
 
-<!-- SLIDE 20 — Como Usar db-fiddle.com -->
+<!-- SLIDE 24 — Como Usar db-fiddle.com -->
 
 # <carbon-tools /> Como Usar o db-fiddle.com
 
@@ -632,7 +742,7 @@ card: true
 bgPreset: palette
 ---
 
-<!-- SLIDE 21 — EX04 Crie Sua Tabela -->
+<!-- SLIDE 25 — EX04 Crie Sua Tabela -->
 
 # <carbon-data-table /> EX04 — Crie Sua Tabela
 
@@ -642,9 +752,9 @@ Abra o **db-fiddle.com** e **escolha um tema** para criar sua tabela:
 
 | Tema | Colunas sugeridas |
 |---|---|
-| 🎮 Games | `id`, `titulo`, `plataforma`, `preco`, `nota_media` |
-| 🎵 Músicas | `id`, `titulo`, `artista`, `duracao_segundos`, `genero` |
-| 🛒 Produtos | `id`, `nome`, `categoria`, `preco`, `estoque` |
+| Games | `id`, `titulo`, `plataforma`, `preco`, `nota_media` |
+| Músicas | `id`, `titulo`, `artista`, `duracao_segundos`, `genero` |
+| Produtos | `id`, `nome`, `categoria`, `preco`, `estoque` |
 
 Escreva o `CREATE TABLE` na área Schema, clique **Run**. Sem erro = tabela criada com sucesso!
 
@@ -666,10 +776,10 @@ Escreva o `CREATE TABLE` na área Schema, clique **Run**. Sem erro = tabela cria
 ---
 layout: default
 card: true
-bgPreset: default
+bgPreset: palette
 ---
 
-<!-- SLIDE 22 — INSERT INTO -->
+<!-- SLIDE 26 — INSERT INTO -->
 
 # `INSERT INTO` — Colocando Dados na Tabela
 
@@ -700,7 +810,7 @@ card: true
 bgPreset: palette
 ---
 
-<!-- SLIDE 23 — EX05 Popule e Consulte (dupla) -->
+<!-- SLIDE 27 — EX05 Popule e Consulte (dupla) -->
 
 # <carbon-user-multiple /> EX05 — Popule e Consulte
 
@@ -728,12 +838,12 @@ Clique **Run** e confirme que os 3 resultados aparecem corretamente.
 </v-click>
 
 ---
-layout: brainstorm
+layout: default
+card: true
 bgPreset: animate
-pulse: true
 ---
 
-<!-- SLIDE 24 — Debate: Tabela de um Modelo de IA -->
+<!-- SLIDE 28 — Debate: Tabela de um Modelo de IA -->
 
 # <carbon-machine-learning /> Debate — Tabela de um Modelo de IA
 
@@ -760,7 +870,7 @@ CREATE TABLE modelos_ia (
 </v-click>
 
 <!-- ============================================================
-     BLOCO 3 — UC06 · ARQUITETURA E GPU (slides 25–35)
+     BLOCO 3 — UC06 · ARQUITETURA E GPU (slides 29–41)
      Paralelismo reforçado + Pipeline 4 estágios + GPUs no mercado
      ============================================================ -->
 
@@ -770,7 +880,7 @@ bgPreset: palette
 card: true
 ---
 
-<!-- SLIDE 25 — Divisor Bloco 3 -->
+<!-- SLIDE 29 — Divisor Bloco 3 -->
 
 # Bloco 3
 ## Arquitetura e GPU: como a máquina pensa rápido
@@ -781,11 +891,12 @@ card: true
 
 ---
 layout: brainstorm
+card: true
 bgPreset: animate
 pulse: true
 ---
 
-<!-- SLIDE 26 — Revisão Oral GPU -->
+<!-- SLIDE 30 — Revisão Oral GPU -->
 
 # O Que Você Lembra da GPU?
 
@@ -805,10 +916,10 @@ pulse: true
 ---
 layout: default
 card: true
-bgPreset: default
+bgPreset: palette
 ---
 
-<!-- SLIDE 27 — Paralelismo: O Segredo da GPU -->
+<!-- SLIDE 31 — Paralelismo: O Segredo da GPU -->
 
 # Paralelismo — O Segredo da GPU
 
@@ -827,23 +938,73 @@ bgPreset: default
 
 </v-click>
 
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 32 — Paralelismo no Dia a Dia -->
+
+# Paralelismo no Dia a Dia
+
+**Onde você já viu isso acontecer:**
+
 <v-click>
 
-**Mais exemplos:**
-- **TikTok:** a GPU mostra vídeo para 1.000 usuários ao mesmo tempo, cada um com seu frame
+- **TikTok:** a GPU renderiza o vídeo para 1.000 usuários ao mesmo tempo, cada um com seu frame
 - **Minecraft:** cada pedacinho da tela é calculado em paralelo — é por isso que não trava
+- **Redes neurais:** cada peso da rede é ajustado ao mesmo tempo durante o treino
+
+</v-click>
+
+<v-click>
 
 > **Paralelismo = fazer muitas coisas ao mesmo tempo, não mais rápido individualmente.**
+>
+> A GPU não é mais "esperta" que a CPU — ela só consegue fazer **muito mais coisas ao mesmo tempo**.
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 33 — CPU Também Tem Cores — Qual a Diferença? -->
+
+# CPU Também Tem Cores — Qual a Diferença?
+
+**"Mas a CPU não consegue fazer paralelismo também?"** — Sim!
+
+<v-click>
+
+Uma CPU moderna tem **4 a 16 cores** e roda 4–16 tarefas ao mesmo tempo. Isso já é paralelismo. O problema é a **escala:**
+
+| | CPU | GPU |
+|---|---|---|
+| Cores típicos | 4 a 16 | 4.000 a 16.000+ |
+| Paralelismo | Sim, limitado | Sim, massivo |
+| Ponto forte | Lógica complexa e variada | Mesma operação em milhões de dados |
+
+</v-click>
+
+<v-click>
+
+> Quando uma rede neural soma valores em 10 milhões de posições ao mesmo tempo, a CPU com 16 cores precisa de muitas rodadas. A GPU faz tudo de uma vez.
+>
+> **CPU: 16 caixas. GPU: 10.000 caixas. Para treinar IA, escala é tudo.**
 
 </v-click>
 
 ---
 layout: two-cols
-bgPreset: default
+bgPreset: palette
 card: true
 ---
 
-<!-- SLIDE 28 — CPU vs GPU Quadro Comparativo -->
+<!-- SLIDE 34 — CPU vs GPU Quadro Comparativo -->
 
 # CPU vs GPU — Quadro Comparativo
 
@@ -871,7 +1032,7 @@ card: true
 bgPreset: palette
 ---
 
-<!-- SLIDE 29 — EX06 CPU ou GPU? -->
+<!-- SLIDE 35 — EX06 CPU ou GPU? -->
 
 # <carbon-terminal /> EX06 — CPU ou GPU?
 
@@ -897,10 +1058,10 @@ Para cada tarefa abaixo, escolha: **CPU** ou **GPU**?
 ---
 layout: default
 card: true
-bgPreset: default
+bgPreset: palette
 ---
 
-<!-- SLIDE 30 — Pipeline: O Que É? -->
+<!-- SLIDE 36 — Pipeline: O Que É? -->
 
 # Pipeline — A Linha de Produção do Processador
 
@@ -931,10 +1092,10 @@ Pense no **McDonald's** quando você pede um lanche:
 ---
 layout: default
 card: true
-bgPreset: default
+bgPreset: palette
 ---
 
-<!-- SLIDE 31 — Os 4 Estágios do Pipeline da GPU -->
+<!-- SLIDE 37 — Os 4 Estágios do Pipeline da GPU -->
 
 # Os 4 Estágios do Pipeline da GPU
 
@@ -970,11 +1131,11 @@ Todo cálculo que uma GPU faz passa por 4 etapas — **ao mesmo tempo para cada 
 
 ---
 layout: two-cols
-bgPreset: default
+bgPreset: palette
 card: true
 ---
 
-<!-- SLIDE 32 — CPU Serial vs GPU Paralela -->
+<!-- SLIDE 38 — CPU Serial vs GPU Paralela -->
 
 # CPU Serial vs GPU Paralela
 
@@ -1016,7 +1177,7 @@ card: true
 bgPreset: palette
 ---
 
-<!-- SLIDE 33 — EX07 Monte o Pipeline (dupla) -->
+<!-- SLIDE 39 — EX07 Monte o Pipeline (dupla) -->
 
 # <carbon-user-multiple /> EX07 — Monte o Pipeline
 
@@ -1024,28 +1185,28 @@ bgPreset: palette
 
 Reordene as etapas abaixo na sequência correta do pipeline da GPU:
 
-| Carta | Descrição |
+| Cor | Descrição |
 |---|---|
-| 🔵 | O core grava o resultado na memória |
-| 🟡 | O core busca a instrução na memória |
-| 🔴 | O core executa o cálculo (soma/multiplicação) |
-| 🟢 | O core lê a instrução e entende o que fazer |
+| Azul | O core grava o resultado na memória |
+| Amarelo | O core busca a instrução na memória |
+| Vermelho | O core executa o cálculo (soma/multiplicação) |
+| Verde | O core lê a instrução e entende o que fazer |
 
 **Qual é a ordem correta?** Escreva as cores na sequência.
 
 <v-click>
 
-> **Gabarito:** 🟡 Fetch → 🟢 Decode → 🔴 Execute → 🔵 Write Back
+> **Gabarito:** Amarelo Fetch → Verde Decode → Vermelho Execute → Azul Write Back
 
 </v-click>
 
 ---
 layout: default
 card: true
-bgPreset: default
+bgPreset: palette
 ---
 
-<!-- SLIDE 34 — GPUs no Mercado -->
+<!-- SLIDE 40 — GPUs no Mercado -->
 
 # GPUs no Mercado — Do Gaming ao Treino de IA
 
@@ -1079,7 +1240,7 @@ avatar: https://github.com/LeoZanini.png?size=256
 aulaNum: "Aula 08"
 ---
 
-<!-- SLIDE 35 — Encerramento A08 -->
+<!-- SLIDE 41 — Encerramento A08 -->
 
 # Aula 08 — Concluída!
 

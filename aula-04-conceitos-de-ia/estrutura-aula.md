@@ -1,4 +1,4 @@
-﻿# Estrutura da Aula  Mapeamento Completo
+utura da Aula  Mapeamento Completo
 **Arquivo:** `slides.md` | **Última revisão:** 2026-03-05
 **Total de slides existentes:** ~100 | Deck cobre Aulas 01, 02, 03 e 04 (atualizado 2026-03-05).
 **Nota de numbering:** todos os ranges de SECAO 3 em diante foram deslocados +1 após reordenação da SECAO 2 e adição de 2 slides à SECAO 3.
