@@ -192,7 +192,7 @@ bgPreset: palette
 > Salve como `SENAC-TecIA/Aula-08/ex01_nota.py`
 
 **Tarefa:** leia a nota e escreva um `if/else`:
-- nota ≥ 6 → imprima `"Aprovado!"`
+- nota maior ou igual a 6 → imprima `"Aprovado!"`
 - caso contrário → imprima `"Recuperação."`
 
 ```python
@@ -243,12 +243,12 @@ print("Avaliação concluída.")  # 0 espaços: roda SEMPRE
 
 <v-click>
 
-**Regra de ouro:** tudo dentro de `if`, `else` ou `elif` precisa de **4 espaços** de recuo. Esquecer causa `IndentationError` — o programa não roda.
+**Regra:** tudo dentro de `if`, `else` ou `elif` precisa de **4 espaços** de recuo. Esquecer causa `IndentationError`, o programa não roda.
 
 </v-click>
 
 ---
-layout: default
+layout: two-cols
 card: true
 bgPreset: palette
 ---
@@ -269,9 +269,9 @@ elif nota >= 5:            # coluna 0
 else:                      # coluna 0
     print("Reprovado")    # 4 espaços — dentro do else
 
-print("Avaliação concluída.")  # coluna 0 — fora de tudo, sempre executa
+print("Avaliação concluída.")  # SEMPRE EXECUTA 
 ```
-
+::right::
 <v-click>
 
 - `if` / `elif` / `else` → **coluna 0**, sem nenhum espaço antes
@@ -331,7 +331,7 @@ bgPreset: palette
 > Salve como `SENAC-TecIA/Aula-08/ex02_classificador.py`
 
 **Tarefa:** leia a nota e use `if/elif/else` para classificar:
-- ≥ 9 → `"Excelente!"` · ≥ 7 → `"Bom!"` · ≥ 5 → `"Recuperação!"` · < 5 → `"Reprovado!"`
+- Maior ou igual a 9 → `"Excelente!"` · Maior ou igual 7 → `"Bom!"` · Maior ou igual 5 → `"Recuperação!"` · menor que 5 → `"Reprovado!"`
 
 ```python
 nota = float(input("Digite a nota: "))
@@ -398,7 +398,7 @@ bgPreset: palette
 
 <!-- SLIDE 13b — Fluxo Completo: Leitura em 4 Passos -->
 
-# Fluxo Completo — Lendo o Código
+# Fluxo Completo: Lendo o Código
 
 **O que esse programa faz em 4 passos:**
 
@@ -415,21 +415,23 @@ card: true
 bgPreset: palette
 ---
 
-<!-- SLIDE 14 — EX03 Classificador Completo (dupla) -->
+<!-- SLIDE 14 — EX03 Situacao do Aluno (dupla) -->
 
-# <carbon-user-multiple /> EX03 — Classificador Completo
+# <carbon-user-multiple /> EX03 — Situacao do Aluno
 
-**Dupla · 10 minutos · Nível 3**
 
-> Salve como `SENAC-TecIA/Aula-08/ex03_completo.py`
+> Salve como `SENAC-TecIA/Aula-08/ex03_situacao.py`
 
-**Tarefa:** escreva um programa que:
-1. Peça o nome do aluno
-2. Peça a nota (lembre de converter com `float()`!)
-3. Classifique: A (≥9) · B (≥7) · C (≥5) · Reprovado (<5)
-4. Imprima: `"NOME - Conceito X - nota Y.Y"`
+**Tarefa:** leia nome, nota e frequência.
 
-**Desafio:** peça nota para 3 alunos e imprima quem teve o maior conceito.
+| Nota | Frequência | Situação |
+|---|---|---|
+| >= 6 | >= 75% | `"Aprovado"` |
+| >= 6 | < 75% | `"Conselho de classe"` |
+| < 6 | >= 75% | `"Recuperacao"` |
+| < 6 | < 75% | `"Reprovado"` |
+
+Imprima: `"NOME: SITUACAO (nota N.N | freq F%)"`
 
 ---
 layout: default
@@ -443,18 +445,19 @@ bgPreset: palette
 
 ```python
 nome = input("Nome do aluno: ")
-nota = float(input("Nota: "))
+nota = float(input("Nota (0 a 10): "))
+frequencia = int(input("Frequencia (%): "))
 
-if nota >= 9:
-    conceito = "A"
-elif nota >= 7:
-    conceito = "B"
-elif nota >= 5:
-    conceito = "C"
+if nota >= 6 and frequencia >= 75:
+    situacao = "Aprovado"
+elif nota >= 6 and frequencia < 75:
+    situacao = "Aprovado - frequencia baixa"
+elif nota < 6 and frequencia >= 75:
+    situacao = "Recuperacao"
 else:
-    conceito = "Reprovado"
+    situacao = "Reprovado"
 
-print(f"{nome} - Conceito {conceito} - nota {nota}")
+print(f"{nome}: {situacao} (nota {nota} | freq {frequencia}%)")  
 ```
 
 ---
@@ -467,7 +470,7 @@ bgPreset: animate
 
 # <carbon-debug /> Dinâmica — Caça ao Bug!
 
-## Encontre o(s) erro(s) neste código — duplas, 5 minutos
+## Encontre o(s) erro(s) neste código:
 
 ```python
 nota = float(input("Nota: "))
@@ -481,16 +484,6 @@ else
 ```
 
 **Há 3 erros escondidos. Quais são?**
-
-<v-click>
-
-> **Erros:**
-> 1. Linha 3: `if nota >= 7` — falta `:` no final
-> 2. Linha 5: `elif` com 2 espaços de recuo em vez de 0 (deve estar na mesma coluna do `if`)
-> 3. Linha 7: `else` — falta `:` no final
-
-</v-click>
-
 ---
 layout: default
 card: true
@@ -508,15 +501,7 @@ bgPreset: palette
 - Combine `input()` + conversão de tipo + condicionais
 - Indentação obrigatória: 4 espaços definem o bloco
 
-<v-click>
 
-**Gancho para o próximo bloco:**
-
-> Esses dados que o Python processa — notas, nomes, resultados — vivem só enquanto o programa roda. Quando você fecha, **tudo some**.
->
-> E se precisasse guardar 1.000 notas de alunos? Em disco, organizado, para consultar depois? Isso é o trabalho do **Banco de Dados**.
-
-</v-click>
 
 ---
 layout: center
@@ -526,31 +511,16 @@ card: true
 
 <!-- SLIDE 17 — INTERVALO -->
 
-# Intervalo
+# Banco De Dados
 
-*9h10 – 9h25*
+*9h25 – 11h25 · 2 HA · UC08*
 
-> Próximo bloco: **Banco de Dados** — você vai criar sua primeira tabela SQL do zero.
+> Próximo bloco: **Banco de Dados**, você vai criar sua primeira tabela SQL do zero.
 
 <!-- ============================================================
      BLOCO 2 — UC08 · BANCO DE DADOS (slides 18–28)
      DDL: CREATE TABLE, tipos SQL, constraints, INSERT INTO
      ============================================================ -->
-
----
-layout: center
-bgPreset: palette
-card: true
----
-
-<!-- SLIDE 18 — Divisor Bloco 2 -->
-
-# Bloco 2
-## Banco de Dados: criando estrutura
-
-*9h25 – 11h25 · 2 HA · UC08*
-
-> **Fio condutor:** BD **organiza** dados
 
 ---
 layout: default
@@ -581,35 +551,262 @@ bgPreset: animate
 </v-click>
 
 ---
-layout: two-cols
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 20a — DDL vs DML: Os Dois Mundos -->
+
+# DDL vs DML: Dois Tipos de Acao no Banco
+
+
+
+**DDL: mexer na estrutura**
+
+(Data Definition Language)
+Criar uma tabela. Adicionar uma coluna. Apagar uma tabela inteira.
+Isso muda **o que existe** no banco, nao os dados guardados.
+
+**DML: mexer nos dados**
+
+(Data Manipulation Language)
+Inserir uma linha. Consultar registros. Atualizar um valor. Apagar uma linha.
+Isso muda **o que esta guardado**, nao a estrutura.
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 20a-b — DDL vem antes de DML -->
+
+# DDL vem antes de DML — sempre
+
+Pense na diferença entre **construir uma gaveta** e **colocar meias dentro da gaveta**.
+
+Voce nao pode guardar meias numa gaveta que ainda nao existe. No banco de dados é a mesma logica:
+
+| Ordem | Acao | Tipo |
+|---|---|---|
+| 1. | `CREATE TABLE` — cria a tabela | DDL |
+| 2. | `INSERT INTO` — coloca dados dentro | DML |
+| 3. | `SELECT` — consulta os dados | DML |
+
+**Regra:** sem tabela criada, nao ha onde guardar nada. DDL primeiro, DML depois.
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 20b — DDL: CREATE TABLE -->
+
+# DDL na Pratica: `CREATE TABLE`
+
+DDL muda o que o banco **conhece**. Antes do `CREATE TABLE`, a tabela simplesmente nao existe.
+
+O comando mais importante do DDL para hoje:
+
+```sql
+CREATE TABLE alunos (
+    id    INTEGER      PRIMARY KEY,
+    nome  VARCHAR(100) NOT NULL,
+    nota  FLOAT
+);
+```
+
+Lendo em voz alta: "Crie a tabela `alunos` com as colunas `id` (inteiro, chave primaria), `nome` (texto ate 100 caracteres, obrigatorio) e `nota` (numero decimal)."
+
+Depois de rodar esse comando, a tabela existe, mas esta **completamente vazia**. Nenhum dado ainda.
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 20b-2 — DDL: ALTER TABLE e DROP TABLE -->
+
+# DDL: Alterando e Apagando Estruturas
+
+Alem do `CREATE TABLE`, o DDL tem mais dois comandos importantes:
+
+**`ALTER TABLE` — adicionar ou modificar colunas numa tabela que ja existe**
+
+```sql
+ALTER TABLE alunos ADD COLUMN email VARCHAR(200);
+```
+
+Isso nao apaga nenhum dado. So adiciona a coluna nova em todas as linhas (com valor vazio por enquanto).
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+# DDL: Alterando e Apagando Estruturas
+
+**`DROP TABLE` — apaga a tabela inteira**
+
+```sql
+DROP TABLE alunos;
+```
+
+**Atencao:** nao tem como desfazer. O banco apaga estrutura e todos os dados sem confirmar. Em empresas reais, um `DROP TABLE` errado pode apagar anos de dados em segundos.
+
+
+---
+layout: default
 bgPreset: palette
 card: true
 ---
 
-<!-- SLIDE 20 — DDL vs DML -->
+<!-- SLIDE 20c — DML: INSERT INTO e SELECT -->
 
-# DDL vs DML — Dois Mundos do SQL
+# DML na Pratica: Inserir e Consultar
 
-## DDL — Data Definition Language
-*"Cria a estrutura"*
+Voce usa DML depois que a estrutura ja existe (depois do `CREATE TABLE`).
 
-- `CREATE TABLE` — cria uma nova tabela
-- `ALTER TABLE` — modifica uma tabela existente
-- `DROP TABLE` — apaga uma tabela inteira
+**`INSERT INTO` — adiciona uma linha nova na tabela**
 
-> Como **construir** o prédio antes de colocar gente dentro.
+```sql
+INSERT INTO alunos (id, nome, nota)
+VALUES (1, 'Ana', 8.5);
+```
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+# DML na Pratica: Inserir e Consultar
+A ordem dos valores tem que bater exatamente com a ordem das colunas. Texto entre aspas simples, numero sem aspas.
+
+**`SELECT` — consulta os dados que ja estao guardados**
+
+```sql
+SELECT nome, nota
+FROM alunos
+WHERE nota >= 6;
+```
+
+"Mostre nome e nota de todos os alunos com nota maior ou igual a 6."
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- SLIDE 20c-2 — DML: UPDATE e DELETE -->
+
+# DML na Pratica: Alterar e Remover
+
+**`UPDATE` — muda o valor de uma linha que ja existe**
+
+```sql
+UPDATE alunos
+SET nota = 9.0
+WHERE nome = 'Ana';
+```
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+# DML na Pratica: Alterar e Remover
+
+Sempre use `WHERE` com `UPDATE`. Sem ele, o banco muda **todas** as linhas da tabela ao mesmo tempo.
+
+**`DELETE` — remove uma linha especifica**
+
+```sql
+DELETE FROM alunos
+WHERE id = 1;
+```
+
+Assim como o `UPDATE`, sempre filtre com `WHERE`. Sem filtro, apaga tudo.
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- SLIDE 20c-3 — DML: Sequencia Correta -->
+
+# A Sequencia Correta no Banco de Dados
+
+Toda vez que voce trabalha com SQL, a ordem e sempre essa:
+
+| Passo | Comando | Tipo | O que faz |
+|---|---|---|---|
+| 1 | `CREATE TABLE` | DDL | Cria a estrutura |
+| 2 | `INSERT INTO` | DML | Coloca dados dentro |
+| 3 | `SELECT` | DML | Consulta o que esta guardado |
+| 4 | `UPDATE` | DML | Corrige ou atualiza um valor |
+| 5 | `DELETE` | DML | Remove uma linha |
+
+Exatamente essa sequencia voce vai usar hoje no db-fiddle.
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+
+# Estrutura geral da sintaxe
+<v-click>
+
+**Exemplo:**
+```sql
+CREATE TABLE nome_da_tabela (
+    nome_coluna  TIPO_DE_DADO  CONSTRAINT,
+    ...
+);
+```
+
+</v-click>
+
+---
+layout: two-cols
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 20e — Tabela vs CREATE TABLE -->
+
+# Da Tabela ao `CREATE TABLE`
+
+## Como fica no banco:
+
+| id | nome | nota |
+|---|---|---|
+| 1 | Ana | 8.5 |
+| 2 | Bruno | 6.0 |
+| 3 | Carla | 9.2 |
+
+Cada **coluna** da tabela corresponde a uma linha no `CREATE TABLE`.
 
 ::right::
 
-## DML — Data Manipulation Language
-*"Manipula os dados"*
+## O SQL que cria essa estrutura:
 
-- `SELECT` — consulta dados *(você já sabe!)*
-- `INSERT INTO` — insere novas linhas
-- `UPDATE` — altera dados existentes
-- `DELETE` — apaga linhas específicas
-
-> Como **usar** o prédio depois de construído.
+```sql
+CREATE TABLE alunos (
+    id    INTEGER      PRIMARY KEY,
+    nome  VARCHAR(100) NOT NULL,
+    nota  FLOAT
+);
+```
 
 ---
 layout: default
@@ -633,17 +830,7 @@ CREATE TABLE alunos (
 **Lendo em voz alta:**
 > "Crie a tabela chamada `alunos`, com as colunas: `id` inteiro e chave primária, `nome` texto até 100 caracteres e obrigatório, `nota` número decimal, `aprovado` verdadeiro ou falso."
 
-<v-click>
 
-**Estrutura geral:**
-```sql
-CREATE TABLE nome_da_tabela (
-    nome_coluna  TIPO_DE_DADO  CONSTRAINT,
-    ...
-);
-```
-
-</v-click>
 
 ---
 layout: two-cols
@@ -676,11 +863,25 @@ card: true
 | `BOOLEAN` | `bool` |
 | `DATE` | data no formato `"2026-03-20"` |
 
-<v-click>
+---
+layout: brainstorm
+bgPreset: palette
+card: true
+---
 
-> A diferença é que no SQL você **declara** o tipo ao criar a tabela. O banco não aceita um número onde espera texto — e dá erro.
+# O que acontece se o tipo estiver errado?
 
-</v-click>
+Em SQL, o tipo é declarado na criação da tabela. O banco **recusa** qualquer valor que não bata com o tipo esperado.
+
+**Pense em voz alta:**
+
+- A coluna `nota` é `FLOAT`. Você tenta inserir `'oito virgula cinco'`. O que o banco faz?
+- A coluna `id` é `INTEGER PRIMARY KEY`. Você tenta inserir `id = 1` duas vezes. O que acontece?
+- A coluna `nome` é `VARCHAR(100) NOT NULL`. Você tenta inserir sem informar o nome. O banco aceita?
+
+> Diferente do Python, que converte tipos na hora (`int("7")` funciona), o SQL **rejeita e dá erro imediatamente**. O tipo certo é responsabilidade de quem cria a tabela.
+
+
 
 ---
 layout: default
@@ -707,6 +908,15 @@ id  INTEGER  PRIMARY KEY
 - O banco rejeita automaticamente ids duplicados
 
 </v-click>
+
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+# Constraints — As Regras da Tabela
 
 <v-click>
 
@@ -743,11 +953,6 @@ bgPreset: palette
 5. Clique em **Run** (botão azul no topo)
 6. O resultado aparece na parte de baixo da tela
 
-<v-click>
-
-> **Dica:** após clicar Run, a URL da barra de endereços muda — copie e cole para o professor como entrega.
-
-</v-click>
 
 ---
 layout: default
@@ -766,10 +971,10 @@ Abra o **db-fiddle.com** e **escolha um tema** para criar sua tabela:
 | Tema | Colunas sugeridas |
 |---|---|
 | Games | `id`, `titulo`, `plataforma`, `preco`, `nota_media` |
-| Músicas | `id`, `titulo`, `artista`, `duracao_segundos`, `genero` |
-| Produtos | `id`, `nome`, `categoria`, `preco`, `estoque` |
 
 Escreva o `CREATE TABLE` na área Schema, clique **Run**. Sem erro = tabela criada com sucesso!
+
+Na área da direita, você precisa fazer o SELECT, para ver a tabela que acabou de criar
 
 ---
 layout: default
@@ -812,7 +1017,13 @@ VALUES (2, 'Fortnite', 'PS5', 0.00, 7.8);
 **Lendo em voz alta:**
 > "Insira na tabela `games`, nas colunas `id`, `titulo`..., os valores `1`, `'Minecraft'`..."
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+# `INSERT INTO` — Colocando Dados na Tabela
 
 **Regras obrigatórias:**
 - Textos entre aspas simples: `'Minecraft'`
@@ -820,7 +1031,31 @@ VALUES (2, 'Fortnite', 'PS5', 0.00, 7.8);
 - A ordem dos valores deve bater com a ordem das colunas
 - Não pode repetir o mesmo `id` (PRIMARY KEY!)
 
-</v-click>
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 27a — EX05 Popule e Consulte -->
+
+# <carbon-user-multiple /> EX05a — Popule e Consulte
+
+**5 minutos · Nível 2**
+
+No mesmo db-fiddle do EX04, adicione **3 jogos** na área **Schema SQL** com `INSERT INTO`. Depois, na área **Query SQL**, rode as consultas abaixo:
+
+**Ver todos os jogos:**
+```sql
+SELECT * FROM games;
+```
+
+**Ordenar do maior para o menor por nota:**
+```sql
+SELECT titulo, nota_media
+FROM games
+ORDER BY nota_media DESC;
+```
 
 ---
 layout: default
@@ -828,74 +1063,28 @@ card: true
 bgPreset: palette
 ---
 
-<!-- SLIDE 27 — EX05 Popule e Consulte (dupla) -->
+<!-- SLIDE 27b — EX05b Filtre os Dados -->
 
-# <carbon-user-multiple /> EX05 — Popule e Consulte
+# <carbon-user-multiple /> EX05b — Filtre os Dados
 
-**Dupla · 10 minutos · Nível 3**
+**5 minutos · Nível 3**
 
-No mesmo db-fiddle do EX04, adicione na área **Schema SQL** três linhas com `INSERT INTO`. Depois, na área **Query SQL**, faça as 3 consultas abaixo e clique **Run**:
+Ainda no mesmo db-fiddle, use `WHERE` para filtrar os resultados:
 
-1. Ver todas as linhas:
+**Ver apenas os jogos de PC:**
 ```sql
-SELECT * FROM games;
+SELECT titulo, preco
+FROM games
+WHERE plataforma = 'PC';
 ```
 
-2. Filtrar por plataforma:
+**Ver apenas jogos com nota acima de 8:**
 ```sql
-SELECT titulo, preco FROM games WHERE plataforma = 'PC';
+SELECT titulo, nota_media
+FROM games
+WHERE nota_media > 8;
 ```
 
-3. Ordenar por nota média (maior primeiro):
-```sql
-SELECT titulo, nota_media FROM games ORDER BY nota_media DESC;
-```
-
-Confirme que os 3 resultados aparecem corretamente.
-
-<v-click>
-
-> **Resultado esperado:** 3 jogos na query 1 · somente os PCs na query 2 · ordenados do maior para o menor na query 3.
-
-</v-click>
-
----
-layout: default
-card: true
-bgPreset: animate
----
-
-<!-- SLIDE 28 — Debate: Tabela de um Modelo de IA -->
-
-# <carbon-machine-learning /> Debate — Tabela de um Modelo de IA
-
-## Se você fosse guardar modelos de IA num banco de dados...
-
-**Que colunas teria essa tabela?** O que você quer saber sobre cada modelo treinado?
-
-<v-click>
-
-**Sugestão:**
-```sql
-CREATE TABLE modelos_ia (
-    id          INTEGER      PRIMARY KEY,
-    nome        VARCHAR(100) NOT NULL,
-    precisao    FLOAT,
-    epochs      INTEGER,
-    gpu_usada   VARCHAR(50),
-    data_treino DATE
-);
-```
-
-> Esse debate conecta os 3 blocos do dia: **Python** treina o modelo, **BD** guarda os resultados, **GPU** é o hardware que fez o treino.
-
-</v-click>
-
-<!-- ============================================================
-     BLOCO 3 — UC06 · ARQUITETURA E GPU (slides 29–41)
-     Paralelismo reforçado + Pipeline 4 estágios + GPUs no mercado
-     ============================================================ -->
-<!-- slides 29–42 -->
 
 ---
 layout: center
@@ -915,7 +1104,7 @@ card: true
 ---
 layout: brainstorm
 card: true
-bgPreset: animate
+bgPreset: palette
 pulse: true
 ---
 
@@ -923,7 +1112,7 @@ pulse: true
 
 # O Que Você Lembra da GPU?
 
-## Fala sem consultar — qualquer coisa que vier à cabeça!
+## Fala sem consultar qualquer coisa que vier à cabeça!
 
 - O que é uma GPU?
 - Qual a diferença entre CPU e GPU?
@@ -1263,6 +1452,7 @@ bgPreset: palette
 
 ---
 layout: end
+card: true
 bgPreset: palette
 github: LeoZanini
 avatar: https://github.com/LeoZanini.png?size=256
