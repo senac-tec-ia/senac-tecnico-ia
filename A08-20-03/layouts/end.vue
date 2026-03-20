@@ -12,6 +12,7 @@ const attrs = useAttrs();
 const props = withDefaults(
   defineProps<{
     bgPreset?: "default" | "animate" | "palette";
+    card?: boolean;
     /** URL da foto de avatar (ex: https://github.com/LeoZanini.png?size=256) */
     avatar?: string;
     /** Handle do GitHub (ex: LeoZanini) */
@@ -21,6 +22,7 @@ const props = withDefaults(
   }>(),
   {
     bgPreset: "default",
+    card: false,
     avatar: "",
     github: "",
     profileUrl: "",
@@ -52,7 +54,13 @@ const bgOpacity = computed(() =>
       :backgroundOpacity="bgOpacity"
     />
     <div class="content-wrapper">
-      <slot />
+      <div
+        v-if="props.card"
+        class="p-8 rounded-xl border border-white backdrop-blur-xl"
+      >
+        <slot />
+      </div>
+      <slot v-else />
 
       <!-- Card de perfil: exibido quando as props avatar ou github forem passadas -->
       <div v-if="props.avatar || props.github" class="profile-card">

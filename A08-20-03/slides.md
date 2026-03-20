@@ -1461,7 +1461,7 @@ aulaNum: "Aula 08"
 
 <!-- SLIDE 42 — Encerramento A08 -->
 
-# Aula 08 — Concluída!
+# Aula 08 Concluída!
 
 ## O fio condutor de hoje:
 
