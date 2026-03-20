@@ -99,11 +99,11 @@ frequencia = int(input('Frequência (%): '))
 
 # and — precisa de nota E frequência altas
 if nota >= 6 and frequencia >= 75:
-    print('Aprovado ✅')
+    print('Aprovado')
 
 # or — basta um critério falhar
 if nota < 6 or frequencia < 75:
-    print('Requer atenção ⚠️')
+    print('Requer atenção')
 
 # not — inverte o booleano
 if not (frequencia >= 75):
@@ -157,9 +157,9 @@ bgPreset: palette
 nota = float(input("Digite sua nota: "))
 
 if nota >= 6:
-    print("Aprovado! ✅")
+    print("Aprovado!")
 else:
-    print("Recuperação 😢")
+    print("Recuperação.")
 ```
 
 <v-click>
@@ -191,33 +191,34 @@ bgPreset: palette
 
 > Salve como `SENAC-TecIA/Aula-08/ex01_nota.py`
 
+**Tarefa:** leia a nota e escreva um `if/else`:
+- nota ≥ 6 → imprima `"Aprovado!"`
+- caso contrário → imprima `"Recuperação."`
+
 ```python
-# EX01 — Aprovado ou Reprovado
-# Técnico em IA — Aula 08
-# Nome: __________________
-
 nota = float(input("Digite sua nota (0 a 10): "))
-
-# TAREFA: escreva o if/else abaixo
-# Se nota for maior ou igual a 6: imprima "Aprovado!"
-# Caso contrário: imprima "Recuperação."
 ```
 
 Teste com pelo menos 3 valores: `5.5`, `6.0`, `8.2`
+
 ---
 layout: default
 card: true
 bgPreset: palette
 ---
 
+<!-- SLIDE 8 Gabarito — EX01 -->
 
- **Gabarito:**
- ```python
- if nota = 6:
-     print("Aprovado!")
- else:
-     print("Recuperação.")
- ```
+# <carbon-checkmark /> Gabarito — EX01
+
+```python
+nota = float(input("Digite sua nota (0 a 10): "))
+
+if nota >= 6:
+    print("Aprovado!")
+else:
+    print("Recuperação.")
+```
 ---
 layout: default
 card: true
@@ -294,13 +295,13 @@ bgPreset: palette
 nota = float(input("Digite sua nota: "))
 
 if nota >= 9:
-    print("Conceito A 🏆")
+    print("Conceito A")
 elif nota >= 7:
-    print("Conceito B 👍")
+    print("Conceito B")
 elif nota >= 5:
-    print("Conceito C ⚠️")
+    print("Conceito C")
 else:
-    print("Reprovado ❌")
+    print("Reprovado")
 ```
 ::right::
 <v-click>
@@ -329,37 +330,37 @@ bgPreset: palette
 
 > Salve como `SENAC-TecIA/Aula-08/ex02_classificador.py`
 
+**Tarefa:** leia a nota e use `if/elif/else` para classificar:
+- ≥ 9 → `"Excelente!"` · ≥ 7 → `"Bom!"` · ≥ 5 → `"Recuperação!"` · < 5 → `"Reprovado!"`
+
 ```python
-# EX02 — Classificador de Notas
-# Técnico em IA — Aula 08
-# Nome: __________________
-
 nota = float(input("Digite a nota: "))
-
-# TAREFA: use if/elif/else para classificar
-# >= 9  → "Excelente!"
-# >= 7  → "Bom!"
-# >= 5  → "Recuperação!"
-# < 5   → "Reprovado!"
 ```
 
 Teste com: `9.5`, `7.3`, `5.0`, `4.9`
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: palette
+---
 
-> **Gabarito:**
-> ```python
-> if nota >= 9:
->     print("Excelente!")
-> elif nota >= 7:
->     print("Bom!")
-> elif nota >= 5:
->     print("Recuperação!")
-> else:
->     print("Reprovado!")
-> ```
+<!-- SLIDE 12 Gabarito — EX02 -->
 
-</v-click>
+# <carbon-checkmark /> Gabarito — EX02
+
+```python
+nota = float(input("Digite a nota: "))
+
+if nota >= 9:
+    print("Excelente!")
+elif nota >= 7:
+    print("Bom!")
+elif nota >= 5:
+    print("Recuperação!")
+else:
+    print("Reprovado!")
+```
 
 ---
 layout: default
@@ -374,7 +375,6 @@ bgPreset: palette
 ## `input()` → converter → comparar → responder
 
 ```python
-# Programa completo — sem lacunas
 nome = input("Qual é o seu nome? ")
 nota = float(input(f"Olá, {nome}! Qual foi sua nota? "))
 
@@ -390,15 +390,24 @@ else:
 print(f"{nome}: {resultado} (nota: {nota})")
 ```
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: palette
+---
 
-**O que esse código faz em 4 passos:**
-1. **Lê** o nome e a nota do usuário
-2. **Converte** a string `"7.5"` para o número `7.5`
+<!-- SLIDE 13b — Fluxo Completo: Leitura em 4 Passos -->
+
+# Fluxo Completo — Lendo o Código
+
+**O que esse programa faz em 4 passos:**
+
+1. **Lê** o nome e a nota do usuário com `input()`
+2. **Converte** a string `"7.5"` para o número `7.5` com `float()`
 3. **Decide** qual conceito com `if/elif/else`
-4. **Imprime** tudo junto com f-string
+4. **Imprime** tudo junto com f-string: `f"{nome}: {resultado} (nota: {nota})"`
 
-</v-click>
+> Esse é o **padrão completo** que você vai usar em todos os próximos exercícios.
 
 ---
 layout: default
@@ -414,35 +423,39 @@ bgPreset: palette
 
 > Salve como `SENAC-TecIA/Aula-08/ex03_completo.py`
 
+**Tarefa:** escreva um programa que:
+1. Peça o nome do aluno
+2. Peça a nota (lembre de converter com `float()`!)
+3. Classifique: A (≥9) · B (≥7) · C (≥5) · Reprovado (<5)
+4. Imprima: `"NOME - Conceito X - nota Y.Y"`
+
+**Desafio:** peça nota para 3 alunos e imprima quem teve o maior conceito.
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 14 Gabarito — EX03 -->
+
+# <carbon-checkmark /> Gabarito — EX03
+
 ```python
-# EX03 — Classificador Completo
-# Técnico em IA — Aula 08
-# Dupla: __________ e __________
+nome = input("Nome do aluno: ")
+nota = float(input("Nota: "))
 
-# TAREFA: escreva um programa que:
-# 1. Peça o nome do aluno
-# 2. Peça a nota (lembre de converter!)
-# 3. Classifique: A (>=9), B (>=7), C (>=5), Reprovado (<5)
-# 4. Imprima: "NOME - Conceito X - nota Y.Y"
-#
-# DESAFIO: peça nota para 3 alunos diferentes
-# e no final imprima quem teve o maior conceito
+if nota >= 9:
+    conceito = "A"
+elif nota >= 7:
+    conceito = "B"
+elif nota >= 5:
+    conceito = "C"
+else:
+    conceito = "Reprovado"
+
+print(f"{nome} - Conceito {conceito} - nota {nota}")
 ```
-
-<v-click>
-
-> **Gabarito (versão básica):**
-> ```python
-> nome = input("Nome do aluno: ")
-> nota = float(input("Nota: "))
-> if nota >= 9: conceito = "A"
-> elif nota >= 7: conceito = "B"
-> elif nota >= 5: conceito = "C"
-> else: conceito = "Reprovado"
-> print(f"{nome} - Conceito {conceito} - nota {nota}")
-> ```
-
-</v-click>
 
 ---
 layout: default
@@ -758,20 +771,25 @@ Abra o **db-fiddle.com** e **escolha um tema** para criar sua tabela:
 
 Escreva o `CREATE TABLE` na área Schema, clique **Run**. Sem erro = tabela criada com sucesso!
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: palette
+---
 
-> **Gabarito (tema Games):**
-> ```sql
-> CREATE TABLE games (
->     id         INTEGER      PRIMARY KEY,
->     titulo     VARCHAR(100) NOT NULL,
->     plataforma VARCHAR(50),
->     preco      FLOAT,
->     nota_media FLOAT
-> );
-> ```
+<!-- SLIDE 25 Gabarito — EX04 -->
 
-</v-click>
+# <carbon-checkmark /> Gabarito — EX04 (tema Games)
+
+```sql
+CREATE TABLE games (
+    id         INTEGER      PRIMARY KEY,
+    titulo     VARCHAR(100) NOT NULL,
+    plataforma VARCHAR(50),
+    preco      FLOAT,
+    nota_media FLOAT
+);
+```
 
 ---
 layout: default
@@ -816,20 +834,24 @@ bgPreset: palette
 
 **Dupla · 10 minutos · Nível 3**
 
-No mesmo db-fiddle do EX04, adicione na área **Schema SQL** três linhas com `INSERT INTO`. Depois, na área **Query SQL**, consulte:
+No mesmo db-fiddle do EX04, adicione na área **Schema SQL** três linhas com `INSERT INTO`. Depois, na área **Query SQL**, faça as 3 consultas abaixo e clique **Run**:
 
+1. Ver todas as linhas:
 ```sql
--- 1. Ver todas as linhas
 SELECT * FROM games;
+```
 
--- 2. Filtrar por plataforma
+2. Filtrar por plataforma:
+```sql
 SELECT titulo, preco FROM games WHERE plataforma = 'PC';
+```
 
--- 3. Ordenar por nota média (maior primeiro)
+3. Ordenar por nota média (maior primeiro):
+```sql
 SELECT titulo, nota_media FROM games ORDER BY nota_media DESC;
 ```
 
-Clique **Run** e confirme que os 3 resultados aparecem corretamente.
+Confirme que os 3 resultados aparecem corretamente.
 
 <v-click>
 
@@ -873,6 +895,7 @@ CREATE TABLE modelos_ia (
      BLOCO 3 — UC06 · ARQUITETURA E GPU (slides 29–41)
      Paralelismo reforçado + Pipeline 4 estágios + GPUs no mercado
      ============================================================ -->
+<!-- slides 29–42 -->
 
 ---
 layout: center
@@ -906,12 +929,6 @@ pulse: true
 - Qual a diferença entre CPU e GPU?
 - Por que a GPU é importante para IA?
 - Você já viu o nome "NVIDIA" em algum lugar?
-
-<v-click>
-
-> Não se preocupe se não lembrar tudo — hoje vamos revisitar e ir **muito mais fundo**. O conceito de **paralelismo** é a chave para entender por que GPUs existem.
-
-</v-click>
 
 ---
 layout: default
@@ -1073,10 +1090,10 @@ Pense no **McDonald's** quando você pede um lanche:
 
 | Etapa | O que acontece |
 |---|---|
-| 🧾 **Caixa** | Recebe e registra o pedido |
-| 📋 **Gerente** | Lê o pedido e distribui as tarefas |
-| 👨‍🍳 **Cozinha** | Prepara o lanche |
-| 🎁 **Entrega** | Coloca na bandeja e entrega ao cliente |
+| **Caixa** | Recebe e registra o pedido |
+| **Gerente** | Lê o pedido e distribui as tarefas |
+| **Cozinha** | Prepara o lanche |
+| **Entrega** | Coloca na bandeja e entrega ao cliente |
 
 </v-click>
 
@@ -1095,9 +1112,9 @@ card: true
 bgPreset: palette
 ---
 
-<!-- SLIDE 37 — Os 4 Estágios do Pipeline da GPU -->
+<!-- SLIDE 37 — Pipeline da GPU: Fetch e Decode -->
 
-# Os 4 Estágios do Pipeline da GPU
+# Os 4 Estágios do Pipeline da GPU (1/2)
 
 Todo cálculo que uma GPU faz passa por 4 etapas — **ao mesmo tempo para cada core**:
 
@@ -1115,6 +1132,16 @@ Todo cálculo que uma GPU faz passa por 4 etapas — **ao mesmo tempo para cada 
 
 </v-click>
 
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 38 — Pipeline da GPU: Execute e Write Back -->
+
+# Os 4 Estágios do Pipeline da GPU (2/2)
+
 <v-click>
 
 **3. Execute — "Fazer o cálculo"**
@@ -1129,13 +1156,15 @@ Todo cálculo que uma GPU faz passa por 4 etapas — **ao mesmo tempo para cada 
 
 </v-click>
 
+> Fetch → Decode → Execute → Write Back: os 4 passos que qualquer core de GPU repete bilhões de vezes por segundo.
+
 ---
 layout: two-cols
 bgPreset: palette
 card: true
 ---
 
-<!-- SLIDE 38 — CPU Serial vs GPU Paralela -->
+<!-- SLIDE 39 — CPU Serial vs GPU Paralela -->
 
 # CPU Serial vs GPU Paralela
 
@@ -1177,7 +1206,7 @@ card: true
 bgPreset: palette
 ---
 
-<!-- SLIDE 39 — EX07 Monte o Pipeline (dupla) -->
+<!-- SLIDE 40 — EX07 Monte o Pipeline (dupla) -->
 
 # <carbon-user-multiple /> EX07 — Monte o Pipeline
 
@@ -1206,7 +1235,7 @@ card: true
 bgPreset: palette
 ---
 
-<!-- SLIDE 40 — GPUs no Mercado -->
+<!-- SLIDE 41 — GPUs no Mercado -->
 
 # GPUs no Mercado — Do Gaming ao Treino de IA
 
@@ -1240,7 +1269,7 @@ avatar: https://github.com/LeoZanini.png?size=256
 aulaNum: "Aula 08"
 ---
 
-<!-- SLIDE 41 — Encerramento A08 -->
+<!-- SLIDE 42 — Encerramento A08 -->
 
 # Aula 08 — Concluída!
 
