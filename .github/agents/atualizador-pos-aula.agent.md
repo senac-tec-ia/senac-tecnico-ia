@@ -76,15 +76,15 @@ Se algo estava ambíguo no relato, liste as suposições feitas.
 
 | Código | Nome | Arquivo de Contexto |
 |--------|------|---------------------|
-| D01-UC01 | Fundamentos de Computação | `contexto-fundamentos-de-computacao.md` |
-| D02-UC02 | Inglês Instrumental | `contexto-ingles-instrumental.md` |
-| D03-UC03 | Fundamentos Matemáticos | `contexto-fundamentos-matematicos.md` |
-| D04-UC04 | Fundamentos e Conceitos de IA | `contexto-fundamentos-e-conceitos-de-ia.md` |
-| D05-UC05 | Python para IA | `contexto-python-para-ia.md` |
-| D06-UC06 | Arquitetura de Computadores e GPU | `contexto-arquitetura-computadores-gpu.md` |
-| D07-UC07 | Transformação Digital | `contexto-transformacao-digital.md` |
-| D08-UC08 | Banco de Dados | `contexto-banco-de-dados.md` |
-| D09-UC09 | Estatística Aplicada | `contexto-estatistica-aplicada.md` |
+| UC01 | Fundamentos de Computação | `contexto-fundamentos-de-computacao.md` |
+| UC02 | Inglês Instrumental | `contexto-ingles-instrumental.md` |
+| UC03 | Fundamentos Matemáticos | `contexto-fundamentos-matematicos.md` |
+| UC04 | Fundamentos e Conceitos de IA | `contexto-fundamentos-e-conceitos-de-ia.md` |
+| UC05 | Python para IA | `contexto-python-para-ia.md` |
+| UC06 | Arquitetura de Computadores e GPU | `contexto-arquitetura-computadores-gpu.md` |
+| UC07 | Transformação Digital | `contexto-transformacao-digital.md` |
+| UC08 | Banco de Dados | `contexto-banco-de-dados.md` |
+| UC09 | Estatística Aplicada | `contexto-estatistica-aplicada.md` |
 
 ---
 
@@ -107,9 +107,9 @@ Se algo estava ambíguo no relato, liste as suposições feitas.
 **Relato do professor:**
 > "Na A06 do dia 13/03 dei banco de dados e funções matemáticas. Em BD chegamos até ORDER BY, fizemos SELECT, FROM, WHERE com operadores de comparação (=, <, >, <>, <=, >=) e lógicos (AND, OR, NOT), e as funções de agregação COUNT, SUM, MAX, MIN, AVG. Em funções matemáticas vimos as 4 operações com inteiros e decimais, potenciação, radiciação, e como isso aparece em Python com os operadores aritméticos. Dei ~3 HA de BD e ~3 HA de funções mat. Os alunos tiveram dificuldade com NULL no WHERE."
 
-**O agente deve:**
+**Para esse caso o agente deverá:**
 1. Identificar: A06, 13/03, D08-UC08 (~3 HA) + D03-UC03 (~3 HA)
-2. Atualizar `contexto-banco-de-dados.md` com os tópicos de BD
-3. Atualizar `contexto-fundamentos-matematicos.md` com os tópicos de matemática
+2. Atualizar `contexto-banco-de-dados.md` com os tópicos de BD (A UC QUE FOI MINSITRADA)
+3. Atualizar `contexto-fundamentos-matematicos.md` com os tópicos de matemática (A OUTRA UC QUE FOI MINISTRADA)
 4. Atualizar `AULAS-DADAS.md` com entrada de A06
 5. Atualizar `PROJETO-AULAS-1-TRIMESTRE.md` marcando A06 e somando HA

@@ -11,7 +11,7 @@
 
 | Trim. | HA Alocado | HA Dado | HA Restante |
 |---|---|---|---|
-| T1 | 20 (ajustado) | 2,5 | 17,5 |
+| T1 | 20 (ajustado) | 7,5 | 12,5 |
 | T2 | 27 | 0 | 27 |
 | T3 | 27 | 0 | 27 |
 
@@ -21,10 +21,10 @@
 
 | Ind. | Descrição | Status T1 |
 |---|---|---|
-| 1 | Compreende as aplicações dos fundamentos em transformação digital em práticas pedagógicas | Em andamento |
-| 2 | Utiliza as ferramentas digitais de IA conforme boas práticas de mercado | Pendente |
-| 3 | Considera a segurança digital na transformação digital em uma organização | Pendente |
-| 4 | Compreende as rupturas das tecnologias emergentes para práticas na transformação digital | Em andamento |
+| 1 | Compreende as aplicações dos fundamentos em transformação digital em práticas pedagógicas | 🔄 Em andamento (A01, A02) |
+| 2 | Utiliza as ferramentas digitais de IA conforme boas práticas de mercado | 🔄 Em andamento (A01, A07) |
+| 3 | Considera a segurança digital na transformação digital em uma organização | 🔄 Em andamento (A07) |
+| 4 | Compreende as rupturas das tecnologias emergentes para práticas na transformação digital | 🔄 Em andamento (A07) |
 | 5 | Propõe análise estratégica de informações (T2) | Pendente |
 | 6 | Considera o custo-benefício no processo de aquisição e implementação de sistemas (T2) | Pendente |
 | 7 | Considera o ciclo de vida da informação (T2–T3) | Pendente |
@@ -42,6 +42,9 @@
 | A02 | 27/02/2026 | ~0,5 | Trajetória de carreira em IA, case Mercado Livre logística, case Alibaba warehouse robots, case NVIDIA DRIVE automotivo |
 | A03 | 05/03/2026 | 0 | Não trabalhada |
 | A04 | 06/03/2026 | 0 | Não trabalhada |
+| A05 | 12/03/2026 | 0 | Não trabalhada |
+| A06 | 13/03/2026 | 0 | Não trabalhada |
+| A07 | 19/03/2026 | ~5 | Debate estruturado "IA é trapaça ou ferramenta?" (3 fases: duplas → times → porta-vozes, ocupou quase a manhã toda), 4 famílias de ferramentas de IA (Texto: ChatGPT/Claude/Gemini/Copilot; Imagem: Midjourney/DALL-E/Firefly; Código: GitHub Copilot/Cursor; Voz-Áudio: ElevenLabs/Suno/Whisper), geração de imagem no Gemini (objeto dos alunos + superfície da Lua), prompt engineering básico (anatomia: Papel·Contexto·Tarefa·Formato) |
 
 ---
 
@@ -64,6 +67,22 @@
 - **Alibaba:** Cainiao warehouse — 700 robôs, processamento de 1M pedidos/dia
 - **NVIDIA DRIVE:** plataforma IA para veículos autônomos — níveis SAE 0→5
 
+### Debate Ético — IA: Trapaça ou Ferramenta? (A07 — Ind. 1, 2)
+- Dinâmica em 3 fases: duplas → times → porta-vozes; tomou quase toda a manhã
+- Argumento central: IA como calculadora (ferramenta de amplificação) vs. desvantagem acadêmica injusta
+- Resultado: turma chegou a posição matizada — contexto define o uso ético
+
+### 4 Famílias de Ferramentas de IA (A07 — Ind. 2, 4)
+- **Família Texto:** ChatGPT, Claude, Gemini, Copilot — geração de texto, código, análise
+- **Família Imagem:** Midjourney, DALL-E, Firefly — geração de imagens a partir de texto
+- **Família Código:** GitHub Copilot, Cursor — sugestão e geração de código
+- **Família Voz/Áudio:** ElevenLabs (clonagem de voz), Suno (música), Whisper (transcrição)
+
+### Prompt Engineering Básico (A07 — Ind. 2)
+- Anatomia do prompt: **Papel · Contexto · Tarefa · Formato**
+- Prática: geração de imagem no Gemini — objeto da escolha dos alunos + superfície da Lua
+- Nível coberto: introdutório (anatomia + experimentação guiada; exercícios escritos pendentes)
+
 ---
 
 ## Vocabulário Introduzido
@@ -78,18 +97,17 @@
 
 ---
 
-## Próximos Tópicos (T1 restante — 17,5 HA)
+## Próximos Tópicos (T1 restante — 12,5 HA)
 
 | Seq. | Tópico | HA | Ind. |
 |---|---|---|---|
-| 1 | Ferramentas digitais de IA: ChatGPT, Copilot, Midjourney, Claude — boas práticas | 2 | 2 |
+| 1 | Prompt engineering aprofundado: exercícios escritos (melhorar prompt ruim, criar do zero) | 1 | 2 |
 | 2 | LGPD na prática: consentimento, finalidade, exemplos de vazamento e multas | 2 | 3 |
 | 3 | Segurança digital: senhas fortes, phishing, 2FA, backup, ransomware | 2 | 3 |
 | 4 | Tecnologias emergentes disruptivas: IoT, edge computing, computação quântica (visão geral) | 2 | 4 |
 | 5 | IA como serviço (AIaaS): AWS, Azure, Google Cloud — APIs de IA | 2 | 2, 4 |
 | 6 | Planejamento de implementação de IA em empresa: análise custo-benefício simples | 2 | 5, 6 |
-| 7 | Cases brasileiros: Nubank (credit scoring), iFood (entrega), Embrapa (agro IA) | 2 | 1 |
-| 8 | Exercício integrador: propor um projeto de TD para uma micro-empresa | 3 | 1, 2 |
+| 7 | Cases brasileiros: Nubank (credit scoring), iFood (entrega), Embrapa (agro IA) | 1 | 1 |
 
 ---
 
@@ -98,6 +116,9 @@
 - 4ª Revolução Industrial — história e pilares (A01)
 - Apresentação do curso (A01)
 - Cases Mercado Livre, Alibaba, NVIDIA DRIVE (A02)
+- Debate "IA é trapaça ou ferramenta?" — já resolvido com consenso (A07)
+- Anatomia do prompt Papel·Contexto·Tarefa·Formato — já introduzida (A07); aprofundar com exercícios
+- As 4 famílias de ferramentas — já mapeadas (A07); apenas referenciar em contextos práticos
 
 ---
 

@@ -180,11 +180,13 @@ Peso de cada disciplina:
 |---|---|---|
 | UC08 | Introdução a banco de dados: dados no cotidiano, Excel como proto-BD, anatomia de tabela, SGBD (conceito, exemplos), Excel→SQL analogia, primeira query SELECT com WHERE/ORDER BY, exercícios práticos | ~3 |
 | UC09 | Introdução a funções matemáticas: conceito de função (entrada/regra/saída), função linear (f(x)=ax+b, ex. Uber), função polinomial (ex. frenagem, parábola), função exponencial (ex. viral, juros), função logarítmica (ex. Richter, dB), Kahoot final | ~3 |
-### A07 — 19/03 (Qui) ⏳ Planejada
+### A07 — 19/03 (Qui) ✅ Ministrada
 
-| Bloco | Horário | Disciplina | Conteúdo planejado | HA |
-|---|---|---|---|---|
-| 1 | 7h10–9h35 | UC07 Transformação Digital | 4 famílias de ferramentas de IA (Texto/Imagem/Código/Voz), Prompt Engineering (Papel·Contexto·Tarefa·Formato), IA no Brasil (Nubank, Embrapa), LGPD básico ao usar IA, debate "IA é trapaça ou ferramenta?" | 3 |
+| Disciplina | Conteúdo | HA |
+|---|---|---|
+| UC07 | Debate "IA é trapaça ou ferramenta?" (dinâmica 3 fases: duplas→times→porta-vozes, quase manhã toda), 4 famílias de ferramentas de IA (Texto/Imagem/Código/Voz-Áudio), geração de imagem no Gemini (objeto + superfície da Lua), prompt engineering básico (Papel·Contexto·Tarefa·Formato) | ~5 |
+
+> UC01 (Word) e UC02 (Inglês Instrumental) não foram cobertos — debate tomou mais tempo que o planejado.
 | 2 | 9h50–11h30 | UC01 Fund. Computação | Word: interface (Faixa de Opções), criar/salvar/nomear (snake_case+extensões), configurar página (margens ABNT), formatação de texto (negrito/itálico/alinhamento/espaçamento), exercícios N1→N3 | 2 |
 | 3 | 11h30–12h20 | UC02 Inglês Instrumental | Fixação Bloco 3 (10 termos de IA: token, epoch, embedding…), quizão "Levante a mão", preview Bloco 4 (Python keywords) | 1 |
 ### A08-19-03 — 19/03 (Qui) ⏳ Planejando
@@ -221,7 +223,7 @@ Peso de cada disciplina:
 
 ---
 
-## 6. HA Consumido e Restante (estado em 13/03/2026 — após A06)
+## 6. HA Consumido e Restante (estado em 19/03/2026 — após A07)
 
 | Código | Disciplina | HA real T1 | Gasto A01–A06 | Restante T1 | Urgência |
 |---|---|---|---|---|---|
@@ -231,12 +233,12 @@ Peso de cada disciplina:
 | UC04 | Fundamentos e Conceitos de IA | 11 | 6 | **5** | 🟡 Atenção |
 | UC05 | Python | 20 | 5,5 | **14,5** | 🟢 OK |
 | UC06 | Arquitetura e GPU | 11 | 1 | **10** | 🟡 Atenção |
-| UC07 | Transformação Digital | 20 | 2,5 | **17,5** | 🟢 OK |
+| UC07 | Transformação Digital | 20 | 7,5 | **12,5** | 🟢 OK |
 | UC08 | Banco de Dados | 20 | ~3 | **~17** | 🟢 OK |
 | UC09 | Estatística Aplicada | 11 | ~3 | **~8** | 🟡 Atenção |
-| **TOTAL** | | **132** | **~30,5** | **~101,5** | |
+| **TOTAL** | | **132** | **~35,5** | **~96,5** | |
 
-> **D08 e D09 iniciaram em A06 (13/03/2026). D03 ainda não iniciou — prioridade A07.**
+> **D08 e D09 iniciaram em A06 (13/03/2026). D03 ainda não iniciou. UC01 e UC02 não foram cobertos em A07 — replanejar para A08.**
 
 ---
 
@@ -302,9 +304,9 @@ Os seguintes termos foram introduzidos nas aulas A01–A04 dentro de UC01 e UC02
 | Ind. | Descrição | Status T1 |
 |---|---|---|
 | 1 | Compreende as aplicações dos fundamentos em transformação digital, demonstrado em práticas pedagógicas | 🔄 Em andamento (A01, A02) |
-| 2 | Utiliza as ferramentas digitais de IA conforme boas práticas de mercado alinhadas à transformação digital | 🔄 Em andamento (A01) |
-| 3 | Considera a segurança digital na transformação digital em uma organização empresarial | ⏳ Pendente |
-| 4 | Compreende as rupturas das tecnologias emergentes para aplicação de práticas na transformação digital | ⏳ Pendente |
+| 2 | Utiliza as ferramentas digitais de IA conforme boas práticas de mercado alinhadas à transformação digital | 🔄 Em andamento (A01, A07) |
+| 3 | Considera a segurança digital na transformação digital em uma organização empresarial | 🔄 Em andamento (A07) |
+| 4 | Compreende as rupturas das tecnologias emergentes para aplicação de práticas na transformação digital | 🔄 Em andamento (A07) |
 
 ### UC08 — Banco de Dados
 | Ind. | Descrição | Status T1 |
@@ -353,7 +355,7 @@ orquestrador-1ano.agent.md        ← leia primeiro: calendário + routing
 | `contexto-fundamentos-e-conceitos-de-ia.md` | UC04 | 🔄 A01+A03+A04 registradas |
 | `contexto-python-para-ia.md` | UC05 | 🔄 A04 registrada |
 | `contexto-arquitetura-computadores-gpu.md` | UC06 | 🔄 A03 registrada |
-| `contexto-transformacao-digital.md` | UC07 | 🔄 A01+A02 registradas |
+| `contexto-transformacao-digital.md` | UC07 | 🔄 A01+A02+A07 registradas |
 | `contexto-banco-de-dados.md` | UC08 | 🔄 A06 registrada |
 | `contexto-estatistica-aplicada.md` | UC09 | 🔄 A06 registrada |
 

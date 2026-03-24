@@ -38,3 +38,8 @@ Disciplina                                   | Conteúdo abordado               
 UC08 — Banco de Dados                    | Dados no cotidiano (Waze, Instagram), Excel→tabela→BD (analogia), anatomia de tabela (campo, registro, PK), SGBD (conceito, limitações do Excel), SQL: SELECT/FROM/WHERE/ORDER BY, operadores (=, <>, <, >, <=, >=, AND, OR, NOT), funções de agregação COUNT/SUM/MAX/MIN/AVG, exercícios práticos, dinâmica Verdade ou Mito | ~3 HA
 UC09 — Funções Matemáticas               | Conceito de função (entrada/regra/saída), função linear f(x)=ax+b (Uber, salário, água), função polinomial f(x)=ax²+bx+c (frenagem, parábola), função exponencial f(x)=a·bˣ (post viral, juros compostos), função logarítmica f(x)=log_b(x) (Richter, dB), exercício: identificar tipo de função, Kahoot final | ~3 HA
 Total ~6 HA
+
+A AULA 07 NO DIA 19/03 FOI SOBRE:
+Disciplina                                   | Conteúdo abordado                                                                                                                                                        | HA est.
+UC07 — Transformação Digital             | Debate estruturado "IA é trapaça ou ferramenta?" (dinâmica em 3 fases: duplas → times → porta-vozes, tomou quase a manhã toda), 4 famílias de ferramentas de IA (Texto: ChatGPT/Claude/Gemini/Copilot; Imagem: Midjourney/DALL-E/Firefly; Código: GitHub Copilot/Cursor; Voz-Áudio: ElevenLabs/Suno/Whisper), geração de imagem no Gemini (objeto da escolha dos alunos + superfície da Lua), prompt engineering básico (anatomia: Papel·Contexto·Tarefa·Formato) | ~5 HA
+Total ~5 HA
