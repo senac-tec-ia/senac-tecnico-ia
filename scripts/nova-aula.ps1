@@ -82,7 +82,38 @@ if (Test-Path $metaPath) {
 # 4. Limpar slides.md
 Write-Host "[4/6] Limpando slides.md..." -ForegroundColor Yellow
 
-$slidesContent = "---`ntheme: ../slidev-theme-neural`ntitle: $Nome`n---`n`n# $Nome`n`n> Conteudo a definir -- use @planejador-trimestre para planejar esta aula`n"
+# Derivar label da aula: A09 -> "Aula 09", A10 -> "Aula 10"
+if ($Nome -match '^A(\d+)') {
+    $AulaLabel = "Aula $($Matches[1].PadLeft(2, '0'))"
+} else {
+    $AulaLabel = $Nome
+}
+
+$DataHoje = (Get-Date -Format "dd 'de' MMMM 'de' yyyy" -Culture "pt-BR")
+$slidesContent = @"
+---
+# $Nome
+# ──────────────────────────────────────────────────────────────
+theme: ./
+colorSchema: dark
+title: "Técnico em IA — $AulaLabel"
+author: Leonardo Zanini
+courseTitle: Técnico em Inteligência Artificial
+aulaNum: "$AulaLabel"
+bgPreset: palette
+layout: cover
+# ──────────────────────────────────────────────────────────────
+---
+
+<!-- SLIDE 1 — Capa -->
+
+# $Nome
+## Conteúdo a definir
+
+*$DataHoje*
+
+> Use @produtor-aula para gerar os slides desta aula.
+"@
 [System.IO.File]::WriteAllText((Join-Path $Destino "slides.md"), $slidesContent, [System.Text.Encoding]::UTF8)
 Write-Host "    OK" -ForegroundColor Green
 
