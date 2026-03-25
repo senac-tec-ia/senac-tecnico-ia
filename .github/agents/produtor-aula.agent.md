@@ -51,7 +51,7 @@ FASE 4 — Ciclo por UC (repete para cada UC do dia):
 Ao receber qualquer trigger de produção ("Gere A0N", "Prepare A0N", "Aula NN"), execute **silenciosamente** (sem mostrar ao usuário) **apenas**:
 
 1. Se existir `A{NN}/plano-aula.md`: leia-o — já contém composição, HA e lista de slides
-2. Para cada UC do dia, leia **apenas** `.github/agents/contexto-{slug}.md` — é o resumo condensado por design (~20 linhas)
+2. Para cada UC do dia, leia **apenas** `.github/agents/contextos/contexto-{slug}.md` — é o resumo condensado por design (~20 linhas)
 3. Leia `.github/agents/referencia-tecnica.md` — layouts e convenções
 4. Monte internamente o rascunho de composição (UC, HA, tópico provável)
 
@@ -157,7 +157,7 @@ Prompt para @autor-slides:
 "@autor-slides — Gere os slides do bloco {slug} para A{NN}.
 Arquivos para carregar (SOMENTE ESTES):
   1. A{NN}/plano-aula.md — seção BLOCO {N} ({slug})
-  2. .github/agents/contexto-{slug}.md
+  2. .github/agents/contextos/contexto-{slug}.md
 Operação: APPEND ao final de A{NN}/slides.md (após o último slide do bloco anterior).
 Exercícios com gabaritos ficam INLINE no slides.md via <v-click>.
 [Handoff Card]"
@@ -228,9 +228,9 @@ Se o usuário pedir apenas slides ou apenas exercícios, execute normalmente as 
 ## Regra de contexto
 
 Antes de qualquer delegação, confirme:
-- `contexto-*.md` de cada disciplina na composição foi lido (NÃO o slides.md da última aula)
+- `.github/agents/contextos/contexto-*.md` de cada disciplina na composição foi lido (NÃO o slides.md da última aula)
 - `plano-aula.md` da aula atual está gravado e aprovado
-- `PROJETO-AULAS-1-TRIMESTRE.md` NÃO foi carregado — informações necessárias já estão em `plano-aula.md` e `contexto-*.md`
+- `PROJETO-AULAS-1-TRIMESTRE.md` NÃO foi carregado — informações necessárias já estão em `plano-aula.md` e `.github/agents/contextos/contexto-*.md`
 
 ---
 

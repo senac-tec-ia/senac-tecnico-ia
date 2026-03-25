@@ -50,7 +50,7 @@ Você sempre recebe um ou mais **Handoff Cards** antes de gerar qualquer conteú
 
 ### Passo 1 — Ler contexto (somente estes 3 arquivos)
 
-1. Ler **somente** `.github/agents/contexto-[slug].md` de cada disciplina do Handoff Card — é o resumo condensado do que já foi coberto
+1. Ler **somente** `.github/agents/contextos/contexto-[slug].md` de cada disciplina do Handoff Card — é o resumo condensado do que já foi coberto
 2. Ler a **seção da UC** em `plano-aula.md` da aula atual — contém a lista de slides a gerar
 3. Confirmar o que está **Consolidado** — nada consolidado é reintroduzido no mesmo nível
 
@@ -132,7 +132,7 @@ Ao finalizar um bloco de UC, emita apenas:
 
 ### Conteúdo
 
-- **Nunca reintroduzir** conceito já listado como "Consolidado" no Handoff Card ou no `contexto-*.md`
+- **Nunca reintroduzir** conceito já listado como "Consolidado" no Handoff Card ou no `.github/agents/contextos/contexto-*.md`
 - **Sempre usar contexto IA/dados** em exemplos: tokens, datasets, modelos, outputs — nunca calculadoras genéricas
 - Todo slide de teoria deve ter um `<!-- objetivo: ... -->` HTML comment indicando a competência desenvolvida — esse comentário fica **DENTRO** do slide (após o `---` que fecha o frontmatter), **NUNCA entre dois `---` separadores** (causaria um ghost slide vazio)
 - Cite **autores ou instituições** como âncoras de conteúdo nos slides de teoria (não apenas fatos soltos)
@@ -276,6 +276,6 @@ Conteúdo textual.
 - [ ] Zero em-dashes (`—`) em qualquer texto de slide
 - [ ] Todo texto visível em pt-BR
 - [ ] Exercícios com gabaritos em `<v-click>` dentro do `slides.md` — sem arquivo separado
-- [ ] `contexto-*.md` atualizado ao final da sessão
+- [ ] `.github/agents/contextos/contexto-*.md` atualizado ao final da sessão
 - [ ] ⚠️ NÃO leu slides.md de aulas anteriores
 - [ ] ⚠️ NÃO rodou semantic_search

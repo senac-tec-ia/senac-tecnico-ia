@@ -12,7 +12,7 @@
 
 | Trim. | HA Alocado | HA Dado | HA Restante |
 |---|---|---|---|
-| T1 | 20 (ajustado) | 3 | 17 |
+| T1 | 20 (ajustado) | 6 | 14 |
 | T2 | 27 | 0 | 27 |
 | T3 | 27 | 0 | 27 |
 
@@ -81,6 +81,8 @@
 |---|---|---|---|
 | A01–A05 | 26/02–12/03/2026 | 0 | Não trabalhada |
 | A06 | 13/03/2026 | 3 | INÍCIO — ver abaixo |
+| A07 | 19/03/2026 | 0 | Não trabalhada |
+| A08 | 20/03/2026 | ~3 | Tipos de dados, CREATE TABLE, INSERT INTO — ver abaixo |
 
 ---
 
@@ -101,7 +103,24 @@
 - Dinâmica: Verdade ou Mito sobre Banco de Dados
 
 **Dinâmicas que funcionaram:** Hook “Qual o tamanho do Excel do iFood?” (600M pedidos) gerou engajamento alto.
+---
 
+### A07 — 19/03/2026
+
+**Não trabalhada** (Sem2 Qui — bloco de Transformação Digital / Fundamentos de Computação)
+
+---
+
+### A08 — 20/03/2026 (~3 HA)
+
+**Tópicos cobertos:**
+- Tipos de dados: `INTEGER`, `VARCHAR` (com tamanho), `FLOAT`, `BOOLEAN`
+- DDL vs DML: DDL modifica estrutura (CREATE, ALTER, DROP); DML manipula dados (INSERT, UPDATE, DELETE)
+- `CREATE TABLE`: sintaxe completa com tipos de dados e constraints
+- `INSERT INTO`: inserção de registros na tabela
+- Constraints: `PRIMARY KEY` e `NOT NULL` — vistos por cima, sem aprofundamento
+
+**Feedback do professor:** Foram 3 aulas seguidas de BD (referência ao bloco de A06 + continuação em A08).
 ---
 
 ## Conceitos Consolidados (não reintroduzir no mesmo nível)
@@ -115,6 +134,12 @@
 | Operadores de comparação SQL: `=`, `<>`, `<`, `>`, `<=`, `>=` | A06 | Introdutório |
 | Operadores lógicos SQL: `AND`, `OR`, `NOT` | A06 | Introdutório |
 | Funções de agregação: `COUNT`, `SUM`, `MAX`, `MIN`, `AVG` | A06 | Introdutório |
+| Tipos de dados SQL: `INTEGER`, `VARCHAR`, `FLOAT`, `BOOLEAN` | A08 | Introdutório |
+| DDL vs DML: conceitos | A08 | Introdutório |
+| `CREATE TABLE` com tipos e constraints | A08 | Introdutório |
+| `INSERT INTO`: inserção de registros | A08 | Introdutório |
+| `PRIMARY KEY`: constraint de chave primária | A08 | Reconhecimento |
+| `NOT NULL`: constraint de obrigatoriedade | A08 | Reconhecimento |
 
 ---
 
@@ -166,14 +191,16 @@
 | Data | Observação | Ação tomada |
 |---|---|---|
 | 2026-03-12 | Professor decide usar Excel como andaime pedagógico antes de qualquer SQL | Estratégia registrada como diretriz permanente da disciplina |
+| 2026-03-20 | Foram 3 aulas seguidas de BD (nota do professor — A06 3HA + A08 3HA); constraints PRIMARY KEY e NOT NULL vistos por cima sem aprofundamento | Reforçar constraints na próxima aula antes de avançar |
 
 ---
 
-## Recomendações para o Próximo Encontro (A07+)
+## Recomendações para o Próximo Encontro (A09+)
 
-> A06 cobriu: modelo mental de BD, anatomia de tabela, SGBD, SQL SELECT/FROM/WHERE/ORDER BY/COUNT/SUM/MAX/MIN/AVG.
-> A turma ficou com dúvida sobre NULL no WHERE — abordar no início de A07.
-> Próximo passo: CREATE TABLE, tipos de dado (TEXT, INTEGER, DECIMAL), INSERT INTO com SQLite no Colab.
+> A08 cobriu: tipos de dados (INTEGER, VARCHAR, FLOAT, BOOLEAN), DDL/DML conceitos, CREATE TABLE com constraints básicas, INSERT INTO.
+> PRIMARY KEY e NOT NULL foram vistos por cima — reforçar no início do próximo bloco antes de avançar.
+> Próximo passo: aprofundar constraints (PRIMARY KEY, NOT NULL, UNIQUE), depois SELECT com WHERE usando os dados inseridos via INSERT INTO.
+> Manter analogia Excel: "CREATE TABLE = criar aba estruturada", "INSERT INTO = digitar linha na aba".
 | SGBD | Sistema de Gerenciamento de Banco de Dados | **Introduzido A06** |
 | SQLite | BD relacional embutido — arquivo único `.db` | Pendente |
 | query | consulta SQL | **Introduzido A06** |

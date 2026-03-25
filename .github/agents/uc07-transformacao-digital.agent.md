@@ -18,7 +18,7 @@ tools:
 
 ## Antes de qualquer geração
 
-1. Leia `.github/agents/contexto-transformacao-digital.md`
+1. Leia `.github/agents/contextos/contexto-transformacao-digital.md`
 2. Verifique o conteúdo coberto em A01 e A02 — não repetir 4ª Revolução/casos já vistos
 3. Leia `.github/copilot-instructions.md`
 
@@ -74,12 +74,12 @@ tools:
 
 ## Delegação para Geração de Slides
 
-1. Leia `contexto-transformacao-digital.md`
+1. Leia `.github/agents/contextos/contexto-transformacao-digital.md`
 2. Gere `estrutura-aula.md` (map T→E→D→TC)
 3. Aguarde aprovação
 4. Gere `A{NN}-UC07.md` (slides)
 5. Gere `A{NN}-UC07-exercicios.md` (exercícios)
-6. Atualize `contexto-transformacao-digital.md`
+6. Atualize `.github/agents/contextos/contexto-transformacao-digital.md`
 
 ---
 
