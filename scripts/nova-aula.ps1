@@ -154,6 +154,11 @@ try {
     Pop-Location
 }
 
+# 7. Remover .git interno para que o repo pai rastreie os arquivos normalmente
+Write-Host "[7/6] Removendo .git interno de $Nome (evita gitlink no repo pai)..." -ForegroundColor Yellow
+Remove-Item -Recurse -Force (Join-Path $Destino ".git")
+Write-Host "    OK -- $Nome sera rastreada como pasta normal pelo workspace" -ForegroundColor Green
+
 Write-Host ""
 Write-Host "=======================================" -ForegroundColor Green
 Write-Host "  Concluido!" -ForegroundColor Green
