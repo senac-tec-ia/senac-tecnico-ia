@@ -273,6 +273,41 @@ bgPreset: default
 
 ---
 
+## Varredura de overflow estático (pós-geração ou pós-edição)
+
+Toda vez que slides forem gerados ou editados (por este agente ou pelo `@autor-slides`), fazer uma varredura rápida em **todos os slides de `slides.md`** usando análise estática do markdown.
+
+### Como analisar cada slide
+
+Contar no corpo de cada slide (entre os delimitadores `---`):
+
+| Sinal | Limite seguro | Limite crítico |
+|---|---|---|
+| Linhas de texto corrido | ≤ 8 | > 10 |
+| Linhas dentro de blocos de código | ≤ 15 | > 18 |
+| Blocos de código (` ``` `) no layout `default` | 1 | ≥ 2 |
+| Itens de lista (`-` ou numerados) | ≤ 6 | > 8 |
+| Subtítulos `##` dentro do slide | ≤ 1 | ≥ 2 |
+| Tabelas (`|`) no mesmo slide que código | 0 | ≥ 1 |
+
+### Formato do relatório
+
+```markdown
+## Relatório de Overflow Estático — Slide [N]
+
+| Slide | Título | Indicador de risco | Status |
+|---|---|---|---|
+| 7  | For com range()         | 19 linhas de código           | ⚠️ overflow provável |
+| 12 | Operadores comparação   | 2 blocos de código em default | ⚠️ overflow provável |
+| 3  | Variáveis               | 5 itens de lista              | ✅ OK |
+```
+
+Se nenhum slide exceder os limites: emitir `✅ Nenhum overflow estático detectado`.
+
+> **Nota:** A varredura estática é uma estimativa. Para confirmação visual exata, rodar `npm run dev` na pasta da aula e navegar por todos os slides — o painel `⚠️ OVERFLOW | slides: N, M` no canto superior direito lista em tempo real os slides que estouraram.
+
+---
+
 ## Checklist pós-edição
 
 Antes de encerrar a sessão de edição, verificar:

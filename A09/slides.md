@@ -62,19 +62,27 @@ da    de        da
 variável  atribuição  variável
 ```
 
-<v-click>
+> `=` em Python **não** pergunta se são iguais — ele **entrega** o valor da direita para a variável da esquerda.
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 3b — Partes da Variável: Tabela -->
+
+# Anatomia de uma Variável (cont.)
 
 | Parte | O que é | Exemplo |
 |---|---|---|
 | **Nome** | Identificador escolhido pelo programador | `nome`, `nota`, `idade` |
-| **`=`** | Operador de atribuição — "receba o valor" | `=` (não é igualdade!) |
-| **Valor** | O dado guardado — pode ser texto, número, verdadeiro/falso | `"Ada"`, `7.5`, `True` |
-
-</v-click>
+| **`=`** | Operador de atribuição: "receba o valor" | `=` (não é igualdade!) |
+| **Valor** | O dado guardado: texto, número ou verdadeiro/falso | `"Ada"`, `7.5`, `True` |
 
 <v-click>
 
-> `=` em Python **não** pergunta se são iguais — ele **entrega** o valor da direita para a variável da esquerda.
+> Dica: o nome da variável deve descrever o que ela guarda. `x = 7.5` funciona, mas `nota = 7.5` é muito mais claro.
 
 </v-click>
 
@@ -97,22 +105,7 @@ altura    = 1.72           # float → número com casa decimal
 aprovado  = True           # bool → só pode ser True ou False
 ```
 
-<v-click>
-
-```python
-print(type(nome))      # <class 'str'>
-print(type(idade))     # <class 'int'>
-print(type(altura))    # <class 'float'>
-print(type(aprovado))  # <class 'bool'>
-```
-
-</v-click>
-
-<v-click>
-
-**Dica de diagnóstico:** quando algo dá errado (`TypeError`), use `type()` para descobrir o que Python enxerga.
-
-</v-click>
+> Use `type()` para confirmar o que Python guardou. Quando algo dá errado (`TypeError`), essa é a primeira ferramenta que você puxa.
 
 ---
 layout: default
@@ -136,20 +129,6 @@ ativo     = False
 ano       = "2026"          # atenção nessa!
 ```
 
-<v-click>
-
-**Gabarito:**
-
-| Variável | `type()` | Observação |
-|---|---|---|
-| `cidade` | `str` | — |
-| `pontos` | `int` | — |
-| `velocidade` | `float` | — |
-| `ativo` | `bool` | — |
-| `ano` | `str` | **Aspas** deixam qualquer coisa como texto! |
-
-</v-click>
-
 ---
 layout: default
 card: true
@@ -162,8 +141,6 @@ bgPreset: default
 
 Python já vem com várias **funções prontas** — chamadas de **built-ins**.
 
-<v-click>
-
 | Função | O que faz | Exemplo |
 |---|---|---|
 | `print()` | Mostra algo na tela | `print("Oi")` |
@@ -174,9 +151,15 @@ Python já vem com várias **funções prontas** — chamadas de **built-ins**.
 | `str()` | Transforma em texto | `str(42)` → `"42"` |
 | `len()` | Conta caracteres ou itens | `len("Python")` → `6` |
 
-</v-click>
+---
+layout: default
+card: true
+bgPreset: default
+---
 
-<v-click>
+<!-- SLIDE 6b — Anatomia de uma Chamada de Função -->
+
+# Anatomia de uma Chamada de Função
 
 **Anatomia de uma chamada de função:**
 
@@ -186,8 +169,6 @@ Python já vem com várias **funções prontas** — chamadas de **built-ins**.
   nome      argumento
  da função  (o que você passa para ela)
 ```
-
-</v-click>
 
 ---
 layout: default
@@ -217,7 +198,15 @@ media = valor / 2   # ❌ TypeError: can't divide str by int
 
 </v-click>
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 7b — Solução: empilhar float() + input() -->
+
+# Solução: Empilhando `float()` com `input()`
 
 **Solução:** empilhar funções — a saída de `input()` vira argumento de `float()`:
 
@@ -227,6 +216,10 @@ nota = float(input("Digite a nota: "))
 #      └── float() transforma "7.5" → 7.5 (float)
 media = nota / 2    # ✅ funciona!
 ```
+
+<v-click>
+
+> Regra prática: use `int(input(...))` para números inteiros (ano, quantidade) e `float(input(...))` para números com decimal (nota, precisão).
 
 </v-click>
 
@@ -252,10 +245,7 @@ ano_nasc = int(input("Qual é o seu ano de nascimento? "))
 # Calcule a idade e imprima uma mensagem personalizada
 ```
 
-**Exemplo de saída esperada:**
-```
-Olá, Ada! Você tem 17 anos em 2026.
-```
+**Exemplo de saída esperada:** `Olá, Ada! Você tem 17 anos em 2026.`
 
 ---
 layout: default
@@ -306,14 +296,24 @@ Esses operadores **comparam** dois valores e retornam `True` ou `False`:
 | `>=` | maior ou igual a | `6 >= 6` | `True` |
 | `<=` | menor ou igual a | `4 <= 4` | `True` |
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: default
+---
 
-> ⚠️ **Não confunda:** `=` **atribui** um valor. `==` **verifica** se dois valores são iguais.
+<!-- SLIDE 10b — Operadores de Comparação: = vs == -->
+
+# `=` vs `==`: Não Confunda!
 
 ```python
-nota = 7.5          # atribuição
-nota == 7.5         # comparação → True
+nota = 7.5          # = atribui: nota RECEBE o valor 7.5
+nota == 7.5         # == compara: nota É IGUAL a 7.5? → True
 ```
+
+<v-click>
+
+> ⚠️ Erro clássico: `if nota = 7:` gera `SyntaxError`. O Python espera `==` dentro de condições. `=` só funciona fora dos `if`, para atribuir valor.
 
 </v-click>
 
@@ -340,7 +340,15 @@ Para cada expressão, escreva o resultado (`True` ou `False`):
 4 != 4
 ```
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 11b — Gabarito: True ou False? -->
+
+# <carbon-search /> Leitura: True ou False? — Gabarito
 
 **Gabarito:**
 
@@ -348,12 +356,10 @@ Para cada expressão, escreva o resultado (`True` ou `False`):
 |---|---|---|
 | `10 > 5` | `True` | 10 é maior que 5 |
 | `3 == 3.0` | `True` | Python compara valor, não tipo aqui |
-| `"Python" != "python"` | `True` | Maiúscula ≠ minúscula |
+| `"Python" != "python"` | `True` | Maiúscula é diferente de minúscula |
 | `7 <= 6` | `False` | 7 não é menor nem igual a 6 |
 | `100 >= 100` | `True` | Igual já satisfaz `>=` |
 | `4 != 4` | `False` | São iguais |
-
-</v-click>
 
 <!-- ============================================================
      BLOCO 2 — PYTHON: elif EM CADEIAS (slides 12–20)
@@ -400,17 +406,25 @@ else:
     print("Reprovado")
 ```
 
-<v-click>
+> Python testa cada condição **de cima para baixo** e **para na primeira verdadeira**. As seguintes nem são testadas.
 
-**Regra de ouro:** Python testa cada condição **de cima para baixo** e **para na primeira verdadeira**. As seguintes nem são testadas.
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 13b — elif: Qual Bloco Executa? -->
+
+# `elif`: Qual Bloco Executa?
+
+**Regra de ouro:** Python para na primeira condição verdadeira.
 
 | Nota digitada | Qual bloco executa? |
 |---|---|
 | 9.5 | `if nota >= 9` → "Conceito A" ✓ |
 | 7.0 | `elif nota >= 7` → "Conceito B" ✓ |
 | 4.9 | `else` → "Reprovado" ✓ |
-
-</v-click>
 
 ---
 layout: default
@@ -466,7 +480,15 @@ Use o código do slide anterior. Para cada valor digitado, qual mensagem aparece
 | `30` | ??? |
 | `10` | ??? |
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 15b — Trace o Desconto: Gabarito -->
+
+# <carbon-search /> Leitura: Trace o Desconto — Gabarito
 
 **Gabarito:**
 
@@ -476,8 +498,6 @@ Use o código do slide anterior. Para cada valor digitado, qual mensagem aparece
 | `55` | `"Meu Deus, COMPRA AGORA!"` (`>= 50`) |
 | `30` | `"Opa, tá legal!"` (`>= 30`) |
 | `10` | `"Não dá pra comprar ainda."` (`else`) |
-
-</v-click>
 
 ---
 layout: default
@@ -502,12 +522,26 @@ bgPreset: default
 | >= 70% | `"MODERADO: monitorar de perto."` |
 | < 70% | `"NORMAL: tudo sob controle."` |
 
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 16b — EX02: Alerta de Reator (Starter) -->
+
+# <carbon-user-multiple /> EX02 — Alerta de Reator (cont.)
+
+**Starter code:**
+
 ```python
 capacidade = int(input("Capacidade do reator (%): "))
 
 if capacidade >= 90:
     # complete aqui
 ```
+
+Test with: `95`, `85`, `72`, `60`
 
 ---
 layout: default
@@ -563,7 +597,15 @@ if nota < 6 or freq < 75:
     print("Requer atenção.")
 ```
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 18b — Como Python Avalia and/or -->
+
+# Combinando Comparação + `and` / `or` (cont.)
 
 **Como Python lê `nota >= 6 and freq >= 75`:**
 
@@ -572,8 +614,6 @@ if nota < 6 or freq < 75:
 3. Aplica `and` → só é `True` se os **dois** forem `True`
 
 > O mesmo `and`/`or`/`not` da tabela verdade — agora com comparações reais.
-
-</v-click>
 
 ---
 layout: default
@@ -598,12 +638,26 @@ bgPreset: default
 | >= 60% | `"Atenção — precisa melhorar."` |
 | < 60% | `"Retreinar — dados insuficientes."` |
 
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 19b — EX03: Starter Code -->
+
+# <carbon-user-multiple /> EX03 — Classificador de Modelo de IA (cont.)
+
+**Código inicial:**
+
 ```python
 precisao = float(input("Precisão do modelo (%): "))
 
 if precisao >= 90:
     # complete aqui
 ```
+
+Complete os `elif` e `else` com as classificações da tabela anterior.
 
 ---
 layout: default
@@ -671,7 +725,15 @@ bgPreset: default
 | `False` | `True` | **False** | **True** | **True** |
 | `False` | `False` | **False** | **False** | **True** |
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 22b — Tabela Verdade: Exemplos Reais -->
+
+# Tabela Verdade — Na Prática
 
 **Traduzindo para situações reais:**
 
@@ -680,8 +742,6 @@ bgPreset: default
 | Aprovação de crédito: renda alta **E** sem dívida | `and` | `renda > 3000 and divida == 0` |
 | Login: senha correta **OU** biometria ok | `or` | `senha_ok or biometria_ok` |
 | Sensor: **NÃO** está em modo seguro | `not` | `not modo_seguro` |
-
-</v-click>
 
 ---
 layout: default
@@ -705,7 +765,15 @@ not True
 (10 == 9) or (7 != 6)
 ```
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 23b — Expressões Lógicas: Gabarito -->
+
+# <carbon-search /> Expressões Lógicas — Gabarito
 
 **Gabarito:**
 
@@ -716,8 +784,6 @@ not True
 | `not True` | `False` | inverte |
 | `(5 > 3) and (2 < 4)` | `True` | `True and True` |
 | `(10 == 9) or (7 != 6)` | `True` | `False or True` |
-
-</v-click>
 
 ---
 layout: default
@@ -777,14 +843,21 @@ else:
 print(f"{nome}: {status} (nota: {nota} | freq: {freq}%)")
 ```
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 25b — Gabarito EX04: Saída Esperada -->
+
+# <carbon-checkmark /> Gabarito — EX04 (cont.)
 
 **Saída esperada (exemplo):**
+
 ```
 Ada: Aprovado (nota: 8.5 | freq: 80%)
 ```
 
 > Isso é o **padrão completo** de Python até agora: `input()` → converter → comparar → decidir → imprimir.
-
-</v-click>
 

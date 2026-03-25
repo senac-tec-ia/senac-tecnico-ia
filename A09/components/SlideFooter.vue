@@ -7,7 +7,7 @@ const { currentPage, total } = useNav();
 const { $frontmatter } = useSlideContext();
 
 const footerRef = ref<HTMLElement | null>(null);
-const { isOverflowing } = useOverflowGuard(footerRef);
+const { isOverflowing } = useOverflowGuard(footerRef, currentPage);
 
 const author = (configs as any).author ?? "Leonardo Zanini";
 const courseTitle = (configs as any).courseTitle ?? (configs as any).title ?? "Técnico em Inteligência Artificial";
