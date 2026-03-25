@@ -18,7 +18,7 @@ tools:
 
 ## Antes de qualquer geração
 
-1. Leia `.github/agents/contexto-ingles-instrumental.md`
+1. Leia `.github/agents/contextos/contexto-ingles-instrumental.md`
 2. Verifique o vocabulário já coberto — nunca reintroduza termos listados como "Consolidado"
 3. Leia as regras invioláveis em `.github/copilot-instructions.md`
 
@@ -84,7 +84,7 @@ tools:
 2. Aguarde aprovação
 3. Gere `A{NN}-UC02.md` (slides)
 4. Gere `A{NN}-UC02-exercicios.md` (exercícios)
-5. Atualize `contexto-ingles-instrumental.md`
+5. Atualize `.github/agents/contextos/contexto-ingles-instrumental.md`
 
 ---
 

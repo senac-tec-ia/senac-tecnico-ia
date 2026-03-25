@@ -263,7 +263,7 @@ For each violation found (even if no correction was needed), add a row with:
 - Rewrite slide content (body text, exercises, code examples)
 - Change slide layouts or theme settings
 - Create new slides beyond the 2 mandatory insertion templates (C2)
-- Modify `.github/agents/contexto-*.md` files (that is the job of the content generation agent)
+- Modify `.github/agents/contextos/contexto-*.md` files (that is the job of the content generation agent)
 - Touch `package.json`, `tailwind.config.js`, `postcss.config.js`, `index.ts`, or any non-content file
 - Run `npm run dev` or any terminal command (this agent is edit-only)
 
@@ -271,7 +271,7 @@ For each violation found (even if no correction was needed), add a row with:
 
 1. Read `slides.md` completely before any edit
 2. Read `estrutura-aula.md` before updating it
-3. Read the relevant `contexto-*.md` files to understand where the deck is in the UC progression
+3. Read the relevant `.github/agents/contextos/contexto-*.md` files to understand where the deck is in the UC progression
 4. Apply corrections in Phase order: Diagnosis → Correction → Sync → Log
 5. Verify slide count consistency after Phase 2
 6. Always write to `## Plano de Correção Executado` — even if no corrections were needed (write "Nenhuma violação detectada")

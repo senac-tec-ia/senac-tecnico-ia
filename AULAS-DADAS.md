@@ -43,3 +43,16 @@ A AULA 07 NO DIA 19/03 FOI SOBRE:
 Disciplina                                   | Conteúdo abordado                                                                                                                                                        | HA est.
 UC07 — Transformação Digital             | Debate estruturado "IA é trapaça ou ferramenta?" (dinâmica em 3 fases: duplas → times → porta-vozes, tomou quase a manhã toda), 4 famílias de ferramentas de IA (Texto: ChatGPT/Claude/Gemini/Copilot; Imagem: Midjourney/DALL-E/Firefly; Código: GitHub Copilot/Cursor; Voz-Áudio: ElevenLabs/Suno/Whisper), geração de imagem no Gemini (objeto da escolha dos alunos + superfície da Lua), prompt engineering básico (anatomia: Papel·Contexto·Tarefa·Formato) | ~5 HA
 Total ~5 HA
+
+A AULA 08 NO DIA 20/03 FOI SOBRE:
+Disciplina                                   | Conteúdo abordado                                                                                                                                                        | HA est.
+
+UC05 — Python                            | if e else (apenas introdução, tabela verdade), turma teve muita dificuldade em fazer os exercícios | ~2 HA
+UC08 — Banco de Dados (3 aulas seguidas)  | DML e DDL, tipos de dados SQL, CREATE TABLE, INSERT INTO, constraints (PRIMARY KEY e NOT NULL, apenas visão geral) | ~3 HA
+Total ~5 HA
+
+A AULA 08 NO DIA 20/03 FOI SOBRE:
+Disciplina                                   | Conteúdo abordado                                                                                                                                                        | HA est.
+UC05 — Python                            | if e else (introdução básica), tabela verdade (and, or, not), alunos com muita dificuldade, demorou para conseguir fazer exercícios | ~2 HA
+UC08 — Banco de Dados                      | Tipos de dados (INTEGER, VARCHAR, FLOAT, BOOLEAN), DML e DDL (conceitos), CREATE TABLE, INSERT INTO, constraints (PRIMARY KEY, NOT NULL vistos por cima), foram 3 aulas seguidas de BD | ~3 HA
+Total ~5 HA

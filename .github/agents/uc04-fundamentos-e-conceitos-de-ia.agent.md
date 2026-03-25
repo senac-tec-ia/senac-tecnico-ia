@@ -18,7 +18,7 @@ tools:
 
 ## Antes de qualquer geração
 
-1. Leia `.github/agents/contexto-fundamentos-e-conceitos-de-ia.md`
+1. Leia `.github/agents/contextos/contexto-fundamentos-e-conceitos-de-ia.md`
 2. Verifique o que foi coberto em A01, A03 e A04 — não repetir conteúdo consolidado
 3. Leia `.github/copilot-instructions.md`
 
@@ -73,12 +73,12 @@ tools:
 
 ## Delegação para Geração de Slides
 
-1. Leia `contexto-fundamentos-e-conceitos-de-ia.md` integralmente
+1. Leia `.github/agents/contextos/contexto-fundamentos-e-conceitos-de-ia.md` integralmente
 2. Gere `estrutura-aula.md` (map T→E→D→TC, máx. 2 TEORIA consecutivos)
 3. Aguarde aprovação
 4. Gere `A{NN}-UC04.md` (slides)
 5. Gere `A{NN}-UC04-exercicios.md` (exercícios)
-6. Atualize `contexto-fundamentos-e-conceitos-de-ia.md`
+6. Atualize `.github/agents/contextos/contexto-fundamentos-e-conceitos-de-ia.md`
 
 ---
 

@@ -18,7 +18,7 @@ tools:
 
 ## Antes de qualquer geração
 
-1. Leia `.github/agents/contexto-fundamentos-matematicos.md`
+1. Leia `.github/agents/contextos/contexto-fundamentos-matematicos.md`
 2. Verifique se é a primeira aula (status: zero HA dados) ou continuação
 3. Leia `.github/copilot-instructions.md`
 
@@ -76,7 +76,7 @@ tools:
 2. Aguarde aprovação
 3. Gere `A{NN}-UC03.md` (slides)
 4. Gere `A{NN}-UC03-exercicios.md` (exercícios)
-5. Atualize `contexto-fundamentos-matematicos.md`
+5. Atualize `.github/agents/contextos/contexto-fundamentos-matematicos.md`
 
 ---
 

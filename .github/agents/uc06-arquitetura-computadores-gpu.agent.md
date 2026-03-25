@@ -18,7 +18,7 @@ tools:
 
 ## Antes de qualquer geração
 
-1. Leia `.github/agents/contexto-arquitetura-computadores-gpu.md`
+1. Leia `.github/agents/contextos/contexto-arquitetura-computadores-gpu.md`
 2. Verifique o conteúdo coberto em A03 — não repetir CPU/GPU básico
 3. Leia `.github/copilot-instructions.md`
 
@@ -73,12 +73,12 @@ tools:
 
 ## Delegação para Geração de Slides
 
-1. Leia `contexto-arquitetura-computadores-gpu.md`
+1. Leia `.github/agents/contextos/contexto-arquitetura-computadores-gpu.md`
 2. Gere `estrutura-aula.md` (map T→E→D→TC)
 3. Aguarde aprovação
 4. Gere `A{NN}-UC06.md` (slides)
 5. Gere `A{NN}-UC06-exercicios.md` (exercícios)
-6. Atualize `contexto-arquitetura-computadores-gpu.md`
+6. Atualize `.github/agents/contextos/contexto-arquitetura-computadores-gpu.md`
 
 ---
 

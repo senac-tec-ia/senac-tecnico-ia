@@ -12,7 +12,7 @@
 
 | Trim. | HA Alocado | HA Dado | HA Restante |
 |---|---|---|---|
-| T1 | 20 (ajustado) | 6 | 14 |
+| T1 | 20 (ajustado) | 8 | 12 |
 | T2 | 27 | 0 | 27 |
 | T3 | 27 | 0 | 27 |
 
@@ -38,6 +38,9 @@
 | A03 | 05/03/2026 | 0 | Não trabalhada | - |
 | A04 | 06/03/2026 | ~2 | Variáveis, tipos (str/int/float/bool), `print()`, `input()`, operadores aritméticos (+, -, *, /, //, %, **), `if/elif/else`, `def/return`, ecossistema Python (Jupyter/Colab, pip) | Ministrada |
 | A05 | 12/03/2026 | ~2 | `print()` aprofundado: f-string, `sep`, `end`; consolidação de tipos com `type()` e armadilhas; `input()` + conversão de tipo: `float(input())`, `int(input())`; exercício livre: 3 notas via `input()`, cálculo de média manual com f-string — ~20 slides percorridos | Ministrada |
+| A06 | 13/03/2026 | 0 | Não trabalhada | - |
+| A07 | 19/03/2026 | 0 | Não trabalhada | - |
+| A08 | 20/03/2026 | ~2 | if/else (introdução e reforço), operadores lógicos `and`, `or`, `not`, tabela verdade | Ministrada |
 
 ---
 
@@ -57,33 +60,33 @@
 | `type()` para diagnóstico de tipo | A05 | Introdutório |
 | Conversão de tipo: `float()`, `int()`, `str()` | A05 | Introdutório |
 | `float(input())` e `int(input())` como padrão de leitura numérica | A05 | Introdutório |
+| Operadores lógicos: `and`, `or`, `not` | A08 | Introdutório |
+| Tabela verdade (and, or, not) | A08 | Introdutório |
 
 ---
 
-## Tópicos Pendentes no T1 (15,5 HA restantes)
+## Tópicos Pendentes no T1 (15,0 HA restantes)
 
 | Seq. | Tópico | HA | Ind. |
 |---|---|---|---|
 | 1 | Operadores de comparação: `==`, `!=`, `<`, `>`, `<=`, `>=` | 0,5 | 1 |
-| 2 | Operadores lógicos: `and`, `or`, `not` | 0,5 | 1 |
-| 3 | Condicionais com múltiplas condições (if + comparação + lógico) | 1 | 1 |
-| 4 | Loops: `for` com `range()` e sobre listas, `while`, `break`, `continue` | 2 | 1 |
-| 5 | Listas: criação, indexação, `append`, `len`, `max`, `min`, `for` sobre listas | 2 | 1 |
-| 6 | Funções avançadas: parâmetros default, docstrings, escopo | 1,5 | 1 |
-| 7 | Módulos e importações: `import`, `random`, `math`, `os` | 2 | 2 |
-| 8 | Leitura e escrita de arquivos: `open()`, `read()`, `write()`, `.csv` | 2 | 2 |
-| 9 | Tratamento de erros: `try/except` | 1 | 1 |
-| 10 | Exercício integrador: mini-projeto com dados de IA | 1,5 | 1, 2 |
+| 2 | Condicionais com múltiplas condições (if + comparação + lógico) — reforço necessario | 1 | 1 |
+| 3 | Loops: `for` com `range()` e sobre listas, `while`, `break`, `continue` | 2 | 1 |
+| 4 | Listas: criação, indexação, `append`, `len`, `max`, `min`, `for` sobre listas | 2 | 1 |
+| 5 | Funções avançadas: parâmetros default, docstrings, escopo | 1,5 | 1 |
+| 6 | Módulos e importações: `import`, `random`, `math`, `os` | 2 | 2 |
+| 7 | Leitura e escrita de arquivos: `open()`, `read()`, `write()`, `.csv` | 2 | 2 |
+| 8 | Tratamento de erros: `try/except` | 1 | 1 |
+| 9 | Exercício integrador: mini-projeto com dados de IA | 1,5 | 1, 2 |
 
 ---
 
 ## Recomendações para o Próximo Encontro
 
-> A05 consolidou: print() com f-string/sep/end, type(), conversão float()/int(), padrão float(input()).
-> A turma aprendeu com ritmo bem lento — ~20 slides em 3 HA de bloco. Planejar A06 com densidade reduzida.
-> A06 (próximo encontro com D05): começar por operadores de comparação (==, !=, >, <) com exercício de leitura (N0), depois if/elif/else com comparação, SÓ ENTÃO ir para loops.
-> NÃO pular direto para loops — turma ainda não sabe combinar condicionais com operadores. Ladrilhar: comparação → if com comparação → for básico.
-> Manter analogias cotidianas antes de qualquer abstração de IA.
+> A08 cobriu if/else (reforço) e operadores lógicos and/or/not com tabela verdade. Turma com muita dificuldade — demorou muito para fazer exercícios.
+> Próximo bloco Python: começar com breve revisão de and/or/not (N0 — leitura de código), então introduzir operadores de comparação (==, !=, <, >), e SOMÉNTE após isso combinar comparação + lógico no if.
+> NÃO pular para loops enquanto condicionais com comparação não estiverem consolidadas.
+> Manter densidade baixa (50% do original) e priorizar exercícios de leitura (N0/N1) antes de escrita.
 
 ---
 
@@ -95,6 +98,7 @@
 | 2026-03-05 | Dinamicas em dupla funcionam melhor do que exercicios individuais para programacao | Estrutura de pares adotada como padrao para exercicios de codigo |
 | 2026-03-12 | Turma absorveu apenas ~20 slides em 3 HA de bloco Python | Densidade dos slides reduzida; planejamento A06 readequado para comecar com comparacao antes de loops |
 | 2026-03-12 | O unico exercicio completo da aula foi o EX-print() (sep, end, f-string) + exercicio livre do professor: 3 notas via input, calculo de media | Confirma que ritmo real e muito abaixo do planejado > planejar com 50% da densidade original |
+| 2026-03-20 | Alunos com muita dificuldade em if/else e operadores logicos; demorou muito para conseguir fazer exercicios | Reforcar logica booleana no inicio do proximo bloco Python; manter densidade baixa |
 
 ---
 

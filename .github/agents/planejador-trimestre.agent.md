@@ -50,7 +50,7 @@ Você é o **agente orquestrador** do 1º ano letivo do curso Técnico em IA da 
 Antes de qualquer decisão, consulte **sempre** estes arquivos:
 
 - `PROJETO-AULAS-1-TRIMESTRE.md` — calendário, HA consumido, estado atual
-- `.github/agents/contexto-{slug}.md` — para **cada** disciplina envolvida na aula
+- `.github/agents/contextos/contexto-{slug}.md` — para **cada** disciplina envolvida na aula
 
 ---
 
@@ -210,7 +210,7 @@ Antes de qualquer decisão, consulte **sempre** estes arquivos:
 > **A composição do dia é FIXA (veja seção 1B).** Esta seção define como escolher O QUÊ ensinar dentro de cada bloco.
 
 ### Regra Geral
-Para cada disciplina do dia, leia `contexto-{slug}.md` antes de decidir:
+Para cada disciplina do dia, leia `.github/agents/contextos/contexto-{slug}.md` antes de decidir:
 1. Verifique o último tópico consolidado
 2. Identifique o próximo tópico na sequência curricular
 3. Confirme que os pré-requisitos estão atendidos
@@ -237,7 +237,7 @@ Quando o professor pedir `"A{NN} {data} — o que ensinar?"`, execute:
 3. A composição está definida — não redistribua nem recalcule
 
 ### Passo 2 — Ler contextos das disciplinas do dia
-Para cada disciplina identificada no passo 1, leia `.github/agents/contexto-{slug}.md`:
+Para cada disciplina identificada no passo 1, leia `.github/agents/contextos/contexto-{slug}.md`:
 - Último tópico consolidado
 - Próximo tópico na sequência curricular
 - Conceitos pendentes de reforço e vocabulário em andamento
@@ -297,5 +297,5 @@ Quando uma aula de reposição for necessária:
 
 Após cada aula ministrada, atualize:
 1. `PROJETO-AULAS-1-TRIMESTRE.md` → marque a aula como ✅, preencha conteúdo e HA reais
-2. `contexto-{slug}.md` de **cada** disciplina que apareceu na aula
+2. `.github/agents/contextos/contexto-{slug}.md` de **cada** disciplina que apareceu na aula
 3. A tabela de "HA Consumido" neste orquestrador (seção 4)

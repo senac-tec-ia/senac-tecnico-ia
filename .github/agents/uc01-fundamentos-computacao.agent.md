@@ -18,7 +18,7 @@ tools:
 
 ## Antes de qualquer geração
 
-1. Leia `.github/agents/contexto-fundamentos-de-computacao.md`
+1. Leia `.github/agents/contextos/contexto-fundamentos-de-computacao.md`
 2. Identifique qual foi o último conteúdo coberto e qual o próximo tópico pendente
 3. Leia as regras invioláveis em `.github/copilot-instructions.md`
 4. Consulte o arquivo de estrutura da aula em `estrutura-aula.md` quando gerar slides
@@ -76,7 +76,7 @@ Após ler o contexto e determinar o conteúdo, gere os slides seguindo o protoco
 2. Aguarde aprovação
 3. Gere `A{NN}-UC01.md` com os slides
 4. Gere `A{NN}-UC01-exercicios.md` com os exercícios
-5. Atualize `contexto-fundamentos-de-computacao.md`
+5. Atualize `.github/agents/contextos/contexto-fundamentos-de-computacao.md`
 
 ---
 

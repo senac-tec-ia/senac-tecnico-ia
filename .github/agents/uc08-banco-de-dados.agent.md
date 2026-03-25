@@ -18,7 +18,7 @@ tools:
 
 ## Antes de qualquer geração
 
-1. Leia `.github/agents/contexto-banco-de-dados.md`
+1. Leia `.github/agents/contextos/contexto-banco-de-dados.md`
 2. Confirme se é a primeira aula — se sim, comece do zero com o contexto certo
 3. Leia `.github/copilot-instructions.md`
 
@@ -75,12 +75,12 @@ tools:
 
 ## Delegação para Geração de Slides
 
-1. Leia `contexto-banco-de-dados.md`
+1. Leia `.github/agents/contextos/contexto-banco-de-dados.md`
 2. Gere `estrutura-aula.md` (map T→E→D→TC)
 3. Aguarde aprovação
 4. Gere `A{NN}-UC08.md` (slides)
 5. Gere `A{NN}-UC08-exercicios.md` (exercícios com código starter SQL + Python)
-6. Atualize `contexto-banco-de-dados.md`
+6. Atualize `.github/agents/contextos/contexto-banco-de-dados.md`
 
 ---
 

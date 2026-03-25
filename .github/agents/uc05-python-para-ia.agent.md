@@ -18,7 +18,7 @@ tools:
 
 ## Antes de qualquer geração
 
-1. Leia `.github/agents/contexto-python-para-ia.md`
+1. Leia `.github/agents/contextos/contexto-python-para-ia.md`
 2. Identifique exatamente onde os alunos pararam — não rever o que já foi consolidado
 3. Leia `.github/copilot-instructions.md`
 
@@ -82,12 +82,12 @@ tools:
 
 ## Delegação para Geração de Slides
 
-1. Leia `contexto-python-para-ia.md` integralmente
+1. Leia `.github/agents/contextos/contexto-python-para-ia.md` integralmente
 2. Gere `estrutura-aula.md` (map T→E→D→TC)
 3. Aguarde aprovação
 4. Gere `A{NN}-UC05.md` (slides)
 5. Gere `A{NN}-UC05-exercicios.md` (exercícios com código starter obrigatório)
-6. Atualize `contexto-python-para-ia.md`
+6. Atualize `.github/agents/contextos/contexto-python-para-ia.md`
 
 ---
 
