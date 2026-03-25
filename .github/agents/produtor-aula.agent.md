@@ -44,16 +44,26 @@ FASE 4 — Ciclo por UC (repete para cada UC do dia):
 ### FASE 0 — Contexto silencioso
 
 > ⚠️ **REGRA DE BUDGET — NÃO VIOLAR:**
-> - **NUNCA** leia `PROJETO-AULAS-1-TRIMESTRE.md` inteiro — tem 200+ linhas e queima budget de contexto desnecessariamente
-> - **NUNCA** leia `slides.md` de aulas anteriores (A01–A06 etc.) — podem ter 3500 linhas
+> - **NUNCA** leia `PROJETO-AULAS-1-TRIMESTRE.md` — budget alto; use `contexto-calendario.md` em vez disso
+> - **NUNCA** leia `slides.md` de aulas anteriores (A01–A08 etc.) — podem ter 3500 linhas
 > - **NUNCA** rode `semantic_search` amplo — retorna conteúdo inteiro de vários arquivos
 
-Ao receber qualquer trigger de produção ("Gere A0N", "Prepare A0N", "Aula NN"), execute **silenciosamente** (sem mostrar ao usuário) **apenas**:
+Ao receber qualquer trigger de produção ("Gere A0N", "Prepare A0N", "Aula NN"), execute **silenciosamente** (sem mostrar ao usuário) os passos abaixo em ordem:
 
-1. Se existir `A{NN}/plano-aula.md`: leia-o — já contém composição, HA e lista de slides
-2. Para cada UC do dia, leia **apenas** `.github/agents/contextos/contexto-{slug}.md` — é o resumo condensado por design (~20 linhas)
-3. Leia `.github/agents/referencia-tecnica.md` — layouts e convenções
-4. Monte internamente o rascunho de composição (UC, HA, tópico provável)
+#### Passo 1 — Determinar a próxima aula (quando o número não for informado)
+
+1. Leia `AULAS-PROGRESSO.md` — identifique a última aula registrada (campo "Última aula registrada")
+2. Leia `AULAS-DADAS.md` — confirme o conteúdo da última aula lecionada e identifique o número A{NN}
+3. Leia `AULAS-DESENVOLVIMENTO-PROG.md` — verifique o que já foi produzido na sprint atual (evite gerar conteúdo duplicado para UCs que já têm slides na fila)
+4. Leia `.github/agents/contextos/contexto-calendario.md` — localize o número da próxima aula, sua data e tipo (`Sem1-Qui`, `Sem1-Sex`, `Sem2-Qui`, `Sem2-Sex`)
+5. Use o tipo para determinar a composição de UCs e horários do dia (tabelas do ciclo quinzenal no mesmo arquivo)
+
+#### Passo 2 — Carregar contexto da aula
+
+5. Se existir `A{NN}/plano-aula.md`: leia-o — já contém composição, HA e lista de slides
+6. Para cada UC do dia, leia **apenas** `.github/agents/contextos/contexto-{slug}.md` — é o resumo condensado por design (~20 linhas)
+7. Leia `.github/agents/referencia-tecnica.md` — layouts e convenções
+8. Monte internamente o rascunho de composição (UC, HA, tópico provável)
 
 ---
 
@@ -166,8 +176,9 @@ Exercícios com gabaritos ficam INLINE no slides.md via <v-click>.
 #### Etapa 4 — Checkpoint
 Após receber os slides:
 1. Atualize `plano-aula.md` marcando esta UC como `✅ gerado` com o intervalo de slides (ex: slides 1–18)
-2. Apresente brevemente o resultado (número de slides gerados, tags usadas)
-3. Termine com:
+2. Atualize `AULAS-DESENVOLVIMENTO-PROG.md` **atomicamente** — edite **somente** o bloco `## UCxx - Nome` desta UC: incremente HA desenvolvidos, registre o tópico e a data destino, atualize HA pendentes; **nunca reescreva o arquivo inteiro nem altere blocos de outras UCs**
+3. Apresente brevemente o resultado (número de slides gerados, tags usadas)
+4. Termine com:
    > 🛑 **Bloco {slug} concluído (slides X–Y em slides.md). Continuar para o próximo bloco ({próximo}) ou quer revisar algum slide?**
 
 Repita as Etapas 1–4 para cada UC restante.
@@ -228,9 +239,12 @@ Se o usuário pedir apenas slides ou apenas exercícios, execute normalmente as 
 ## Regra de contexto
 
 Antes de qualquer delegação, confirme:
+- `AULAS-PROGRESSO.md` e `AULAS-DADAS.md` foram lidos para determinar a última aula concluída
+- `AULAS-DESENVOLVIMENTO-PROG.md` foi lido para verificar o que já foi produzido na sprint atual (evitar duplicação de conteúdo entre sessões)
+- `.github/agents/contextos/contexto-calendario.md` foi lido para resolver data, tipo e composição de UCs do dia
 - `.github/agents/contextos/contexto-*.md` de cada disciplina na composição foi lido (NÃO o slides.md da última aula)
 - `plano-aula.md` da aula atual está gravado e aprovado
-- `PROJETO-AULAS-1-TRIMESTRE.md` NÃO foi carregado — informações necessárias já estão em `plano-aula.md` e `.github/agents/contextos/contexto-*.md`
+- `PROJETO-AULAS-1-TRIMESTRE.md` NÃO foi carregado — use `contexto-calendario.md` para dados de calendário
 
 ---
 

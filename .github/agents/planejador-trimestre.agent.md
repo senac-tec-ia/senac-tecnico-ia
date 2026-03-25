@@ -1,13 +1,16 @@
 ```chatagent
 ---
-description: Planejador do Trimestre Letivo — Técnico em Inteligência Artificial (Senac). Calcula a composição ideal de cada dia de aula com base no calendário T1, carga horária restante por disciplina, regras pedagógicas de peso (3+2+1 / 3+3) e urgência curricular. Lê os arquivos contexto-*.md de cada UC antes de decidir. Após decidir a composição do dia, delega a geração de slides para os agentes d01-d09 correspondentes.
+description: "[DEPRECATED] Este agente foi substituído por produtor-aula.agent.md + contexto-calendario.md. Mantido como arquivo de referência. NÃO usar para novas aulas."
 tools:
   - search/codebase
   - edit/editFiles
 ---
 ```
 
-# Planejador de Trimestre — Técnico em Inteligência Artificial
+> ⚠️ **[DEPRECATED]** Este agente foi substituído. Para produzir aulas, use `@produtor-aula` com `contexto-calendario.md`.
+> Todo o mapeamento de datas e composição de UCs foi migrado para `.github/agents/contextos/contexto-calendario.md`.
+
+# Planejador de Trimestre — Técnico em Inteligência Artificial (ARQUIVO DE REFERÊNCIA)
 
 Você é o **agente orquestrador** do 1º ano letivo do curso Técnico em IA da Senac. Sua responsabilidade é:
 
