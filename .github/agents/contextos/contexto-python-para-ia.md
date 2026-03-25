@@ -41,6 +41,7 @@
 | A06 | 13/03/2026 | 0 | Não trabalhada | - |
 | A07 | 19/03/2026 | 0 | Não trabalhada | - |
 | A08 | 20/03/2026 | ~2 | if/else (introdução e reforço), operadores lógicos `and`, `or`, `not`, tabela verdade | Ministrada |
+| A09 | 25/03/2026 | ~5 | Anatomia de variável + vocabulário técnico; tipos + `type()`; built-ins e `float(input())`; operadores de comparação (`==`, `!=`, `<`, `>`, `<=`, `>=`); `elif` em cadeias; comparação + `and`/`or`; tabela verdade revisão; desafio integrador | Slides prontos |
 
 ---
 
@@ -54,23 +55,28 @@
 | `print()` básico | A04 | Introdutório |
 | `input()` básico | A04 | Introdutório |
 | Operadores aritméticos (+, -, *, /, //, %, **) | A04 | Introdutório |
-| Condicionais: `if/elif/else` básico | A04 | Introdutório |
-| `def` e `return` básico | A04 | Introdutório |
 | `print()` aprofundado: f-string, `sep`, `end` | A05 | Introdutório |
 | `type()` para diagnóstico de tipo | A05 | Introdutório |
 | Conversão de tipo: `float()`, `int()`, `str()` | A05 | Introdutório |
 | `float(input())` e `int(input())` como padrão de leitura numérica | A05 | Introdutório |
+| Condicionais: `if/elif/else` básico | A08 | Introdutório |
 | Operadores lógicos: `and`, `or`, `not` | A08 | Introdutório |
 | Tabela verdade (and, or, not) | A08 | Introdutório |
+| Vocabulário técnico: operador de atribuição, built-in, argumento | A09 | Introdutório |
+| Operadores de comparação: `==`, `!=`, `<`, `>`, `<=`, `>=` | A09 | Introdutório |
+| `elif` em cadeias com múltiplos limiares | A09 | Introdutório |
+| Comparação + `and`/`or` no `if` | A09 | Introdutório |
 
 ---
 
-## Tópicos Pendentes no T1 (15,0 HA restantes)
+## Tópicos Pendentes no T1 (~10 HA restantes)
+
+> A09 cobriu: operadores de comparação, elif em cadeias, comparação + and/or, tabela verdade revisão, vocabulário técnico.
 
 | Seq. | Tópico | HA | Ind. |
 |---|---|---|---|
-| 1 | Operadores de comparação: `==`, `!=`, `<`, `>`, `<=`, `>=` | 0,5 | 1 |
-| 2 | Condicionais com múltiplas condições (if + comparação + lógico) — reforço necessario | 1 | 1 |
+| — | ~~Operadores de comparação~~ | ~~0,5~~ | — |
+| — | ~~Condicionais com múltiplas condições + elif + lógico~~ | ~~1~~ | — |
 | 3 | Loops: `for` com `range()` e sobre listas, `while`, `break`, `continue` | 2 | 1 |
 | 4 | Listas: criação, indexação, `append`, `len`, `max`, `min`, `for` sobre listas | 2 | 1 |
 | 5 | Funções avançadas: parâmetros default, docstrings, escopo | 1,5 | 1 |
@@ -83,10 +89,10 @@
 
 ## Recomendações para o Próximo Encontro
 
-> A08 cobriu if/else (reforço) e operadores lógicos and/or/not com tabela verdade. Turma com muita dificuldade — demorou muito para fazer exercícios.
-> Próximo bloco Python: começar com breve revisão de and/or/not (N0 — leitura de código), então introduzir operadores de comparação (==, !=, <, >), e SOMÉNTE após isso combinar comparação + lógico no if.
-> NÃO pular para loops enquanto condicionais com comparação não estiverem consolidadas.
-> Manter densidade baixa (50% do original) e priorizar exercícios de leitura (N0/N1) antes de escrita.
+> A09 cobriu vocabulário técnico, operadores de comparação, elif em cadeias e comparação + lógico.
+> Próximo bloco Python: verificar se turma absorveu elif (via exercício N0 no início) e, se sim, iniciar `for` com `range()` — primeiro contato com loops.
+> Manter densidade baixa. Começar sempre com E0 (leitura de código) antes de qualquer exercício de escrita.
+> Se elif ainda fraco: fazer mais um exercício de elif antes de avançar para loops.
 
 ---
 

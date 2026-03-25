@@ -118,45 +118,31 @@ Fluxo obrigatório — **não pule etapas**:
 
 ## Tracking — AULAS-DESENVOLVIMENTO-PROG.md
 
-> ⚠️ **Este bloco rastreia produção de slides/exercícios, NÃO aulas já ministradas.**
-> É uma sprint de desenvolvimento: registra o que foi criado e o que ainda falta gerar.
+> ⚠️ Este arquivo rastreia **produção de slides/exercícios**, NÃO aulas já ministradas.
 
 ### Antes de agir
 
-1. Leia `AULAS-DESENVOLVIMENTO-PROG.md`
-2. Localize o bloco `## UC05 - Python para IA` — se **não existir**, crie-o ao final do arquivo
-3. Use os dados para saber quais slides já foram produzidos e evitar duplicação
+1. **Se os HA a desenvolver não foram informados pelo usuário**, pergunte: *"Quantos HA de Python serão desenvolvidos nesta aula?"*
+2. Leia `AULAS-DESENVOLVIMENTO-PROG.md` para saber o que já foi registrado
 
 ### Após gerar
 
-Edite **somente** o bloco desta UC em `AULAS-DESENVOLVIMENTO-PROG.md`:
+Insira **uma linha** na tabela `## Sprint atual` de `AULAS-DESENVOLVIMENTO-PROG.md`:
 
-- Incremente os "HA desenvolvidos"
-- Registre o conteúdo produzido e a data destino (ex: `A{NN} — tópico X (X HA) — data destino: DD/MM`)
-- Atualize a lista de HA ainda pendentes
-
-### Regras de escrita atômica
-
-- ❌ NÃO reescreva o arquivo inteiro
-- ❌ NÃO altere blocos de outras UCs
-- ✅ Edite apenas o próprio bloco `## UC05 - Python para IA`
-- ✅ Mantenha o histórico de tudo que foi produzido
-- ✅ **SEMPRE atômico** — uma edição cirúrgica no próprio bloco, jamais substituição total
-
-### Formato do bloco
-
-```md
-## UC05 - Python para IA
-
-HA desenvolvidos: X
-
-Produzido nesta sprint:
-- A{NN} — tópico X (X HA) — data destino: DD/MM
-
-HA ainda pendentes:
-- tópico Y (X HA)
-- tópico Z (X HA)
 ```
+| A{NN} | UC05 | Python para IA | {HA} | DD/MM | {HA restantes T1} |
+```
+
+- "HA ainda pendentes" = número calculado do contexto da UC após subtrair o produzido agora
+- Detalhes ficam **exclusivamente** em `contexto-python-para-ia.md` — nunca aqui
+
+### Regras
+
+- ❌ NÃO crie seções `## UC05` separadas neste arquivo
+- ❌ NÃO liste tópicos pendentes neste arquivo
+- ❌ NÃO reescreva o arquivo inteiro
+- ✅ Apenas insira uma linha na tabela `## Sprint atual`
+- ✅ Se o usuário não informou os HA, **pergunte antes de gerar**
 
 ---
 
