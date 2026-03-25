@@ -99,7 +99,7 @@ const bgOpacity = computed(() =>
 .content-wrapper :deep(h2) {
   font-size: 1.875rem;
   font-weight: 500;
-  color: #cbd5e1;
+  color: var(--slidev-theme-text-muted);
   margin-top: 1rem;
   margin-bottom: 2rem;
 }

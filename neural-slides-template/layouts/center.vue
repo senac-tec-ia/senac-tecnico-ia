@@ -11,12 +11,10 @@ const attrs = useAttrs();
 
 const props = withDefaults(
   defineProps<{
-    card?: boolean;
     wide?: boolean;
     bgPreset?: "default" | "animate" | "palette";
   }>(),
   {
-    card: false,
     wide: false,
     bgPreset: "default",
   },
@@ -40,19 +38,12 @@ const bgOpacity = computed(() =>
       :backgroundOpacity="bgOpacity"
     />
     <div class="content-wrapper">
-      <div
-        v-if="props.card"
-        class="p-12 rounded-xl border border-white backdrop-blur-xl"
-      >
+      <div class="p-12 rounded-xl border border-white backdrop-blur-xl">
         <div v-if="props.wide" class="wide-content">
           <slot />
         </div>
         <slot v-else />
       </div>
-      <div v-else-if="props.wide" class="wide-content">
-        <slot />
-      </div>
-      <slot v-else />
     </div>
     <SlideFooter />
   </div>
@@ -80,7 +71,7 @@ const bgOpacity = computed(() =>
   font-weight: 600;
   margin-top: 8px;
   margin-bottom: 8px;
-  color: #cbd5e1;
+  color: var(--slidev-theme-text-muted);
 }
 
 /* Parágrafos */

@@ -12,13 +12,11 @@ const attrs = useAttrs();
 const props = withDefaults(
   defineProps<{
     bgPreset?: "default" | "animate" | "palette";
-    card?: boolean;
     /** Texto da legenda abaixo do grid (opcional) */
     caption?: string;
   }>(),
   {
     bgPreset: "default",
-    card: false,
     caption: "",
   },
 );
@@ -42,10 +40,7 @@ const bgOpacity = computed(() =>
     />
 
     <div
-      class="content-wrapper relative z-10 w-full"
-      :class="{
-        'p-10 rounded-xl border border-white backdrop-blur-xl': props.card,
-      }"
+      class="content-wrapper relative z-10 w-full p-10 rounded-xl border border-white backdrop-blur-xl"
     >
       <!-- Título / slot padrão (h1 será elevado ao topo) -->
       <div class="header-block mb-4">

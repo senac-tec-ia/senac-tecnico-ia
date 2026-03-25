@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { useNav, useSlideContext, configs } from "@slidev/client";
-import { computed } from "vue";
+import { computed, ref } from "vue";
+import { useOverflowGuard } from "../composables/useOverflowGuard";
 
 const { currentPage, total } = useNav();
 const { $frontmatter } = useSlideContext();
+
+const footerRef = ref<HTMLElement | null>(null);
+const { isOverflowing } = useOverflowGuard(footerRef);
 
 const author = (configs as any).author ?? "Leonardo Zanini";
 const courseTitle = (configs as any).courseTitle ?? (configs as any).title ?? "Técnico em Inteligência Artificial";
@@ -12,7 +16,7 @@ const footerLogo = (configs as any).footerLogo ?? "/assets/senac-logo.png";
 </script>
 
 <template>
-  <footer class="global-footer">
+  <footer ref="footerRef" class="global-footer">
     <div class="footer-left flex items-center gap-2">
       <img :src="footerLogo" class="footer-logo" alt="Logo" />
       <div>{{ courseTitle }}</div>
@@ -24,6 +28,11 @@ const footerLogo = (configs as any).footerLogo ?? "/assets/senac-logo.png";
       <div>{{ currentPage }} / {{ total }}</div>
     </div>
   </footer>
+
+  <!-- Aviso de overflow — só aparece em dev (npm run dev) -->
+  <div v-if="isOverflowing" class="overflow-badge" aria-label="Conteúdo transbordando a altura do slide">
+    ⚠️ OVERFLOW — conteúdo ultrapassa a altura do slide
+  </div>
 </template>
 
 <style scoped>
@@ -69,5 +78,24 @@ const footerLogo = (configs as any).footerLogo ?? "/assets/senac-logo.png";
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+/* ── Overflow guard — só visível em dev ─────────────────────────── */
+.overflow-badge {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(239, 68, 68, 0.92);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 3px 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+  border-bottom: 2px solid #dc2626;
 }
 </style>

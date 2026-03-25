@@ -97,7 +97,7 @@ h1.title-gradient {
 
 h2 {
   @apply text-3xl font-semibold mb-3;
-  color: var(--slidev-theme-primary);
+  color: var(--slidev-theme-text-muted);
 }
 
 h3 {

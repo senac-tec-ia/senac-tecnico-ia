@@ -33,11 +33,9 @@ const bgAttrs = computed(() => {
 const props = withDefaults(
   defineProps<{
     bgPreset?: "default" | "animate" | "palette";
-    card?: boolean;
   }>(),
   {
     bgPreset: "default",
-    card: false,
   },
 );
 
@@ -84,12 +82,8 @@ onMounted(async () => {
 
     <!-- ① Full-width title header — h1 is moved here from the right slot -->
     <!-- ② Content area: image floats left, all text flows around it (and below) -->
-    <!-- When card=true, both are wrapped in a glassmorphism card -->
     <div
-      class="relative z-10 flex-1 min-h-0 flex flex-col"
-      :class="props.card
-        ? 'card-wrapper rounded-xl border border-white/20 backdrop-blur-xl bg-black/25 p-6'
-        : ''"
+      class="relative z-10 flex-1 min-h-0 flex flex-col card-wrapper rounded-xl border border-white/20 backdrop-blur-xl bg-black/25 p-6"
     >
       <div ref="headerRef" class="title-header mb-4" />
 
@@ -152,7 +146,8 @@ onMounted(async () => {
 }
 
 .text-body :deep(h2) {
-  @apply text-xl font-semibold mt-3 mb-1 text-slate-200;
+  @apply text-xl font-semibold mt-3 mb-1;
+  color: var(--slidev-theme-text-muted);
 }
 
 .text-body :deep(h3) {

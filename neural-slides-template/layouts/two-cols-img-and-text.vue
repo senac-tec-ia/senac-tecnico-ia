@@ -146,7 +146,8 @@ onMounted(async () => {
 
 /* Right text defaults */
 .two-cols-img-and-text :deep(h2) {
-  @apply text-1xl font-semibold mt-0 mb-2 text-slate-200 text-xl;
+  @apply text-xl font-semibold mt-0 mb-2;
+  color: var(--slidev-theme-text-muted);
 }
 
 .two-cols-img-and-text :deep(ul) {

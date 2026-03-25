@@ -111,7 +111,7 @@ onMounted(async () => {
   font-size: 1.4rem;
   font-weight: 600;
   margin: 0;
-  color: #cbd5e1;
+  color: var(--slidev-theme-text-muted);
 }
 
 .two-cols-text-header :deep(strong) {
@@ -125,7 +125,7 @@ onMounted(async () => {
   font-weight: 600;
   margin-top: 8px;
   margin-bottom: 8px;
-  color: #cbd5e1;
+  color: var(--slidev-theme-text-muted);
 }
 
 .content-wrapper :deep(p) {

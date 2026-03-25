@@ -11,7 +11,6 @@ const attrs = useAttrs();
 
 const props = withDefaults(
   defineProps<{
-    card?: boolean;
     bgPreset?: "default" | "animate" | "palette";
 
     // Background base config (can be overridden per-slide)
@@ -22,7 +21,6 @@ const props = withDefaults(
     nodeStrokeWidth?: number;
   }>(),
   {
-    card: false,
     bgPreset: "palette",
     pulse: true,
     pulseDuration: 8,
@@ -48,13 +46,9 @@ const props = withDefaults(
       :pulseScale="props.pulseScale"
     />
     <div class="relative z-10 w-full max-w-3xl">
-      <div
-        v-if="props.card"
-        class="p-12 rounded-xl border border-white backdrop-blur-xl"
-      >
+      <div class="p-12 rounded-xl border border-white backdrop-blur-xl">
         <slot />
       </div>
-      <slot v-else />
     </div>
     <SlideFooter />
   </div>
