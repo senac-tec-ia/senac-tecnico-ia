@@ -26,22 +26,6 @@ layout: cover
      BLOCO 1 — PYTHON: FUNDAMENTOS COM VOCABULÁRIO (slides 2–11)
      Anatomia das ferramentas que já usamos + operadores de comparação
      ============================================================ -->
-
----
-layout: center
-bgPreset: palette
-card: true
----
-
-<!-- SLIDE 2 — Divisor Bloco 1 -->
-
-# Bloco 1
-## Python: falando a língua do interpretador
-
-*7h10 – 9h10 · 2 HA · UC05*
-
-> Hoje a gente para e pergunta: **por que** as coisas funcionam do jeito que funcionam?
-
 ---
 layout: default
 card: true
@@ -406,8 +390,6 @@ else:
     print("Reprovado")
 ```
 
-> Python testa cada condição **de cima para baixo** e **para na primeira verdadeira**. As seguintes nem são testadas.
-
 ---
 layout: default
 card: true
@@ -451,13 +433,19 @@ else:
     print("Não dá pra comprar ainda.")
 ```
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 14b — Desconto: Por que a Ordem Importa? -->
+
+# Exemplo: Desconto na Loja (cont.)
 
 **Por que os limiares são testados de maior para menor?**
 
 Se você testasse `desconto >= 20` primeiro, um desconto de 50% também passaria nesse teste — e nunca chegaria à mensagem "COMPRA AGORA". A **ordem** define o resultado.
-
-</v-click>
 
 ---
 layout: default
@@ -808,6 +796,18 @@ bgPreset: default
 | `nota < 6` **e** `freq >= 75` | `"Recuperação"` |
 | `nota < 6` **e** `freq < 75` | `"Reprovado"` |
 
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 24b — EX04: Código Inicial -->
+
+# <carbon-trophy /> EX04 — Desafio Integrador (cont.)
+
+**Starter code:**
+
 ```python
 nome = input("Nome: ")
 nota = float(input("Nota (0–10): "))
@@ -860,4 +860,356 @@ Ada: Aprovado (nota: 8.5 | freq: 80%)
 ```
 
 > Isso é o **padrão completo** de Python até agora: `input()` → converter → comparar → decidir → imprimir.
+
+<!-- ============================================================
+     BLOCO 4 — FUNDAMENTOS MATEMÁTICOS: POTÊNCIAS, RAÍZES E EXPRESSÕES
+     UC03 · Ind. 1 — operações aritméticas + álgebra elementar
+     Sem def, sem for — código linear com variáveis e print
+     ============================================================ -->
+
+---
+layout: center
+bgPreset: palette
+card: true
+---
+
+<!-- SLIDE 26 — Divisor Bloco 4 -->
+
+# Bloco 4
+## Matemática: potências, raízes e expressões
+
+*26 de março de 2026 · 2 HA · UC03*
+
+> A mesma calculadora que já usamos em Python — agora com olhos matemáticos.
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 27 — Potência: Multiplicação Repetida -->
+
+# Potência: Multiplicação Repetida
+
+**Potência** é um atalho para multiplicar um número por ele mesmo várias vezes:
+
+$$2^3 = 2 \times 2 \times 2 = 8$$
+
+Em Python, você já conhece o operador `**`:
+
+```python
+print(2 ** 3)    # 8
+print(5 ** 2)    # 25   ← "5 ao quadrado"
+print(10 ** 3)   # 1000 ← "10 ao cubo"
+```
+
+> **Próximo passo:** por que potências de 2? Porque computadores falam em bits.
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 27b — Bits e Bytes -->
+
+# Bits e Bytes: a moeda do computador
+
+O computador só entende **dois estados**: liga ou desliga. Verdadeiro ou falso. `1` ou `0`.
+
+**Cada um desses estados é 1 bit.**
+
+| Agrupamento | Nome | O que guarda |
+|---|---|---|
+| 1 estado (`0` ou `1`) | **bit** | uma decisão: sim/não, liga/desliga |
+| 8 bits juntos | **byte** | 1 caractere — a letra "A", por exemplo |
+| 1024 bytes | **KB** (kilobyte) | uma mensagem curta de texto |
+| 1024 KB | **MB** (megabyte) | uma foto, uma música |
+
+<v-click>
+
+> Por que **8** bits = 1 byte? Com 8 casas de `0` ou `1`, dá para representar $2^8 = 256$ combinações diferentes — o suficiente para cobrir todas as letras, números e símbolos básicos.
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 28 — Tabela de Potências de 2 -->
+
+# Potências de 2 — a linguagem dos computadores
+
+| Expressão | Python | Resultado | Onde aparece |
+|---|---|---|---|
+| $2^1$ | `2 ** 1` | 2 | — |
+| $2^3$ | `2 ** 3` | 8 | 8 bits = 1 byte |
+| $2^8$ | `2 ** 8` | 256 | valores de cor RGB (0–255) |
+| $2^{10}$ | `2 ** 10` | 1024 | 1 KB de memória |
+| $2^{20}$ | `2 ** 20` | 1.048.576 | 1 MB de memória |
+
+> Rode cada linha no terminal Python e confirme. RGB vai de 0 a 255 — exatamente $2^8 - 1$ valores. Pixels de uma imagem são feitos disso.
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 29 — E0: Quanto Vale? -->
+
+# <carbon-search /> Leitura: Quanto Vale?
+
+**Em dupla · 6 minutos · Nível 0 — calcule de cabeça primeiro, depois rode**
+
+```python
+print(2 ** 4)     # quanto é?
+print(3 ** 3)     # e esse?
+print(10 ** 2)    # e esse?
+print(5 ** 0)     # surpresa — o que acontece com expoente 0?
+print(2 ** 10)    # e esse? (dica: é um número importante em computação)
+```
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 30 — Gabarito E0: Quanto Vale? -->
+
+# <carbon-checkmark /> Gabarito — Quanto Vale?
+
+| Expressão | Resultado | Observação |
+|---|---|---|
+| `2 ** 4` | `16` | 2×2×2×2 |
+| `3 ** 3` | `27` | 3×3×3 |
+| `10 ** 2` | `100` | quadrado de 10 |
+| `5 ** 0` | `1` | **qualquer número elevado a 0 vale 1 — sempre** |
+| `2 ** 10` | `1024` | 1 KB! |
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 31 — Raiz: A Pergunta Inversa -->
+
+# Raiz: A Pergunta Inversa
+
+**Potência** pergunta: *"2 multiplicado por si mesmo 3 vezes dá quanto?"*
+**Raiz** pergunta: *"qual número multiplicado por si mesmo dá 25?"*
+
+$$\sqrt{25} = 5 \quad \text{porque} \quad 5 \times 5 = 25$$
+
+Em Python, raiz quadrada é **potência de `0.5`** — mesmo operador `**`:
+
+```python
+print(25 ** 0.5)    # 5.0  ← raiz quadrada de 25
+print(9  ** 0.5)    # 3.0
+print(16 ** 0.5)    # 4.0
+print(2  ** 0.5)    # 1.4142... ← raiz de 2 (não é inteiro!)
+```
+
+> Você não precisa memorizar comando novo. `**` faz tudo — potência e raiz.
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 32 — EX01: Calculadora de Potências -->
+
+# <carbon-user-multiple /> EX01 — Calculadora de Potências
+
+**Duplas · 12 minutos · Nível 1**
+
+> Salve como `SENAC-TecIA/Aula-09/mat_ex01_potencia.py`
+
+**Tarefa:** leia base e expoente via `input()`, calcule e imprima o resultado.
+
+```python
+base     = float(input("Digite a base: "))
+expoente = float(input("Digite o expoente: "))
+
+resultado = base ** expoente
+
+print(f"{base} elevado a {expoente} = {resultado}")
+```
+
+**Teste com:** `2` e `10` → deve dar `1024.0` | depois `25` e `0.5` → deve dar `5.0`
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 33 — Gabarito EX01 -->
+
+# <carbon-checkmark /> Gabarito — EX01
+
+```python
+base     = float(input("Digite a base: "))
+expoente = float(input("Digite o expoente: "))
+
+resultado = base ** expoente
+
+print(f"{base} elevado a {expoente} = {resultado}")
+```
+
+<v-click>
+
+**Pontos de atenção:**
+- `float(input(...))` porque base e expoente podem ter decimal (`0.5` para raiz)
+- `**` é o mesmo operador de antes — não existe sintaxe nova aqui
+- Testar `base=25, expoente=0.5` confirma que raiz quadrada é uma potência
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 34 — Expressão Algébrica: Receita com Ingrediente -->
+
+# Expressão Algébrica: Receita com Ingrediente
+
+Uma **expressão algébrica** é uma receita matemática onde **x é o ingrediente que muda** — a receita é sempre a mesma.
+
+$$2x + 5$$
+
+| x (ingrediente) | Conta | Resultado |
+|---|---|---|
+| 0 | 2×0 + 5 | **5** |
+| 1 | 2×1 + 5 | **7** |
+| 3 | 2×3 + 5 | **11** |
+| 10 | 2×10 + 5 | **25** |
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 34b — Expressão Algébrica em Python -->
+
+# Expressão Algébrica em Python
+
+Em Python, `x` é uma variável normal. A expressão usa os operadores que você já sabe:
+
+```python
+x = 3
+resultado = 2 * x + 5
+print(resultado)    # 11
+```
+
+> Troque o `3` por qualquer número da tabela anterior — o resultado vai bater!
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 35 — E0: Qual o Resultado da Expressão? -->
+
+# <carbon-search /> Leitura: Qual o Resultado?
+
+**Em dupla · 6 minutos · Nível 0 — calcule no papel, depois confirme rodando**
+
+Para cada valor de `x`, qual é o resultado de `3 * x + 2`?
+
+| x | Conta | Resultado |
+|---|---|---|
+| 0 | `3 * 0 + 2` | ??? |
+| 1 | `3 * 1 + 2` | ??? |
+| 4 | `3 * 4 + 2` | ??? |
+| 10 | `3 * 10 + 2` | ??? |
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 36 — Gabarito E0: Qual o Resultado? -->
+
+# <carbon-checkmark /> Gabarito — Qual o Resultado?
+
+| x | Resultado | Passo a passo |
+|---|---|---|
+| 0 | **2** | 3×0 = 0, mais 2 = 2 |
+| 1 | **5** | 3×1 = 3, mais 2 = 5 |
+| 4 | **14** | 3×4 = 12, mais 2 = 14 |
+| 10 | **32** | 3×10 = 30, mais 2 = 32 |
+
+<v-click>
+
+> Percebeu o padrão? Cada vez que x aumenta 1, o resultado aumenta **3** — exatamente o número que multiplica x. Isso é o que o `3` da expressão significa.
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 37 — EX02: Verificador de Equação -->
+
+# <carbon-user-multiple /> EX02 — Verificador de Equação
+
+**Duplas · 15 minutos · Nível 1–2**
+
+> Salve como `SENAC-TecIA/Aula-09/mat_ex02_equacao.py`
+
+**Contexto:** precisamos encontrar o valor de `x` que resolve a equação $2x + 5 = 11$.
+
+**Tarefa:** use Python para **testar valores** até o programa imprimir `True`:
+
+```python
+x = float(input("Tente um valor para x: "))
+verificacao = 2 * x + 5 == 11
+print(f"x = {x} resolve a equação? {verificacao}")
+```
+
+Tente `x = 1`, depois `x = 2`, depois `x = 3`... qual dá `True`?
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 38 — Gabarito EX02 -->
+
+# <carbon-checkmark /> Gabarito — EX02
+
+```python
+x = float(input("Tente um valor para x: "))
+verificacao = 2 * x + 5 == 11
+print(f"x = {x} resolve a equação? {verificacao}")
+```
+
+<v-click>
+
+**Resposta: `x = 3`**
+
+```
+x = 1 → 2×1 + 5 = 7  ≠ 11  → False
+x = 2 → 2×2 + 5 = 9  ≠ 11  → False
+x = 3 → 2×3 + 5 = 11 = 11  → True ✓
+```
+
+> `==` aparece nos dois mundos: **em Python** compara valores e retorna `True`/`False`. **Em matemática** define a equação. São exatamente a mesma ideia.
+
+</v-click>
 

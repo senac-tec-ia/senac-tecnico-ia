@@ -11,7 +11,7 @@
 
 | Trim. | HA Alocado | HA Dado | HA Restante |
 |---|---|---|---|
-| T1 | 13 | 2 | 11 |
+| T1 | 13 | 4 | 9 |
 | T2 | 14 | 0 | 14 |
 | T3 | 13 | 0 | 13 |
 
@@ -21,7 +21,7 @@
 
 | Ind. | Descrição | Status T1 |
 |---|---|---|
-| 1 | Aplica operações fundamentais da aritmética e álgebra em problemas de computação | Pendente |
+| 1 | Aplica operações fundamentais da aritmética e álgebra em problemas de computação | **Em progresso** (potências, raízes, expressões algébricas — A09) |
 | 2 | Utiliza conceitos de lógica matemática para estruturar raciocínios e algoritmos | Pendente |
 | 3 | Emprega noções de conjuntos, funções e matrizes na organização de informações | Pendente |
 | 4 | Reconhece padrões e sequências numéricas para construção de algoritmos básicos | Pendente |
@@ -38,7 +38,8 @@
 | A02 | 27/02/2026 | 0 | Não trabalhada |
 | A03 | 05/03/2026 | 0 | Não trabalhada |
 | A04 | 06/03/2026 | 0 | Não trabalhada |
-| A05 | 12/03/2026 | ~2 | **INICIO:** Aritmética computacional (int, float, `//`, `%`, `**`, PEMDAS), Álgebra: variável vs incognita, equação linear `y = 2x + 5`, função `calcular_y(x)` em Python |
+| A05 | 12/03/2026 | ~2 | **INICIO:** Aritmética computacional (int, float, `//`, `%`, `**`, PEMDAS), Álgebra: variável vs incógnita, equação linear `y = 2x + 5` |
+| A09 | 26/03/2026 | 2 | **Potências e raízes** (`**`, `**0.5`, tabela potências de 2, contexto bytes/RGB), **Expressões algébricas** (x como ingrediente, tabela de valores), **Equações** (verificador com `==` — trial & error para resolver `2x+5=11`) |
 
 ---
 
@@ -75,8 +76,11 @@
 | potência | `**` eleva à potência | A05 |
 | PEMDAS | ordem de operações: potência, mult, div, adição, subtração | A05 |
 | variável (matemática) | incógnita em álgebra, diferente de atribuição Python | A05 |
-| equação linear | `y = ax + b` | A05 |
-
+| equação linear | `y = ax + b` | A05 || `potência` | $b^n$ — `b ** n` em Python | A09 |
+| `expoente` | o número de cima na potência | A09 |
+| `raiz quadrada` | $\sqrt{x}$ = `x ** 0.5` em Python | A09 |
+| `expressão algébrica` | receita com variável: `2*x + 5` | A09 |
+| `equação` | expressão com `=` que precisa ser resolvida | A09 |
 ---
 
 ## Conexões Identificadas com Outras Disciplinas

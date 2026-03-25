@@ -15,5 +15,6 @@
 | Sessão | UC | Disciplina | HA produzidos | Aula destino | HA ainda pendentes |
 |--------|----|-----------:|:-------------:|:------------:|:------------------:|
 | A09 | UC05 | Python para IA | 3 | 25/03 | 12 |
+| A09 | UC03 | Fund. Matemáticos | 2 | 26/03 | 9 |
 
 ---
