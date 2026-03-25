@@ -102,7 +102,6 @@ Para cada UC:
 
 ### 6. NÃO FAZER
 
-* ❌ NÃO atualizar `PROJETO-AULAS-1-TRIMESTRE.md`
 * ❌ NÃO recalcular HA global
 * ❌ NÃO reorganizar conteúdo
 * ❌ NÃO tentar melhorar pedagogicamente

@@ -4,7 +4,6 @@ description: Agent for auditing and correcting lesson structure in Slidev decks 
 tools:
   - search/codebase
   - edit/editFiles
-  - read/problems
 ---
 
 # Auditor de Estrutura de Aula — Senac Técnico em IA

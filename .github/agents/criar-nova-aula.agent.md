@@ -33,14 +33,13 @@ O script `scripts/nova-aula.ps1` executa automaticamente:
 ## Protocolo de Execução
 
 ### Passo 1 — Identificar o número da nova aula
-1. Leia `PROJETO-AULAS-1-TRIMESTRE.md` (raiz) para identificar qual é a próxima aula programada
+1. Leia `.github/agents/contextos/contexto-calendario.md` para identificar qual é a próxima aula programada
 2. Confirme o número com o professor antes de prosseguir (ex: "A próxima aula é A07 — confirma?")
 
 ### Passo 2 — Criar a pasta da nova aula
 Copie **apenas** a estrutura Slidev do `neural-slides-template/`, excluindo:
 - `.github/` — os agentes vivem na raiz, não nas subpastas
 - `AULAS-DADAS.md` — arquivo global na raiz
-- `PROJETO-AULAS-1-TRIMESTRE.md` — arquivo global na raiz
 
 Estrutura a copiar:
 ```
@@ -102,16 +101,12 @@ No `package.json` da raiz do workspace, adicione dentro de `"scripts"`:
 ```
 E adicione `"a{nn}"` ao array `"workspaces"`.
 
-### Passo 7 — Registrar em PROJETO-AULAS-1-TRIMESTRE.md
-Na tabela do calendário, atualize a linha de A{NN} de "A definir" para "⏳ Planejando" com a data prevista.
-
-### Passo 8 — Relatório de confirmação
+### Passo 7 — Relatório de confirmação
 ```
 ✅ A{NN}/ criada com estrutura Slidev completa
 ✅ A{NN}/package.json — name ajustado
 ✅ A{NN}/meta.yaml — data e status configurados
 ✅ package.json (raiz) — scripts e workspace adicionados
-✅ PROJETO-AULAS-1-TRIMESTRE.md — A{NN} registrada
 
 Próximo passo: use @planejador-trimestre para definir as disciplinas desta aula.
 ```
@@ -121,6 +116,6 @@ Próximo passo: use @planejador-trimestre para definir as disciplinas desta aula
 ## Regras Invioláveis
 
 1. **NUNCA criar `.github/` dentro da nova pasta** — os agentes são globais e vivem em `senac-tecnico-ia/.github/agents/`
-2. **NUNCA copiar** `AULAS-DADAS.md` ou `PROJETO-AULAS-1-TRIMESTRE.md` para a nova pasta
+2. **NUNCA copiar** `AULAS-DADAS.md` para a nova pasta
 3. O tema Slidev é sempre `../slidev-theme-neural` (path relativo à pasta da nova aula)
-4. Sempre consulte `PROJETO-AULAS-1-TRIMESTRE.md` antes de nomear — nunca pule números de aula
+4. Sempre consulte `contexto-calendario.md` antes de nomear — nunca pule números de aula

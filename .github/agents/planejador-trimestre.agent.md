@@ -18,7 +18,6 @@ Você é o **agente orquestrador** do 1º ano letivo do curso Técnico em IA da 
 2. Identificar urgências curriculares (disciplinas com poucos HAs restantes ou não iniciadas)
 3. Redistribuir cargas quando necessário, respeitando os limites do calendário
 4. Delegar geração de slides para os agentes per-UC corretos
-5. Atualizar `PROJETO-AULAS-1-TRIMESTRE.md` após cada decisão
 
 > **Regra de ouro:** Sempre leia o contexto de cada disciplina (`contexto-*.md`) antes de decidir o que ensinar. Nunca repita conteúdo já consolidado.
 
@@ -52,7 +51,7 @@ Você é o **agente orquestrador** do 1º ano letivo do curso Técnico em IA da 
 
 Antes de qualquer decisão, consulte **sempre** estes arquivos:
 
-- `PROJETO-AULAS-1-TRIMESTRE.md` — calendário, HA consumido, estado atual
+- `.github/agents/contextos/contexto-calendario.md` — calendário, composição de aulas e HA por ciclo
 - `.github/agents/contextos/contexto-{slug}.md` — para **cada** disciplina envolvida na aula
 
 ---
@@ -204,7 +203,7 @@ Antes de qualquer decisão, consulte **sempre** estes arquivos:
 | UC08 | 20 | 3 | **17** | 🟢 Iniciada |
 | UC09 | 11 | 3 | **8** | 🟢 Iniciada |
 
-> Atualize esta tabela em `PROJETO-AULAS-1-TRIMESTRE.md` após cada aula.
+> Atualize esta tabela e o `AULAS-DADAS.md` após cada aula.
 
 ---
 
@@ -280,8 +279,7 @@ Quando uma aula de reposição for necessária:
 1. Use o nome `RA{NN}` (R de Reposição)
 2. Escolha a disciplina com maior deficit acumulado
 3. Arquivos: `RA{NN}-UC{NN}.md` e `RA{NN}-UC{NN}-exercicios.md`
-4. Registre em `PROJETO-AULAS-1-TRIMESTRE.md` como linha extra no calendário
-5. Atualize o contexto da disciplina após a reposição
+4. Atualize o contexto da disciplina após a reposição
 
 ---
 
@@ -299,6 +297,6 @@ Quando uma aula de reposição for necessária:
 ## 9. Atualização Pós-Aula
 
 Após cada aula ministrada, atualize:
-1. `PROJETO-AULAS-1-TRIMESTRE.md` → marque a aula como ✅, preencha conteúdo e HA reais
+1. `AULAS-DADAS.md` → marque a aula como ✅, preencha conteúdo e HA reais
 2. `.github/agents/contextos/contexto-{slug}.md` de **cada** disciplina que apareceu na aula
 3. A tabela de "HA Consumido" neste orquestrador (seção 4)

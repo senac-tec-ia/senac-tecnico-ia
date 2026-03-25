@@ -1,7 +1,6 @@
 # Contexto — Calendário T1 2026
 
 > Fonte de verdade compacta para determinar a composição de cada aula.
-> Use este arquivo em vez de `PROJETO-AULAS-1-TRIMESTRE.md` (budget alto).
 
 ---
 

@@ -44,7 +44,6 @@ FASE 4 — Ciclo por UC (repete para cada UC do dia):
 ### FASE 0 — Contexto silencioso
 
 > ⚠️ **REGRA DE BUDGET — NÃO VIOLAR:**
-> - **NUNCA** leia `PROJETO-AULAS-1-TRIMESTRE.md` — budget alto; use `contexto-calendario.md` em vez disso
 > - **NUNCA** leia `slides.md` de aulas anteriores (A01–A08 etc.) — podem ter 3500 linhas
 > - **NUNCA** rode `semantic_search` amplo — retorna conteúdo inteiro de vários arquivos
 
@@ -244,7 +243,6 @@ Antes de qualquer delegação, confirme:
 - `.github/agents/contextos/contexto-calendario.md` foi lido para resolver data, tipo e composição de UCs do dia
 - `.github/agents/contextos/contexto-*.md` de cada disciplina na composição foi lido (NÃO o slides.md da última aula)
 - `plano-aula.md` da aula atual está gravado e aprovado
-- `PROJETO-AULAS-1-TRIMESTRE.md` NÃO foi carregado — use `contexto-calendario.md` para dados de calendário
 
 ---
 
