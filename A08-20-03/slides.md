@@ -971,10 +971,10 @@ Abra o **db-fiddle.com** e **escolha um tema** para criar sua tabela:
 | Tema | Colunas sugeridas |
 |---|---|
 | Games | `id`, `titulo`, `plataforma`, `preco`, `nota_media` |
+| Músicas | `id`, `titulo`, `artista`, `duracao_segundos`, `genero` |
+| Produtos | `id`, `nome`, `categoria`, `preco`, `estoque` |
 
 Escreva o `CREATE TABLE` na área Schema, clique **Run**. Sem erro = tabela criada com sucesso!
-
-Na área da direita, você precisa fazer o SELECT, para ver a tabela que acabou de criar
 
 ---
 layout: default
@@ -1017,13 +1017,7 @@ VALUES (2, 'Fortnite', 'PS5', 0.00, 7.8);
 **Lendo em voz alta:**
 > "Insira na tabela `games`, nas colunas `id`, `titulo`..., os valores `1`, `'Minecraft'`..."
 
----
-layout: default
-card: true
-bgPreset: palette
----
-
-# `INSERT INTO` — Colocando Dados na Tabela
+<v-click>
 
 **Regras obrigatórias:**
 - Textos entre aspas simples: `'Minecraft'`
@@ -1031,60 +1025,82 @@ bgPreset: palette
 - A ordem dos valores deve bater com a ordem das colunas
 - Não pode repetir o mesmo `id` (PRIMARY KEY!)
 
+</v-click>
+
 ---
 layout: default
 card: true
 bgPreset: palette
 ---
 
-<!-- SLIDE 27a — EX05 Popule e Consulte -->
+<!-- SLIDE 27 — EX05 Popule e Consulte (dupla) -->
 
-# <carbon-user-multiple /> EX05a — Popule e Consulte
+# <carbon-user-multiple /> EX05 — Popule e Consulte
 
-**5 minutos · Nível 2**
+**Dupla · 10 minutos · Nível 3**
 
-No mesmo db-fiddle do EX04, adicione **3 jogos** na área **Schema SQL** com `INSERT INTO`. Depois, na área **Query SQL**, rode as consultas abaixo:
+No mesmo db-fiddle do EX04, adicione na área **Schema SQL** três linhas com `INSERT INTO`. Depois, na área **Query SQL**, faça as 3 consultas abaixo e clique **Run**:
 
-**Ver todos os jogos:**
+1. Ver todas as linhas:
 ```sql
 SELECT * FROM games;
 ```
 
-**Ordenar do maior para o menor por nota:**
+2. Filtrar por plataforma:
 ```sql
-SELECT titulo, nota_media
-FROM games
-ORDER BY nota_media DESC;
+SELECT titulo, preco FROM games WHERE plataforma = 'PC';
 ```
+
+3. Ordenar por nota média (maior primeiro):
+```sql
+SELECT titulo, nota_media FROM games ORDER BY nota_media DESC;
+```
+
+Confirme que os 3 resultados aparecem corretamente.
+
+<v-click>
+
+> **Resultado esperado:** 3 jogos na query 1 · somente os PCs na query 2 · ordenados do maior para o menor na query 3.
+
+</v-click>
 
 ---
 layout: default
 card: true
-bgPreset: palette
+bgPreset: animate
 ---
 
-<!-- SLIDE 27b — EX05b Filtre os Dados -->
+<!-- SLIDE 28 — Debate: Tabela de um Modelo de IA -->
 
-# <carbon-user-multiple /> EX05b — Filtre os Dados
+# <carbon-machine-learning /> Debate — Tabela de um Modelo de IA
 
-**5 minutos · Nível 3**
+## Se você fosse guardar modelos de IA num banco de dados...
 
-Ainda no mesmo db-fiddle, use `WHERE` para filtrar os resultados:
+**Que colunas teria essa tabela?** O que você quer saber sobre cada modelo treinado?
 
-**Ver apenas os jogos de PC:**
+<v-click>
+
+**Sugestão:**
 ```sql
-SELECT titulo, preco
-FROM games
-WHERE plataforma = 'PC';
+CREATE TABLE modelos_ia (
+    id          INTEGER      PRIMARY KEY,
+    nome        VARCHAR(100) NOT NULL,
+    precisao    FLOAT,
+    epochs      INTEGER,
+    gpu_usada   VARCHAR(50),
+    data_treino DATE
+);
 ```
 
-**Ver apenas jogos com nota acima de 8:**
-```sql
-SELECT titulo, nota_media
-FROM games
-WHERE nota_media > 8;
-```
+> Esse debate conecta os 3 blocos do dia: **Python** treina o modelo, **BD** guarda os resultados, **GPU** é o hardware que fez o treino.
 
+</v-click>
+
+<!-- ============================================================
+     BLOCO 3 — UC06 · ARQUITETURA E GPU (slides 29–41)
+     Paralelismo reforçado + Pipeline 4 estágios + GPUs no mercado
+     ============================================================ -->
+<!-- slides 29–42 -->
 
 ---
 layout: center
@@ -1104,7 +1120,7 @@ card: true
 ---
 layout: brainstorm
 card: true
-bgPreset: palette
+bgPreset: animate
 pulse: true
 ---
 
@@ -1112,7 +1128,7 @@ pulse: true
 
 # O Que Você Lembra da GPU?
 
-## Fala sem consultar qualquer coisa que vier à cabeça!
+## Fala sem consultar — qualquer coisa que vier à cabeça!
 
 - O que é uma GPU?
 - Qual a diferença entre CPU e GPU?
@@ -1452,7 +1468,6 @@ bgPreset: palette
 
 ---
 layout: end
-card: true
 bgPreset: palette
 github: LeoZanini
 avatar: https://github.com/LeoZanini.png?size=256
@@ -1461,7 +1476,7 @@ aulaNum: "Aula 08"
 
 <!-- SLIDE 42 — Encerramento A08 -->
 
-# Aula 08 Concluída!
+# Aula 08 — Concluída!
 
 ## O fio condutor de hoje:
 

@@ -12,7 +12,7 @@
 
 | Trim. | HA Alocado | HA Dado | HA Restante |
 |---|---|---|---|
-| T1 | 20 (ajustado) | 6 | 14 |
+| T1 | 20 (ajustado) | 9 | 11 |
 | T2 | 27 | 0 | 27 |
 | T3 | 27 | 0 | 27 |
 
@@ -83,6 +83,7 @@
 | A06 | 13/03/2026 | 3 | INÍCIO — ver abaixo |
 | A07 | 19/03/2026 | 0 | Não trabalhada |
 | A08 | 20/03/2026 | ~3 | Tipos de dados, CREATE TABLE, INSERT INTO — ver abaixo |
+| A10 | 27/03/2026 | 3 | Os 4 Ds (DDL/DML/DQL/DCL), ALTER TABLE, constraints (PK/NOT NULL/UNIQUE/DEFAULT), UPDATE, DELETE, TRUNCATE vs DROP, SELECT++ (LIMIT/DISTINCT/AS) — ver abaixo |
 
 ---
 
@@ -123,6 +124,20 @@
 **Feedback do professor:** Foram 3 aulas seguidas de BD (referência ao bloco de A06 + continuação em A08).
 ---
 
+### A10 — 27/03/2026 (~3 HA)
+
+**Tópicos cobertos:**
+- Os 4 Ds do SQL: DDL, DML, DQL, DCL — visão panorâmica com tabela de comandos
+- `ALTER TABLE`: ADD COLUMN, RENAME COLUMN, DROP COLUMN
+- Constraints aprofundadas: `PRIMARY KEY`, `NOT NULL`, `UNIQUE`, `DEFAULT` — com exemplos e analogia Excel
+- DML completo: `UPDATE` com `WHERE` (e perigo de UPDATE sem WHERE), `DELETE` com `WHERE`
+- `TRUNCATE TABLE` vs `DROP TABLE` vs `DELETE FROM` — diferenças práticas
+- DQL avançado: `LIMIT`, `DISTINCT`, `AS` (alias)
+- Exercícios: UPDATE na tabela `produto`, DELETE com condição, SELECT com LIMIT/DISTINCT/AS
+- Contexto de IA: tabela `modelo_ia` usada como exemplo central
+- DCL (`GRANT`/`REVOKE`) apresentado no mapa final — aprofundamento previsto para T2
+---
+
 ## Conceitos Consolidados (não reintroduzir no mesmo nível)
 
 | Conceito | Aula | Nível de Profundidade |
@@ -139,8 +154,12 @@
 | `CREATE TABLE` com tipos e constraints | A08 | Introdutório |
 | `INSERT INTO`: inserção de registros | A08 | Introdutório |
 | `PRIMARY KEY`: constraint de chave primária | A08 | Reconhecimento |
-| `NOT NULL`: constraint de obrigatoriedade | A08 | Reconhecimento |
-
+| `NOT NULL`: constraint de obrigatoriedade | A08 | Reconhecimento || `ALTER TABLE`: ADD/RENAME/DROP COLUMN | A10 | Introdutório |
+| `NOT NULL`, `UNIQUE`, `DEFAULT`: constraints completas | A10 | Introdutório |
+| `UPDATE` com `WHERE` | A10 | Introdutório |
+| `DELETE` com `WHERE` | A10 | Introdutório |
+| `TRUNCATE TABLE` vs `DROP TABLE` | A10 | Reconhecimento |
+| `LIMIT`, `DISTINCT`, `AS` no SELECT | A10 | Introdutório |
 ---
 
 ## Sequência Planejada T1 (20 HA) — com Andaime Excel
@@ -197,10 +216,9 @@
 
 ## Recomendações para o Próximo Encontro (A09+)
 
-> A08 cobriu: tipos de dados (INTEGER, VARCHAR, FLOAT, BOOLEAN), DDL/DML conceitos, CREATE TABLE com constraints básicas, INSERT INTO.
-> PRIMARY KEY e NOT NULL foram vistos por cima — reforçar no início do próximo bloco antes de avançar.
-> Próximo passo: aprofundar constraints (PRIMARY KEY, NOT NULL, UNIQUE), depois SELECT com WHERE usando os dados inseridos via INSERT INTO.
-> Manter analogia Excel: "CREATE TABLE = criar aba estruturada", "INSERT INTO = digitar linha na aba".
+> A10 cobriu: os 4 Ds (DDL/DML/DQL/DCL), ALTER TABLE, constraints (PRIMARY KEY/NOT NULL/UNIQUE/DEFAULT), UPDATE, DELETE, TRUNCATE, SELECT++ (LIMIT/DISTINCT/AS).
+> DCL (GRANT/REVOKE) apresentado no mapa — aprofundar em T2.
+> Próximo passo: chave estrangeira (FK) e JOIN entre tabelas.
 | SGBD | Sistema de Gerenciamento de Banco de Dados | **Introduzido A06** |
 | SQLite | BD relacional embutido — arquivo único `.db` | Pendente |
 | query | consulta SQL | **Introduzido A06** |

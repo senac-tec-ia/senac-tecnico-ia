@@ -12,9 +12,12 @@ const attrs = useAttrs();
 const props = withDefaults(
   defineProps<{
     bgPreset?: "default" | "animate" | "palette";
+    codeSize?: "lg" | "sm";
+    kahootColors?: boolean;
   }>(),
   {
     bgPreset: "default",
+    kahootColors: false,
   },
 );
 
@@ -57,7 +60,9 @@ onMounted(async () => {
     />
 
     <div
-      class="bg-black/10 rounded-[14px] border border-white backdrop-blur-md relative z-10 h-full p-8 max-w-4xl max-h-md"
+      class="bg-slate-900/85 rounded-[14px] border border-white/30 backdrop-blur-md relative z-10 h-full p-8 max-w-4xl max-h-md"
+      :style="props.codeSize ? { '--q-code-fs': props.codeSize === 'sm' ? '1.75rem' : '2rem' } : {}"
+      :class="{ 'kahoot-mode': props.kahootColors }"
     >
       <div ref="headerRef" class="two-cols-text-header"></div>
 
@@ -152,5 +157,41 @@ onMounted(async () => {
   font-size: 1.25rem;
   font-weight: 700;
   color: #94a3b8;
+}
+
+/* Kahoot: código grande + alternativas coloridas (props codeSize/kahootColors) */
+.kahoot-mode .content-wrapper :deep(pre),
+.kahoot-mode .content-wrapper :deep(pre code) {
+  font-size: var(--q-code-fs, 2rem) !important;
+  line-height: 1.5;
+}
+
+.kahoot-mode .col-right :deep(li) {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.kahoot-mode .col-right :deep(li:nth-child(1)) {
+  color: #facc15; /* Amarelo - A */
+}
+
+.kahoot-mode .col-right :deep(li:nth-child(2)) {
+  color: #60a5fa; /* Azul - B */
+}
+
+.kahoot-mode .col-right :deep(li:nth-child(3)) {
+  color: #4ade80; /* Verde - C */
+}
+
+.kahoot-mode .col-right :deep(li:nth-child(4)) {
+  color: #f87171; /* Vermelho - D */
+}
+
+/* Fix: inline code dentro do h1 não recebe fundo escuro */
+.two-cols-text-header :deep(code) {
+  background: transparent !important;
+  color: inherit;
+  padding: 0;
 }
 </style>

@@ -10,12 +10,13 @@
 
 ---
 
-## Sprint atual: A09
+## Sprint atual: A10
 
 | Sessão | UC | Disciplina | HA produzidos | Aula destino | HA ainda pendentes |
 |--------|----|-----------:|:-------------:|:------------:|:------------------:|
 | A09 | UC05 | Python para IA | 3 | 25/03 | 12 |
 | A09 | UC03 | Fund. Matemáticos | 2 | 26/03 | 9 |
 | A09 | UC04 | Fundamentos de IA | 1 | 25/03 | 4 |
+| A10 | UC08 | Banco de Dados | 3 | 27/03 | 11 |
 
 ---
