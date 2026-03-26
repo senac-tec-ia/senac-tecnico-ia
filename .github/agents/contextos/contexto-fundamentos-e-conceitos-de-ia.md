@@ -11,7 +11,7 @@
 
 | Trim. | HA Alocado | HA Dado | HA Restante |
 |---|---|---|---|
-| T1 | 11 (ajustado) | 6 | 5 |
+| T1 | 11 (ajustado) | 7 | 4 |
 | T2 | 14 | 0 | 14 |
 | T3 | 14 | 0 | 14 |
 
@@ -22,7 +22,7 @@
 | Ind. | Descrição | Status T1 |
 |---|---|---|
 | 1 | Identifica conceitos e fundamentos de Inteligência Artificial | Em andamento |
-| 2 | Classifica diferentes métodos, algoritmos e técnicas em IA | Em andamento |
+| 2 | Classifica diferentes métodos, algoritmos e técnicas em IA | Avançado (ML/CV/NLP distintos, tabela comparativa) |
 | 3 | Compreende e utiliza resultados supervisionados, não supervisionados e por reforço (T2) | Pendente |
 | 4 | Compreende e aplica questões éticas e impactos sociais relacionados ao uso de IA (T3) | Semeado |
 
@@ -36,6 +36,7 @@
 | A02 | 27/02/2026 | 0 | Não trabalhada |
 | A03 | 05/03/2026 | ~3 | Definição formal de IA, história completa (1943→2024), ML supervisionado/não-sup./reforço, redes neurais, DL, NLP, ética, LGPD |
 | A04 | 06/03/2026 | ~1 | Vocabulário avançado: NLP, Token, LLM, Backpropagation, Epoch, Embedding |
+| A09 | 25/03/2026 | ~1 | Debate: IA como ferramenta vs trapaça (ética); slides UC04 com mapa da IA, distinção ML/CV/NLP, tabela comparativa, fechamento ético |
 
 ---
 
@@ -76,7 +77,7 @@
 
 ---
 
-## Próximos Tópicos (T1 restante — 5 HA)
+## Próximos Tópicos (T1 restante — 4 HA)
 
 **Prioridade: consolidar Ind. 2 (classificação de métodos/algoritmos)**
 
@@ -84,8 +85,7 @@
 |---|---|---|
 | 1 | Algoritmos de classificação: Decision Trees, Random Forest, SVM | 2 |
 | 2 | Algoritmos de clustering: K-Means, DBSCAN | 1 |
-| 3 | Aprendizado por Reforço: casos de uso reais (AlphaGo, robótica) | 1 |
-| 4 | Bias, fairness e impacto social — debate estruturado | 1 |
+| 3 | Bias, fairness e impacto social — aprofundar (debate já semeado) | 1 |
 
 ---
 
@@ -95,6 +95,9 @@
 - Definição geral de ML/DL/NLP (A03)
 - Introdução ao Turing Test e Dartmouth Conference
 - LGPD conceito inicial (mencionar, não reintroduzir)
+- Mapa hierárquico IA → ML → DL → CV/NLP/RL (A09)
+- Tabela comparativa ML geral vs CV vs NLP (A09)
+- Debate ética: ferramenta vs trapaça — posições já exploradas (A09)
 
 ---
 

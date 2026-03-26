@@ -1213,3 +1213,180 @@ x = 3 → 2×3 + 5 = 11 = 11  → True ✓
 
 </v-click>
 
+<!-- ============================================================
+     BLOCO UC04 — FUNDAMENTOS DE IA: MAPEANDO OS SUBCAMPOS
+     ~1 HA · recall debate ética + distinção ML / CV / NLP
+     ============================================================ -->
+---
+layout: center
+bgPreset: palette
+card: true
+---
+
+<!-- SLIDE 39 — Divisor UC04 -->
+
+# Fundamentos de IA
+## Mapeando os Subcampos
+
+*UC04 · 1 HA · Ind. 2*
+
+> Na última aula vocês debateram: **ferramenta essencial ou trapaça?**  
+> Hoje vamos precisar dos conceitos para responder isso com mais rigor.
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 40 — O Mapa da IA -->
+
+# IA não é uma coisa só
+
+```
+Inteligência Artificial  ◀── guarda-chuva
+│
+├── Machine Learning      ◀── aprende com dados
+│   │
+│   └── Deep Learning     ◀── aprende com muitas camadas
+│       │
+│       ├── Computer Vision  ◀── enxergar imagens
+│       ├── NLP              ◀── entender texto e fala
+│       └── Reinforcement L. ◀── aprender por tentativa/erro
+│
+└── Sistemas Especialistas ◀── regras escritas por humanos (anos 80)
+```
+
+<v-click>
+
+> ML ⊂ IA. Deep Learning ⊂ ML. CV e NLP ⊂ Deep Learning.  
+> Quando alguém diz "IA", geralmente quer dizer um desses subcampos.
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 41 — Computer Vision -->
+
+# Computer Vision — A IA que enxerga
+
+**O que é:** treinar um modelo para *interpretar* imagens e vídeos como um humano faria.
+
+| Aplicação | Como CV entra |
+|---|---|
+| Reconhecimento facial (Face ID) | Detecta e mapeia pontos do rosto |
+| Carro autônomo (Tesla, Waymo) | Identifica placa, pedestre, semáforo |
+| Diagnóstico médico por imagem | Detecta tumor em raio-X |
+| Moderação de conteúdo (Instagram) | Remove imagens proibidas automaticamente |
+
+<v-click>
+
+**Como funciona:** usa **CNN** (Rede Neural Convolucional) — varre a imagem em pequenas janelas procurando padrões (borda, textura, forma).
+
+```python
+# sklearn não serve para CV de verdade — aqui entra PyTorch/TensorFlow:
+from torchvision import models
+model = models.resnet50(pretrained=True)   # modelo já treinado em 1M imagens
+```
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 42 — NLP -->
+
+# NLP — A IA que lê e fala
+
+**O que é:** treinar um modelo para *entender e gerar* linguagem humana (texto ou fala).
+
+| Aplicação | Como NLP entra |
+|---|---|
+| ChatGPT, Gemini, Claude | Geram texto coerente em qualquer idioma |
+| Tradução automática (DeepL) | Converte significado entre idiomas |
+| Análise de sentimento | "Esse review é positivo ou negativo?" |
+| Autocomplete do teclado | Prevê a próxima palavra |
+
+<v-click>
+
+**Como funciona:** converte palavras em **embeddings** (vetores numéricos) → passa por camadas **Transformer** → prevê o próximo token.
+
+```python
+# Exemplo real (biblioteca transformers da HuggingFace):
+from transformers import pipeline
+sentiment = pipeline("sentiment-analysis")
+print(sentiment("Essa aula foi incrível!"))
+# → [{'label': 'POSITIVE', 'score': 0.9998}]
+```
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 43 — CV vs NLP vs ML: O que diferencia? -->
+
+# O que diferencia CV, NLP e ML?
+
+| | **ML geral** | **Computer Vision** | **NLP** |
+|---|---|---|---|
+| **Entrada** | tabela de dados | imagem / vídeo | texto / áudio |
+| **Arquitetura típica** | Decision Tree, SVM, RF | CNN | Transformer |
+| **Bibliotecas** | scikit-learn | PyTorch + torchvision | HuggingFace |
+| **Exemplo de output** | preço previsto | "gato detectado (97%)" | "texto positivo" |
+
+<v-click>
+
+> Todos **aprendem com exemplos** — mas o *tipo de dado* e a *arquitetura* mudam completamente.  
+> Saber isso é saber pedir a ferramenta certa para o problema certo.
+
+</v-click>
+
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 44 — De volta ao debate: ferramenta ou trapaça? -->
+
+# De volta ao debate
+
+Na última aula, dois grupos defenderam posições opostas:
+
+<v-click>
+
+**Grupo A — "IA é ferramenta essencial"**  
+→ Aumenta produtividade, acelera aprendizado, democratiza acesso ao conhecimento.
+
+**Grupo B — "IA é trapaça"**  
+→ Substitui o esforço cognitivo, apaga autoria, cria dependência.
+
+</v-click>
+
+<v-click>
+
+**O que os conceitos de hoje adicionam ao debate:**
+
+- CV e NLP *imitam* capacidades humanas (visão, linguagem) — **não pensam, prevêem**
+- LLMs são máquinas de *autocomplete* muito sofisticadas — não "entendem"
+- **Consequência:** usar IA sem entender o que ela faz é trapaça; usar sabendo o que faz é ferramenta
+
+</v-click>
+
+<v-click>
+
+> **Pergunta para levar pra casa:** se um médico usa CV para diagnosticar, quem assina o laudo?
+
+</v-click>
+
