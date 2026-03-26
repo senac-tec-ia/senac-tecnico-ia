@@ -1283,9 +1283,18 @@ bgPreset: default
 | Diagnóstico médico por imagem | Detecta tumor em raio-X |
 | Moderação de conteúdo (Instagram) | Remove imagens proibidas automaticamente |
 
-<v-click>
 
-**Como funciona:** usa **CNN** (Rede Neural Convolucional) — varre a imagem em pequenas janelas procurando padrões (borda, textura, forma).
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 41b — Computer Vision: Como funciona -->
+
+# Computer Vision — Como funciona
+
+**CNN** (Rede Neural Convolucional): varre a imagem em pequenas janelas procurando padrões (borda, textura, forma).
 
 ```python
 # sklearn não serve para CV de verdade — aqui entra PyTorch/TensorFlow:
@@ -1293,7 +1302,7 @@ from torchvision import models
 model = models.resnet50(pretrained=True)   # modelo já treinado em 1M imagens
 ```
 
-</v-click>
+> CNN = Convolutional Neural Network. Camadas iniciais detectam bordas; camadas finais identificam objetos completos.
 
 ---
 layout: default
@@ -1314,9 +1323,18 @@ bgPreset: default
 | Análise de sentimento | "Esse review é positivo ou negativo?" |
 | Autocomplete do teclado | Prevê a próxima palavra |
 
-<v-click>
 
-**Como funciona:** converte palavras em **embeddings** (vetores numéricos) → passa por camadas **Transformer** → prevê o próximo token.
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 42b — NLP: Como funciona -->
+
+# NLP — Como funciona
+
+**Embeddings + Transformer + Token**: palavras viram vetores numéricos, passam por camadas Transformer, e o modelo prevê o próximo token.
 
 ```python
 # Exemplo real (biblioteca transformers da HuggingFace):
@@ -1326,7 +1344,7 @@ print(sentiment("Essa aula foi incrível!"))
 # → [{'label': 'POSITIVE', 'score': 0.9998}]
 ```
 
-</v-click>
+> **Token** = pedaço mínimo de texto. LLMs nunca leem frases inteiras — prevêem token por token.
 
 ---
 layout: default
@@ -1358,13 +1376,11 @@ card: true
 bgPreset: default
 ---
 
-<!-- SLIDE 44 — De volta ao debate: ferramenta ou trapaça? -->
+<!-- SLIDE 44 — De volta ao debate: dois lados -->
 
 # De volta ao debate
 
 Na última aula, dois grupos defenderam posições opostas:
-
-<v-click>
 
 **Grupo A — "IA é ferramenta essencial"**  
 → Aumenta produtividade, acelera aprendizado, democratiza acesso ao conhecimento.
@@ -1372,11 +1388,17 @@ Na última aula, dois grupos defenderam posições opostas:
 **Grupo B — "IA é trapaça"**  
 → Substitui o esforço cognitivo, apaga autoria, cria dependência.
 
-</v-click>
+---
+layout: default
+card: true
+bgPreset: default
+---
+
+<!-- SLIDE 44b — O que os conceitos adicionam -->
+
+# O que os conceitos de hoje adicionam
 
 <v-click>
-
-**O que os conceitos de hoje adicionam ao debate:**
 
 - CV e NLP *imitam* capacidades humanas (visão, linguagem) — **não pensam, prevêem**
 - LLMs são máquinas de *autocomplete* muito sofisticadas — não "entendem"
