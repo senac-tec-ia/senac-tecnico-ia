@@ -3,7 +3,7 @@ import TwoColsText from "./two-cols-text.vue";
 
 const props = defineProps<{
   bgPreset?: "default" | "animate" | "palette";
-  codeSize?: "lg" | "sm";
+  codeSize?: "lg" | "sm" | "xs";
   kahootColors?: boolean;
 }>();
 </script>

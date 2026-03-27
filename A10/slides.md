@@ -19,14 +19,9 @@ bgPreset: palette
 # ─────────────────────────────────────────────────────────────────
 ---
 
----
-layout: cover
-bgPreset: animate
----
-
 <!-- kahoot cover -->
 
-# Revisão — Kahoot
+# QUIZ INTERATIVO!
 ## Python · Aula 09
 
 *Variáveis · Tipos · `input()` · Operadores Lógicos*
@@ -174,15 +169,19 @@ print(nota)
 </v-click>
 
 ---
-layout: two-cols
+layout: default
 bgPreset: palette
 kahootColors: true
 codeSize: sm
+highContrast: true
 ---
 
 <!-- Q6 — f-string -->
 
 # Q6 — O que imprime?
+
+<div style="display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: start; margin-bottom: 1rem;">
+<div>
 
 ```python
 nome = "Ana"
@@ -190,12 +189,16 @@ nota = 8.5
 print(f"{nome} tirou {nota}")
 ```
 
-::right::
+</div>
+<div>
 
 - **A)** {nome} tirou {nota}
 - **B)** Erro de sintaxe
 - **C)** Ana tirou nota
 - **D)** Ana tirou 8.5
+
+</div>
+</div>
 
 <v-click>
 
@@ -236,27 +239,35 @@ else:
 </v-click>
 
 ---
-layout: two-cols
+layout: default
 bgPreset: palette
 kahootColors: true
 codeSize: sm
+highContrast: true
 ---
 
 <!-- Q8 — str() para concatenar -->
 
 # Q8 — O que imprime?
 
+<div style="display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: start; margin-bottom: 1rem;">
+<div>
+
 ```python
 ano = 2026
 print("Ano: " + str(ano))
 ```
 
-::right::
+</div>
+<div>
 
 - **A)** Ano: str(2026)
 - **B)** Erro — não dá somar str com int
 - **C)** Ano2026
 - **D)** Ano: 2026
+
+</div>
+</div>
 
 <v-click>
 
@@ -358,17 +369,21 @@ codeSize: sm
 
 # Q12 — O que imprime?
 
+<div style="--q-code-fs: 1.25rem">
+
 ```python
-capacidade = 85
-if capacidade >= 90:
+uso_cpu = 75
+if uso_cpu >= 90:
     print("CRÍTICO")
-elif capacidade >= 80:
+elif uso_cpu >= 80:
     print("ALTO")
-elif capacidade >= 70:
+elif uso_cpu >= 70:
     print("MODERADO")
 else:
     print("NORMAL")
 ```
+
+</div>
 
 ::right::
 
@@ -379,7 +394,7 @@ else:
 
 <v-click>
 
-> ✅ **A — `ALTO`** — `85 >= 90` é `False`; `85 >= 80` é `True` → para aqui
+> ✅ **D — `MODERADO`** — `75 >= 90` e `75 >= 80` são `False`; `75 >= 70` é `True`
 
 </v-click>
 
@@ -423,25 +438,48 @@ bgPreset: palette
 
 <!-- DDL recap + ALTER TABLE conceito -->
 
-# DDL — Você já usou, vamos aprofundar
+# DDL — `ALTER TABLE`: adicionar coluna
 
 **`CREATE TABLE`** — cria a estrutura ✅ já fizemos
 
-**`ALTER TABLE`** — modifica uma tabela que já existe
+**`ALTER TABLE`** — modifica uma tabela existente
 
-> **Analogia Excel:** `ALTER TABLE` = inserir/renomear/deletar uma **coluna** na planilha — mas com regras rígidas.
+> Analogia: inserir nova coluna na planilha sem apagar os dados existentes
 
 ::right::
 
 ```sql
 -- Adicionar coluna nova
-ALTER TABLE modelo_ia ADD COLUMN versao VARCHAR(10);
+ALTER TABLE modelo_ia
+  ADD COLUMN versao VARCHAR(10);
+```
 
+---
+layout: two-cols
+card: true
+bgPreset: palette
+---
+
+<!-- DDL — ALTER TABLE: RENAME e DROP -->
+
+# DDL — `ALTER TABLE`: renomear e remover
+
+**`RENAME COLUMN`** — renomeia uma coluna existente
+
+**`DROP COLUMN`** — remove uma coluna permanentemente
+
+> ⚠️ `DROP COLUMN` é irreversível — os dados dessa coluna são apagados para sempre
+
+::right::
+
+```sql
 -- Renomear coluna
-ALTER TABLE modelo_ia RENAME COLUMN nome TO nome_modelo;
+ALTER TABLE modelo_ia
+  RENAME COLUMN nome TO nome_modelo;
 
 -- Remover coluna
-ALTER TABLE modelo_ia DROP COLUMN descricao;
+ALTER TABLE modelo_ia
+  DROP COLUMN descricao;
 ```
 
 ---
@@ -517,27 +555,16 @@ bgPreset: palette
 
 ```sql
 -- Sintaxe
-UPDATE nome_tabela
-SET coluna1 = novo_valor, coluna2 = outro_valor
-WHERE condicao;
+UPDATE nome_tabela SET coluna = novo_valor WHERE condicao;
+
+-- Corrigir acurácia do GPT-mini
+UPDATE modelo_ia SET acuracia = 0.94 WHERE nome = 'GPT-mini';
 ```
 
-```sql
--- Exemplo: corrigir a acurácia do modelo GPT-mini
-UPDATE modelo_ia
-SET acuracia = 0.94
-WHERE nome = 'GPT-mini';
-```
-
-> ⚠️ **PERIGO — nunca esqueça o `WHERE`:**
->
-> ```sql
-> UPDATE modelo_ia SET acuracia = 0.94;
-> -- ☠️ Atualiza TODOS os registros!
-> ```
+> ⚠️ **Nunca omita o `WHERE`** — sem filtro, o UPDATE afeta **todas** as linhas da tabela!
 
 ---
-layout: default
+layout: two-cols
 card: true
 bgPreset: palette
 ---
@@ -553,6 +580,8 @@ Dada a tabela `produto`:
 | 1 | Teclado | 120.00 | 10 |
 | 2 | Mouse | 75.00 | 25 |
 | 3 | Monitor | 850.00 | 3 |
+
+::right::
 
 **Escreva o UPDATE para:**
 1. Alterar o preço do Mouse para `89.90`
@@ -645,14 +674,14 @@ DELETE FROM produto WHERE id = 1;
 </v-click>
 
 ---
-layout: two-cols
+layout: default
 card: true
 bgPreset: palette
 ---
 
-<!-- DQL SELECT aprofundado: LIMIT, DISTINCT, AS -->
+<!-- DQL SELECT++ — LIMIT e DISTINCT (1/2) -->
 
-# DQL — SELECT++
+# DQL — SELECT++ · LIMIT e DISTINCT
 
 ```sql
 -- LIMIT: limitar número de linhas retornadas
@@ -662,7 +691,17 @@ SELECT * FROM modelo_ia ORDER BY acuracia DESC LIMIT 3;
 SELECT DISTINCT categoria FROM produto;
 ```
 
-::right::
+> **Por que LIMIT importa em IA?** Tabelas de log de treino podem ter **milhões** de linhas. `LIMIT` evita travar o sistema.
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- DQL SELECT++ — AS: alias (2/2) -->
+
+# DQL — SELECT++ · AS: renomear colunas
 
 ```sql
 -- AS: renomear coluna no resultado (alias)
@@ -671,15 +710,13 @@ FROM modelo_ia
 WHERE ativo = TRUE;
 ```
 
-> **Por que LIMIT importa em IA?** — Tabelas de log de treino podem ter **milhões** de linhas. `LIMIT` evita travar o sistema.
-
 ---
 layout: default
 card: true
 bgPreset: palette
 ---
 
-<!-- Exercício SELECT++ -->
+<!-- Exercício SELECT++ (1/2) — Enunciado -->
 
 # Exercício — SELECT Avançado
 
@@ -690,7 +727,15 @@ Tabela `modelo_ia` com colunas: `id`, `nome`, `acuracia`, `ativo`
 2. Apenas os nomes de modelos ativos (usar `WHERE` + `DISTINCT`)
 3. Renomear `acuracia` como `score` no resultado
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- Exercício SELECT++ (2/2) — Gabarito -->
+
+# Gabarito — SELECT Avançado
 
 ```sql
 -- 1
@@ -703,31 +748,36 @@ SELECT DISTINCT nome FROM modelo_ia WHERE ativo = TRUE;
 SELECT nome, acuracia AS score FROM modelo_ia;
 ```
 
-</v-click>
-
 ---
-layout: two-cols
+layout: default
 card: true
 bgPreset: palette
 ---
 
-<!-- Mapa final dos 4 Ds na prática -->
+<!-- Os 4 Ds — DDL e DML (1/2) -->
 
-# Os 4 Ds — Mapa Completo na Prática
+# Os 4 Ds — DDL e DML
 
 ```sql
 -- DDL: estrutura
 CREATE TABLE modelo_ia (...);
 ALTER TABLE modelo_ia ADD COLUMN versao VARCHAR(10);
 DROP TABLE modelo_ia;
-
 -- DML: dados
 INSERT INTO modelo_ia VALUES (1, 'GPT-mini', 0.91, TRUE);
 UPDATE modelo_ia SET acuracia = 0.94 WHERE id = 1;
 DELETE FROM modelo_ia WHERE ativo = FALSE;
 ```
 
-::right::
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- Os 4 Ds — DQL e DCL (2/2) -->
+
+# Os 4 Ds — DQL e DCL
 
 ```sql
 -- DQL: consulta
@@ -736,8 +786,7 @@ FROM modelo_ia
 WHERE ativo = TRUE
 ORDER BY acuracia DESC
 LIMIT 5;
-
--- DCL: permissões (ver em T2)
+-- DCL: permissões (T2)
 GRANT SELECT ON modelo_ia TO analista;
 REVOKE DELETE ON modelo_ia FROM estagiario;
 ```
@@ -752,13 +801,13 @@ bgPreset: animate
 
 # Síntese — Aula 10 · Banco de Dados
 
-- **DDL** → `CREATE` `ALTER` `DROP` — você controla a **estrutura**
-- **DML** → `INSERT` `UPDATE` `DELETE` — você controla os **dados**
-- **DQL** → `SELECT` com `LIMIT`, `DISTINCT`, `AS` — você **consulta** com precisão
-- **DCL** → `GRANT` `REVOKE` — você controla o **acesso** *(T2)*
-- **Constraints** → `PRIMARY KEY` · `NOT NULL` · `UNIQUE` · `DEFAULT`
+- **DDL** → `CREATE` `ALTER` `DROP` — controla a **estrutura**
+- **DML** → `INSERT` `UPDATE` `DELETE` — controla os **dados**
+- **DQL** → `SELECT` + `LIMIT` `DISTINCT` `AS` — **consulta** com precisão
+- **DCL** → `GRANT` `REVOKE` — controla o **acesso** *(T2)*
+- **Constraints** → `PRIMARY KEY` `NOT NULL` `UNIQUE` `DEFAULT`
 
-> **Próxima aula:** relacionamentos entre tabelas — chave estrangeira (FK) e `JOIN`
+> **Próxima aula:** relacionamentos — chave estrangeira (`FK`) e `JOIN`
 
 ---
 layout: end

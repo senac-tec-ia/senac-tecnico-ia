@@ -12,7 +12,7 @@ const attrs = useAttrs();
 const props = withDefaults(
   defineProps<{
     bgPreset?: "default" | "animate" | "palette";
-    codeSize?: "lg" | "sm";
+    codeSize?: "lg" | "sm" | "xs";
     kahootColors?: boolean;
   }>(),
   {
@@ -61,7 +61,7 @@ onMounted(async () => {
 
     <div
       class="bg-slate-900/85 rounded-[14px] border border-white/30 backdrop-blur-md relative z-10 h-full p-8 max-w-4xl max-h-md"
-      :style="props.codeSize ? { '--q-code-fs': props.codeSize === 'sm' ? '1.75rem' : '2rem' } : {}"
+      :style="props.codeSize ? { '--q-code-fs': props.codeSize === 'xs' ? '1.25rem' : props.codeSize === 'sm' ? '1.75rem' : '2rem' } : {}"
       :class="{ 'kahoot-mode': props.kahootColors }"
     >
       <div ref="headerRef" class="two-cols-text-header"></div>

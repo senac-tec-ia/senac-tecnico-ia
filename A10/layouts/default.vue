@@ -12,7 +12,7 @@ const attrs = useAttrs();
 const props = withDefaults(
   defineProps<{
     bgPreset?: "default" | "animate" | "palette";
-    codeSize?: "lg" | "sm";
+    codeSize?: "lg" | "sm" | "xs";
     kahootColors?: boolean;
     highContrast?: boolean;
   }>(),
@@ -49,7 +49,7 @@ const bgOpacity = computed(() =>
             : 'border border-white backdrop-blur-xl',
           { 'kahoot-mode': props.kahootColors },
         ]"
-        :style="props.codeSize ? { '--q-code-fs': props.codeSize === 'sm' ? '1.75rem' : '2rem' } : {}"
+        :style="props.codeSize ? { '--q-code-fs': props.codeSize === 'xs' ? '1.25rem' : props.codeSize === 'sm' ? '1.75rem' : '2rem' } : {}"
       >
         <slot />
       </div>
