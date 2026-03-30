@@ -42,6 +42,7 @@
 | A07 | 19/03/2026 | 0 | Não trabalhada | - |
 | A08 | 20/03/2026 | ~2 | if/else (introdução e reforço), operadores lógicos `and`, `or`, `not`, tabela verdade | Ministrada |
 | A09 | 25/03/2026 | ~5 | Anatomia de variável + vocabulário técnico; tipos + `type()`; built-ins e `float(input())`; operadores de comparação (`==`, `!=`, `<`, `>`, `<=`, `>=`); `elif` em cadeias; comparação + `and`/`or`; tabela verdade revisão; desafio integrador | Slides prontos |
+| A10 | 27/03/2026 | ~2 | Gincana de Python: questões de código e leitura de output ("o que é impresso"); reforço de conceitos já vistos; alunos com dificuldade em programar por conta própria | Ministrada |
 
 ---
 
@@ -66,6 +67,7 @@
 | Operadores de comparação: `==`, `!=`, `<`, `>`, `<=`, `>=` | A09 | Introdutório |
 | `elif` em cadeias com múltiplos limiares | A09 | Introdutório |
 | Comparação + `and`/`or` no `if` | A09 | Introdutório |
+| Leitura e rastreamento de output de código (output tracing) | A10 | Reconhecimento |
 
 ---
 
@@ -105,6 +107,7 @@
 | 2026-03-12 | Turma absorveu apenas ~20 slides em 3 HA de bloco Python | Densidade dos slides reduzida; planejamento A06 readequado para comecar com comparacao antes de loops |
 | 2026-03-12 | O unico exercicio completo da aula foi o EX-print() (sep, end, f-string) + exercicio livre do professor: 3 notas via input, calculo de media | Confirma que ritmo real e muito abaixo do planejado > planejar com 50% da densidade original |
 | 2026-03-20 | Alunos com muita dificuldade em if/else e operadores logicos; demorou muito para conseguir fazer exercicios | Reforcar logica booleana no inicio do proximo bloco Python; manter densidade baixa |
+| 2026-03-27 | Gincana de Python rendeu bastante; ja notada dificuldade de alguns alunos em programar por conta propria | Proximas aulas com exercicios de escrita guiada; suporte individual para alunos com mais dificuldade |
 
 ---
 

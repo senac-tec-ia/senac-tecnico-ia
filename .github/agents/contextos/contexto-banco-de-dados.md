@@ -211,6 +211,7 @@
 |---|---|---|
 | 2026-03-12 | Professor decide usar Excel como andaime pedagógico antes de qualquer SQL | Estratégia registrada como diretriz permanente da disciplina |
 | 2026-03-20 | Foram 3 aulas seguidas de BD (nota do professor — A06 3HA + A08 3HA); constraints PRIMARY KEY e NOT NULL vistos por cima sem aprofundamento | Reforçar constraints na próxima aula antes de avançar |
+| 2026-03-27 | A10 rendeu de certa forma mas ritmo ainda lento; turma relembrou tipos de dados, constraints, 4 D's, CREATE TABLE, INSERT INTO e UPDATE | Conteudo consolidado via revisao; proximo passo: chave estrangeira (FK) e JOIN |
 
 ---
 

@@ -62,3 +62,9 @@ Disciplina                                   | Conteúdo abordado               
 UC05 — Python                            | variável (anatomia do zero: nome/=/valor), tipos de dados (str, int, float, bool) + type(), input(), conversão de tipos int()/float()/str(), operadores lógicos (and, or, not) — teoria coberta, turma com grande dificuldade para solidificar; apenas 2 exercícios concluídos na aula inteira | ~4 HA
 UC03 — Matemática                        | operadores de comparação revisados, 1 exercício de elif com múltiplos condicionais: Alerta de Reator (capacidade >=90% CRÍTICO / >=80% ALTO / >=70% MODERADO / <70% NORMAL) | ~1 HA
 Total ~5 HA
+
+A AULA 10 NO DIA 27/03 FOI SOBRE:
+Disciplina                                   | Conteúdo abordado                                                                                                                                                        | HA est.
+UC05 — Python                            | Gincana de Python: questões de código e leitura de output ("o que é impresso"), bastante proveito, dificuldade de alguns alunos em programar por conta própria | ~2 HA
+UC08 — Banco de Dados                    | Os 4 D's do SQL (DDL/DML/DQL/DCL), tipos de dados, constraints, UPDATE, CREATE TABLE, INSERT INTO — revisão e consolidação; rendeu mas ritmo ainda lento | ~3 HA
+Total ~5 HA
