@@ -336,17 +336,19 @@ O curso Técnico em IA usa uma estrutura de **blocos pedagógicos** para organiz
 
 ### 1º Ano — Total: 400h
 
+> ⚠️ **Todas as UCs são ofertadas de forma concomitante, sem pré-requisitos entre si.** A intensidade (●) é orientativa para planejamento de carga — todas as UCs são avaliáveis em qualquer trimestre.
+
 | UC | Carga Horária | 1º Trim | 2º Trim | 3º Trim |
 |---|---|---|---|---|
-| Fundamentos e Conceitos de IA | 34h | ●●● | — | — |
-| Python para IA | 67h | ●●● | ●● | — |
-| Arquitetura de Computadores e GPU | 33h | ●● | ● | — |
-| Transformação Digital | 67h | — | ●●● | ●● |
-| Banco de Dados | 67h | — | ●●● | ●● |
-| Estatística Aplicada à IA | 33h | — | — | ●●● |
-| Fundamentos de Computação | 34h | ●● | ● | — |
-| Inglês Instrumental | 33h | ● | ●● | ● |
-| Matemática para Computação | 33h | — | — | ●●● |
+| Fundamentos e Conceitos de IA | 34h | ●●● | ●● | ● |
+| Python para IA | 67h | ●●● | ●●● | ●● |
+| Arquitetura de Computadores e GPU | 33h | ●●● | ●● | ● |
+| Transformação Digital | 67h | ●● | ●●● | ●●● |
+| Banco de Dados | 67h | ●● | ●●● | ●●● |
+| Estatística Aplicada à IA | 33h | ●● | ●●● | ●●● |
+| Fundamentos de Computação | 34h | ●●● | ●● | ● |
+| Inglês Instrumental | 33h | ●● | ●●● | ●● |
+| Matemática para Computação | 33h | ●● | ●●● | ●●● |
 
 ### Como usar este mapa para planejar
 
