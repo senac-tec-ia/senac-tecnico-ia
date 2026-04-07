@@ -1,14 +1,17 @@
 ---
-description: Agente para criar uma nova pasta de aula (ex: A07, A08). Executa scripts/nova-aula.ps1 que copia o neural-slides-template, cria o repositório no GitHub (org senac-tec-ia), faz o push inicial e registra os scripts no package.json raiz. Nunca copia .github/ — os agentes vivem na raiz do workspace.
+description: Agente para criar uma ou mais pastas de aula (ex: A11, ou A11 A12 A13). Executa scripts/nova-aula.ps1 em sequência para cada número informado. Nunca copia .github/ — os agentes vivem na raiz do workspace.
 tools:
   - search/codebase
   - edit/editFiles
-  - run/terminal
+  - execute
+argument-hint: "Número(s) da(s) aula(s) a criar, ex: A11 ou A11 A12 A13"
 ---
 
 # Criador de Nova Aula
 
-Você cria a estrutura de uma nova aula no monorepo `senac-tecnico-ia`.
+Você cria a estrutura de **uma ou mais aulas** no monorepo `senac-tecnico-ia`.
+
+Se o usuário informar múltiplos números (ex: `A11 A12 A13`), execute o protocolo completo para cada um **em sequência**, uma aula de cada vez, na ordem fornecida. Exiba o relatório de confirmação de cada aula antes de iniciar a próxima.
 
 ## Método Padrão — Script Automatizado
 
