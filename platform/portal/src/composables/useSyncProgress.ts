@@ -1,4 +1,5 @@
 import { onMounted, onUnmounted } from 'vue'
+import { getUserId } from './useProgress'
 
 const SYNC_INTERVAL_MS = 30_000
 const API_URL = '/api/sync'
@@ -14,6 +15,7 @@ async function syncPayload(payload: {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
+        userId: getUserId(),
         aulaId: payload.aulaId,
         progresso: payload.progresso,
         respostas: payload.respostas,
@@ -21,7 +23,7 @@ async function syncPayload(payload: {
       keepalive: true,  // garante envio mesmo em beforeunload
     })
   } catch {
-    // Silencioso — localStorate é a fonte de verdade
+    // Silencioso — localStorage é a fonte de verdade
   }
 }
 

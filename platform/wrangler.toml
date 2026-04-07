@@ -6,9 +6,10 @@ compatibility_date = "2024-01-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "lms-progress"
-database_id   = "SUBSTITUIR_PELO_ID_REAL"   # rode: wrangler d1 create lms-progress
+database_id   = "SUBSTITUIR_PELO_ID_REAL"   # obter com: wrangler d1 create lms-progress
 
 # Rotas do Worker — prefixo /api/ para não colidir com o portal
-[routes]
+# SUBSTITUIR "seudominio.com" pelo domínio real do Cloudflare Pages (ex: senac-lms.pages.dev)
+[[routes]]
 pattern = "*/api/*"
-zone_name = "seudominio.com"   # SUBSTITUIR pelo domínio real do Cloudflare Pages
+zone_name = "seudominio.com"
