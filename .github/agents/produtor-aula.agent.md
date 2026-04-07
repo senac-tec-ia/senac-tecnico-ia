@@ -62,7 +62,8 @@ Ao receber qualquer trigger de produção ("Gere A0N", "Prepare A0N", "Aula NN")
 5. Se existir `A{NN}/plano-aula.md`: leia-o — já contém composição, HA e lista de slides
 6. Para cada UC do dia, leia **apenas** `.github/agents/contextos/contexto-{slug}.md` — é o resumo condensado por design (~20 linhas)
 7. Leia `.github/agents/referencia-tecnica.md` — layouts e convenções
-8. Monte internamente o rascunho de composição (UC, HA, tópico provável)
+8. Leia `.github/agents/contextos/ATIVIDADES_AVALIATIVAS.md` — verifique se alguma avaliação tem data-alvo coincidindo com a aula de hoje (campo "Data-alvo" na tabela do Plano). Se sim, **avise o professor** antes de avançar: pode ser necessário preparar um slide de instruções/enunciado para a turma naquele dia.
+9. Monte internamente o rascunho de composição (UC, HA, tópico provável)
 
 ---
 

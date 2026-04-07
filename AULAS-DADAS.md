@@ -57,7 +57,7 @@ UC05 — Python                            | if e else (introdução básica), t
 UC08 — Banco de Dados                      | Tipos de dados (INTEGER, VARCHAR, FLOAT, BOOLEAN), DML e DDL (conceitos), CREATE TABLE, INSERT INTO, constraints (PRIMARY KEY, NOT NULL vistos por cima), foram 3 aulas seguidas de BD | ~3 HA
 Total ~5 HA
 
-A AULA 09 NO DIA 25/03 FOI SOBRE:
+A AULA 09 NO DIA 26/03 FOI SOBRE:
 Disciplina                                   | Conteúdo abordado                                                                                                                                                        | HA est.
 UC05 — Python                            | variável (anatomia do zero: nome/=/valor), tipos de dados (str, int, float, bool) + type(), input(), conversão de tipos int()/float()/str(), operadores lógicos (and, or, not) — teoria coberta, turma com grande dificuldade para solidificar; apenas 2 exercícios concluídos na aula inteira | ~4 HA
 UC03 — Matemática                        | operadores de comparação revisados, 1 exercício de elif com múltiplos condicionais: Alerta de Reator (capacidade >=90% CRÍTICO / >=80% ALTO / >=70% MODERADO / <70% NORMAL) | ~1 HA
