@@ -1,0 +1,14 @@
+name = "lms-senac-tecnico-ia"
+main = "worker/src/index.ts"
+compatibility_date = "2024-01-01"
+
+# Cloudflare D1 — banco de dados SQLite distribuído
+[[d1_databases]]
+binding = "DB"
+database_name = "lms-progress"
+database_id   = "SUBSTITUIR_PELO_ID_REAL"   # rode: wrangler d1 create lms-progress
+
+# Rotas do Worker — prefixo /api/ para não colidir com o portal
+[routes]
+pattern = "*/api/*"
+zone_name = "seudominio.com"   # SUBSTITUIR pelo domínio real do Cloudflare Pages

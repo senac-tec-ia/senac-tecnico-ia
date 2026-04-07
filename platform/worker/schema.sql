@@ -1,0 +1,29 @@
+-- D1 Schema — LMS Senac Técnico em IA
+-- Rode com: wrangler d1 execute lms-progress --file=worker/schema.sql
+
+CREATE TABLE IF NOT EXISTS users (
+  id         TEXT PRIMARY KEY,       -- gerado pelo cliente (UUID v4 no localStorage)
+  nome       TEXT,
+  email      TEXT,
+  created_at INTEGER NOT NULL DEFAULT (unixepoch())
+);
+
+CREATE TABLE IF NOT EXISTS progress (
+  user_id    TEXT    NOT NULL,
+  aula_slug  TEXT    NOT NULL,
+  progresso  REAL    NOT NULL DEFAULT 0,  -- 0.0 a 1.0
+  updated_at INTEGER NOT NULL DEFAULT (unixepoch()),
+  PRIMARY KEY (user_id, aula_slug)
+);
+
+CREATE TABLE IF NOT EXISTS respostas (
+  user_id    TEXT    NOT NULL,
+  aula_slug  TEXT    NOT NULL,
+  questao_id TEXT    NOT NULL,
+  resposta   TEXT    NOT NULL,
+  updated_at INTEGER NOT NULL DEFAULT (unixepoch()),
+  PRIMARY KEY (user_id, aula_slug, questao_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_progress_user   ON progress (user_id);
+CREATE INDEX IF NOT EXISTS idx_respostas_aula  ON respostas (aula_slug);

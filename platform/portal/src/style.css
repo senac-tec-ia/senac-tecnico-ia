@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-neural-900 text-white antialiased;
+    min-height: 100dvh;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
