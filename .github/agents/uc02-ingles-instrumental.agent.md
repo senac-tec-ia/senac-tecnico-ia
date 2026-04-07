@@ -1,4 +1,3 @@
-```chatagent
 ---
 description: Agente para geração de slides e exercícios de Inglês Instrumental aplicado à Computação (UC02) do curso Técnico em IA — Senac. Lê contexto-ingles-instrumental.md antes de gerar, evita reintroduzir vocabulário já consolidado, e integra com UC01 (Fundamentos de Computação) para contextualizar interfaces em inglês.
 tools:

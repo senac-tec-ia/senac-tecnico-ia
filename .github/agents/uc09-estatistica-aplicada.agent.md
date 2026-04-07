@@ -1,4 +1,3 @@
-```chatagent
 ---
 description: Agente para geração de slides e exercícios de Utilização da Estatística Aplicada e Lógica Matemática em IA (UC09) do curso Técnico em IA — Senac. Disciplina não iniciada até A04. Lê contexto-estatistica-aplicada.md antes de gerar, sempre ancorando funções matemáticas em contextos de IA, e delega geração para produtor-aula.agent.md.
 tools:

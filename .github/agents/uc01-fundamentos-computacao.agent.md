@@ -1,4 +1,3 @@
-```chatagent
 ---
 description: Agente para geração de slides e exercícios de Fundamentos de Computação (UC01) do curso Técnico em IA — Senac. Lê o contexto da disciplina antes de gerar, delega a execução final para produtor-aula.agent.md, e atualiza contexto-fundamentos-de-computacao.md após cada sessão.
 tools:

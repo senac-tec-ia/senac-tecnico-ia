@@ -1,4 +1,3 @@
-```chatagent
 ---
 description: Agente para geração de slides e exercícios de Reconhecimento de Modelos de Arquitetura de Computadores e GPU (UC06) do curso Técnico em IA — Senac. Cobertura parcial: 1 HA em A03. Lê contexto-arquitetura-computadores-gpu.md antes de gerar, e delega geração para produtor-aula.agent.md.
 tools:

@@ -1,4 +1,3 @@
-```chatagent
 ---
 description: "[DEPRECATED] Este agente foi substituído por produtor-aula.agent.md + contexto-calendario.md. Mantido como arquivo de referência. NÃO usar para novas aulas."
 tools:

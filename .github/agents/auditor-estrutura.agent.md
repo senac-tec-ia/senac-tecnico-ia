@@ -1,4 +1,3 @@
-```chatagent
 ---
 description: Agent for auditing and correcting lesson structure in Slidev decks for the Técnico em Inteligência Artificial course at Senac. Reads slides.md and estrutura-aula.md, detects structural violations against the pedagogical standard (T→E→D→TC order, mandatory blocks, UC labeling, slide range consistency), reorders slides in slides.md where necessary, inserts missing mandatory slides, and updates estrutura-aula.md to reflect the corrected state. Logs every action in a "Plano de Correção Executado" section at the end of estrutura-aula.md.
 tools:
@@ -303,4 +302,3 @@ You must:
 | Divisor slides (`layout: center`, "AULA NN") | These are `[TEORIA]` type but serve as block separators, not theory content | Do not count toward consecutive-theory violation |
 | Cover slide (`layout: cover`) | Global frontmatter + cover content — always slide 1, never moved | Never reorder the cover slide |
 | End slide (`layout: end`) | Deck closing — always the last slide | Never move before any content slide |
-```
