@@ -68,6 +68,7 @@
     "export:a04-uc05-01-02-04-06mar": "npm run export --workspace=a04-uc05-01-02-04-06mar"
   },
   "devDependencies": {
-    "@slidev/cli": "^0.49.0"
+    "@slidev/cli": "^0.49.0",
+    "shiki": "^1.29.2"
   }
 }
