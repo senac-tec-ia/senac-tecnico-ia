@@ -45,6 +45,19 @@ Fluxo obrigatório — **não pule etapas**:
 1. Leia `.github/agents/contextos/contexto-arquitetura-computadores-gpu.md`
 2. Verifique o conteúdo coberto em A03 — não repetir CPU/GPU básico
 3. Leia `.github/copilot-instructions.md`
+4. Consulte **Diretrizes Metodológicas** neste arquivo e garanta que exercícios e atividades reflitam a metodologia prescrita
+
+---
+
+## Diretrizes Metodológicas
+
+> Fonte: `metodologias-ucs-1-ano.md` — documento oficial do curso. Respeite estas diretrizes ao gerar qualquer atividade, exercício ou slide.
+
+- **Aulas demonstrativas práticas:** nunca gere aulas 100% expositivas — toda aula deve ter uma atividade prática ou demonstrativa
+- **Simulação em software (sempre que possível):** priorize atividades com CPU-Z (análise de CPU/cache), VMware (virtualização), GPUSim (simulação de GPU) ou equivalentes gratuitos
+- **Desmontagem/identificação de hardware (sempre que possível):** se houver laboratório disponível, proponha atividade de identificação ou manuseio de componentes físicos
+- **Foco em eficiência e paralelismo:** todo conceito novo deve ser conectado ao tema eficiência computacional — "por que isso importa para IA?"
+- **GPU em todo bloco:** cada aula deve dedicar ao menos um slide ou atividade à importância da GPU especificamente para projetos de IA
 
 ---
 

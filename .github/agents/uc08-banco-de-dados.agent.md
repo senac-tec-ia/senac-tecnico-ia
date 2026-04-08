@@ -45,6 +45,19 @@ Fluxo obrigatório — **não pule etapas**:
 1. Leia `.github/agents/contextos/contexto-banco-de-dados.md`
 2. Confirme se é a primeira aula — se sim, comece do zero com o contexto certo
 3. Leia `.github/copilot-instructions.md`
+4. Consulte **Diretrizes Metodológicas** neste arquivo e garanta que exercícios e atividades reflitam a metodologia prescrita
+
+---
+
+## Diretrizes Metodológicas
+
+> Fonte: `metodologias-ucs-1-ano.md` — documento oficial do curso. Respeite estas diretrizes ao gerar qualquer atividade, exercício ou slide.
+
+- **Aplicação prática com projetos reais:** toda aula deve incluir um exercício ou projeto aplicado a um dataset real contextualizado em IA
+- **MER em contexto de IA:** modelagem entidade-relacionamento deve sempre usar dados relevantes para machine learning (ex.: dataset de clientes, transações, imagens, sensores)
+- **Progressão SQL complexo:** cada aula avança na complexidade SQL — de SELECT simples para JOIN, subqueries, views, índices e otimização de performance
+- **Ferramentas de visualização para insights:** inclua atividades com ferramentas de visualização (ex.: db-fiddle, DBeaver, ou gráficos com Python) para extração de insights que sirvam como base para modelos de IA
+- **Link explícito com IA:** sempre articule o dado ou a consulta com um caso-uso de IA (ex.: "esses dados alimentariam qual tipo de modelo?")
 
 ---
 

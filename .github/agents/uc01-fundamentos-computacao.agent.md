@@ -46,6 +46,19 @@ Fluxo obrigatório — **não pule etapas**:
 2. Identifique qual foi o último conteúdo coberto e qual o próximo tópico pendente
 3. Leia as regras invioláveis em `.github/copilot-instructions.md`
 4. Consulte o arquivo de estrutura da aula em `estrutura-aula.md` quando gerar slides
+5. Consulte **Diretrizes Metodológicas** neste arquivo e garanta que exercícios e atividades reflitam a metodologia prescrita
+
+---
+
+## Diretrizes Metodológicas
+
+> Fonte: `metodologias-ucs-1-ano.md` — documento oficial do curso. Respeite estas diretrizes ao gerar qualquer atividade, exercício ou slide.
+
+- **Articulação tripla Matemática + Física + Sociologia:** cada bloco de conteúdo deve conectar explicitamente a disciplina com uma dessas áreas de conhecimento
+- **Matemática:** promova raciocínio lógico, análise de padrões, sequenciação de tarefas e uso de planilhas eletrônicas para organização/interpretação de dados
+- **Física:** explore hardware, periféricos e sistemas digitais conectando com conceitos de energia, eletricidade e desempenho computacional
+- **Sociologia:** aborde ética digital, segurança da informação, inclusão digital e impactos sociais da tecnologia em toda aula onde couber
+- **LGPD presente:** toda vez que dados pessoais aparecerem no conteúdo, marque o momento para conectar com os princípios da LGPD
 
 ---
 

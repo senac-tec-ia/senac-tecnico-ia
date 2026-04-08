@@ -44,6 +44,10 @@
 | A04 | 06/03/2026 | 0 | Não trabalhada |
 | A05 | 12/03/2026 | ~1 | **INICIO:** Conceito de função `y = f(x)`, função linear `y = ax + b`, coeficiente angular `a` e coeficiente linear `b`, implementação em Python: `def f_linear(x, a, b): return a*x + b` |
 | A06 | 13/03/2026 | ~3 | Revisão e aprofundamento função linear (Uber, salário, água); função polinomial `f(x)=ax²+bx+c` (frenagem de carro, parábola, área); função exponencial `f(x)=a·bˣ` (post viral, juros compostos, crescimento de dados); função logarítmica `f(x)=log_b(x)` (Richter, decíbeis, faturamentos); exercício em dupla: identificar tipo de função em 5 situações; Kahoot 10 perguntas |
+| A07 | 19/03/2026 | 0 | Não trabalhada (Sem2-Qui — bloco UC07/UC01/UC02) |
+| A08 | 20/03/2026 | 0 | Não trabalhada (Sem2-Sex — bloco UC05/UC08/UC06) |
+| A09 | 26/03/2026 | 0 | Não trabalhada (Sem1-Qui — bloco UC05/UC03/UC04) |
+| A10 | 27/03/2026 | 0 | Não trabalhada — bloco da Sem1-Sex foi gincana Python (UC05) + SQL extenso (UC08); UC09 não chegou a ser aberta |
 
 ---
 

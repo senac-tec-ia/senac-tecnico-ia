@@ -36,7 +36,13 @@
 | A01 | 26/02/2026 | 0 | Não trabalhada |
 | A02 | 27/02/2026 | 0 | Não trabalhada |
 | A03 | 05/03/2026 | ~1 | CPU vs GPU (paralelismo vs IA), RAM, HD vs SSD vs NVMe, periféricos, comparativo de componentes |
-| A04 | 06/03/2026 | 0 | Não trabalhada |
+| A04 | 06/03/2026 | 0 | Não trabalhada (Sem2-Sex — bloco UC05/UC08/UC06, mas tempo todo consumido por UC05 e UC08) |
+| A05 | 12/03/2026 | 0 | Não trabalhada (Sem1-Qui — bloco UC05/UC03/UC04) |
+| A06 | 13/03/2026 | 0 | Não trabalhada (Sem1-Sex — bloco UC08/UC09) |
+| A07 | 19/03/2026 | 0 | Não trabalhada (Sem2-Qui — bloco UC07/UC01/UC02) |
+| A08 | 20/03/2026 | 0 | Não trabalhada — bloco UC06 não foi aberto; tempo consumido por dificuldades UC05 (if/else) + UC08 |
+| A09 | 26/03/2026 | 0 | Não trabalhada (Sem1-Qui — bloco UC05/UC03/UC04) |
+| A10 | 27/03/2026 | 0 | Não trabalhada (Sem1-Sex — gincana Python + SQL extenso) |
 
 ---
 

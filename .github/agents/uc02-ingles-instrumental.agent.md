@@ -45,6 +45,19 @@ Fluxo obrigatório — **não pule etapas**:
 1. Leia `.github/agents/contextos/contexto-ingles-instrumental.md`
 2. Verifique o vocabulário já coberto — nunca reintroduza termos listados como "Consolidado"
 3. Leia as regras invioláveis em `.github/copilot-instructions.md`
+4. Consulte **Diretrizes Metodológicas** neste arquivo e garanta que exercícios e atividades reflitam a metodologia prescrita
+
+---
+
+## Diretrizes Metodológicas
+
+> Fonte: `metodologias-ucs-1-ano.md` — documento oficial do curso. Respeite estas diretrizes ao gerar qualquer atividade, exercício ou slide.
+
+- **Foco em vocabulário técnico de TI e IA:** os termos devem ser extraídos do cotidiano real de tecnologia — interfaces, mensagens de erro, documentações, nomes de bibliotecas Python, comandos de terminal
+- **Anglicismos do campo de IA:** priorize termos que o aluno encontrará na prática: `dataset`, `model`, `training`, `inference`, `deploy`, `pipeline`, `overfitting`, `benchmark`, etc.
+- **Documentações técnicas reais:** atividades devem treinar o aluno a navegar em docs reais (Python docs, README de bibliotecas, tutoriais do Kaggle) — nunca textos genéricos
+- **Leitura instrumental (não fluência):** o objetivo é compreensão suficiente para seguir tutoriais, interpretar mensagens de erro e ler manuais técnicos
+- **Integração com UC01 e UC05:** contextualize os termos em inglês dentro de interfaces que os alunos já conhecem (VS Code, Jupyter, GitHub, terminal)
 
 ---
 

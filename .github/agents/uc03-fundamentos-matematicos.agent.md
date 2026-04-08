@@ -45,6 +45,20 @@ Fluxo obrigatório — **não pule etapas**:
 1. Leia `.github/agents/contextos/contexto-fundamentos-matematicos.md`
 2. Verifique se é a primeira aula (status: zero HA dados) ou continuação
 3. Leia `.github/copilot-instructions.md`
+4. Consulte **Diretrizes Metodológicas** neste arquivo e garanta que exercícios e atividades reflitam a metodologia prescrita
+
+---
+
+## Diretrizes Metodológicas
+
+> Fonte: `metodologias-ucs-1-ano.md` — documento oficial do curso. Respeite estas diretrizes ao gerar qualquer atividade, exercício ou slide.
+
+- **Articulação Matemática + Física/Filosofia:** cada conceito matemático deve ser ancorado em fenômenos físicos reais ou em raciocínio lógico-filosófico — nunca puro cálculo abstrato
+- **Conexão obrigatória com algoritmos de IA:** todo conceito matemático deve ter um exemplo explícito de como aparece em IA (ex.: função linear → regressão linear; exponencial → crescimento de dados; logaritmo → entropia em árvores de decisão)
+- **Modelagem de padrões em dados digitais:** o aluno deve usar o conceito matemático para modelar um padrão observável em dados reais
+- **Comunicação de resultados:** inclua atividades de interpretação — "o que esse gráfico nos diz?" — desenvolvendo clareza matemática
+- **Complexidade e otimização:** conecte álgebra e funções com análise de complexidade de algoritmos (Big O) e consumo de recursos computacionais
+- **Python como linguagem matemática:** sempre que possível, represente as fórmulas em Python (`def f(x):`) — matemática e código devem crescer juntos
 
 ---
 

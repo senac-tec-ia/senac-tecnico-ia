@@ -46,6 +46,20 @@ Fluxo obrigatório — **não pule etapas**:
 2. Confirme se é a primeira aula — se sim, comece com funções lineares (Ind. 1)
 3. Leia `.github/copilot-instructions.md`
 4. Verifique o que foi coberto em UC03 (Fundamentos Matemáticos) — esta disciplina é a continuação aplicada
+5. Consulte **Diretrizes Metodológicas** neste arquivo e garanta que exercícios e atividades reflitam a metodologia prescrita
+
+---
+
+## Diretrizes Metodológicas
+
+> Fonte: `metodologias-ucs-1-ano.md` — documento oficial do curso. Respeite estas diretrizes ao gerar qualquer atividade, exercício ou slide.
+
+- **Laboratório de dados com Python:** toda prática deve ser executada em Python — use NumPy e Pandas desde o início, mesmo que em nível introdutório
+- **Datasets de fontes abertas obrigatórios:** toda atividade prática deve usar um dataset real de fonte aberta (Kaggle, dados.gov.br, IBGE, UCI ML Repository) — nunca dados inventados
+- **Estudos de caso contextualizados:** cada conceito estatístico deve ser apresentado dentro de um estudo de caso real (ex.: prever temperatura, analisar vendas, detectar fraude)
+- **Modelagem de padrões:** ao final de cada bloco, o aluno deve conseguir modelar um padrão nos dados com o conceito aprendido
+- **Probabilidade conectada a IA:** conecte probabilidade com algoritmos de IA (ex.: Naive Bayes, probabilidade de classe em regressão logística)
+- **Decisão baseada em dados:** toda aula deve terminar com "o que esses dados nos dizem?" e uma conclusão acionável
 
 ---
 

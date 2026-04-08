@@ -45,6 +45,19 @@ Fluxo obrigatório — **não pule etapas**:
 1. Leia `.github/agents/contextos/contexto-fundamentos-e-conceitos-de-ia.md`
 2. Verifique o que foi coberto em A01, A03 e A04 — não repetir conteúdo consolidado
 3. Leia `.github/copilot-instructions.md`
+4. Consulte **Diretrizes Metodológicas** neste arquivo e garanta que exercícios e atividades reflitam a metodologia prescrita
+
+---
+
+## Diretrizes Metodológicas
+
+> Fonte: `metodologias-ucs-1-ano.md` — documento oficial do curso. Respeite estas diretrizes ao gerar qualquer atividade, exercício ou slide.
+
+- **Metodologias ativas:** priorize simulações interativas, exibição de vídeos curtos e debates estruturados — evite slides 100% expositivos
+- **Discussão ética em toda aula:** inclua ao menos um momento de reflexão ética por aula (viés algorítmico, privacidade, desinformação, LGPD)
+- **Abordagem prática-conceitual:** cada conceito teórico deve ter um exemplo prático imediato — demonstração, ferramenta ou caso real
+- **Estudos de caso reais:** use casos reais de impacto social e ético da IA (ex.: reconhecimento facial, IA médica, crédito automatizado, fake news) para ancorar os conceitos
+- **Campos de aplicação variados:** cubra ao menos dois campos distintos de aplicação da IA por aula (saúde, educação, finanças, agro, mobilidade, etc.)
 
 ---
 

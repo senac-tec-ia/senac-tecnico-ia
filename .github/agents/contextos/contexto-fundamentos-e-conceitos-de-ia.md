@@ -11,7 +11,7 @@
 
 | Trim. | HA Alocado | HA Dado | HA Restante |
 |---|---|---|---|
-| T1 | 11 (ajustado) | 7 | 4 |
+| T1 | 11 (ajustado) | 6 | 5 |
 | T2 | 14 | 0 | 14 |
 | T3 | 14 | 0 | 14 |
 
@@ -36,7 +36,12 @@
 | A02 | 27/02/2026 | 0 | Não trabalhada |
 | A03 | 05/03/2026 | ~3 | Definição formal de IA, história completa (1943→2024), ML supervisionado/não-sup./reforço, redes neurais, DL, NLP, ética, LGPD |
 | A04 | 06/03/2026 | ~1 | Vocabulário avançado: NLP, Token, LLM, Backpropagation, Epoch, Embedding |
-| A09 | 25/03/2026 | ~1 | Debate: IA como ferramenta vs trapaça (ética); slides UC04 com mapa da IA, distinção ML/CV/NLP, tabela comparativa, fechamento ético |
+| A05 | 12/03/2026 | 0 | Não trabalhada (Sem1-Qui — bloco 100% Python/UC05) |
+| A06 | 13/03/2026 | 0 | Não trabalhada (Sem1-Sex — bloco UC08/UC09) |
+| A07 | 19/03/2026 | 0 | Não trabalhada (debate UC07 tomou toda a manhã) |
+| A08 | 20/03/2026 | 0 | Não trabalhada (Sem2-Sex — bloco UC05/UC08/UC06) |
+| A09 | 26/03/2026 | 0 | Não trabalhada — aula 100% Python (UC05 não rendeu), UC04 não foi aberta |
+| A10 | 27/03/2026 | 0 | Não trabalhada (Sem1-Sex — gincana Python + SQL) |
 
 ---
 
@@ -95,9 +100,9 @@
 - Definição geral de ML/DL/NLP (A03)
 - Introdução ao Turing Test e Dartmouth Conference
 - LGPD conceito inicial (mencionar, não reintroduzir)
-- Mapa hierárquico IA → ML → DL → CV/NLP/RL (A09)
-- Tabela comparativa ML geral vs CV vs NLP (A09)
-- Debate ética: ferramenta vs trapaça — posições já exploradas (A09)
+- Mapa hierárquico IA → ML → DL → CV/NLP/RL (A07 — debate UC07)
+- Tabela comparativa ML geral vs CV vs NLP (A07 — debate UC07)
+- Debate ética: ferramenta vs trapaça — posições já exploradas (A07 — UC07)
 
 ---
 

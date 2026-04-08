@@ -11,7 +11,7 @@
 
 | Trim. | HA Alocado | HA Dado | HA Restante |
 |---|---|---|---|
-| T1 | 13 | 4 | 9 |
+| T1 | 13 | 3 | 10 |
 | T2 | 14 | 0 | 14 |
 | T3 | 13 | 0 | 13 |
 
@@ -39,7 +39,11 @@
 | A03 | 05/03/2026 | 0 | Não trabalhada |
 | A04 | 06/03/2026 | 0 | Não trabalhada |
 | A05 | 12/03/2026 | ~2 | **INICIO:** Aritmética computacional (int, float, `//`, `%`, `**`, PEMDAS), Álgebra: variável vs incógnita, equação linear `y = 2x + 5` |
-| A09 | 26/03/2026 | 2 | **Potências e raízes** (`**`, `**0.5`, tabela potências de 2, contexto bytes/RGB), **Expressões algébricas** (x como ingrediente, tabela de valores), **Equações** (verificador com `==` — trial & error para resolver `2x+5=11`) |
+| A06 | 13/03/2026 | 0 | Não trabalhada (Sem1-Sex — bloco UC08/UC09) |
+| A07 | 19/03/2026 | 0 | Não trabalhada (Sem2-Qui — bloco UC07/UC01/UC02) |
+| A08 | 20/03/2026 | 0 | Não trabalhada (Sem2-Sex — bloco UC05/UC08/UC06) |
+| A09 | 26/03/2026 | ~1 | **Potências e raízes** (`**`, `**0.5`, tabela potências de 2, contexto bytes/RGB), **Expressões algébricas** (x como ingrediente, tabela de valores), **Equações** (verificador com `==` — trial & error para resolver `2x+5=11`) |
+| A10 | 27/03/2026 | 0 | Não trabalhada (Sem1-Sex — gincana Python + SQL) |
 
 ---
 

@@ -45,6 +45,19 @@ Fluxo obrigatório — **não pule etapas**:
 1. Leia `.github/agents/contextos/contexto-transformacao-digital.md`
 2. Verifique o conteúdo coberto em A01 e A02 — não repetir 4ª Revolução/casos já vistos
 3. Leia `.github/copilot-instructions.md`
+4. Consulte **Diretrizes Metodológicas** neste arquivo e garanta que exercícios e atividades reflitam a metodologia prescrita
+
+---
+
+## Diretrizes Metodológicas
+
+> Fonte: `metodologias-ucs-1-ano.md` — documento oficial do curso. Respeite estas diretrizes ao gerar qualquer atividade, exercício ou slide.
+
+- **Visão sistêmica e estratégica:** o foco é diagnóstico e estratégia, não apenas conceito — alunos devem sair sabendo *aplicar*, não só *saber*
+- **Metodologias ativas baseadas em problemas reais:** cada aula deve conter um problema real de empresa ou setor como fio condutor
+- **Análise de estudos de caso empresariais em grupos:** atividades práticas devem ser em grupo (3–4 alunos), analisando e apresentando cases reais (Nubank, iFood, Embrapa, Porto Seguro, etc.)
+- **Diagnóstico de maturidade digital:** inclua atividades onde os alunos avaliam o nível digital de uma empresa real ou fictícia
+- **Prototipagem de soluções digitais orientadas por IA:** ao final de cada bloco temático, proponha um protótipo ou proposta de solução usando IA
 
 ---
 

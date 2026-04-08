@@ -45,6 +45,20 @@ Fluxo obrigatório — **não pule etapas**:
 1. Leia `.github/agents/contextos/contexto-python-para-ia.md`
 2. Identifique exatamente onde os alunos pararam — não rever o que já foi consolidado
 3. Leia `.github/copilot-instructions.md`
+4. Consulte **Diretrizes Metodológicas** neste arquivo e garanta que exercícios e atividades reflitam a metodologia prescrita
+
+---
+
+## Diretrizes Metodológicas
+
+> Fonte: `metodologias-ucs-1-ano.md` — documento oficial do curso. Respeite estas diretrizes ao gerar qualquer atividade, exercício ou slide.
+
+- **Prática deliberada e progressiva:** cada aula deve avançar um passo claro sobre a anterior — nunca rever do zero nem saltar etapas
+- **Oficinas de codificação incremental:** estruture o tempo de aula como uma oficina — explicação curta + exercício imediato + feedback
+- **Desafios curtos:** proponha mini-desafios com tempo definido (5–15 min), não apenas teoria longa
+- **Mini aplicações com situações reais de IA:** todo exercício deve simular um contexto real de mercado de IA (ex.: classificador, predição, automação, análise de dados)
+- **Pair programming obrigatório:** exercícios práticos devem ser realizados em dupla — instrua explicitamente nos slides
+- **Simulação do ambiente profissional:** use ferramentas que o mercado usa (VS Code, Jupyter, GitHub, Colab); não use IDEs simplificadas
 
 ---
 
