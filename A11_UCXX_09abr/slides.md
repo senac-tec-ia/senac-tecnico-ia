@@ -62,11 +62,11 @@ card: true
 
 Cada time vai pesquisar **1 empresa real** que usa IA. Descubram:
 
-1. 🏢 **Empresa e setor** — Qual empresa? Banco, saúde, varejo, agronegócio...
-2. 🔍 **Problema** — Qual problema a IA resolve nessa empresa?
-3. 📊 **Dados utilizados** — Que tipo de dado a IA usa? (fotos, histórico, sensores...)
-4. 🤖 **Como a IA resolve** — De que forma ela aprende e decide?
-5. 🎯 **Resultado** — O que mudou com a IA? Ficou mais rápido? Mais barato?
+1. <carbon-building /> **Empresa e setor** — Qual empresa? Banco, saúde, varejo, agronegócio...
+2. <carbon-search /> **Problema** — Qual problema a IA resolve nessa empresa?
+3. <carbon-chart-bar /> **Dados utilizados** — Que tipo de dado a IA usa? (fotos, histórico, sensores...)
+4. <carbon-bot /> **Como a IA resolve** — De que forma ela aprende e decide?
+5. <carbon-target /> **Resultado** — O que mudou com a IA? Ficou mais rápido? Mais barato?
 
 > **Pesquisem no Google, YouTube ou LinkedIn.** Anotem no papel — vão apresentar em 2 min.
 
@@ -90,9 +90,9 @@ card: true
 - Canvas 2 — Protótipo de solução IA (papel)
 - Prontos para apresentar em **2 minutos**
 
-> 💡 Dica: pesquisem "empresa + inteligência artificial" no Google. LinkedIn, blogs técnicos e notícias de negócios ajudam muito.
+> <carbon-idea /> Dica: pesquisem "empresa + inteligência artificial" no Google. LinkedIn, blogs técnicos e notícias de negócios ajudam muito.
 
-**⏱ Início agora!**
+**<carbon-timer /> Início agora!**
 
 ---
 layout: default
@@ -108,11 +108,11 @@ card: true
 
 | Campo | O que anotar |
 |---|---|
-| 🏢 **Empresa** | Nome + setor de atuação |
-| 🔍 **Problema** | Qual desafio ou ineficiência a empresa tinha antes? |
-| 📊 **Dados** | Que dados a IA usa para aprender? |
-| 🤖 **Solução** | Como a IA resolve? (classificação, previsão, recomendação...) |
-| 🎯 **Resultado** | O que melhorou? Cite um número ou impacto real se conseguir |
+| <carbon-building /> **Empresa** | Nome + setor de atuação |
+| <carbon-search /> **Problema** | Qual desafio ou ineficiência a empresa tinha antes? |
+| <carbon-chart-bar /> **Dados** | Que dados a IA usa para aprender? |
+| <carbon-bot /> **Solução** | Como a IA resolve? (classificação, previsão, recomendação...) |
+| <carbon-target /> **Resultado** | O que melhorou? Cite um número ou impacto real se conseguir |
 
 > Use frases curtas — você vai apresentar isso em 2 minutos.
 
@@ -130,10 +130,10 @@ card: true
 
 | Bloco | Pergunta |
 |---|---|
-| ❓ **Problema** | Que problema específico de vocês resolveriam? |
-| 📦 **Dados Necessários** | Que dados precisariam coletar para treinar a IA? |
-| 🧠 **Solução IA** | Que tipo de IA usariam? (classificação, previsão, geração...) |
-| ✅ **Benefício Esperado** | O que melhora para a empresa e para quem usa o serviço? |
+| <carbon-help /> **Problema** | Que problema específico de vocês resolveriam? |
+| <carbon-package /> **Dados Necessários** | Que dados precisariam coletar para treinar a IA? |
+| <carbon-cognitive /> **Solução IA** | Que tipo de IA usariam? (classificação, previsão, geração...) |
+| <carbon-checkmark /> **Benefício Esperado** | O que melhora para a empresa e para quem usa o serviço? |
 
 > Este é o mesmo modelo que times de produto e startups usam para propor soluções de IA.
 
@@ -149,11 +149,11 @@ card: true
 
 *Use como guia enquanto o time trabalha:*
 
-- 🎯 **Viável** — O problema é real e as pessoas ou empresas realmente sofrem com ele?
+- <carbon-target /> **Viável** — O problema é real e as pessoas ou empresas realmente sofrem com ele?
 
-- 📊 **Usa dados reais** — Existe algum dado disponível para treinar essa IA? (histórico, imagens, textos, sensores)
+- <carbon-chart-bar /> **Usa dados reais** — Existe algum dado disponível para treinar essa IA? (histórico, imagens, textos, sensores)
 
-- 💡 **Gera valor** — A solução melhora algo concreto: tempo, custo, segurança ou experiência?
+- <carbon-idea /> **Gera valor** — A solução melhora algo concreto: tempo, custo, segurança ou experiência?
 
 > Uma solução de IA sem dados é como uma receita sem ingredientes. O **dado é o combustível da IA**.
 
@@ -176,7 +176,7 @@ pulse: true
 
 **Após cada apresentação:** a turma faz **1 pergunta** para o time
 
-> 🎙 Não precisa ser perfeito — o objetivo é praticar explicar ideias técnicas em voz alta. Profissionais de tecnologia fazem isso todo dia.
+> <carbon-microphone /> Não precisa ser perfeito — o objetivo é praticar explicar ideias técnicas em voz alta. Profissionais de tecnologia fazem isso todo dia.
 
 ---
 layout: brainstorm
@@ -214,11 +214,11 @@ card: true
 
 | Etapa | O que acontece |
 |---|---|
-| 1️⃣ **Problema** | Identifica um desafio real que tem dados associados |
-| 2️⃣ **Dados** | Coleta e organiza exemplos (histórico, fotos, textos) |
-| 3️⃣ **Modelo** | IA aprende padrões com esses dados (treino) |
-| 4️⃣ **Resultado** | IA faz previsões ou decisões em casos novos |
-| 5️⃣ **Impacto** | Melhoria real: velocidade, custo, precisão ou experiência |
+| **1.** Problema | Identifica um desafio real que tem dados associados |
+| **2.** Dados | Coleta e organiza exemplos (histórico, fotos, textos) |
+| **3.** Modelo | IA aprende padrões com esses dados (treino) |
+| **4.** Resultado | IA faz previsões ou decisões em casos novos |
+| **5.** Impacto | Melhoria real: velocidade, custo, precisão ou experiência |
 
 > Toda IA que você vai encontrar na carreira segue esse caminho — com mais ou menos complexidade.
 
@@ -268,11 +268,11 @@ Na A07, pedimos que vocês criassem um documento no Word. Nem todo mundo fez —
 **Hoje a gente faz junto, aqui, agora.**
 
 Ao final deste bloco, você vai saber:
-- ✅ Configurar margens ABNT no Word
-- ✅ Escolher fonte e espaçamento corretos
-- ✅ Aplicar estilos de título (H1 e H2)
-- ✅ Inserir e formatar uma tabela
-- ✅ Exportar o documento em PDF
+- <carbon-checkmark /> Configurar margens ABNT no Word
+- <carbon-checkmark /> Escolher fonte e espaçamento corretos
+- <carbon-checkmark /> Aplicar estilos de título (H1 e H2)
+- <carbon-checkmark /> Inserir e formatar uma tabela
+- <carbon-checkmark /> Exportar o documento em PDF
 
 > Isso não é só para a tarefa — é a formatação que você vai usar em estágios, relatórios e projetos reais.
 
@@ -290,10 +290,10 @@ card: true
 
 | Margem | Medida |
 |---|---|
-| ⬆️ **Superior** | 3 cm |
-| ⬅️ **Esquerda** | 3 cm |
-| ⬇️ **Inferior** | 2 cm |
-| ➡️ **Direita** | 2 cm |
+| <carbon-arrow-up /> **Superior** | 3 cm |
+| <carbon-arrow-left /> **Esquerda** | 3 cm |
+| <carbon-arrow-down /> **Inferior** | 2 cm |
+| <carbon-arrow-right /> **Direita** | 2 cm |
 
 > **Por que 3 cm à esquerda?** Reservado para encadernação — o lado que fica preso precisa de mais espaço.
 
@@ -313,10 +313,10 @@ card: true
 
 | Item | Configuração |
 |---|---|
-| 🔤 **Fonte** | Calibri **ou** Times New Roman |
-| 🔢 **Tamanho** | 12 pts no corpo do texto · 14 pts no título de seção |
-| ↕️ **Espaçamento** | 1,5 entre linhas |
-| ↩️ **Recuo de parágrafo** | 1,25 cm na primeira linha (opcional) |
+| <carbon-text-font /> **Fonte** | Calibri **ou** Times New Roman |
+| <carbon-text-scale /> **Tamanho** | 12 pts no corpo do texto · 14 pts no título de seção |
+| <carbon-fit-to-height /> **Espaçamento** | 1,5 entre linhas |
+| <carbon-text-indent /> **Recuo de parágrafo** | 1,25 cm na primeira linha (opcional) |
 
 **Como aplicar:** Ctrl+A → seleciona tudo → fonte Calibri → tamanho 12 → Página Inicial → Espaçamento de Linha → 1,5
 
@@ -382,12 +382,12 @@ card: true
 
 **Façam comigo — professor na frente, você na máquina:**
 
-1. ✅ Novo documento → margens ABNT configuradas
-2. ✅ Ctrl+A → Calibri 12 · Espaçamento 1,5
-3. ✅ Cabeçalho: Nome · Turma: Técnico em IA — 1º Ano · Data: 16/04/2026
-4. ✅ Título centralizado em negrito: **Glossário de Inteligência Artificial** → Estilo Título 1
-5. ✅ Tabela 3 colunas com cabeçalho sombreado
-6. ✅ Seção **Minha Opinião** → Estilo Título 1
+1. <carbon-checkmark /> Novo documento → margens ABNT configuradas
+2. <carbon-checkmark /> Ctrl+A → Calibri 12 · Espaçamento 1,5
+3. <carbon-checkmark /> Cabeçalho: Nome · Turma: Técnico em IA — 1º Ano · Data: 16/04/2026
+4. <carbon-checkmark /> Título centralizado em negrito: **Glossário de Inteligência Artificial** → Estilo Título 1
+5. <carbon-checkmark /> Tabela 3 colunas com cabeçalho sombreado
+6. <carbon-checkmark /> Seção **Minha Opinião** → Estilo Título 1
 
 > Ao final, você tem o esqueleto completo. A tarefa é só preencher os 10 termos e escrever o parágrafo.
 
@@ -457,7 +457,7 @@ Você acabou de montar o esqueleto do documento. Agora é só:
 2. Escrever **1 parágrafo** de 5–7 linhas com a sua opinião sobre IA
 3. Exportar em PDF e enviar pela plataforma
 
-**⏱ Tempo estimado: ~45 minutos**
+**<carbon-timer /> Tempo estimado: ~45 minutos**
 
 > **Prazo: quinta-feira, 16/04/2026 — próxima semana**
 
@@ -531,13 +531,13 @@ card: true
 
 **3 passos para entender qualquer termo de IA:**
 
-1. 🔍 **Contexto** — Em que frase o termo aparece? O contexto geralmente revela o significado.
+1. <carbon-search /> **Contexto** — Em que frase o termo aparece? O contexto geralmente revela o significado.
    > _"The model was trained on a large dataset"_ → "trained" + "dataset" = aprendizado com dados
 
-2. 🌱 **Raiz da palavra** — Muitos termos técnicos têm raiz latina que você já conhece.
+2. <carbon-growth /> **Raiz da palavra** — Muitos termos técnicos têm raiz latina que você já conhece.
    > _"Inference"_ → _inferir_ (concluir algo a partir de evidências)
 
-3. 🔄 **Tradução funcional** — Não é literal, é: _"O que isso faz na prática?"_
+3. <carbon-repeat /> **Tradução funcional** — Não é literal, é: _"O que isso faz na prática?"_
    > _"Embedding"_ → "converte palavra em número para a IA processar"
 
 > **Atalho prático:** pesquise `[termo] in machine learning` no Google — os primeiros resultados explicam em inglês simples.
@@ -578,7 +578,7 @@ bgPreset: palette
 
 <!-- SLIDE 28 — AV01 — Glossário IA: Tarefa Completa -->
 
-# 📝 AV01 — Tarefa de Casa: Glossário IA
+# <carbon-document-tasks /> AV01 — Tarefa de Casa: Glossário IA
 
 <div style="overflow-y: auto; max-height: 370px; padding-right: 8px; font-size: 0.9em; line-height: 1.5;">
 
@@ -595,7 +595,7 @@ Crie uma tabela com 3 colunas:
 | Machine Learning | Aprendizado de Máquina | _(exemplo)_ A IA aprende sozinha a partir de exemplos |
 | ... | ... | ... |
 
-⚠️ A **terceira coluna é com as suas palavras** — não copie da internet.
+<carbon-warning /> A **terceira coluna é com as suas palavras** — não copie da internet.
 
 Termos para escolher: `Machine Learning` · `Deep Learning` · `Neural Network` · `Dataset` · `Algorithm` · `GPU` · `Token` · `Training` · `Model` · `NLP` · `Bias` · `Embedding` · `Epoch` · `Inference`
 
@@ -627,13 +627,13 @@ bgPreset: palette
 
 ## O que fizemos hoje
 
-- 🤖 **UC07:** Pesquisamos e prototipamos soluções reais de IA em times
-- 💻 **UC01:** Montamos o esqueleto do documento Word com formatação ABNT
-- 🌐 **UC02:** Conhecemos os 10 termos de IA para a tarefa — em inglês, com contexto
+- <carbon-bot /> **UC07:** Pesquisamos e prototipamos soluções reais de IA em times
+- <carbon-laptop /> **UC01:** Montamos o esqueleto do documento Word com formatação ABNT
+- <carbon-globe /> **UC02:** Conhecemos os 10 termos de IA para a tarefa — em inglês, com contexto
 
 ## Próxima aula e tarefa
 
-- 📝 **AV01 — Glossário IA:** prazo **16/04/2026 (Quinta-feira)**
-- 📅 **A12 — 10/04 (Sexta-feira):** continuação do curso
+- <carbon-document-tasks /> **AV01 — Glossário IA:** prazo **16/04/2026 (Quinta-feira)**
+- <carbon-calendar /> **A12 — 10/04 (Sexta-feira):** continuação do curso
 
 > Lembrem-se: a **terceira coluna** da tabela deve ser **com as suas palavras** — é o que mais vale na avaliação.
