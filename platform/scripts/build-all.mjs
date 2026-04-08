@@ -111,6 +111,13 @@ for (const dirName of aulaDirs) {
 
 if (aulasMeta.length === 0) {
   log(`\n  Nenhuma aula para buildar. Use --all ou publique uma aula (status: published).`, 'yellow')
+
+  // Garantir que platform/dist/ e aulas.json existam mesmo sem aulas published
+  if (!fs.existsSync(DIST)) {
+    fs.mkdirSync(DIST, { recursive: true })
+  }
+  fs.writeFileSync(path.join(DIST, 'aulas.json'), '[]', 'utf8')
+  log(`  📄 aulas.json gerado: 0 aulas`, 'yellow')
   process.exit(0)
 }
 
