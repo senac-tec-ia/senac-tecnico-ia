@@ -66,7 +66,7 @@ Cada time vai pesquisar **1 empresa real** que usa IA. Descubram:
 2. <carbon-search /> **Problema** — Qual problema a IA resolve nessa empresa?
 3. <carbon-chart-bar /> **Dados utilizados** — Que tipo de dado a IA usa? (fotos, histórico, sensores...)
 4. <carbon-bot /> **Como a IA resolve** — De que forma ela aprende e decide?
-5. <carbon-target /> **Resultado** — O que mudou com a IA? Ficou mais rápido? Mais barato?
+5. <carbon-star /> **Resultado** — O que mudou com a IA? Ficou mais rápido? Mais barato?
 
 > **Pesquisem no Google, YouTube ou LinkedIn.** Anotem no papel — vão apresentar em 2 min.
 
@@ -112,7 +112,7 @@ card: true
 | <carbon-search /> **Problema** | Qual desafio ou ineficiência a empresa tinha antes? |
 | <carbon-chart-bar /> **Dados** | Que dados a IA usa para aprender? |
 | <carbon-bot /> **Solução** | Como a IA resolve? (classificação, previsão, recomendação...) |
-| <carbon-target /> **Resultado** | O que melhorou? Cite um número ou impacto real se conseguir |
+| <carbon-star /> **Resultado** | O que melhorou? Cite um número ou impacto real se conseguir |
 
 > Use frases curtas — você vai apresentar isso em 2 minutos.
 
@@ -149,7 +149,7 @@ card: true
 
 *Use como guia enquanto o time trabalha:*
 
-- <carbon-target /> **Viável** — O problema é real e as pessoas ou empresas realmente sofrem com ele?
+- <carbon-checkmark /> **Viável** — O problema é real e as pessoas ou empresas realmente sofrem com ele?
 
 - <carbon-chart-bar /> **Usa dados reais** — Existe algum dado disponível para treinar essa IA? (histórico, imagens, textos, sensores)
 
@@ -584,7 +584,7 @@ bgPreset: palette
 
 **Prazo: quinta-feira, 16 de abril · plataforma de entrega da turma · Individual · ~45 min**
 
----
+<hr>
 
 **Parte 1 — Tabela de 10 termos** _(obrigatória)_
 
@@ -599,7 +599,7 @@ Crie uma tabela com 3 colunas:
 
 Termos para escolher: `Machine Learning` · `Deep Learning` · `Neural Network` · `Dataset` · `Algorithm` · `GPU` · `Token` · `Training` · `Model` · `NLP` · `Bias` · `Embedding` · `Epoch` · `Inference`
 
----
+<hr>
 
 **Parte 2 — Minha Opinião** _(obrigatória)_
 
@@ -608,7 +608,7 @@ Escreva 5–7 linhas respondendo UMA das perguntas:
 - _"Tem alguma coisa na IA que te surpreendeu? Por quê?"_
 - _"Você usaria IA no trabalho no futuro? Em qual situação?"_
 
----
+<hr>
 
 **Formatação obrigatória:** Margens 3cm sup/esq · 2cm inf/dir · Calibri 12 · Espaçamento 1,5 · Cabeçalho (Nome · Turma · Data: 16/04/2026) · Exportar em PDF
 
