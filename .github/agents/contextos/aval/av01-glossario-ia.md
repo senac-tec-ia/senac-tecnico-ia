@@ -5,8 +5,8 @@ tipo: TC
 alternativa-escolhida: "4 — Glossário + Mini Reflexão Ética"
 ucs: UC01, UC02, UC04
 indicadores: "UC01: Ind.2+3 · UC02: Ind.1 · UC04: Ind.1"
-data-prazo: "10/04/2026 (Sexta-feira)"
-aula-alvo: A12
+data-prazo: "16/04/2026 (Quinta-feira)"
+aula-alvo: A13
 status: detalhada
 ---
 
@@ -15,7 +15,7 @@ status: detalhada
 > **Status:** ✅ Detalhada
 
 **Tipo:** TC — Tarefa de Casa  
-**Prazo:** 10/04/2026 (Sexta-feira, A12) — via plataforma de entrega da turma  
+**Prazo:** 16/04/2026 (Quinta-feira, A13) — via plataforma de entrega da turma  
 **Formação:** Individual  
 **UCs cobertas:** UC01, UC02, UC04  
 **Indicadores:** UC01 Ind.2 · UC01 Ind.3 · UC02 Ind.1 · UC04 Ind.1  
@@ -29,7 +29,7 @@ status: detalhada
 ---
 
 ### 📝 Tarefa de Casa — Glossário IA
-**Prazo: sexta-feira, 10 de abril, pela plataforma de entrega da turma**
+**Prazo: quinta-feira, 16 de abril, pela plataforma de entrega da turma**
 
 Durante as nossas aulas, você aprendeu vários termos de Inteligência Artificial que as pessoas já usam no dia a dia: no TikTok, no YouTube, nas recomendações do Spotify, no desbloqueio por rosto do celular.
 
@@ -72,7 +72,7 @@ Após a tabela, crie uma nova seção com o título **"Minha Opinião"** e escre
 
 Seu documento precisa ter:
 
-- [ ] **Cabeçalho** com: Nome completo | Turma: Técnico em IA — 1º Ano | Data: 10/04/2026
+- [ ] **Cabeçalho** com: Nome completo | Turma: Técnico em IA — 1º Ano | Data: 16/04/2026
 - [ ] **Título** centralizado e em negrito: `Glossário de Inteligência Artificial`
 - [ ] **Margens ABNT:** 3 cm superior e esquerda · 2 cm inferior e direita
 - [ ] **Fonte:** Calibri ou Times New Roman · tamanho 12
@@ -86,7 +86,7 @@ Seu documento precisa ter:
 
 1. Salve o arquivo Word como: `glossario_ia_SEUNOME.docx`
 2. Exporte em PDF: `glossario_ia_SEUNOME.pdf`
-3. **Envie apenas o PDF** pela plataforma de entrega até **sexta, 10/04, antes da aula**
+3. **Envie apenas o PDF** pela plataforma de entrega até **quinta, 16/04, antes da aula**
 
 ---
 
@@ -112,7 +112,7 @@ Seu documento precisa ter:
 
 ## Orientações para o Professor
 
-**Como publicar:** Criar a tarefa na plataforma de entrega da turma com prazo 10/04 às 23h59. Publicar **hoje (06/04) ou no máximo 07/04** para dar tempo aos alunos.
+**Como publicar:** Criar a tarefa na plataforma de entrega da turma com prazo 16/04 às 23h59. Publicar **hoje (08/04) ou no máximo 09/04** para dar tempo aos alunos.
 
 **O que observar ao corrigir:**
 - A coluna mais importante para avaliação é a **terceira coluna** — é onde se evidencia compreensão real vs. cópia

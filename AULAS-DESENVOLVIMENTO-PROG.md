@@ -10,7 +10,7 @@
 
 ---
 
-## Sprint atual: A10
+## Sprint atual: A11
 
 | Sessão | UC | Disciplina | HA produzidos | Aula destino | HA ainda pendentes |
 |--------|----|-----------:|:-------------:|:------------:|:------------------:|
@@ -18,5 +18,8 @@
 | A09 | UC03 | Fund. Matemáticos | 2 | 26/03 | 9 |
 | A09 | UC04 | Fundamentos de IA | 1 | 25/03 | 4 |
 | A10 | UC08 | Banco de Dados | 3 | 27/03 | 11 |
+| A11 | UC07 | Transformação Digital | 3 | 09/04 | 5 |
+| A11 | UC01 | Fund. Computação | 2 | 09/04 | 7 |
+| A11 | UC02 | Inglês Instrumental | 1 | 09/04 | 9 |
 
 ---
