@@ -30,14 +30,6 @@ jobs:
         env:
           NODE_ENV: production
 
-      - name: Create Cloudflare Pages project (first run only)
-        uses: cloudflare/wrangler-action@v3
-        continue-on-error: true
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages project create senac-lms --production-branch=master
-
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
