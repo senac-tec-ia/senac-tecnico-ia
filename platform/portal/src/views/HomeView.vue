@@ -1,6 +1,7 @@
 ﻿<script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { marked } from 'marked'
+import { RouterLink } from 'vue-router'
 import type { AulaMeta } from '@/types/aulas'
 import AulaCard from '@/components/AulaCard.vue'
 
@@ -10,6 +11,17 @@ const aulas = ref<AulaMeta[]>([])
 const loading = ref(true)
 const error = ref('')
 const professorMessage = ref('')
+const ucAtiva = ref<string | null>(null)
+
+const ucsDisponiveis = computed(() => {
+  const set = new Set<string>()
+  aulas.value.forEach(a => a.ucs.forEach(uc => set.add(uc)))
+  return [...set].sort((a, b) => Number(a) - Number(b))
+})
+
+const aulasFiltradas = computed(() =>
+  ucAtiva.value ? aulas.value.filter(a => a.ucs.includes(ucAtiva.value!)) : aulas.value
+)
 
 onMounted(async () => {
   try {
@@ -34,9 +46,22 @@ onMounted(async () => {
 
 <template>
   <div class="min-h-dvh bg-neural-900 px-4 py-8 sm:px-6">
-    <header class="max-w-4xl mx-auto mb-8">
+    <header class="max-w-4xl mx-auto mb-6">
       <p class="text-neural-accent text-sm font-mono mb-1">Senac · Tecnico em IA</p>
-      <h1 class="text-2xl sm:text-3xl font-bold text-white">Aulas</h1>
+      <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4">Portal do Aluno</h1>
+      <!-- Tab nav -->
+      <nav class="flex gap-1 border-b border-neural-700">
+        <RouterLink
+          to="/"
+          class="px-4 py-2 text-sm font-medium rounded-t-lg transition"
+          :class="$route.path === '/' ? 'bg-neural-800 text-white border border-b-neural-800 border-neural-700 -mb-px' : 'text-gray-400 hover:text-white'"
+        >Aulas</RouterLink>
+        <RouterLink
+          to="/avaliacoes"
+          class="px-4 py-2 text-sm font-medium rounded-t-lg transition"
+          :class="$route.path === '/avaliacoes' ? 'bg-neural-800 text-white border border-b-neural-800 border-neural-700 -mb-px' : 'text-gray-400 hover:text-white'"
+        >Avaliações</RouterLink>
+      </nav>
     </header>
 
     <div
@@ -48,6 +73,20 @@ onMounted(async () => {
         class="prose prose-invert prose-sm max-w-none text-gray-200"
         v-html="marked.parse(professorMessage)"
       />
+    </div>
+
+    <div v-if="!loading && ucsDisponiveis.length" class="max-w-4xl mx-auto mb-4 flex flex-wrap gap-2">
+      <button
+        @click="ucAtiva = null"
+        :class="ucAtiva === null ? 'bg-neural-accent text-neural-900 font-semibold' : 'bg-neural-800 text-gray-400 hover:text-white hover:bg-neural-700'"
+        class="px-3 py-1 rounded-full text-xs transition"
+      >Todas</button>
+      <button
+        v-for="uc in ucsDisponiveis" :key="uc"
+        @click="ucAtiva = ucAtiva === uc ? null : uc"
+        :class="ucAtiva === uc ? 'bg-neural-accent text-neural-900 font-semibold' : 'bg-neural-800 text-gray-400 hover:text-white hover:bg-neural-700'"
+        class="px-3 py-1 rounded-full text-xs transition"
+      >UC{{ uc }}</button>
     </div>
 
     <div v-if="loading" class="max-w-4xl mx-auto grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -63,7 +102,7 @@ onMounted(async () => {
     </div>
 
     <main v-else class="max-w-4xl mx-auto grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <AulaCard v-for="aula in aulas" :key="aula.slug" :aula="aula" />
+      <AulaCard v-for="aula in aulasFiltradas" :key="aula.slug" :aula="aula" />
     </main>
   </div>
 </template>

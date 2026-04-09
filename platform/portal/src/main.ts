@@ -4,6 +4,8 @@ import App from './App.vue'
 import HomeView from './views/HomeView.vue'
 import AulaView from './views/AulaView.vue'
 import AdminView from './views/AdminView.vue'
+import AvaliacoesView from './views/AvaliacoesView.vue'
+import AvaliacaoView from './views/AvaliacaoView.vue'
 import './style.css'
 
 const router = createRouter({
@@ -11,6 +13,8 @@ const router = createRouter({
   routes: [
     { path: '/', component: HomeView },
     { path: '/aula/:slug', component: AulaView },
+    { path: '/avaliacoes', component: AvaliacoesView },
+    { path: '/avaliacao/:id', component: AvaliacaoView },
     { path: '/admin', component: AdminView },
   ],
 })

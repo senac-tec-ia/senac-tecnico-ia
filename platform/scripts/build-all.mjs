@@ -7,8 +7,10 @@
  * Use --all para incluir todas (modo dev/preview local)
  *
  * Uso:
- *   node platform/scripts/build-all.mjs          ← só published
- *   node platform/scripts/build-all.mjs --all    ← todas (dev local)
+ *   node platform/scripts/build-all.mjs          ← só published (incremental)
+ *   node platform/scripts/build-all.mjs --all    ← todas (dev local, incremental)
+ *   node platform/scripts/build-all.mjs --force  ← rebuilda tudo do zero
+ *   node platform/scripts/build-all.mjs --all --force
  */
 
 import fs from 'fs'
@@ -20,7 +22,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT  = path.resolve(__dirname, '../..')
 const DIST  = path.resolve(__dirname, '../dist')
 
-const includeAll = process.argv.includes('--all')
+const includeAll    = process.argv.includes('--all')
+const forceRebuild  = process.argv.includes('--force')
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -55,6 +58,30 @@ function readMeta(aulaDir) {
 function log(msg, color = '') {
   const colors = { green: '\x1b[32m', yellow: '\x1b[33m', red: '\x1b[31m', cyan: '\x1b[36m', reset: '\x1b[0m' }
   console.log(`${colors[color] || ''}${msg}${colors.reset}`)
+}
+
+/**
+ * Retorna true se o dist já existe e é mais recente que qualquer arquivo fonte.
+ * Rastreia: slides.md, meta.yaml e todos os .vue/.ts/.js/.css da pasta.
+ */
+function isUpToDate(aulaDir, aulaDistDir) {
+  const indexHtml = path.join(aulaDistDir, 'index.html')
+  if (!fs.existsSync(indexHtml)) return false
+  const distMtime = fs.statSync(indexHtml).mtimeMs
+
+  const TRACK_EXT = /\.(md|yaml|vue|ts|js|css|json)$/
+  const stack = [aulaDir]
+  while (stack.length) {
+    const dir = stack.pop()
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (entry.name === 'node_modules' || entry.name === '.slidev' || entry.name === 'dist') continue
+      const full = path.join(dir, entry.name)
+      if (entry.isDirectory()) { stack.push(full); continue }
+      if (!TRACK_EXT.test(entry.name)) continue
+      if (fs.statSync(full).mtimeMs > distMtime) return false
+    }
+  }
+  return true
 }
 
 // ---------------------------------------------------------------------------
@@ -156,6 +183,13 @@ for (const { dirName, aulaDir, slug, meta } of aulasMeta) {
 
   const aulaDistDir = path.join(DIST, slug)
 
+  // Build incremental: pular se dist for mais recente que os fontes
+  if (!forceRebuild && isUpToDate(aulaDir, aulaDistDir)) {
+    log(`  ⏩ ${dirName} — sem alterações, pulando`, 'yellow')
+    results.push({ dirName, slug, status: 'skipped', meta })
+    continue
+  }
+
   // Limpar dist anterior desta aula
   if (fs.existsSync(aulaDistDir)) {
     fs.rmSync(aulaDistDir, { recursive: true })
@@ -181,7 +215,7 @@ for (const { dirName, aulaDir, slug, meta } of aulasMeta) {
 // ---------------------------------------------------------------------------
 
 const aulasJson = results
-  .filter(r => r.status === 'ok')
+  .filter(r => r.status === 'ok' || r.status === 'skipped')
   .map(({ dirName, slug, meta }) => {
     // Extrair UCs do nome do dir (ex: A11_UC07+01+02_09abr → ['07','01','02'])
     const ucMatch = dirName.match(/_UC([^_]+)_/)
@@ -212,13 +246,61 @@ fs.writeFileSync(
 log(`\n  📄 aulas.json gerado: ${aulasJson.length} aulas`, 'green')
 
 // ---------------------------------------------------------------------------
+// 5b. Gerar avaliacoes.json + copiar content.md
+// ---------------------------------------------------------------------------
+
+const AVALS_BASE = path.join(ROOT, 'avaliacoes')
+const avalsJson = []
+
+if (fs.existsSync(AVALS_BASE)) {
+  const avDirs = fs.readdirSync(AVALS_BASE)
+    .filter(n => /^av\d+/i.test(n))
+    .sort()
+    .map(n => ({ id: n, dir: path.join(AVALS_BASE, n) }))
+    .filter(({ dir }) => fs.statSync(dir).isDirectory())
+
+  for (const { id, dir } of avDirs) {
+    const metaPath = path.join(dir, 'meta.yaml')
+    if (!fs.existsSync(metaPath)) continue
+    const meta = parseYaml(fs.readFileSync(metaPath, 'utf8'))
+    avalsJson.push({
+      id:        meta.id        || id,
+      titulo:    meta.titulo    || id,
+      tipo:      meta.tipo      || 'TC',
+      prazo:     meta.prazo     || 'TBD',
+      prazoLabel: meta['prazo-label'] || meta.prazoLabel || meta.prazo || 'A definir',
+      ucs:       Array.isArray(meta.ucs) ? meta.ucs : [],
+      status:    meta.status    || 'em-planejamento',
+    })
+
+    // Copiar content.md se existir e avaliação publicada
+    const contentSrc = path.join(dir, 'content.md')
+    if (fs.existsSync(contentSrc)) {
+      const contentDst = path.join(DIST, 'avaliacoes', id)
+      fs.mkdirSync(contentDst, { recursive: true })
+      fs.copyFileSync(contentSrc, path.join(contentDst, 'content.md'))
+      log(`  📋 ${id}/content.md copiado`, 'green')
+    }
+  }
+  log(`  📄 avaliacoes.json gerado: ${avalsJson.length} avaliações`, 'green')
+}
+
+fs.writeFileSync(
+  path.join(DIST, 'avaliacoes.json'),
+  JSON.stringify(avalsJson, null, 2),
+  'utf8'
+)
+
+// ---------------------------------------------------------------------------
 // 6. Relatório final
 // ---------------------------------------------------------------------------
-const ok    = results.filter(r => r.status === 'ok').length
-const error = results.filter(r => r.status === 'error').length
+const ok      = results.filter(r => r.status === 'ok').length
+const skipped = results.filter(r => r.status === 'skipped').length
+const error   = results.filter(r => r.status === 'error').length
 
 log(`\n═══════════════════════════════════════`, 'cyan')
-log(`  ✅ OK:    ${ok} aula(s)`, 'green')
+log(`  ✅ OK:      ${ok} aula(s) buildada(s)`, 'green')
+if (skipped > 0) log(`  ⏩ Puladas: ${skipped} aula(s) sem alteração`, 'yellow')
 if (error > 0) {
   log(`  ❌ Erro:  ${error} aula(s)`, 'red')
   results.filter(r => r.status === 'error').forEach(r => {
