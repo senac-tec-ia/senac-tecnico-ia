@@ -80,17 +80,15 @@ card: true
 
 # Formação dos Times e Início da Pesquisa
 
-**Organização:**
 - Times de ~5 pessoas — definam entre vocês
 - Cada time escolhe **1 empresa diferente dos outros times**
-- **30 minutos** para pesquisar e preencher os dois canvases
+- **30 minutos** para pesquisar + apresentar em 2 min
 
-**O que entregar:**
-- Canvas 1 — Diagnóstico da empresa (papel)
-- Canvas 2 — Protótipo de solução IA (papel)
-- Prontos para apresentar em **2 minutos**
+**No papel:**
+- Canvas 1 — Diagnóstico da empresa
+- Canvas 2 — Protótipo de solução IA
 
-> <carbon-idea /> Dica: pesquisem "empresa + inteligência artificial" no Google. LinkedIn, blogs técnicos e notícias de negócios ajudam muito.
+> <carbon-idea /> Pesquisem "empresa + inteligência artificial" no Google ou LinkedIn.
 
 **<carbon-timer /> Início agora!**
 
@@ -251,8 +249,6 @@ card: true
 # Bloco 2 — Fundamentos de Computação
 ## UC01 · 9h50–11h30 · 2 HA
 
-> **Foco:** Formatar um documento Word com padrão ABNT — a base da AV01
-
 ---
 layout: default
 bgPreset: default
@@ -261,9 +257,7 @@ card: true
 
 <!-- SLIDE 14 — A Tarefa do Word Está Esperando -->
 
-# A Tarefa do Word Está Esperando
-
-Na A07, pedimos que vocês criassem um documento no Word. Nem todo mundo fez — tudo bem.
+# A Tarefa do Word
 
 **Hoje a gente faz junto, aqui, agora.**
 
@@ -295,9 +289,9 @@ card: true
 | <carbon-arrow-down /> **Inferior** | 2 cm |
 | <carbon-arrow-right /> **Direita** | 2 cm |
 
-> **Por que 3 cm à esquerda?** Reservado para encadernação — o lado que fica preso precisa de mais espaço.
+> Margem esquerda maior (3 cm) = reservada para encadernação.
 
-*Abram o Word e configurem agora.*
+*Configurem agora.*
 
 ---
 layout: default
@@ -334,17 +328,15 @@ card: true
 
 **Não é só estético — é estrutural.**
 
-- **Título 1 (H1)** → seção principal (ex: "Minha Opinião", "Glossário de IA")
+- **Título 1 (H1)** → seção principal (ex: "Glossário de IA", "Minha Opinião")
 - **Título 2 (H2)** → subseção, se houver
 
 **Por que usar estilos e não só negrito?**
-1. O Word gera **sumário automático** a partir dos estilos
+1. Word gera **sumário automático** a partir dos estilos
 2. Mantém consistência visual em todo o documento
-3. É como profissionais formatam relatórios corporativos reais
+3. É como profissionais formatam relatórios reais
 
-**Como aplicar:** clique no título → Página Inicial → clique em **Título 1** no painel de Estilos
-
-*Apliquem agora no título do documento e na seção "Minha Opinião".*
+**Como aplicar:** Página Inicial → painel de Estilos → clique em **Título 1**
 
 ---
 layout: default
@@ -382,14 +374,13 @@ card: true
 
 **Façam comigo — professor na frente, você na máquina:**
 
-1. <carbon-checkmark /> Novo documento → margens ABNT configuradas
-2. <carbon-checkmark /> Ctrl+A → Calibri 12 · Espaçamento 1,5
-3. <carbon-checkmark /> Cabeçalho: Nome · Turma: Técnico em IA — 1º Ano · Data: 16/04/2026
-4. <carbon-checkmark /> Título centralizado em negrito: **Glossário de Inteligência Artificial** → Estilo Título 1
-5. <carbon-checkmark /> Tabela 3 colunas com cabeçalho sombreado
-6. <carbon-checkmark /> Seção **Minha Opinião** → Estilo Título 1
+1. <carbon-checkmark /> Novo documento → margens ABNT + Calibri 12 + Espaçamento 1,5
+2. <carbon-checkmark /> Cabeçalho: Nome · Turma: Técnico em IA — 1º Ano · Data: 16/04/2026
+3. <carbon-checkmark /> Título: **Glossário de Inteligência Artificial** → Estilo Título 1
+4. <carbon-checkmark /> Tabela 3 colunas com cabeçalho sombreado
+5. <carbon-checkmark /> Seção **Minha Opinião** → Estilo Título 1
 
-> Ao final, você tem o esqueleto completo. A tarefa é só preencher os 10 termos e escrever o parágrafo.
+> Esqueleto pronto — só preencher os 10 termos e escrever o parágrafo.
 
 ---
 layout: default
@@ -402,20 +393,15 @@ card: true
 # Como Exportar em PDF
 
 **Por que PDF?**
-- Garante que a formatação **não vai se quebrar** no computador de quem corrige
-- É o formato profissional para entregas e documentos oficiais
+- Formatação **não quebra** no computador de quem corrige
+- É o formato profissional para entregas oficiais
 
-**No Word — duas formas:**
+**No Word:**
 
 > **Arquivo → Exportar → Criar PDF/XPS → Publicar**
-
-*ou*
-
-> **Arquivo → Salvar Como → tipo: PDF → Salvar**
+> *ou* **Arquivo → Salvar Como → tipo: PDF → Salvar**
 
 **Nome do arquivo:** `glossario_ia_SEUNOME.pdf`
-
-> Dica: mantenha o `.docx` também — arquivo editável caso precise ajustar antes do prazo.
 
 ---
 layout: default
@@ -427,8 +413,6 @@ card: true
 
 # Vocabulário do Word em Inglês
 
-*Você já usa esses termos toda vez que abre o Word:*
-
 | Inglês | Português | Onde fica |
 |---|---|---|
 | **Format** | Formatar | Guia Página Inicial |
@@ -437,9 +421,9 @@ card: true
 | **Font** | Fonte | Barra de formatação |
 | **Margin** | Margem | Layout → Margens |
 | **Export** | Exportar | Arquivo → Exportar |
-| **Heading** | Título de seção | Estilos → Título 1 / Título 2 |
+| **Heading** | Título de seção | Estilos → Título 1 / 2 |
 
-> Esses termos aparecem em tutoriais, documentações e cursos online — quase sempre em inglês. Reconhecê-los já facilita muito o aprendizado.
+> Esses termos aparecem em tutoriais e docs online — sempre em inglês.
 
 ---
 layout: center
@@ -502,9 +486,9 @@ bgPreset: palette
 card: true
 ---
 
-<!-- SLIDE 25 — 10 Termos de IA da Sua Tarefa -->
+<!-- SLIDE 25 — 10 Termos de IA da Sua Tarefa (1/2) -->
 
-# 10 Termos de IA da Sua Tarefa
+# 10 Termos de IA da Sua Tarefa _(1/2)_
 
 | Termo em inglês | Tradução | Contexto de uso |
 |---|---|---|
@@ -513,6 +497,19 @@ card: true
 | **Model** | Modelo | O "cérebro" treinado que faz as previsões |
 | **Training** | Treinamento | Processo de aprender padrões com os dados |
 | **Token** | Token | Fragmento de texto que a IA processa |
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- SLIDE 25b — 10 Termos de IA da Sua Tarefa (2/2) -->
+
+# 10 Termos de IA da Sua Tarefa _(2/2)_
+
+| Termo em inglês | Tradução | Contexto de uso |
+|---|---|---|
 | **Embedding** | Incorporação | Representação numérica de palavras |
 | **Epoch** | Época | Uma passagem completa pelos dados de treino |
 | **GPU** | Placa Gráfica | Hardware que acelera o treino da IA |
@@ -531,16 +528,14 @@ card: true
 
 **3 passos para entender qualquer termo de IA:**
 
-1. <carbon-search /> **Contexto** — Em que frase o termo aparece? O contexto geralmente revela o significado.
-   > _"The model was trained on a large dataset"_ → "trained" + "dataset" = aprendizado com dados
+1. <carbon-search /> **Contexto** — Em que frase aparece? O contexto revela o significado.
 
-2. <carbon-growth /> **Raiz da palavra** — Muitos termos técnicos têm raiz latina que você já conhece.
-   > _"Inference"_ → _inferir_ (concluir algo a partir de evidências)
+2. <carbon-growth /> **Raiz da palavra** — Muitos termos têm raiz latina que você conhece.
+   > _"Inference"_ → _inferir_ (concluir a partir de evidências)
 
-3. <carbon-repeat /> **Tradução funcional** — Não é literal, é: _"O que isso faz na prática?"_
-   > _"Embedding"_ → "converte palavra em número para a IA processar"
+3. <carbon-repeat /> **Tradução funcional** — Não é literal: _"O que isso faz na prática?"_
 
-> **Atalho prático:** pesquise `[termo] in machine learning` no Google — os primeiros resultados explicam em inglês simples.
+> **Atalho:** pesquise `[termo] in machine learning` no Google.
 
 ---
 layout: default
@@ -560,11 +555,8 @@ card: true
 | **Training** | | |
 | **Bias** | | |
 
-*Professor escreve na frente, vocês preenchem no próprio documento.*
-
 <v-click>
 
-> **Gabarito coletivo:**
 > - **GPU** — Placa Gráfica · _"hardware que faz o computador treinar modelos de IA muito mais rápido"_
 > - **Training** — Treinamento · _"processo onde a IA aprende padrões a partir dos exemplos do dataset"_
 > - **Bias** — Viés · _"erro sistemático que a IA aprende quando os dados de treino têm preconceitos"_
@@ -617,8 +609,9 @@ Escreva 5–7 linhas respondendo UMA das perguntas:
 </div>
 
 ---
-layout: end
+layout: default
 bgPreset: palette
+card: true
 ---
 
 <!-- SLIDE 29 — Encerramento A11 -->
@@ -634,6 +627,5 @@ bgPreset: palette
 ## Próxima aula e tarefa
 
 - <carbon-document-tasks /> **AV01 — Glossário IA:** prazo **16/04/2026 (Quinta-feira)**
-- <carbon-calendar /> **A12 — 10/04 (Sexta-feira):** continuação do curso
 
 > Lembrem-se: a **terceira coluna** da tabela deve ser **com as suas palavras** — é o que mais vale na avaliação.
