@@ -8,10 +8,10 @@ const props = withDefaults(
   }>(),
   {
     icons: () => [
-      { src: "/icons/instagram.svg", alt: "Instagram" },
-      { src: "/icons/tiktok.svg", alt: "TikTok" },
-      { src: "/icons/yt.svg", alt: "YouTube" },
-      { src: "/icons/spotify.svg", alt: "Spotify" },
+      { src: `${import.meta.env.BASE_URL}icons/instagram.svg`, alt: "Instagram" },
+      { src: `${import.meta.env.BASE_URL}icons/tiktok.svg`, alt: "TikTok" },
+      { src: `${import.meta.env.BASE_URL}icons/yt.svg`, alt: "YouTube" },
+      { src: `${import.meta.env.BASE_URL}icons/spotify.svg`, alt: "Spotify" },
     ],
     size: "96px",
   },

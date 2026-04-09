@@ -12,7 +12,7 @@ const { isOverflowing } = useOverflowGuard(footerRef, currentPage);
 const author = (configs as any).author ?? "Leonardo Zanini";
 const courseTitle = (configs as any).courseTitle ?? (configs as any).title ?? "Técnico em Inteligência Artificial";
 const aulaNum = computed(() => ($frontmatter as any)?.aulaNum ?? (configs as any).aulaNum ?? "");
-const footerLogo = (configs as any).footerLogo ?? "/assets/senac-logo.png";
+const footerLogo = (configs as any).footerLogo ?? "assets/senac-logo.png";
 </script>
 
 <template>

@@ -194,7 +194,7 @@ onMounted(async () => {
   if (!svgContainerRef.value) return;
 
   try {
-    const response = await fetch("/assets/title-background-complete-nodes.svg");
+    const response = await fetch("assets/title-background-complete-nodes.svg");
     const svgText = await response.text();
     svgContainerRef.value.innerHTML = svgText;
 
