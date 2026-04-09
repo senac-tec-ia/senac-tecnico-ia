@@ -111,6 +111,10 @@ for (const dirName of aulaDirs) {
 
 if (aulasMeta.length === 0) {
   log(`\n  Nenhuma aula para buildar. Use --all ou publique uma aula (status: published).`, 'yellow')
+  // Gera aulas.json vazio para o portal não quebrar com 404
+  if (!fs.existsSync(DIST)) fs.mkdirSync(DIST, { recursive: true })
+  fs.writeFileSync(path.join(DIST, 'aulas.json'), '[]', 'utf8')
+  log(`\n  📄 aulas.json gerado: 0 aulas (nenhuma published)`, 'yellow')
   process.exit(0)
 }
 
