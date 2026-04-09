@@ -1,7 +1,7 @@
 ﻿# Metadados da Aula — Neural Slides
 # Preenchido pelo CLI ao rodar `course new`
 
-aula: "A09"
+aula: "09"
 slug: ""
 title: ""
 author: "Leonardo Zanini"
@@ -9,10 +9,10 @@ courseTitle: "Técnico em Inteligência Artificial"
 
 disciplines: []
 
-date: ""
+date: "26/03/2026"
 
 # draft | ready | published
-status: "em-planejamento"
+status: published
 
 deployUrl: ""
 

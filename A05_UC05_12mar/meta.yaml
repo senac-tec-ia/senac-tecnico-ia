@@ -1,8 +1,8 @@
 # Metadados da Aula — Neural Slides
 # Preenchido pelo CLI ao rodar `course new`
 
-aula: 5
-slug: "a05-python-loops-matematica-estatistica"
+aula: "05"
+slug: ""
 title: "Python: Loops e Listas, Matemática e Estatística"
 author: "Leonardo Zanini"
 courseTitle: "Técnico em Inteligência Artificial"
@@ -18,10 +18,10 @@ disciplines:
     name: "Estatística Aplicada"
     ha: 1
 
-date: "2026-03-12"
+date: "12/03/2026"
 
 # draft | ready | published
-status: ready
+status: published
 
 deployUrl: ""
 
