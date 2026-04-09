@@ -1,6 +1,6 @@
 ﻿<script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { RouterLink, useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
 import type { AvaliacaoMeta } from '@/types/avaliacoes'
 
 const router = useRouter()
@@ -22,23 +22,7 @@ function handleClick(av: AvaliacaoMeta) {
 </script>
 
 <template>
-  <div class="min-h-dvh bg-neural-900 px-4 py-8 sm:px-6">
-    <header class="max-w-4xl mx-auto mb-6">
-      <p class="text-neural-accent text-sm font-mono mb-1">Senac · Tecnico em IA</p>
-      <h1 class="text-2xl sm:text-3xl font-bold text-white mb-4">Portal do Aluno</h1>
-      <nav class="flex gap-1 border-b border-neural-700">
-        <RouterLink
-          to="/"
-          class="px-4 py-2 text-sm font-medium rounded-t-lg transition text-gray-400 hover:text-white"
-        >Aulas</RouterLink>
-        <RouterLink
-          to="/avaliacoes"
-          class="px-4 py-2 text-sm font-medium rounded-t-lg transition bg-neural-800 text-white border border-b-neural-800 border-neural-700 -mb-px"
-        >Avaliações</RouterLink>
-      </nav>
-    </header>
-
-    <main class="max-w-4xl mx-auto">
+  <div class="max-w-4xl mx-auto">
       <div v-if="loading" class="flex flex-col gap-3">
         <div v-for="n in 6" :key="n" class="h-20 rounded-2xl bg-neural-800 animate-pulse" />
       </div>
@@ -81,6 +65,5 @@ function handleClick(av: AvaliacaoMeta) {
           </div>
         </div>
       </div>
-    </main>
   </div>
 </template>

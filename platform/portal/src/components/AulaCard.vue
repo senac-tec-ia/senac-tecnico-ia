@@ -2,7 +2,7 @@
 import type { AulaMeta } from '@/types/aulas'
 import { useRouter } from 'vue-router'
 
-const props = defineProps<{ aula: AulaMeta }>()
+const props = defineProps<{ aula: AulaMeta; ucAtiva?: string | null }>()
 const router = useRouter()
 
 const ucLabels: Record<string, string> = {
@@ -60,7 +60,8 @@ function open() {
       <span
         v-for="uc in aula.ucs"
         :key="uc"
-        class="text-xs text-gray-300 bg-neural-600 px-2 py-0.5 rounded-full"
+        class="text-xs px-2 py-0.5 rounded-full transition-colors"
+        :class="props.ucAtiva === uc ? 'bg-neural-accent text-neural-900 font-semibold' : 'text-gray-300 bg-neural-600'"
       >
         {{ ucLabel(uc) }}
       </span>
