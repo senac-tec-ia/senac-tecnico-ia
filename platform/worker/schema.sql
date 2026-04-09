@@ -27,3 +27,12 @@ CREATE TABLE IF NOT EXISTS respostas (
 
 CREATE INDEX IF NOT EXISTS idx_progress_user   ON progress (user_id);
 CREATE INDEX IF NOT EXISTS idx_respostas_aula  ON respostas (aula_slug);
+
+CREATE TABLE IF NOT EXISTS site_config (
+  key        TEXT PRIMARY KEY,
+  value      TEXT NOT NULL DEFAULT '',
+  updated_at INTEGER NOT NULL DEFAULT (unixepoch())
+);
+
+-- Mensagem inicial (vazia)
+INSERT OR IGNORE INTO site_config (key, value) VALUES ('professor_message', '');
