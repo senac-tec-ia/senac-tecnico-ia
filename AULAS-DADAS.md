@@ -68,3 +68,10 @@ Disciplina                                   | Conteúdo abordado               
 UC05 — Python                            | Gincana de Python: questões de código e leitura de output ("o que é impresso"), bastante proveito, dificuldade de alguns alunos em programar por conta própria | ~2 HA
 UC08 — Banco de Dados                    | Os 4 D's do SQL (DDL/DML/DQL/DCL), tipos de dados, constraints, UPDATE, CREATE TABLE, INSERT INTO — revisão e consolidação; rendeu mas ritmo ainda lento | ~3 HA
 Total ~5 HA
+
+A AULA 11 NO DIA 09/04 FOI SOBRE:
+Disciplina                                   | Conteúdo abordado                                                                                                                                                        | HA est.
+UC07 — Transformação Digital             | Dinâmica em times: pesquisa autônoma de empresa real que usa IA (canvas de diagnóstico: empresa · setor · problema · dados · solução · resultado), canvas de protótipo de solução IA, apresentações dos times para a turma — aula top, engajamento alto | ~3 HA
+UC01 — Fundamentos de Computação         | Word (pós-recreio): margens ABNT (3cm sup/esq · 2cm inf/dir), fonte Calibri 12/espaçamento 1,5, estilos de título H1 e H2, inserção e formatação de tabela (3 colunas), exportar em PDF | ~2 HA
+UC02+UC04 — Inglês Técnico / IA          | AV01 iniciada em sala: glossário de 10 termos de IA em inglês (machine learning, dataset, model, training, inference, bias, token, embedding, epoch, GPU) com tradução e significado — conceitos de inglês técnico, IA e fundamentos de comp | ~1 HA
+Total ~6 HA

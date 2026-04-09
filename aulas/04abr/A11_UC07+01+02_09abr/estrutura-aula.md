@@ -122,3 +122,26 @@
 - **Prazo alterado: 16/04/2026** (originalmente 10/04)
 - Slide 28: enunciado completo como slide scrollável (`layout: default`, `<div style="overflow-y: auto">`)
 - `av01-glossario-ia.md` atualizado: prazo 16/04/2026, aula-alvo A13 ✅
+
+---
+
+## Registro de Campo — O Que Aconteceu Realmente em 09/04/2026
+
+> **Fonte:** relato direto do professor após a aula.
+
+### O que foi efetivamente ministrado
+
+**UC07 — Transformação Digital (~3 HA, antes do recreio):**
+- Dinâmica em times: cada time pesquisou autonomamente empresa real com IA, preencheu canvas de diagnóstico + canvas de protótipo de solução IA, e apresentou para a turma
+- Engajamento muito alto — "aula top"
+- Conteúdo do plano seguido integralmente
+
+**UC01 — Fundamentos de Computação (~2 HA, após recreio):**
+- Word: margens ABNT (3cm sup/esq, 2cm inf/dir), fonte Calibri 12, espaçamento 1,5, estilos H1/H2, inserção e formatação de tabela 3 colunas, exportar PDF
+- Feito junto em aula (professor demonstrando, alunos acompanhando)
+
+**UC02+UC04 — Inglês Técnico / IA (~1 HA):**
+- AV01 iniciada em sala: glossário de 10 termos de IA (machine learning, dataset, model, training, inference, bias, token, embedding, epoch, GPU)
+- Conceitos de inglês técnico + fundamentos de IA + fundamentos de comp
+
+**Total real: ~6 HA** — plano seguido sem desvios significativos.
