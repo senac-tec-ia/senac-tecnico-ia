@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "slidev slides.md",
-    "build": "slidev build slides.md --base /aula-01/",
+    "build": "slidev build slides.md --out dist",
     "export": "slidev export slides.md"
   },
   "devDependencies": {
