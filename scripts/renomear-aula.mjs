@@ -16,6 +16,7 @@ import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '..')
+const AULAS_BASE = path.join(ROOT, 'aulas')
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -24,6 +25,37 @@ const ROOT = path.resolve(__dirname, '..')
 /** Converte nome do dir em slug de URL: A11_UC07+01+02_09abr → a11-uc07-01-02-09abr */
 function toSlug(dirName) {
   return dirName.toLowerCase().replace(/_/g, '-').replace(/\+/g, '-')
+}
+
+/** Mapeia abreviação pt-BR → pasta numerada */
+const MES_FOLDER = {
+  jan: '01jan', fev: '02fev', mar: '03mar', abr: '04abr',
+  mai: '05mai', jun: '06jun', jul: '07jul', ago: '08ago',
+  set: '09set', out: '10out', nov: '11nov', dez: '12dez',
+}
+
+/** Infere pasta de mês do nome do dir: A11_UC07+01+02_09abr → '04abr' */
+function inferMes(dirName) {
+  const match = dirName.match(/_\d{2}([a-z]{3})$/i)
+  if (!match) return null
+  return MES_FOLDER[match[1].toLowerCase()] ?? null
+}
+
+/** Busca path completo de uma aula pelo nome em aulas/{mes}/ */
+function findAulaDir(name) {
+  const mes = inferMes(name)
+  if (mes) {
+    const candidate = path.join(AULAS_BASE, mes, name)
+    if (fs.existsSync(candidate)) return candidate
+  }
+  // fallback: varrer todos os meses
+  if (fs.existsSync(AULAS_BASE)) {
+    for (const m of fs.readdirSync(AULAS_BASE)) {
+      const candidate = path.join(AULAS_BASE, m, name)
+      if (fs.existsSync(candidate)) return candidate
+    }
+  }
+  return null
 }
 
 function readJson(filePath) {
@@ -54,18 +86,24 @@ if (!oldName || !newName) {
   process.exit(1)
 }
 
-const oldDir = path.join(ROOT, oldName)
-const newDir = path.join(ROOT, newName)
 const oldSlug = toSlug(oldName)
 const newSlug = toSlug(newName)
 
 // --- Validações ---
-if (!fs.existsSync(oldDir)) {
-  console.error(`Erro: pasta "${oldName}" não encontrada.`)
+const oldDir = findAulaDir(oldName)
+if (!oldDir) {
+  console.error(`Erro: pasta "${oldName}" não encontrada em aulas/*/`)
   process.exit(1)
 }
+
+const newMes = inferMes(newName)
+if (!newMes) {
+  console.error(`Erro: não foi possível inferir o mês de "${newName}" (esperado: A{NN}_UC..._DD{mmm})`)
+  process.exit(1)
+}
+const newDir = path.join(AULAS_BASE, newMes, newName)
 if (fs.existsSync(newDir)) {
-  console.error(`Erro: pasta "${newName}" já existe.`)
+  console.error(`Erro: pasta "${newName}" já existe em aulas/${newMes}/`)
   process.exit(1)
 }
 
@@ -74,6 +112,7 @@ console.log(`  Slug antigo: ${oldSlug}`)
 console.log(`  Slug novo:   ${newSlug}\n`)
 
 // --- 1. Renomear diretório ---
+fs.mkdirSync(path.dirname(newDir), { recursive: true })
 fs.renameSync(oldDir, newDir)
 console.log(`[1/4] Dir renomeado ✓`)
 

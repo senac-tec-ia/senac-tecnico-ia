@@ -61,12 +61,28 @@ function log(msg, color = '') {
 // 1. Descobrir pastas de aula
 // ---------------------------------------------------------------------------
 
+const AULAS_BASE = path.join(ROOT, 'aulas')
 const AULA_PATTERN = /^A\d+/
 
-const aulaDirs = fs.readdirSync(ROOT).filter(name => {
-  if (!AULA_PATTERN.test(name)) return false
-  return fs.statSync(path.join(ROOT, name)).isDirectory()
-}).sort()
+// Escaneia aulas/{mes}/{dirName}/ e ordena pelo número da aula (A01, A02...)
+const aulaDirs = []
+if (fs.existsSync(AULAS_BASE)) {
+  for (const mes of fs.readdirSync(AULAS_BASE).sort()) {
+    const mesDir = path.join(AULAS_BASE, mes)
+    if (!fs.statSync(mesDir).isDirectory()) continue
+    for (const name of fs.readdirSync(mesDir).sort()) {
+      if (!AULA_PATTERN.test(name)) continue
+      if (!fs.statSync(path.join(mesDir, name)).isDirectory()) continue
+      aulaDirs.push({ dirName: name, aulaDir: path.join(mesDir, name) })
+    }
+  }
+}
+// Garante ordem cronológica pelo número (A01 < A02 < ... independente do mês)
+aulaDirs.sort((a, b) => {
+  const nA = parseInt(a.dirName.match(/^A(\d+)/)?.[1] ?? '0')
+  const nB = parseInt(b.dirName.match(/^A(\d+)/)?.[1] ?? '0')
+  return nA - nB
+})
 
 log(`\n📚 Plataforma LMS — Build das Aulas`, 'cyan')
 log(`   Root: ${ROOT}`, 'cyan')
@@ -79,8 +95,7 @@ log(`   Aulas encontradas: ${aulaDirs.length}\n`, 'cyan')
 
 const aulasMeta = []
 
-for (const dirName of aulaDirs) {
-  const aulaDir = path.join(ROOT, dirName)
+for (const { dirName, aulaDir } of aulaDirs) {
   const meta = readMeta(aulaDir)
 
   if (!meta) {

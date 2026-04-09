@@ -6,7 +6,7 @@
   "workspaces": [
     "slidev-theme-neural",
     "aula-*",
-    "A*",
+    "aulas/*/*",
     "platform/portal"
   ],
   "scripts": {

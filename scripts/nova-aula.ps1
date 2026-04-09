@@ -10,8 +10,26 @@ $ErrorActionPreference = "Stop"
 
 $Root      = Split-Path $PSScriptRoot -Parent
 $Template  = Join-Path $Root "neural-slides-template"
-$Destino   = Join-Path $Root $Nome
 $NomeLower = $Nome.ToLower()
+
+# Inferir pasta de mês do nome (ex: A12_UCXX_10abr → 04abr)
+$mesMap = @{
+    jan='01jan'; fev='02fev'; mar='03mar'; abr='04abr'
+    mai='05mai'; jun='06jun'; jul='07jul'; ago='08ago'
+    set='09set'; out='10out'; nov='11nov'; dez='12dez'
+}
+if ($Nome -match '_\d{2}([a-z]{3})$') {
+    $MesAbrev = $Matches[1]
+    $Mes = $mesMap[$MesAbrev]
+    if (-not $Mes) {
+        Write-Error "Mes '$MesAbrev' nao reconhecido. Use: jan fev mar abr mai jun jul ago set out nov dez"
+        exit 1
+    }
+} else {
+    Write-Error "Nao foi possivel inferir o mes de '$Nome'. O nome deve terminar com _DD{mmm} (ex: A12_UCXX_10abr)."
+    exit 1
+}
+$Destino = Join-Path $Root "aulas\$Mes\$Nome"
 
 Write-Host ""
 Write-Host "=======================================" -ForegroundColor Cyan
@@ -38,6 +56,7 @@ Write-Host "[1/6] Copiando neural-slides-template -> $Nome..." -ForegroundColor 
 $ExcluirPastas   = @(".github", ".git", "node_modules", "dist", ".slidev")
 $ExcluirArquivos = @("AULAS-DADAS.md", "PROJETO-AULAS-1-TRIMESTRE.md", "package-lock.json")
 
+New-Item -ItemType Directory -Path (Split-Path $Destino -Parent) -Force | Out-Null
 New-Item -ItemType Directory -Path $Destino | Out-Null
 
 Get-ChildItem $Template -Recurse -Force | ForEach-Object {
@@ -128,8 +147,8 @@ $rootPkg.scripts | Add-Member -NotePropertyName "build:$NomeLower"  -NotePropert
 $rootPkg.scripts | Add-Member -NotePropertyName "export:$NomeLower" -NotePropertyValue "npm run export --workspace=$NomeLower" -Force
 
 $workspaces = @($rootPkg.workspaces)
-if ("A*" -notin $workspaces) {
-    $rootPkg.workspaces = $workspaces + "A*"
+if ("aulas/*/*" -notin $workspaces) {
+    $rootPkg.workspaces = $workspaces + "aulas/*/*"
 }
 $rootPkg | ConvertTo-Json -Depth 10 | Set-Content $rootPkgPath -Encoding UTF8
 Write-Host "    OK -- dev:$NomeLower, build:$NomeLower, export:$NomeLower" -ForegroundColor Green
