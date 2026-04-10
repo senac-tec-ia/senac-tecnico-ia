@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { marked } from 'marked'
 import { RouterLink, RouterView, useRoute } from 'vue-router'
 
 const WORKER = 'https://lms-senac-tecnico-ia.leo-zn-97.workers.dev'
 const route = useRoute()
 const professorMessage = ref('')
+
+const isAulaPage = computed(() => route.name === 'aula' || route.path.startsWith('/aula/'))
 
 onMounted(async () => {
   try {
@@ -20,7 +22,10 @@ onMounted(async () => {
 
 <template>
   <div class="min-h-dvh bg-neural-900">
-    <header class="sticky top-0 z-20 bg-neural-900/95 backdrop-blur-sm border-b border-neural-700 px-4 pt-5 pb-0 sm:px-6">
+    <header
+      v-if="!isAulaPage"
+      class="sticky top-0 z-20 bg-neural-900/95 backdrop-blur-sm border-b border-neural-700 px-4 pt-5 pb-0 sm:px-6"
+    >
       <div class="max-w-4xl mx-auto">
         <div class="flex justify-center sm:justify-between items-center mb-6">
         <div>
@@ -49,7 +54,7 @@ onMounted(async () => {
       </div>
     </header>
 
-    <div class="px-4 py-6 sm:px-6">
+    <div :class="isAulaPage ? '' : 'px-4 py-6 sm:px-6'">
       <RouterView />
     </div>
   </div>
