@@ -3,9 +3,21 @@
 /* Shiki code blocks */
 .shiki {
   @apply rounded-xl;
-  background: #1e293b !important;
-  border: 1px solid rgba(99, 102, 241, 0.6);
+  background: #0a0f1a !important;
+  border: 2px solid rgba(140, 200, 255, 0.55);
   overflow-x: auto;
+}
+
+/* ── Texto grande + alto contraste para sala de aula ─────────── */
+.shiki code,
+.shiki .line {
+  font-size: 1.05em !important;
+  line-height: 1.65 !important;
+}
+
+/* Base text — branco puro para máximo contraste */
+.shiki {
+  color: #e2e8f0 !important;
 }
 
 /* Line numbers */
@@ -22,47 +34,61 @@
   padding: 0 1rem;
 }
 
-/* Syntax highlighting customization */
-.shiki .line {
-  @apply leading-relaxed;
-}
+/* ── Syntax highlighting — alto contraste ────────────────────── */
 
 /* Comments */
-.shiki .token.comment {
-  color: #64748b;
+.shiki .token.comment,
+.shiki span[style*="color:#6A9955"],
+.shiki span[style*="color:#6272a4"] {
+  color: #7ec8e3 !important;
   font-style: italic;
 }
 
-/* Keywords */
-.shiki .token.keyword {
-  color: #c792ea;
+/* Keywords (if, else, for, def, return…) */
+.shiki .token.keyword,
+.shiki span[style*="color:#569cd6"],
+.shiki span[style*="color:#c586c0"],
+.shiki span[style*="color:#ff79c6"] {
+  color: #ff9dff !important;
+  font-weight: 700;
 }
 
 /* Strings */
-.shiki .token.string {
-  color: #c3e88d;
+.shiki .token.string,
+.shiki span[style*="color:#ce9178"],
+.shiki span[style*="color:#f1fa8c"] {
+  color: #b5f5a0 !important;
 }
 
 /* Functions */
-.shiki .token.function {
-  color: #82aaff;
+.shiki .token.function,
+.shiki span[style*="color:#dcdcaa"] {
+  color: #7dd3fc !important;
 }
 
 /* Numbers */
-.shiki .token.number {
-  color: #f78c6c;
+.shiki .token.number,
+.shiki span[style*="color:#b5cea8"] {
+  color: #ffd580 !important;
 }
 
-/* Variables */
-.shiki .token.variable {
-  color: #eeffff;
+/* Built-ins / class names */
+.shiki .token.class-name,
+.shiki span[style*="color:#4ec9b0"] {
+  color: #67e8f9 !important;
+}
+
+/* Operators / punctuation */
+.shiki .token.operator,
+.shiki .token.punctuation {
+  color: #e2e8f0 !important;
 }
 
 /* Code title */
 .slidev-code-title {
   @apply px-4 py-2 text-sm font-mono rounded-t-lg;
   background: rgba(99, 102, 241, 0.6);
-  color: #0932ff;
+  color: #ffffff;
   border: 1px solid rgba(99, 102, 241, 0.6);
   border-bottom: none;
 }

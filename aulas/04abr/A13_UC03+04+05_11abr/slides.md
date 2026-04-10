@@ -16,12 +16,13 @@ layout: cover
 
 <!-- SLIDE 1 — [CAPA] -->
 
-# Aula 13
-## Sábado de Reviravolta
-
+# Sábado de Gincana
+## UC 03 + 04 + 05
+## > Python · Matemática · Fundamentos de IA
+## — de pé, em times, com placar
 *11 de abril de 2026 — Sábado (Reposição)*
 
-> Python · Matemática · Fundamentos de IA — de pé, em times, com placar
+
 
 ---
 layout: center
@@ -43,7 +44,6 @@ pulse: true
 | 4 | Matemática | Mini-Aula dos Alunos | avaliação |
 | 5 | Fund. IA | Tribunal da IA | 8 |
 
-> **Times de 3.** Você vai responder individualmente. Não tem como se esconder.
 
 ---
 layout: center
@@ -79,7 +79,7 @@ bgPreset: palette
 | `for` | Você aponta para cada item da lista em ordem |
 | `print` | Você anuncia em voz alta o que recebeu |
 
-> **Regra de ouro:** o programa executa linha por linha, de cima para baixo. Silêncio total até ser a sua vez.
+o programa executa linha por linha, de cima para baixo. Silêncio total até ser a sua vez.
 
 ---
 layout: default
@@ -101,11 +101,14 @@ else:
     print("Recuperação.")
 ```
 
-**Papéis:** `nota` · `if` · `bloco-verdadeiro` · `bloco-falso` · `print`
-
+**Papéis:** `nota` · `if`  · `print`
+---
+layout: default
+card: true
+bgPreset: palette
+---
 **O professor vai "digitar" 3 valores em sequência:**
 
-<v-click>
 
 | Rodada | Valor | Quem executa? |
 |---|---|---|
@@ -113,7 +116,7 @@ else:
 | 2 | `nota = 7.0` | bloco-verdadeiro → print("Aprovado!") |
 | 3 | `nota = 6.0` | **caso-limite** — discutir em grupo |
 
-</v-click>
+
 
 > Troca metade dos atores a cada rodada. Todo mundo joga.
 
@@ -130,16 +133,20 @@ bgPreset: palette
 **Código no quadro:**
 
 ```python
-modelos = ["GPT-4", "BERT", "LLaMA"]
+modelos = ["GPT-4", "CLAUDIO", "GEMINI"]
 
 for modelo in modelos:
     print(f"Testando: {modelo}...")
 
 print("Todos os modelos testados!")
 ```
+---
+layout: default
+card: true
+bgPreset: palette
+---
 
 **Papéis:**
-- **3 alunos** = itens da lista — cada um segura um cartão com o nome do modelo
 - **1 aluno** = `for` — aponta para cada item em ordem, um de cada vez
 - **1 aluno** = `print` dentro do loop — fala *"Testando: [nome]..."* a cada apontada
 - **1 aluno** = `print` fora do loop — fica sentado, só levanta no final
@@ -182,14 +189,11 @@ O aluno na **frente** responde. Os outros: **silêncio absoluto.**
 
 | Pontuação | Condição |
 |---|---|
-| **3 pts** | Acertou sozinho em até 60 segundos |
-| **0 pts** | Precisou de ajuda após o tempo |
+| **3 pts** | Acertou sozinho |
+| **0 pts** | Precisou de ajuda |
 | **+1 pt bônus** | Explicou a regra geral ("o problema é que...") |
 
-> O último da fila passa para a frente após cada bug. Todos respondem individualmente.
-
-**Bugs cobertos hoje:** somente `if/else`, `for`, `elif`, `f-string`, variáveis — **sem função, sem while.**
-
+O último da fila passa para a frente após cada bug. Todos respondem individualmente.
 ---
 layout: default
 card: true
@@ -591,6 +595,7 @@ Após o voto, o professor aponta para **um aluno específico** de um time e perg
 layout: default
 card: true
 bgPreset: palette
+
 ---
 
 <!-- SLIDE 23 — [DINAMICA] Caso 1 e 2 -->
