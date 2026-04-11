@@ -13,7 +13,7 @@ date: "11/04/2026"
 tipo: reposicao-sabado
 
 # draft | ready | published
-status: em-planejamento
+status: published
 
 deployUrl: ""
 
