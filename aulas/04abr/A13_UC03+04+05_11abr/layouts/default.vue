@@ -12,9 +12,13 @@ const attrs = useAttrs();
 const props = withDefaults(
   defineProps<{
     bgPreset?: "default" | "animate" | "palette";
+    codeSize?: "sm" | "md" | "lg" | "xl";
+    kahootColors?: boolean;
+    highContrast?: boolean;
   }>(),
   {
     bgPreset: "default",
+    kahootColors: false,
   },
 );
 
@@ -37,7 +41,16 @@ const bgOpacity = computed(() =>
       :backgroundOpacity="bgOpacity"
     />
     <div class="content-wrapper">
-      <div class="p-8 rounded-xl border border-white backdrop-blur-xl">
+      <div
+        :class="[
+          'p-8 rounded-xl',
+          props.highContrast
+            ? 'bg-slate-900/85 border border-white/30 backdrop-blur-md'
+            : 'border border-white backdrop-blur-xl',
+          { 'kahoot-mode': props.kahootColors },
+        ]"
+        :style="props.codeSize ? { '--q-code-fs': props.codeSize === 'sm' ? '1.25rem' : props.codeSize === 'md' ? '1.5rem' : props.codeSize === 'xl' ? '2.5rem' : '2rem' } : {}"
+      >
         <slot />
       </div>
     </div>
@@ -110,5 +123,48 @@ const bgOpacity = computed(() =>
   padding: 1rem;
   border-radius: 0.5rem;
   margin: 1.5rem 0;
+}
+
+/* codeSize prop: aplica --q-code-fs em pre/code sempre que definido */
+.content-wrapper :deep(pre),
+.content-wrapper :deep(pre code) {
+  font-size: var(--q-code-fs);
+  line-height: 1.5;
+}
+
+/* Kahoot: código grande + alternativas coloridas (props codeSize/kahootColors) */
+.kahoot-mode :deep(pre),
+.kahoot-mode :deep(pre code) {
+  font-size: var(--q-code-fs, 2rem) !important;
+  line-height: 1.5;
+}
+
+.kahoot-mode :deep(li) {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.kahoot-mode :deep(li:nth-child(1)) {
+  color: #facc15;
+}
+
+.kahoot-mode :deep(li:nth-child(2)) {
+  color: #60a5fa;
+}
+
+.kahoot-mode :deep(li:nth-child(3)) {
+  color: #4ade80;
+}
+
+.kahoot-mode :deep(li:nth-child(4)) {
+  color: #f87171;
+}
+
+/* Fix: inline code dentro de h1 não recebe fundo escuro */
+.content-wrapper :deep(h1 code) {
+  background-color: transparent !important;
+  color: inherit;
+  padding: 0;
 }
 </style>

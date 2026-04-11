@@ -15,6 +15,12 @@
   line-height: 1.65 !important;
 }
 
+/* codeSize prop (lg=2rem, sm=1.75rem, xs=1.25rem) — sobrescreve o padrão */
+[style*="--q-code-fs"] .shiki code,
+[style*="--q-code-fs"] .shiki .line {
+  font-size: var(--q-code-fs) !important;
+}
+
 /* Base text — branco puro para máximo contraste */
 .shiki {
   color: #e2e8f0 !important;

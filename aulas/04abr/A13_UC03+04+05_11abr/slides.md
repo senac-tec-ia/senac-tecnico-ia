@@ -85,6 +85,9 @@ o programa executa linha por linha, de cima para baixo. Silêncio total até ser
 layout: default
 card: true
 bgPreset: palette
+colorSchema: dark
+codeSize: lg
+highContrast: true
 ---
 
 <!-- SLIDE 5 — [DINAMICA] Rodada 1 — if/else -->
@@ -124,6 +127,8 @@ bgPreset: palette
 layout: default
 card: true
 bgPreset: palette
+codeSize: lg
+highContrast: true
 ---
 
 <!-- SLIDE 6 — [DINAMICA] Rodada 2 — for -->
@@ -194,10 +199,13 @@ O aluno na **frente** responde. Os outros: **silêncio absoluto.**
 | **+1 pt bônus** | Explicou a regra geral ("o problema é que...") |
 
 O último da fila passa para a frente após cada bug. Todos respondem individualmente.
+
 ---
 layout: default
 card: true
 bgPreset: palette
+codeSize: lg
+highContrast: true
 ---
 
 <!-- SLIDE 9 — [DINAMICA] Bug 01 e 02 -->
@@ -238,6 +246,8 @@ for i in range(5):
 layout: default
 card: true
 bgPreset: palette
+codeSize: lg
+highContrast: true
 ---
 
 <!-- SLIDE 10 — [DINAMICA] Bug 03 e 04 -->
@@ -277,6 +287,8 @@ if nota >= 6
 layout: default
 card: true
 bgPreset: palette
+codeSize: lg
+highContrast: true
 ---
 
 <!-- SLIDE 11 — [DINAMICA] Bug 05 e 06 -->
@@ -297,6 +309,12 @@ if nota = 10:
 </AdminOnly>
 
 ---
+layout: default
+card: true
+bgPreset: palette
+codeSize: lg
+highContrast: true
+---
 
 **BUG 06 — O que vai aparecer na tela?**
 
@@ -315,6 +333,8 @@ print(nomes)
 layout: default
 card: true
 bgPreset: palette
+codeSize: md
+highContrast: true
 ---
 
 <!-- SLIDE 12 — [DINAMICA] Bug 07 e 08 -->
@@ -339,6 +359,12 @@ elif nota >= 4:
 </AdminOnly>
 
 ---
+layout: default
+card: true
+bgPreset: palette
+codeSize: lg
+highContrast: true
+---
 
 **BUG 08 — O que está errado na f-string?**
 
@@ -357,6 +383,8 @@ print("Olá, {nome}!")
 layout: default
 card: true
 bgPreset: palette
+codeSize: lg
+highContrast: true
 ---
 
 <!-- SLIDE 13 — [DINAMICA] Bug 09 e 10 -->
@@ -377,6 +405,12 @@ for item in lista
 </AdminOnly>
 
 ---
+layout: default
+card: true
+bgPreset: palette
+codeSize: lg
+highContrast: true
+---
 
 **BUG 10 — Por que dá erro?**
 
@@ -395,6 +429,8 @@ resultado = 10 + 5
 layout: default
 card: true
 bgPreset: palette
+codeSize: lg
+highContrast: true
 ---
 
 <!-- SLIDE 14 — [DINAMICA] Código no Papel -->
@@ -427,12 +463,43 @@ else:
 </AdminOnly>
 
 ---
+layout: default
+card: true
+bgPreset: palette
+codeSize: lg
+highContrast: true
+---
+
+<!-- SLIDE 15 — [EXERCICIO] Código no Quadro — Tabuada do 5 -->
+
+# <carbon-code /> Código no Quadro — Tabuada do 5
+
+**Escreva no quadro. A turma lê linha por linha em voz alta.**
+
+```python
+for numero in range(1, 11):
+    resultado = 5 * numero
+    print(f"5 x {numero} = {resultado}")
+```
+
+**Perguntas enquanto executa:**
+1. O loop roda quantas vezes? Por quê?
+2. O que `range(1, 11)` significa? Qual o primeiro e o último valor?
+3. O que muda se trocar `5` por `7`?
+
+<v-click>
+
+**Desafio rápido:** reescreva para imprimir a tabuada do 9. O que muda no código?
+
+</v-click>
+
+---
 layout: center
 bgPreset: palette
 pulse: true
 ---
 
-<!-- SLIDE 15 — [DIVISOR] Bloco 3 — Plano Cartesiano -->
+<!-- SLIDE 16 — [DIVISOR] Bloco 3 — Plano Cartesiano -->
 
 # Bloco 3
 ## Plano Cartesiano Vivo
@@ -457,6 +524,11 @@ Uma **função linear** relaciona dois valores: para cada `x` que você coloca, 
 |---|---|---|
 | `a` | coeficiente angular | a inclinação da reta |
 | `b` | coeficiente linear | onde a reta cruza o eixo Y |
+---
+layout: default
+card: true
+bgPreset: palette
+---
 
 **Exemplo:** $f(x) = 2x + 1$
 
@@ -490,16 +562,19 @@ Cada membro do time calcula `y` para o `x` recebido. Anota no caderno. **Sem com
 Os 3 comparam. Se tiver divergência, chegam num consenso. **Só um representante vai ao quadro.**
 
 **Etapa 3 — Grafando (10 min):**
-Cada representante cola um post-it no eixo desenhado no quadro, no ponto $(x, y)$ correto.
+Cada representante escreve no eixo desenhado no quadro, no ponto $(x, y)$ correto.
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: palette
+---
 
 **Etapa 4 — Perguntas individuais (20 min):**
 O professor aponta para alunos específicos:
 - *"Seu x foi -2. O y ficou positivo ou negativo? Por quê?"*
 - *"Em Python: `if y > 0: print('positivo')` — quais de vocês entrariam no if?"*
 
-</v-click>
 
 ---
 layout: center
@@ -589,7 +664,15 @@ Após o voto, o professor aponta para **um aluno específico** de um time e perg
 
 > **Não existe resposta certa ou errada.** O que vale é o raciocínio.
 
-**Pontuação:** 1 pt por caso em que o time consegue **justificar a votação** quando perguntado.
+**Como dar o ponto:**
+
+| O aluno fez isso | Ponto? |
+|---|---|
+| Explicou o raciocínio com 1 frase clara | ✅ 1 pt |
+| Respondeu só "sim" ou "não" sem justificar | ❌ 0 pt |
+| Contradisse o próprio time (e justificou) | ✅ 1 pt bônus |
+
+> Marque os pontos no quadro em tempo real — um risco por ponto, por time.
 
 ---
 layout: default
@@ -749,7 +832,34 @@ pulse: true
 | Mini-Aula (avaliação por pares) | 5 |
 | Tribunal da IA (8 casos) | 8 |
 
-> O time campeão escolhe o nome do próximo exercício de Python.
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 29 — [DESEMPATE] Critério de Desempate -->
+
+# <carbon-trophy /> Critério de Desempate
+
+**Se dois ou mais times estiverem empatados no placar final:**
+
+**Cada time escreve no caderno (2 min):**
+1. **Qual time** — que não o seu — deu a **melhor justificativa** no dia
+2. **Por quê** — 1 frase explicando o raciocínio deles
+
+> Não pode votar no próprio time.
+
+<v-click>
+
+**Votação aberta:** o professor coleta e lê em voz alta.
+
+O time mais votado como *"melhor argumento"* vence o empate.
+
+> Se ainda empatar: o professor escolhe o argumento mais criativo que ouviu no dia.
+
+</v-click>
 
 ---
 layout: end
