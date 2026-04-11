@@ -25,12 +25,52 @@ layout: cover
 
 
 ---
+layout: default
+card: true
+bgPreset: palette
+highContrast: true
+---
+
+<!-- SLIDE 2 — [SETUP] Material do Dia -->
+
+# <carbon-tool-kit /> Antes de começar — precisamos montar tudo
+
+**Quem terminar de preparar o seu item, senta. Silêncio quando todos sentarem.**
+
+| # | O que fazer | Quantos alunos |
+|---|---|---|
+| 1 | Pegar folhas A4 e recortar em 8 tiras cada | 2 |
+| 2 | Escrever nas tiras: `nota` · `if` · `bloco-verdadeiro` · `bloco-falso` · `for` · `print` — uma por tira | 2 |
+| 3 | Recortar cartões pequenos e escrever **SIM** em verde, **NÃO** em vermelho, **DEPENDE** em amarelo — 1 jogo por time | 3 |
+| 4 | Desenhar o eixo cartesiano no quadro (x de -5 a 5, y de -10 a 10) | 2 |
+| 5 | Escrever o placar no canto do quadro: Times 1 a N, coluna de pontos | 1 |
+
+---
+layout: default
+card: true
+bgPreset: palette
+highContrast: true
+---
+
+<!-- SLIDE 3 — [SETUP] Formação dos Times -->
+
+# <carbon-group /> Formação dos Times
+
+**Agora dividam em times de 3.**
+
+- Cada time escolhe um **nome** (pode ser nome de modelo de IA, linguagem de programação, o que quiser)
+- O professor anota o nome de cada time no placar do quadro
+- Guardem os cartões **SIM / NÃO / DEPENDE** — vocês vão usar no Bloco 5
+
+> Quando todos os times tiverem nome e o placar estiver pronto: **avisa o professor.**
+
+---
 layout: center
 bgPreset: palette
 pulse: true
 ---
 
-<!-- SLIDE 2 — [TEORIA] Placar do Dia -->
+<!-- SLIDE 4 — [TEORIA] Placar do Dia -->
 
 # Hoje tem gincana
 
