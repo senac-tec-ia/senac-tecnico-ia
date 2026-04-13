@@ -28,40 +28,28 @@ jobs:
 
       # ── 1. Review script (categorização + alertas) ──
       - name: Run review
-        id: review
         run: |
-          REVIEW=$(node scripts/review-staged.mjs --ci --base=origin/${{ github.base_ref }} --markdown 2>&1) || true
-          echo "review<<REVIEW_EOF" >> "$GITHUB_OUTPUT"
-          echo "$REVIEW" >> "$GITHUB_OUTPUT"
-          echo "REVIEW_EOF" >> "$GITHUB_OUTPUT"
+          node scripts/review-staged.mjs --ci --base=origin/${{ github.base_ref }} --markdown > /tmp/review.md 2>&1 || true
 
       # ── 2. Validate HA (contextos vs AULAS-DADAS.md) ──
       - name: Validate HA
-        id: validate_ha
         run: |
-          OUTPUT=$(node scripts/validate-ha.mjs 2>&1) || true
-          echo "ha<<HA_EOF" >> "$GITHUB_OUTPUT"
-          echo "$OUTPUT" >> "$GITHUB_OUTPUT"
-          echo "HA_EOF" >> "$GITHUB_OUTPUT"
+          node scripts/validate-ha.mjs > /tmp/validate-ha.txt 2>&1 || true
 
       # ── 3. Lint slides alterados ──
       - name: Lint changed slides
-        id: lint_slides
         run: |
           CHANGED_SLIDES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- '*/slides.md')
           if [ -z "$CHANGED_SLIDES" ]; then
-            echo "lint=Nenhum slides.md alterado neste PR." >> "$GITHUB_OUTPUT"
+            echo "Nenhum slides.md alterado neste PR." > /tmp/lint-slides.txt
           else
-            OUTPUT=""
+            > /tmp/lint-slides.txt
             for f in $CHANGED_SLIDES; do
               if [ -f "$f" ]; then
-                RESULT=$(node scripts/lint-slides.mjs "$f" 2>&1) || true
-                OUTPUT="${OUTPUT}${RESULT}\n\n"
+                node scripts/lint-slides.mjs "$f" >> /tmp/lint-slides.txt 2>&1 || true
+                echo "" >> /tmp/lint-slides.txt
               fi
             done
-            echo "lint<<LINT_EOF" >> "$GITHUB_OUTPUT"
-            echo -e "$OUTPUT" >> "$GITHUB_OUTPUT"
-            echo "LINT_EOF" >> "$GITHUB_OUTPUT"
           fi
 
       # ── 4. Post comment on PR ──
@@ -69,9 +57,10 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const review = `${{ steps.review.outputs.review }}`;
-            const ha = `${{ steps.validate_ha.outputs.ha }}`;
-            const lint = `${{ steps.lint_slides.outputs.lint }}`;
+            const fs = require('fs');
+            const review = fs.readFileSync('/tmp/review.md', 'utf8');
+            const ha = fs.readFileSync('/tmp/validate-ha.txt', 'utf8');
+            const lint = fs.readFileSync('/tmp/lint-slides.txt', 'utf8');
 
             const body = [
               review,
