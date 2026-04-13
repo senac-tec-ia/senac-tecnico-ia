@@ -114,8 +114,6 @@ bgPreset: palette
 |---|---|
 | `nota` | Você é a variável. Atualiza seu valor quando o professor falar |
 | `if` | Você avalia a condição e aponta para o caminho certo |
-| `bloco-verdadeiro` | Executa se o if apontar para você |
-| `bloco-falso` | Executa se o if apontar para você |
 | `for` | Você aponta para cada item da lista em ordem |
 | `print` | Você anuncia em voz alta o que recebeu |
 
