@@ -51,9 +51,8 @@ Ao receber qualquer trigger de produção ("Gere A0N", "Prepare A0N", "Aula NN")
 
 #### Passo 1 — Determinar a próxima aula (quando o número não for informado)
 
-1. Leia `AULAS-PROGRESSO.md` — identifique a última aula registrada (campo "Última aula registrada")
-2. Leia `AULAS-DADAS.md` — confirme o conteúdo da última aula lecionada e identifique o número A{NN}
-3. Leia `AULAS-DESENVOLVIMENTO-PROG.md` — verifique o que já foi produzido na sprint atual (evite gerar conteúdo duplicado para UCs que já têm slides na fila)
+1. Leia `AULAS-DADAS.md` — identifique a última aula registrada, seu conteúdo e o número A{NN}
+2. Leia `AULAS-DESENVOLVIMENTO-PROG.md` — verifique o que já foi produzido na sprint atual (evite gerar conteúdo duplicado para UCs que já têm slides na fila)
 4. Leia `.github/agents/contextos/contexto-calendario.md` — localize o número da próxima aula, sua data e tipo (`Sem1-Qui`, `Sem1-Sex`, `Sem2-Qui`, `Sem2-Sex`)
 5. Use o tipo para determinar a composição de UCs e horários do dia (tabelas do ciclo quinzenal no mesmo arquivo)
 
@@ -122,12 +121,19 @@ Termine o Round 2 com:
 Após receber as respostas do Round 2:
 
 1. **Processe internamente** todas as escolhas e decisões dos dois rounds
-2. **Grave `plano-aula.md`** na pasta da aula com:
+2. **Verifique pré-requisitos:** Para cada tópico planejado, confirme que os pré-requisitos foram realmente ministrados consultando `AULAS-DADAS.md` e os campos `Consolidado` nos contextos. Se algum pré-requisito **não consta como ministrado**, inclua um alerta no plano:
+   ```
+   ⚠️ PRÉ-REQUISITO NÃO CONFIRMADO:
+   - UC05 "list comprehension" assume que "for loops" foi ensinado, mas não consta em AULAS-DADAS.md
+   → Sugestão: incluir revisão rápida (1 slide) OU confirmar que foi coberto informalmente
+   ```
+3. **Grave `plano-aula.md`** na pasta da aula com:
    - Composição do dia (UC, HA, horários)
    - Decisões tomadas nos rounds 1 e 2 (resumo por item)
+   - Alertas de pré-requisitos (se houver)
    - Lista numerada de slides com título, tag pedagógica e 1 linha de resumo
-3. **Apresente ao professor** o conteúdo de `plano-aula.md` como mensagem
-4. Termine com:
+4. **Apresente ao professor** o conteúdo de `plano-aula.md` como mensagem
+5. Termine com:
    > 🛑 **Plano gravado em `plano-aula.md`. Digite "Implementar" para gerar os arquivos, ou faça ajustes.**
 
 ---
@@ -165,11 +171,12 @@ Após aprovação do esboço, invocar `@autor-slides` **somente para esta UC** c
 Prompt para @autor-slides:
 ```
 "@autor-slides — Gere os slides do bloco {slug} para A{NN}.
-Arquivos para carregar (SOMENTE ESTES):
+Arquivo obrigatório:
   1. A{NN}/plano-aula.md — seção BLOCO {N} ({slug})
-  2. .github/agents/contextos/contexto-{slug}.md
 Operação: APPEND ao final de A{NN}/slides.md (após o último slide do bloco anterior).
 Exercícios com gabaritos ficam INLINE no slides.md via <v-click>.
+
+### Handoff Card (já contém Consolidado — NÃO reler contexto-{slug}.md)
 [Handoff Card]"
 ```
 
@@ -239,7 +246,7 @@ Se o usuário pedir apenas slides ou apenas exercícios, execute normalmente as 
 ## Regra de contexto
 
 Antes de qualquer delegação, confirme:
-- `AULAS-PROGRESSO.md` e `AULAS-DADAS.md` foram lidos para determinar a última aula concluída
+- `AULAS-DADAS.md` foi lido para determinar a última aula concluída
 - `AULAS-DESENVOLVIMENTO-PROG.md` foi lido para verificar o que já foi produzido na sprint atual (evitar duplicação de conteúdo entre sessões)
 - `.github/agents/contextos/contexto-calendario.md` foi lido para resolver data, tipo e composição de UCs do dia
 - `.github/agents/contextos/contexto-*.md` de cada disciplina na composição foi lido (NÃO o slides.md da última aula)

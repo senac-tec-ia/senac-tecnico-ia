@@ -40,6 +40,13 @@ Ex: `A14_UC07+01+02_16abr` → `a14-uc07-01-02-16abr`
 2. Monte o nome completo: `A{NN}_UC{XX}+{XX}_{DD}{MMM}` (use `UCXX` se professor não confirmou UCs)
 3. Confirme com o professor antes de prosseguir
 
+### Passo 1.5 — Criar branch Git
+Crie uma branch dedicada para esta aula:
+```bash
+git checkout -b aula/a{nn}-{dd}{mmm}
+```
+Convenção de branch: `aula/a{nn}-{dd}{mmm}` (ex: `aula/a14-16abr`). Sempre a partir de `master` atualizado.
+
 ### Passo 2 — Criar a pasta da nova aula
 Copie **apenas** a estrutura Slidev do `neural-slides-template/`, excluindo:
 - `.github/` — os agentes vivem na raiz, não nas subpastas
@@ -125,12 +132,47 @@ No `package.json` da raiz do workspace, adicione dentro de `"scripts"` (o worksp
 ✅ package.json (raiz) — scripts dev/build/export adicionados
 ✅ status: em-planejamento (invisível aos alunos até status: published)
 
-Próximo passo: use @planejador-trimestre → depois edite meta.yaml para renomear o dir
+Próximo passo: use @produtor-aula → depois edite meta.yaml para renomear o dir
 (UC confirmadas) e mude status para published quando a aula estiver pronta.
 ```
 
-### Passo 8 — Ao confirmar as UCs da aula
-Quando `@planejador-trimestre` ou o professor confirmar as UCs do dia, renomear o diretório:
+### Passo 8 — Commit inicial e abrir PR
+Faça o commit da estrutura e abra um Pull Request para `master`:
+```bash
+git add .
+git commit -m "feat(A{NN}): scaffold aula A{NN} — {DD}/{MMM}"
+git push -u origin aula/a{nn}-{dd}{mmm}
+```
+
+Em seguida, crie o PR usando GitHub CLI:
+```bash
+gh pr create \
+  --title "Aula A{NN} — {DD}/{MM}/{AAAA} — {UCs}" \
+  --body "## Aula A{NN}
+
+**Data:** {DD}/{MM}/{AAAA}
+**UCs:** {lista de UCs}
+**Status:** em-planejamento
+
+### Checklist
+- [ ] Scaffold criado
+- [ ] @produtor-aula executado (plano-aula.md aprovado)
+- [ ] Slides gerados por UC
+- [ ] Lint de slides aprovado
+- [ ] HA validado
+- [ ] meta.yaml atualizado para \`published\`
+
+> PR criado automaticamente por @criar-nova-aula" \
+  --base master \
+  --draft
+```
+
+> ⚠️ O PR é criado como **draft** — o professor faz merge quando a aula estiver pronta.
+> A cada push nesta branch, o workflow `pr-review.yml` roda automaticamente:
+> review de categorização, lint de slides e validação de HA — tudo como comentário no PR.
+
+### Passo 9 — Ao confirmar as UCs da aula
+Quando `@produtor-aula` ou o professor confirmar as UCs do dia, renomear o diretório:
 ```bash
 node scripts/renomear-aula.mjs A{NN}_UCXX_{DD}{MMM} A{NN}_UC{XX}+{XX}_{DD}{MMM}
 ```
