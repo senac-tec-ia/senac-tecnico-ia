@@ -1,0 +1,21 @@
+# Metadados da Aula — Neural Slides
+# Preenchido pelo CLI ao rodar `course new`
+
+aula: "15"
+slug: "a15-uc05-08-06-17abr"
+title: "Python Loops For, SQL com JOINs e Arquitetura CPU"
+author: "Leonardo Zanini"
+courseTitle: "Técnico em Inteligência Artificial"
+
+disciplines: ["UC05", "UC08", "UC06"]
+
+date: "17/04/2026"
+
+# draft | ready | published
+status: em-planejamento
+
+deployUrl: ""
+
+slideCount: 0
+
+agentsUsed: []
