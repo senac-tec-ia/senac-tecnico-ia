@@ -49,12 +49,22 @@ FASE 4 — Ciclo por UC (repete para cada UC do dia):
 
 Ao receber qualquer trigger de produção ("Gere A0N", "Prepare A0N", "Aula NN"), execute **silenciosamente** (sem mostrar ao usuário) os passos abaixo em ordem:
 
+#### Passo 0 — Verificar plano de conteúdo enriquecido
+
+1. Verifique se existe `plano-conteudo-A{NN}.md` na **raiz** do repositório ou dentro da pasta da aula (`aulas/{MM}{mmm}/A{NN}_.../plano-conteudo.md`)
+2. **Se existir:** leia o plano de conteúdo completo. Este arquivo já contém composição, tópicos detalhados, fontes web, exercícios sugeridos e notas pedagógicas gerados pelo `@planejador-curricular`
+3. **Se existir plano de conteúdo → PULE direto para FASE 3** (gravar `plano-aula.md` e apresentar resumo ao professor). Não é necessário executar FASE 1 e FASE 2 (entrevistas), pois o conteúdo já foi planejado. O professor ainda pode ajustar antes de "Implementar".
+
+> 💡 O `plano-conteudo` substitui a entrevista. O professor teve a oportunidade de revisar o `roadmap-t1.md` e o plano de conteúdo antes de invocar o produtor.
+
 #### Passo 1 — Determinar a próxima aula (quando o número não for informado)
+
+> ⚠️ Pulo este passo se o Passo 0 encontrou um plano de conteúdo.
 
 1. Leia `AULAS-DADAS.md` — identifique a última aula registrada, seu conteúdo e o número A{NN}
 2. Leia `AULAS-DESENVOLVIMENTO-PROG.md` — verifique o que já foi produzido na sprint atual (evite gerar conteúdo duplicado para UCs que já têm slides na fila)
-4. Leia `.github/agents/contextos/contexto-calendario.md` — localize o número da próxima aula, sua data e tipo (`Sem1-Qui`, `Sem1-Sex`, `Sem2-Qui`, `Sem2-Sex`)
-5. Use o tipo para determinar a composição de UCs e horários do dia (tabelas do ciclo quinzenal no mesmo arquivo)
+3. Leia `roadmap-t1.md` — localize a aula A{NN} no calendário consolidado (composição de UCs, HA, avaliações)
+4. Leia `.github/agents/contextos/contexto-calendario.md` — confirme tipo (`Sem1-Qui`, `Sem1-Sex`, `Sem2-Qui`, `Sem2-Sex`) e horários
 
 #### Passo 2 — Carregar contexto da aula
 

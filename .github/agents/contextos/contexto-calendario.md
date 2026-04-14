@@ -53,16 +53,19 @@
 | ❌  | 03/04 | Sexta-Feira da Paixão — sem aula |
 | A11 | 09/04 | Sem2-Qui |
 | A12 | 10/04 | Sem2-Sex |
-| A13 | 16/04 | Sem1-Qui |
-| A14 | 17/04 | Sem1-Sex |
-| A15 | 23/04 | Sem2-Qui |
-| A16 | 24/04 | Sem2-Sex |
-| A17 | 30/04 | Sem1-Qui |
+| A13 | 11/04 | Reposição Sáb (UC03+UC04+UC05) |
+| A14 | 16/04 | Sem2-Qui |
+| A15 | 17/04 | Sem2-Sex |
+| A16 | 20/04 | Reposição Seg (UC07 visita + UC04 3HA) |
+| A17 | 23/04 | Sem1-Qui |
+| A18 | 24/04 | Sem1-Sex |
+| A19 | 30/04 | Sem2-Qui |
 | ❌  | 01/05 | Dia do Trabalho — sem aula |
-| A18 | 07/05 | Sem2-Qui |
-| A19 | 08/05 | Sem2-Sex |
-| A20 | 14/05 | Sem1-Qui |
-| A21 | 15/05 | Sem1-Sex — FIM T1 |
+| rep? | 02/05 | Reposição Sáb (a definir — sugestão UC02+UC03+UC06) |
+| A20 | 07/05 | Sem1-Qui |
+| A21 | 08/05 | Sem1-Sex |
+| A22 | 14/05 | Sem2-Qui — FIM T1 |
+| —  | 15/05 | Planejamento — NÃO contar para avaliação |
 
 ---
 
@@ -79,3 +82,23 @@
 | UC07 | transformacao-digital | uc07-transformacao-digital.agent.md |
 | UC08 | banco-de-dados | uc08-banco-de-dados.agent.md |
 | UC09 | estatistica-aplicada | uc09-estatistica-aplicada.agent.md |
+
+---
+
+## HA — Alocação T1 por UC
+
+> Resumo de carga horária. Fonte detalhada: `roadmap-t1.md`.
+
+| UC | Disciplina | HA T1 Alocado | HA Dado (A01–A13) | HA Restante (A14–A22) | Status |
+|---|---|---|---|---|---|
+| UC01 | Fundamentos da Computação | 13 | ~10 | ~6 | ⚠️ +3 acima |
+| UC02 | Inglês Instrumental | 13 | ~5 | ~3 | 🔴 -5 déficit |
+| UC03 | Fundamentos Matemáticos | 13 | ~3 | ~4 | 🔴 -6 déficit |
+| UC04 | Fundamentos e Conceitos de IA | 11 | ~7 | ~5 | ✅ ok |
+| UC05 | Python para IA | 20 | ~18 | ~8 | ⚠️ +6 acima |
+| UC06 | Arquitetura de Computadores e GPU | 11 | ~3 | ~2 | 🔴 -6 déficit |
+| UC07 | Transformação Digital | 20 | ~10.5 | ~12 | ⚠️ +2.5 acima |
+| UC08 | Banco de Dados | 20 | ~11 | ~8 | ✅ ok |
+| UC09 | Estatística Aplicada | 11 | ~3 | ~6 | ⚠️ -2 leve |
+
+**Déficits prioritários:** UC02 (-5), UC03 (-6), UC06 (-6) → mitigar na reposição 02/05 e 15-16/05.
