@@ -40,7 +40,7 @@
 | A11 | 09/04 | Qui | Sem2-Qui | UC07 3HA | UC01 2HA | UC02+UC04 1HA | ✅ dado |
 | A12 | 10/04 | Sex | Sem2-Sex | UC05 2HA | UC08 2HA | UC06 2HA | ✅ dado |
 | A13 | 11/04 | Sáb | Reposição | UC05 ~2HA | UC03 ~2HA | UC04 ~2HA | ✅ dado |
-| **A14** | **16/04** | **Qui** | **Sem2-Qui** | **UC07 3HA** | **UC01 2HA** | **UC02 1HA** | 🔄 plano-conteudo |
+| **A14** | **16/04** | **Qui** | **Sem2-Qui** | **UC07 3HA** | **UC01 2HA** | **UC02 1HA** | ✅ gerado |
 | **A15** | **17/04** | **Sex** | **Sem2-Sex** | **UC05 2HA** | **UC08 2HA** | **UC06 2HA** | ⬜ planejado |
 | **A16** | **20/04** | **Seg** | **Reposição** | **UC07 3HA** *(visita)* | **UC04 3HA** | — | ⬜ planejado |
 | **A17** | **23/04** | **Qui** | **Sem1-Qui** | **UC05 3HA** | **UC03 2HA** | **UC04 1HA** | ⬜ planejado |
@@ -152,7 +152,7 @@
 | **Metodologia** | Estudos de caso reais + discussão em grupos (metodologia ativa baseada em problemas reais) |
 | **Avaliação** | Prepara Av.2 Quiz (Q14 sobre segurança digital) |
 | **Cross-UC** | UC01 (LGPD relevante para proteção de dados pessoais — Sociologia+Tecnologia) |
-| **Status** | ⬜ planejado |
+| **Status** | ✅ gerado |
 
 #### UC01 — Fundamentos de Computação (2HA · 9h50–11h30)
 
@@ -166,7 +166,7 @@
 | **Metodologia** | Prática em laboratório — método 4 passos (demonstrar → guiar → praticar → validar) |
 | **Avaliação** | Prepara entrega Av.1 (prazo A14 ou A15). Alunos devem sair da aula com o glossário formatado. |
 | **Cross-UC** | UC02 (glossário bilíngue = conteúdo do Av.1) |
-| **Status** | ⬜ planejado |
+| **Status** | ✅ gerado |
 
 #### UC02 — Inglês Instrumental (1HA · 11h30–12h20)
 
@@ -180,7 +180,7 @@
 | **Metodologia** | Vocabulário técnico contextualizado em interfaces/programação real (Língua Inglesa articulada com TI) |
 | **Avaliação** | Reforça Av.1 (glossário bilíngue) + prepara Av.2 (Q16 — leitura de manual em inglês) |
 | **Cross-UC** | UC05 (termos de programação Python usados diretamente) |
-| **Status** | ⬜ planejado |
+| **Status** | ✅ gerado |
 
 ---
 
