@@ -1,0 +1,40 @@
+#!/bin/sh
+#
+# Git pre-commit hook — Senac Técnico em IA
+# Roda review-staged.mjs antes de cada commit.
+# Bloqueia o commit se houver erros (exit code 1).
+# Avisos são mostrados mas não bloqueiam.
+#
+# Para bypasear (emergência): git commit --no-verify
+#
+
+# Resolve o diretório raiz do repo
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+
+# Verifica se Node está disponível
+if ! command -v node >/dev/null 2>&1; then
+  echo "⚠️  Node.js não encontrado — pulando review pré-commit"
+  exit 0
+fi
+
+# Verifica se o script existe
+REVIEW_SCRIPT="$REPO_ROOT/scripts/review-staged.mjs"
+if [ ! -f "$REVIEW_SCRIPT" ]; then
+  echo "⚠️  scripts/review-staged.mjs não encontrado — pulando review"
+  exit 0
+fi
+
+# Roda o review
+echo ""
+node "$REVIEW_SCRIPT"
+EXIT_CODE=$?
+
+# Se o script retornou erro (exit 1), bloqueia o commit
+if [ $EXIT_CODE -ne 0 ]; then
+  echo ""
+  echo "❌ Commit bloqueado pelo revisor. Corrija os erros acima."
+  echo "   Para forçar: git commit --no-verify"
+  exit 1
+fi
+
+exit 0

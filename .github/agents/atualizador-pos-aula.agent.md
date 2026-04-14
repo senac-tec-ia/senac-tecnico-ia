@@ -59,17 +59,24 @@ Fonte de verdade:
 
 ### 4. Atualizar `AULAS-DADAS.md`
 
-Adicionar no final:
+Adicionar no final (antes do bloco de template HTML comment), usando o formato padronizado:
 
+```markdown
+## A{NN} — {DD/MM/AAAA}
+
+| UC | Disciplina | Conteúdo | HA |
+|---|---|---|---|
+| UC{NN} | {Nome} | {Tópicos reais da aula} | ~{N} |
+| | **Total** | | **~{N}** |
+
+**Feedback:** {Observações do professor — dificuldades, engajamento, ritmo. Se nenhuma, omitir esta linha.}
+
+---
 ```
-A AULA {NN} NO DIA {DD/MM} FOI SOBRE:
 
-{UC} — {Nome}
-| {tópicos resumidos} | ~{X} HA
-```
-
-👉 Sem formatação complexa
+👉 Manter formato de tabela Markdown consistente
 👉 Sem inventar conteúdo
+👉 A seção **Feedback:** é obrigatória se o professor mencionou dificuldades, engajamento ou ritmo
 
 ---
 
@@ -80,7 +87,7 @@ Para cada UC:
 #### Adicionar em "Resumo por Aula":
 
 ```
-- A{NN}: {tópicos reais da aula}
+| A{NN} | {DD/MM/AAAA} | ~{N} | {tópicos reais} | Ministrada |
 ```
 
 ---
@@ -93,10 +100,29 @@ Para cada UC:
 
 ---
 
-#### Em "Feedback de Campo":
+#### Em "Feedback de Campo" (OBRIGATÓRIO quando aplicável):
 
-* Adicionar exatamente o que o professor falou
-* Sem interpretação
+Se o relato do professor contiver QUALQUER um desses sinais, **deve** gerar entrada em "Feedback de Campo":
+- Dificuldade da turma (ex: "turma não conseguiu fazer", "alunos travaram")
+- Ritmo inesperado (ex: "não deu tempo", "rendeu mais que esperado", "tomou a manhã toda")
+- Engajamento (ex: "turma engajou muito", "aula top", "turma dispersa")
+- Ajuste necessário (ex: "precisa reforçar", "voltar nesse conceito")
+
+Formato:
+
+```
+| {DD/MM} | {Observação exata do professor} | {Ação: reforçar / avançar / repetir / nenhuma} |
+```
+
+Sem interpretação. Sem classificação subjetiva. Apenas o que foi dito.
+
+---
+
+### 6. Atualizar `.copilot-instructions.md`
+
+Atualizar a seção "Contexto Atual do Curso":
+- **Última aula ministrada**: A{NN} ({DD/MM/AAAA}) — {resumo 1 linha}
+- **Em produção**: Sprint A{NN+1} (se aplicável)
 
 ---
 

@@ -1,4 +1,10 @@
 # Propostas de Avaliação — T1 2026
+
+> ⚠️ **ARQUIVO DE REFERÊNCIA (read-only)** — contém as 4 propostas analisadas antes da decisão.
+> A proposta escolhida (E2) foi detalhada e operacionalizada em:
+> `.github/agents/contextos/ATIVIDADES_AVALIATIVAS.md` ← **FONTE DA VERDADE OPERACIONAL**
+> Para consultar avaliações, leia esse arquivo, não este.
+
 ## Técnico em Inteligência Artificial — 1º Ano
 
 **Período restante:** A11 (09/04) → A20 (14/05/2026) — 10 aulas  
