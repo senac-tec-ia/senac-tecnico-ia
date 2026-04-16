@@ -8,6 +8,8 @@
   --slidev-theme-secondary: #3a1500;
   --slidev-theme-accent: #ffc64a;
 
+  --slidev-theme-links: #dbdbdb;
+
   /* Background */
   --slidev-theme-bg: #0f172a;
   --slidev-theme-bg-alt: #1e293b;
@@ -113,14 +115,14 @@ p {
 
 /* Links */
 a {
-  @apply underline decoration-2 decoration-blue-400;
-  color: var(--slidev-theme-primary);
+  @apply underline decoration-2 decoration-gray-200;
+  color: var(--slidev-theme-links);
   transition: all 0.3s ease;
 }
 
 a:hover {
   @apply decoration-blue-300;
-  color: var(--slidev-theme-secondary);
+  color: var(--slidev-theme-links);
   text-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
 }
 

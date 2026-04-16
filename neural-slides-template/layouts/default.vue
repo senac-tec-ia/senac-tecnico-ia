@@ -99,14 +99,14 @@ const bgOpacity = computed(() =>
 
 /* Code blocks */
 .content-wrapper :deep(code) {
-  background-color: rgba(59, 130, 246, 0.1);
+  background-color: rgba(120, 170, 250, 0.1);
   padding: 0.125rem 0.375rem;
   border-radius: 0.25rem;
   font-size: 0.95em;
 }
 
 .content-wrapper :deep(pre) {
-  background-color: rgba(15, 23, 42, 0.8);
+  background-color: rgba(247, 125, 88, 0.8);
   padding: 1rem;
   border-radius: 0.5rem;
   margin: 1.5rem 0;
