@@ -37,7 +37,7 @@ const bgOpacity = computed(() =>
       :backgroundOpacity="bgOpacity"
     />
     <div class="content-wrapper">
-      <div class="p-8 rounded-xl border border-white backdrop-blur-xl">
+      <div class="slide-card">
         <slot />
       </div>
     </div>
@@ -95,14 +95,6 @@ const bgOpacity = computed(() =>
 .content-wrapper :deep(strong) {
   font-weight: 700;
   color: #f1f5f9;
-}
-
-/* Code blocks */
-.content-wrapper :deep(code) {
-  background-color: rgba(120, 170, 250, 0.1);
-  padding: 0.125rem 0.375rem;
-  border-radius: 0.25rem;
-  font-size: 0.95em;
 }
 
 .content-wrapper :deep(pre) {

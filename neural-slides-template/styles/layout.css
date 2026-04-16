@@ -8,7 +8,7 @@
   --slidev-theme-secondary: #3a1500;
   --slidev-theme-accent: #ffc64a;
 
-  --slidev-theme-links: #dbdbdb;
+  --slidev-theme-links: #73bafc;
 
   /* Background */
   --slidev-theme-bg: #0f172a;
@@ -115,15 +115,14 @@ p {
 
 /* Links */
 a {
-  @apply underline decoration-2 decoration-gray-200;
+  @apply underline decoration-1 decoration-gray-400;
   color: var(--slidev-theme-links);
   transition: all 0.3s ease;
 }
 
 a:hover {
   @apply decoration-blue-300;
-  color: var(--slidev-theme-links);
-  text-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+  text-shadow: 0 0 8px rgba(96, 99, 255, 0.5);
 }
 
 /* Listas */
@@ -138,11 +137,17 @@ li {
 }
 
 /* Code inline */
-code {
-  @apply px-2 py-1 rounded text-sm;
-  background: rgba(99, 102, 241, 0.2);
+:not(pre) > code {
+  @apply text-sm;
+  background-color: #222423 !important;
   color: #a5b4fc;
+  /* Reseta o gradient-clip herdado do h1 */
+  -webkit-text-fill-color: #a5b4fc;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
   font-family: "Fira Code", monospace;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
 }
 
 /* Blocos de código */
@@ -176,7 +181,7 @@ pre {
 /* Cards customizados */
 .card {
   @apply p-6 rounded-xl backdrop-blur-sm;
-  background: rgba(30, 41, 59, 0.6);
+  background: rgba(90, 91, 92, 0.6);
   border: 1px solid rgba(99, 102, 241, 0.2);
   transition: all 0.3s ease;
 }
@@ -185,6 +190,14 @@ pre {
   @apply glow;
   border-color: rgba(99, 102, 241, 0.5);
   transform: translateY(-4px);
+}
+
+/* Card principal dos slides (layout default) */
+.slide-card {
+  padding: 2rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(24px);
 }
 
 /* Botões */

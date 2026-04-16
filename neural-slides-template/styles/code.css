@@ -3,8 +3,8 @@
 /* Shiki code blocks */
 .shiki {
   @apply rounded-xl;
-  background: #1e293b !important;
-  border: 1px solid rgba(99, 102, 241, 0.6);
+  background: #0b3985b4 !important;
+  border: 1px solid rgba(48, 51, 221, 0.6);
   overflow-x: auto;
 }
 
@@ -29,7 +29,7 @@
 
 /* Comments */
 .shiki .token.comment {
-  color: #64748b;
+  color: #45b678 !important;
   font-style: italic;
 }
 
@@ -40,7 +40,7 @@
 
 /* Strings */
 .shiki .token.string {
-  color: #c3e88d;
+  color: #97f012;
 }
 
 /* Functions */
@@ -67,11 +67,15 @@
   border-bottom: none;
 }
 
-/* Copy button styling */
-.slidev-code-copy {
-  @apply opacity-0 transition-opacity;
+/* Copy button styling — sempre visível */
+.slidev-code-wrapper .slidev-code-copy {
+  opacity: 0.6 !important;
+  color: #3af30b;
+  box-shadow: 0 0 1px #3af30b;
+  margin: 8px;
+  border-radius: 5px;
 }
 
-.slidev-code-wrapper:hover .slidev-code-copy {
-  @apply opacity-100;
+.slidev-code-wrapper .slidev-code-copy:hover {
+  opacity: 1 !important;
 }
