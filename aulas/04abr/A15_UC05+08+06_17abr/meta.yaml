@@ -13,7 +13,9 @@ date: "17/04/2026"
 
 # draft | ready | published
 status: published
+
 slideCount: 32
+
 agentsUsed:
   - produtor-aula
   - autor-slides

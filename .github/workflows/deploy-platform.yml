@@ -4,7 +4,7 @@ on:
   push:
     branches: [master]
     paths:
-      - 'A*/**'
+      - 'aulas/**'
       - 'platform/**'
       - 'package.json'
       - 'package-lock.json'
