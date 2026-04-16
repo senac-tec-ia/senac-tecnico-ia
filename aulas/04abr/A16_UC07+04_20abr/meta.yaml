@@ -1,0 +1,23 @@
+# Metadados da Aula — Neural Slides
+# Preenchido pelo CLI ao rodar `course new`
+
+aula: "16"
+slug: "a16-uc07-04-20abr"
+title: "Visita Técnica e Classificação em IA"
+author: "Leonardo Zanini"
+courseTitle: "Técnico em Inteligência Artificial"
+
+disciplines: ["UC07", "UC04"]
+
+date: "20/04/2026"
+
+tipo: reposicao-segunda
+
+# draft | ready | published
+status: em-planejamento
+
+deployUrl: ""
+
+slideCount: 0
+
+agentsUsed: []
