@@ -41,7 +41,7 @@
 | A12 | 10/04 | Sex | Sem2-Sex | UC05 2HA | UC08 2HA | UC06 2HA | ✅ dado |
 | A13 | 11/04 | Sáb | Reposição | UC05 ~2HA | UC03 ~2HA | UC04 ~2HA | ✅ dado |
 | **A14** | **16/04** | **Qui** | **Sem2-Qui** | **UC07 3HA** | **UC01 2HA** | **UC02 1HA** | ✅ gerado |
-| **A15** | **17/04** | **Sex** | **Sem2-Sex** | **UC05 2HA** | **UC08 2HA** | **UC06 2HA** | ⬜ planejado |
+| **A15** | **17/04** | **Sex** | **Sem2-Sex** | **UC05 2HA** | **UC08 2HA** | **UC06 2HA** | ✅ gerado |
 | **A16** | **20/04** | **Seg** | **Reposição** | **UC07 3HA** *(visita)* | **UC04 3HA** | — | ⬜ planejado |
 | **A17** | **23/04** | **Qui** | **Sem1-Qui** | **UC05 3HA** | **UC03 2HA** | **UC04 1HA** | ⬜ planejado |
 | **A18** | **24/04** | **Sex** | **Sem1-Sex** | **UC08 3HA** | **UC09 3HA** | — | ⬜ planejado |
@@ -198,7 +198,7 @@
 | **Metodologia** | Oficina de codificação incremental, desafios curtos (prática deliberada) |
 | **Avaliação** | Prepara Av.3 (TriaBot usa `for` indiretamente) e Av.4 (iteração sobre listas) |
 | **Cross-UC** | UC03 (aritmética: somas, contagens — formaliza padrão acumulador) |
-| **Status** | ⬜ planejado |
+| **Status** | ✅ gerado |
 
 #### UC08 — Banco de Dados (2HA · 8h50–10h40)
 
@@ -212,7 +212,7 @@
 | **Metodologia** | Projetos com datasets contextualizados em IA; analogia Excel como andaime |
 | **Avaliação** | Pré-requisito para Av.5 (SQL) e Av.6 (Mini Projeto) |
 | **Cross-UC** | UC05 (futuro: Python lê BD com JOIN → Av.6) |
-| **Status** | ⬜ planejado |
+| **Status** | ✅ gerado |
 
 #### UC06 — Arquitetura de Computadores e GPU (2HA · 10h40–12h20)
 
@@ -226,7 +226,7 @@
 | **Metodologia** | Aula demonstrativa com diagramas + simulação visual (CPU-Z ou equivalente) |
 | **Avaliação** | Prepara Av.2 Quiz (Q7-8 sobre arquitetura) |
 | **Cross-UC** | UC07 (segurança: CPU vulnerabilidades Spectre/Meltdown — menção breve) |
-| **Status** | ⬜ planejado |
+| **Status** | ✅ gerado |
 
 ---
 

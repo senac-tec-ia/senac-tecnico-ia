@@ -100,7 +100,7 @@ bgPreset: palette
 
 # Nem Todo Dado É Igual
 
-::left::
+
 
 ## 📋 Dados Pessoais
 *Identificam uma pessoa*
@@ -112,7 +112,7 @@ bgPreset: palette
 - IP, cookies, geolocalização
 - Foto (que identifica o rosto)
 
-> Precisam de proteção adequada.
+Precisam de proteção adequada.
 
 ::right::
 
@@ -126,8 +126,6 @@ bgPreset: palette
 - Vida sexual
 - Dados genéticos
 - **Biometria** (impressão digital, face ID)
-
-> A LGPD impõe restrições extras para tratamento de dados sensíveis.
 
 ---
 layout: default
@@ -178,7 +176,7 @@ A LGPD garante que **você tem controle** sobre seus próprios dados:
 
 <v-click>
 
-> 💡 **Teste agora:** No Instagram → Configurações → Sua Atividade → Baixar suas informações. Você pode baixar **tudo** que o Instagram sabe sobre você.
+> 💡 **Teste depois:** No Instagram → Configurações → Sua Atividade → Tudo sobre você está aqui
 
 </v-click>
 
@@ -216,9 +214,7 @@ pulse: true
 
 <!-- SLIDE 10 — Atividade dados pessoais vs sensíveis -->
 
-# Classify It! 🗂️
-
-**Em duplas — 5 minutos**
+# Classify It!
 
 Para cada item abaixo, classifique: **Pessoal / Sensível / Anônimo**
 
@@ -245,6 +241,7 @@ bgPreset: palette
 
 <v-clicks>
 
+- **howsecureismypassword.net** 
 - **Regra mínima:** 12+ caracteres · maiúsculas + minúsculas + números + símbolos
 - **Nunca reutilize** senhas entre serviços diferentes
 - Use um **gerenciador de senhas:** Bitwarden (gratuito e open source), Google Password Manager
@@ -253,20 +250,12 @@ bgPreset: palette
 
 <v-click>
 
-**Quanto tempo para quebrar sua senha?**
-
 | Senha | Tempo estimado |
 |---|---|
 | `12345678` | Instantâneo |
 | `Leo2026` | 2 horas |
 | `Leo@Senac#2026!` | 400 anos |
 | `#kP9!mQ2@vR7$nL` | Trilhões de anos |
-
-</v-click>
-
-<v-click>
-
-> 🔗 Teste a sua em **howsecureismypassword.net** (nunca coloque sua senha real — use estrutura similar)
 
 </v-click>
 
@@ -280,8 +269,6 @@ bgPreset: palette
 
 # <carbon-two-factor-authentication /> Autenticação em Dois Fatores (2FA)
 
-::left::
-
 ## O Que É
 
 **Algo que você sabe** + **Algo que você tem**
@@ -289,7 +276,7 @@ bgPreset: palette
 - Senha × Código do celular
 - Mesmo que roubem sua senha, sem o segundo fator não entram
 
-## Tipos de 2FA (do menos ao mais seguro)
+## Tipos de 2FA (do - ao + seguro)
 
 1. SMS (⚠️ vulnerável a SIM swap)
 2. App autenticador (Google Authenticator, Authy) ✅
@@ -305,8 +292,6 @@ bgPreset: palette
 4. Escaneie o QR code com Google Authenticator
 5. ✅ Pronto — sua conta tem 2FA
 
-> 🎯 **Atividade:** Quem já tem 2FA ativo no Google ou em algum app levanta a mão. Vamos ativar juntos agora!
-
 ---
 layout: default
 card: true
@@ -317,14 +302,14 @@ bgPreset: palette
 
 # <carbon-warning-alt /> Phishing — Quando o Ataque É Você
 
-**Phishing** é quando alguém te engana para roubar seus dados — sem invadir nada tecnicamente.
+**Phishing** é quando alguém te engana para roubar seus dados, sem invadir nada tecnicamente.
 
 <v-clicks>
 
-- 📧 **E-mail falso** que imita banco, operadora, Receita Federal
-- 📱 **SMS falso** ("seu pacote não pôde ser entregue — clique aqui")
-- 📞 **Ligação falsa** ("sou do suporte da Microsoft, seu computador está infectado")
-- 🔗 **Link malicioso** que parece legítimo mas vai para site clone
+1. **E-mail falso** que imita banco, operadora, Receita Federal
+2. **SMS falso** ("seu pacote não pôde ser entregue — clique aqui")
+3. **Ligação falsa** ("sou do suporte da Microsoft, seu computador está infectado")
+4. **Link malicioso** que parece legítimo mas vai para site clone
 
 </v-clicks>
 
@@ -339,7 +324,7 @@ bgPreset: palette
 </v-click>
 
 ---
-layout: brainstorm
+layout: default
 card: true
 bgPreset: animate
 pulse: true
@@ -347,7 +332,7 @@ pulse: true
 
 <!-- SLIDE 14 — Exercício phishing -->
 
-# Qual E-mail É Phishing? 🎣
+# Qual E-mail É Phishing?
 
 **Analise os 3 e-mails abaixo e identifique o(s) falso(s):**
 
@@ -386,30 +371,36 @@ bgPreset: palette
 
 </v-clicks>
 
-<v-click>
+---
+layout: default
+card: true
+bgPreset: palette
+---
 
-**O que você pode fazer se tiver dados vazados:**
+
+# O que você pode fazer se tiver dados vazados:
 1. Verificar em **haveibeenpwned.com** e **registrato.bcb.gov.br**
 2. Ativar bloqueio de crédito no Serasa/SPC
 3. Monitorar seu CPF no **gov.br**
 4. Trocar senhas de serviços onde usa o mesmo e-mail
 
-</v-click>
 
 ---
 layout: brainstorm
 card: true
-bgPreset: animate
+bgPreset: palette
 pulse: true
 ---
 
 <!-- SLIDE 16 — Debate final LGPD -->
 
-# Uma Empresa Vazou Seus Dados. E Agora? 🔐
+# Uma Empresa Vazou Seus Dados. E Agora? 
 
-**Debate em grupo — 10 minutos**
+**Debate em duplas: 10 minutos**
 
 Cenário: *Uma fintech startup coletou seus dados financeiros para oferecer crédito. Sofreu um ataque hacker e 50.000 CPFs foram expostos.*
+
+<br/> 
 
 - Quais **direitos** da LGPD foram violados?
 - O que a **empresa** é obrigada a fazer agora?
@@ -426,7 +417,7 @@ bgPreset: palette
 
 <!-- SLIDE 17 — Checklist segurança digital -->
 
-# ✅ Checklist Pessoal de Segurança Digital
+# Checklist Pessoal de Segurança Digital
 
 **3 ações para implementar hoje:**
 
@@ -444,12 +435,6 @@ bgPreset: palette
 - Acesse as configurações de privacidade de um app que você usa
 - Veja quais dados eles coletam e se você concorda
 - Se não concordar → revogar consentimento ou excluir conta
-
-</v-click>
-
-<v-click>
-
-> 🤖 **Fechamento UC07:** Segurança digital não é opcional na transformação digital. Toda solução de IA responsável começa com proteção de dados.
 
 </v-click>
 
@@ -512,12 +497,20 @@ bgPreset: palette
 
 <v-clicks>
 
-1. ✅ Aplique estilos H1/H2 aos títulos do documento
-2. 📍 Posicione o cursor **logo após a capa** (página 2)
-3. 🔖 **Referências → Sumário → Tabela Automática 1**
+1. Aplique estilos H1/H2 aos títulos do documento
+2. Posicione o cursor **logo após a capa** (página 2)
+3. **Referências → Sumário → Tabela Automática 1**
 4. O Word gera o índice com títulos + números de página automaticamente!
 
 </v-clicks>
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+# <carbon-list-numbered /> Sumário Automático — Passo a Passo
 
 <v-click>
 
@@ -543,16 +536,12 @@ bgPreset: palette
 
 # <carbon-page-break /> Cabeçalho e Rodapé
 
-::left::
-
 ## Como Inserir
 
 1. **Inserir → Cabeçalho** → escolha um modelo
 2. Digite o texto: `Técnico em IA — Senac`
 3. **Inserir → Rodapé** → escolha um modelo
 4. **Inserir → Número de Página** → Inferior da Página → Centralizado
-
-## Dica: Capa Sem Número
 
 - Opções do cabeçalho → ✅ **"Primeira página diferente"**
 - A capa não recebe cabeçalho nem numeração
@@ -572,6 +561,8 @@ Técnico em Inteligência Artificial — Senac
 ```
 
 > 💡 Duplo clique no cabeçalho/rodapé para editar. ESC para sair.
+
+> Dica: Capa Sem Número
 
 ---
 layout: default
@@ -594,6 +585,14 @@ bgPreset: palette
 
 </v-clicks>
 
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+# Revisar e Exportar
+
 <v-click>
 
 **Exportar para PDF:**
@@ -604,7 +603,7 @@ bgPreset: palette
 </v-click>
 
 ---
-layout: brainstorm
+layout: default
 card: true
 bgPreset: animate
 pulse: true
@@ -612,7 +611,7 @@ pulse: true
 
 <!-- SLIDE 23 — Prática guiada: montando o Av.1 -->
 
-# 🎯 Prática Guiada — Monte o Av.1 Agora
+# Vamos finalizar avaliação 1
 
 **Estrutura do Glossário (Av.1):**
 
@@ -624,7 +623,6 @@ pulse: true
 6. Exportar para PDF
 
 > 🕐 **40 minutos de prática.** Professor circula para ajudar.  
-> ✅ Quem terminar → entrega o PDF no Classroom agora mesmo!
 
 ---
 layout: default
@@ -645,6 +643,25 @@ bgPreset: palette
 | 3 | Training | Treinamento | Processo de ensinar o modelo com dados |
 | 4 | Model | Modelo | A IA treinada, pronta para prever |
 | 5 | Inference | Inferência | Usar o modelo para fazer previsões |
+
+</SlideTable>
+
+> Estes são os 10 termos cobrados no **Av.1**. Adicione: definição em PT completa + conexão com o que aprendemos.
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 24 — Termos do Av.1 (referência) -->
+
+# Referência: 10 Termos do Glossário Av.1
+
+<SlideTable>
+
+| # | Termo EN | Tradução PT | Dica de significado |
+|---|---|---|---|
 | 6 | Bias | Viés | Erro sistemático nos dados ou modelo |
 | 7 | Token | Token | Unidade mínima de texto (palavra ou parte) |
 | 8 | Embedding | Incorporação | Representação numérica de palavras |
@@ -689,6 +706,16 @@ bgPreset: palette
 
 </v-clicks>
 
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 26 — Por que inglês em programação? -->
+
+# <carbon-language /> Por Que Programação É em Inglês?
+
 <v-click>
 
 **Python tem 35 keywords — todas em inglês:**
@@ -716,7 +743,7 @@ bgPreset: palette
 
 <!-- SLIDE 27 — Vocabulário: variable, function, loop -->
 
-# Vocabulário do Dia — Parte 1 de 3
+# Vocabulário do Dia — Parte 1 de 4
 
 <SlideTable>
 
@@ -727,6 +754,16 @@ bgPreset: palette
 | **loop** | /luːp/ | laço | Código que se repete várias vezes | `for i in range(5):` |
 
 </SlideTable>
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 27 — Vocabulário: variable, function, loop -->
+
+# Vocabulário do Dia — Parte 1 de 3
 
 <v-click>
 
@@ -766,6 +803,16 @@ bgPreset: palette
 
 </SlideTable>
 
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 28 — Vocabulário: string, integer, float, boolean -->
+
+# Vocabulário do Dia — Parte 2 de 3
+
 <v-click>
 
 ```python
@@ -804,7 +851,19 @@ bgPreset: palette
 
 </SlideTable>
 
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- SLIDE 29 — Vocabulário: parameter, return, error -->
+
+# Vocabulário do Dia — Parte 3 de 3
+
+
 <v-click>
+
 
 ```python
 # parameter e return — o par mais importante de funções
@@ -824,17 +883,14 @@ print(f"Média: {resultado}")  # Média: 8.0
 </v-click>
 
 ---
-layout: brainstorm
+layout: defaultS
 card: true
 bgPreset: animate
 pulse: true
 ---
 
 <!-- SLIDE 30 — Exercício: Read the Code -->
-
-# Read the Code! 🧑‍💻
-
-**Em dupla — 10 minutos**
+# Read the Code!
 
 ```python
 # This function calculates the average of three grades
@@ -846,6 +902,14 @@ def calculate_average(grade1, grade2, grade3):
 result = calculate_average(8, 7, 9)
 print(f"The average is: {result}")
 ```
+---
+layout: defaultS
+card: true
+bgPreset: animate
+pulse: true
+---
+
+# Read the Code!
 
 1. **What does this function do?** (responda em português)
 2. **How many parameters does it receive?** Quais são os nomes?
@@ -859,14 +923,14 @@ print(f"The average is: {result}")
 </v-click>
 
 ---
-layout: brainstorm
+layout: default
 card: true
 bgPreset: animate
 ---
 
 <!-- SLIDE 31 — Quiz oral -->
 
-# <carbon-flash /> Quiz Oral — Quem Responde Mais Rápido? ⚡
+# <carbon-flash /> Quiz Oral
 
 **Professor mostra a palavra — você responde: tradução + uso em Python!**
 
@@ -877,6 +941,23 @@ bgPreset: animate
 3. `loop` → ?
 4. `string` → ?
 5. `integer` → ?
+
+</v-clicks>
+
+---
+layout: default
+card: true
+bgPreset: animate
+---
+
+<!-- SLIDE 31 — Quiz oral -->
+
+# <carbon-flash /> Quiz Oral
+
+**Professor mostra a palavra — você responde: tradução + uso em Python!**
+
+<v-clicks>
+
 6. `float` → ?
 7. `boolean` → ?
 8. `parameter` → ?
@@ -884,8 +965,6 @@ bgPreset: animate
 10. `error` → ?
 
 </v-clicks>
-
-> 🏆 Quem acertar mais rápido ganha ponto simbólico. Sem pressão — é só praticar!
 
 ---
 layout: default
@@ -916,23 +995,33 @@ bgPreset: palette
 </v-click>
 
 ---
-layout: end
+layout: default
 bgPreset: palette
+card: true
 ---
 
 <!-- SLIDE 33 — Encerramento A14 -->
 
-# Até Amanhã, A14!
+# Até Amanhã, tropinha!
 
 **Hoje você aprendeu:**
 
 - 🔐 **LGPD:** seus dados têm proteção legal — dados pessoais vs sensíveis, direitos do titular, segurança digital
 - 📝 **Word:** sumário automático, cabeçalho/rodapé, PDF — ferramentas profissionais de formatação
 - 🇬🇧 **Inglês:** 10 termos de programação com contexto Python real
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- SLIDE 33 — Encerramento A14 -->
+
+# Até Amanhã, tropinha!
 
 **Para amanhã (A15 — 17/04):**
-- 🐍 **UC05:** Loops `for` em Python — `range()`, iteração sobre listas
-- 🗄️ **UC08:** Chave estrangeira (FK) e primeiro JOIN
-- 🖥️ **UC06:** Arquitetura CPU — fetch-decode-execute
+- 🐍 **UC05:** Loops `while` em Python, metodos de listas
+- 🗄️ **UC08:** Nosso banco de dados
+- 🖥️ **UC06:** CPU-Z
 
 ⚠️ **Av.1 — prazo final amanhã, 17/04.** Quem não entregou hoje, entrega até o fim da A15!

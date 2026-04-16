@@ -12,7 +12,11 @@ disciplines: ["UC05", "UC08", "UC06"]
 date: "17/04/2026"
 
 # draft | ready | published
-status: em-planejamento
+status: draft
+slideCount: 32
+agentsUsed:
+  - produtor-aula
+  - autor-slides
 
 deployUrl: ""
 
