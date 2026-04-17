@@ -1,5 +1,5 @@
 ---
-theme: ../slidev-theme-neural
+theme: ../../../neural-slides-template
 title: "Aula 01 — Introdução à Inteligência Artificial"
 titleTemplate: "%s | Técnico em IA"
 colorSchema: dark

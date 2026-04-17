@@ -4,7 +4,7 @@
 # BLOCO 2: Python — elif em Cadeias             (9h25–11h25)
 # BLOCO 3: Python — Tabela Verdade + Desafio    (11h35–12h20)
 # ─────────────────────────────────────────────────────────────────
-theme: ./
+theme: ../../../neural-slides-template
 colorSchema: dark
 title: "Técnico em IA — Aula 09"
 author: Leonardo Zanini

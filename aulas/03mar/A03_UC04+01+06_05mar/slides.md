@@ -2,7 +2,7 @@
 # ─────────────────────────────────────────────────────────────────
 #  CONFIGURAÇÃO GLOBAL DA AULA: preencha antes de começar
 # ─────────────────────────────────────────────────────────────────
-theme: ./                        # não alterar: aponta para o tema local
+theme: ../../../neural-slides-template
 colorSchema: dark                # não alterar
 
 # Metadados da aula

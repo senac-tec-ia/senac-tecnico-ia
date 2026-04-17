@@ -53,7 +53,7 @@ if (-not (Get-Command "gh" -ErrorAction SilentlyContinue)) {
 # 1. Copiar template
 Write-Host "[1/6] Copiando neural-slides-template -> $Nome..." -ForegroundColor Yellow
 
-$ExcluirPastas   = @(".github", ".git", "node_modules", "dist", ".slidev")
+$ExcluirPastas   = @(".github", ".git", "node_modules", "dist", ".slidev", "components", "layouts", "styles", "composables")
 $ExcluirArquivos = @("AULAS-DADAS.md", "PROJETO-AULAS-1-TRIMESTRE.md", "package-lock.json")
 
 New-Item -ItemType Directory -Path (Split-Path $Destino -Parent) -Force | Out-Null
@@ -113,7 +113,7 @@ $slidesContent = @"
 ---
 # $Nome
 # ──────────────────────────────────────────────────────────────
-theme: ./
+theme: ../../../neural-slides-template
 colorSchema: dark
 title: "Técnico em IA — $AulaLabel"
 author: Leonardo Zanini

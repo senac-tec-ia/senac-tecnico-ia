@@ -4,7 +4,7 @@
 #  BLOCO 1: D08-UC06 · Banco de Dados (3 HA)
 #  BLOCO 2: D09-UC07 · Funções Matemáticas (3 HA)
 # ─────────────────────────────────────────────────────────────────
-theme: ./
+theme: ../../../neural-slides-template
 colorSchema: dark
 title: "Técnico em IA — Aula 06"
 author: Leonardo Zanini

@@ -1,5 +1,5 @@
 ---
-theme: ./
+theme: ../../../neural-slides-template
 colorSchema: dark
 transition: slide-left
 title: "Técnico em IA - Aula 07"

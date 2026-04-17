@@ -1,5 +1,5 @@
 ---
-theme: ./
+theme: ../../../neural-slides-template
 colorSchema: dark
 title: "Técnico em IA: Aula 04"
 author: Leonardo Zanini

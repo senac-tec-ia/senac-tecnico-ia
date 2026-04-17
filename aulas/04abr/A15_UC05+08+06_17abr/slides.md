@@ -1,7 +1,7 @@
 ---
 # A15
 # ──────────────────────────────────────────────────────────────
-theme: ../slidev-theme-neural
+theme: ../../../neural-slides-template
 colorSchema: dark
 title: "Técnico em IA — Aula 15"
 author: Leonardo Zanini

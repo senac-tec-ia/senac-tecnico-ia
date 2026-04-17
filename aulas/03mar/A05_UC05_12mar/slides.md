@@ -2,7 +2,7 @@
 # ─────────────────────────────────────────────────────────────────
 #  A05 · 12/03/2026 · Python: print, input, Operadores e Condicionais · Matemática · Estatística
 # ─────────────────────────────────────────────────────────────────
-theme: ./
+theme: ../../../neural-slides-template
 colorSchema: dark
 
 title: "Técnico em IA: Aula 05"

@@ -4,7 +4,7 @@
 #  BLOCO 2: UC08 · Banco de Dados — DDL/CREATE     (9h25–11h25)
 #  BLOCO 3: UC06 · Arquitetura e GPU — Pipeline    (11h35–12h20)
 # ─────────────────────────────────────────────────────────────────
-theme: ./
+theme: ../../../neural-slides-template
 colorSchema: dark
 title: "Técnico em IA — Aula 08"
 author: Leonardo Zanini

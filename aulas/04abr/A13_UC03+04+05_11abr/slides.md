@@ -1,7 +1,7 @@
 ---
 # A13
 # ──────────────────────────────────────────────────────────────
-theme: ../slidev-theme-neural
+theme: ../../../neural-slides-template
 colorSchema: dark
 title: "Técnico em IA — Aula 13"
 author: Leonardo Zanini

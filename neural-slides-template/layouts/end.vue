@@ -12,6 +12,8 @@ const attrs = useAttrs();
 const props = withDefaults(
   defineProps<{
     bgPreset?: "default" | "animate" | "palette";
+    /** Envolve o conteúdo em um card glassmorphism */
+    card?: boolean;
     /** URL da foto de avatar (ex: https://github.com/LeoZanini.png?size=256) */
     avatar?: string;
     /** Handle do GitHub (ex: LeoZanini) */
@@ -21,6 +23,7 @@ const props = withDefaults(
   }>(),
   {
     bgPreset: "default",
+    card: false,
     avatar: "",
     github: "",
     profileUrl: "",
@@ -52,7 +55,9 @@ const bgOpacity = computed(() =>
       :backgroundOpacity="bgOpacity"
     />
     <div class="content-wrapper">
-      <slot />
+      <div :class="props.card ? 'slide-card' : undefined">
+        <slot />
+      </div>
 
       <!-- Card de perfil: exibido quando as props avatar ou github forem passadas -->
       <div v-if="props.avatar || props.github" class="profile-card">
