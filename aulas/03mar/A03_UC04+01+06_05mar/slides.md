@@ -8,6 +8,7 @@ colorSchema: dark                # não alterar
 # Metadados da aula
 title: "Técnico em IA: Aula 03"  # título da janela/aba do browser
 author: Leonardo Zanini
+github: LeoZanini
 courseTitle: Técnico em Inteligência Artificial  # rodapé centro
 aulaNum: "Aula 03"
 

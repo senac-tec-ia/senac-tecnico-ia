@@ -35,6 +35,7 @@ theme: ./                          # REQUIRED — do not change
 colorSchema: dark                  # REQUIRED — do not change
 title: "Técnico em IA — Aula 03"  # browser tab/window title
 author: Leonardo Zanini            # → footer right
+github: LeoZanini                  # → slide end (profile card) — avatar gerado automaticamente
 courseTitle: Técnico em Inteligência Artificial  # → footer center
 aulaNum: "Aula 03"                 # → footer left (e.g. "Aula 03" or "Aulas 03 e 04")
 footerLogo: /assets/senac-logo.png # footer logo (default: senac-logo.png)

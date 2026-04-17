@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, useAttrs } from "vue";
+import { configs } from "@slidev/client";
 import SlideBackground from "../components/SlideBackground.vue";
 import SlideFooter from "../components/SlideFooter.vue";
 
@@ -14,26 +15,39 @@ const props = withDefaults(
     bgPreset?: "default" | "animate" | "palette";
     /** Envolve o conteúdo em um card glassmorphism */
     card?: boolean;
-    /** URL da foto de avatar (ex: https://github.com/LeoZanini.png?size=256) */
+    /** URL da foto de avatar — fallback: configs.avatar do frontmatter global */
     avatar?: string;
-    /** Handle do GitHub (ex: LeoZanini) */
+    /** Handle do GitHub — fallback: configs.github do frontmatter global */
     github?: string;
     /** URL completa do perfil — gerada automaticamente a partir de `github` se omitida */
     profileUrl?: string;
   }>(),
   {
     bgPreset: "default",
-    card: false,
+    card: true,
     avatar: "",
     github: "",
     profileUrl: "",
   },
 );
 
+// Lê do frontmatter global como fallback (define uma vez no cabeçalho do slides.md)
+const resolvedGithub = computed(
+  () => props.github || (configs as any).github || "",
+);
+const resolvedAvatar = computed(
+  () =>
+    props.avatar ||
+    (configs as any).avatar ||
+    (resolvedGithub.value
+      ? `https://github.com/${resolvedGithub.value}.png?size=256`
+      : ""),
+);
+
 const resolvedProfileUrl = computed(
   () =>
     props.profileUrl ||
-    (props.github ? `https://github.com/${props.github}` : ""),
+    (resolvedGithub.value ? `https://github.com/${resolvedGithub.value}` : ""),
 );
 
 const bgOpacity = computed(() =>
@@ -43,7 +57,7 @@ const bgOpacity = computed(() =>
 
 <template>
   <div
-    class="slidev-layout end relative flex flex-col items-center justify-center text-center h-full"
+    class="slidev-layout end relative flex flex-col items-center justify-center h-full"
   >
     <SlideBackground
       v-bind="attrs"
@@ -59,15 +73,15 @@ const bgOpacity = computed(() =>
         <slot />
       </div>
 
-      <!-- Card de perfil: exibido quando as props avatar ou github forem passadas -->
-      <div v-if="props.avatar || props.github" class="profile-card">
+      <!-- Card de perfil: exibido quando avatar ou github estiverem disponíveis -->
+      <div v-if="resolvedAvatar || resolvedGithub" class="profile-card">
         <img
-          v-if="props.avatar"
-          :src="props.avatar"
+          v-if="resolvedAvatar"
+          :src="resolvedAvatar"
           alt="Foto de perfil"
           class="profile-avatar"
         />
-        <div v-if="props.github" class="profile-info">
+        <div v-if="resolvedGithub" class="profile-info">
           <p class="profile-label">GitHub:</p>
           <a
             :href="resolvedProfileUrl"
@@ -75,7 +89,7 @@ const bgOpacity = computed(() =>
             rel="noreferrer"
             class="profile-link"
           >
-            github.com/{{ props.github }}
+            github.com/{{ resolvedGithub }}
           </a>
         </div>
       </div>
@@ -87,7 +101,9 @@ const bgOpacity = computed(() =>
 <style scoped>
 .end {
   position: relative;
+  padding-top: 2rem;
   padding-bottom: 2rem;
+  height: fit-content;
 }
 
 .content-wrapper {
@@ -97,7 +113,7 @@ const bgOpacity = computed(() =>
 
 /* Título principal */
 .content-wrapper :deep(h1) {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Subtítulo */
@@ -121,7 +137,7 @@ const bgOpacity = computed(() =>
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
 }
 
 .profile-avatar {

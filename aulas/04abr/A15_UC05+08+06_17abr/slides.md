@@ -5,6 +5,7 @@ theme: ../../../neural-slides-template
 colorSchema: dark
 title: "Técnico em IA — Aula 15"
 author: Leonardo Zanini
+github: LeoZanini
 courseTitle: Técnico em Inteligência Artificial
 aulaNum: "Aula 15"
 bgPreset: palette
@@ -801,8 +802,8 @@ bgPreset: default
 ---
 layout: brainstorm
 card: true
-bgPreset: animate
-pulse: true
+bgPreset: palette
+animate: true
 ---
 
 <!-- SLIDE 31 — [DEBATE] Nosso PC Aguenta IA? -->
@@ -825,13 +826,14 @@ O professor vai anotar no quadro. Turma, respondam:
 ---
 layout: end
 bgPreset: animate
+github: LeoZanini
+avatar: https://github.com/LeoZanini.png?size=256
 ---
 
 <!-- SLIDE 32 — Encerramento -->
 
-# Aula 15 — Concluida
 
-**Hoje voce aprendeu:**
+# Hoje voce aprendeu:
 
 - Loop `while` com condicao de parada e `break`
 - Metodos de lista: `.append()`, `.pop()`, `.sort()`
@@ -839,6 +841,7 @@ bgPreset: animate
 - Como criar um BD completo do zero com SQLite local
 - Como ler o hardware real do seu PC com CPU-Z
 
+<br/>
+
 *Proxima aula (A16 — 20/04 SEGUNDA FEIRA REPOSIÇÃO): Visita Tecnica + Classificacao em IA*
 
-*17 de abril de 2026*
