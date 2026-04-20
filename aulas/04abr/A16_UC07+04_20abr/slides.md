@@ -31,7 +31,7 @@ bgPreset: palette
 **Cada grupo pesquisa e ensina um tópico à turma.**
 
 | Etapa | O que acontece |
-|---|---|---|
+|---|---|
 | Pesquisa  | Celular permitido — qualquer fonte |
 | Apresentação  | Todos do grupo devem falar |
 | Avaliação  | Turma dá nota **1–5** no caderno |
