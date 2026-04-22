@@ -1,5 +1,5 @@
 ﻿---
-theme: ../../../slidev-theme-neural
+theme: ../../../neural-slides-template
 colorSchema: dark
 title: "Técnico em IA — Aula 17"
 author: Leonardo Zanini
@@ -17,3 +17,4 @@ layout: cover
 *23 de abril de 2026*
 
 > Use @produtor-aula para gerar os slides desta aula.
+
