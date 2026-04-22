@@ -98,7 +98,7 @@ const bgOpacity = computed(() =>
 }
 
 .content-wrapper :deep(pre) {
-  background-color: rgba(247, 125, 88, 0.8);
+  background-color: rgba(15, 23, 42, 0.8);
   padding: 1rem;
   border-radius: 0.5rem;
   margin: 1.5rem 0;

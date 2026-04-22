@@ -1,9 +1,10 @@
 ---
-theme: ./
+theme: ../../../neural-slides-template
 colorSchema: dark
 transition: slide-left
 title: "Técnico em IA - Aula 07"
 author: Leonardo Zanini
+github: LeoZanini
 courseTitle: Técnico em Inteligência Artificial
 aulaNum: "Aula 07"
 bgPreset: palette

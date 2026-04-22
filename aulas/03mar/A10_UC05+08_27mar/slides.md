@@ -2,12 +2,13 @@
 # ─────────────────────────────────────────────────────────────────
 #  CONFIGURAÇÃO GLOBAL DA AULA — preencha antes de começar
 # ─────────────────────────────────────────────────────────────────
-theme: ./                        # não alterar — aponta para o tema local
+theme: ../../../neural-slides-template
 colorSchema: dark                # não alterar
 
 # Metadados da aula
 title: "Técnico em IA — Aula 10"
 author: Leonardo Zanini
+github: LeoZanini
 courseTitle: Técnico em Inteligência Artificial
 aulaNum: "Aula 10"
 

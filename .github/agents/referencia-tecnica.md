@@ -35,6 +35,7 @@ theme: ./                          # REQUIRED — do not change
 colorSchema: dark                  # REQUIRED — do not change
 title: "Técnico em IA — Aula 03"  # browser tab/window title
 author: Leonardo Zanini            # → footer right
+github: LeoZanini                  # → slide end (profile card) — avatar gerado automaticamente
 courseTitle: Técnico em Inteligência Artificial  # → footer center
 aulaNum: "Aula 03"                 # → footer left (e.g. "Aula 03" or "Aulas 03 e 04")
 footerLogo: /assets/senac-logo.png # footer logo (default: senac-logo.png)
@@ -138,6 +139,38 @@ Each slide starts with `---` and can have its own properties.
 ---
 
 ## 3. Component Reference
+
+### `AdminOnly` — Gabarito protegido por horário ⚠️ OBRIGATÓRIO para respostas
+
+**Toda resposta de exercício deve ficar dentro deste componente.** Nunca use `<v-click>` puro para gabaritos — ele expõe a resposta ao projetar os slides para a turma.
+
+O conteúdo fica oculto até `unlockHour` da `aulaDate` (definidos no frontmatter global) **ou** para o professor com cookie `lms_admin_jwt` válido.
+
+```markdown
+<AdminOnly>
+
+**Gabarito:**
+```python
+while hp > 0:
+    dano = randint(0, 10)
+    hp -= dano
+```
+
+</AdminOnly>
+```
+
+Frontmatter global que controla o unlock (adicionar no cabeçalho do `slides.md`):
+```yaml
+aulaDate:   "2026-04-17"   # data da aula no formato YYYY-MM-DD
+unlockHour: 13             # hora de liberação em horário local (padrão 13 se omitido)
+```
+
+Para unlock por slide específico (opcional), use a prop `unlock`:
+```markdown
+<AdminOnly unlock="2026-04-17T15:00">
+  Gabarito liberado às 15h independente do frontmatter.
+</AdminOnly>
+```
 
 ### `MLToast` — Pop-up notification
 
