@@ -1,0 +1,21 @@
+# Metadados da Aula — Neural Slides
+# Preenchido pelo CLI ao rodar `course new`
+
+aula: "17"
+slug: "a17-uc05-03-04-23abr"
+title: "Aula 17 — Python + Matemática + Fund. IA"
+author: "Leonardo Zanini"
+courseTitle: "Técnico em Inteligência Artificial"
+
+disciplines: ["UC05", "UC03", "UC04"]
+
+date: "23/04/2026"
+
+# draft | em-planejamento | ready | published
+status: em-planejamento
+
+deployUrl: ""
+
+slideCount: 0
+
+agentsUsed: []
