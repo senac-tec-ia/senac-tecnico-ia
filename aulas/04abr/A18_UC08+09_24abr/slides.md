@@ -1,4 +1,4 @@
-﻿---
+---
 theme: ../../../neural-slides-template
 colorSchema: dark
 title: "Técnico em IA — Aula 18"
