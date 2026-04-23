@@ -1,7 +1,7 @@
 ﻿id: av02
-titulo: "Avaliação 02"
-tipo: TC
+titulo: "Relatório de Visita Técnica — Limber"
+tipo: MP
 prazo: "TBD"
-prazoLabel: "A definir"
-ucs: []
-status: em-planejamento
+prazoLabel: "A confirmar pelo professor"
+ucs: [UC07]
+status: published
