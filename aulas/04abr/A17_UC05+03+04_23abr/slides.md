@@ -642,7 +642,7 @@ avatar: https://github.com/LeoZanini.png?size=256
 
 <!-- SLIDE 31 — [ENCERRAMENTO] -->
 
-# Boa aula, pessoal! 🚀
+# Fiquem de olho nos prazos de entrega!
 
 TokenLab + Av.02 — dois desafios, um dia.
 
