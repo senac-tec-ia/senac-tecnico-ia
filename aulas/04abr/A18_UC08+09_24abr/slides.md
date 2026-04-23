@@ -16,19 +16,6 @@ layout: cover
 
 *24 de abril de 2026*
 
----
-layout: center
-bgPreset: animate
----
-
-<!-- SLIDE 2 — [TEORIA] Divisor — Finalizando o TokenLab -->
-
-# ⏱️ Bloco 1
-## Finalizando o TokenLab
-
-*Até o intervalo: foco total na Av.03*
-
-*7h10 – 9h40*
 
 ---
 layout: default
@@ -77,9 +64,9 @@ if tokens == 0:
 print("============================================")
 print("       TOKENLAB — Calculadora de Custo IA")
 print("============================================")
-print(f"Texto analisado : {texto}")
-print(f"Caracteres      : {caracteres}")
-print(f"Tokens estimados: {tokens}")
+print(f"??? : {???}")
+print(f"???  : {???}")
+print(f"???: {???}")
 
 # Fase 1 — classifique o tamanho (curto / médio / longo)
 tamanho = ???
@@ -111,8 +98,6 @@ Antes de mandar o link, confirme cada item:
 
 <br>
 
-> 💬 Se travar em qualquer fase, chama o professor — não pule.
-
 ---
 layout: default
 bgPreset: default
@@ -140,18 +125,6 @@ git push origin main
 <br>
 
 > Se aparecer erro de autenticação, chama o professor.
-> Se aparecer `Everything up-to-date`, o arquivo já estava no repositório — rode novamente após salvar alterações.
-
----
-layout: center
-bgPreset: animate
----
-
-<!-- SLIDE 7 — [TEORIA] Intervalo -->
-
-# ☕ Intervalo
-
-*Volta às 9h50*
 
 ---
 layout: center
@@ -230,6 +203,34 @@ import numpy as np
 
 > Essas duas bibliotecas aparecem juntas em praticamente todo projeto de dados com Python.
 > Na próxima aula vamos adicionar `pandas` para ler arquivos CSV.
+
+---
+layout: default
+bgPreset: default
+card: true
+---
+
+<!-- SLIDE 10b — [TEORIA] Funções do plt — Cola Rápida -->
+
+# Funções do `plt` — Cola Rápida
+
+`plt` é o **apelido** de `matplotlib.pyplot` — o "pincel" do Python para gráficos.
+Você chama uma função, ela configura o gráfico. No final, `plt.show()` abre a janela.
+
+| Função | O que faz |
+|---|---|
+| `plt.plot(x, y)` | Linha contínua — ideal para fórmulas e sequências |
+| `plt.scatter(x, y)` | Pontos soltos — ideal para dados reais medidos |
+| `plt.title("texto")` | Título do gráfico |
+| `plt.xlabel("texto")` | Rótulo do eixo horizontal (x) |
+| `plt.ylabel("texto")` | Rótulo do eixo vertical (y) |
+| `plt.axhline(valor)` | Linha horizontal em um valor fixo (ex: média) |
+| `plt.legend()` | Mostra a legenda (funciona com `label=` nas funções acima) |
+| `plt.grid(True)` | Adiciona grade ao gráfico |
+| `plt.show()` | Exibe o gráfico na tela — sempre a última linha |
+
+> 📚 Documentação completa (em inglês, com exemplos visuais):
+> **matplotlib.org/stable/api/pyplot_summary.html**
 
 ---
 layout: default
@@ -320,16 +321,6 @@ plt.show()
 
 **O que esperar:** uma reta que começa em y=2 quando x=0 e sobe com inclinação 3.
 
-<v-click>
-
-> **Gabarito:**
-> ```python
-> y = [3 * i + 2 for i in x]
-> plt.title("Função Linear: y = 3x + 2")
-> ```
-> Quando x=0 → y=2. Quando x=5 → y=17. ✅
-
-</v-click>
 
 ---
 layout: two-cols
@@ -390,9 +381,23 @@ card: true
 | 30 | 80 |
 | 33 | 100 |
 
-**Monte o código completo** com título e nomes nos eixos.
+**Starter code — copie e preencha os `???`:**
 
-<v-click>
+```python
+import matplotlib.pyplot as plt
+
+temp   = [??????????????????????]
+vendas = [??????????????????????]
+
+plt.scatter(???, ???)        # passe as duas listas
+plt.title("???")
+plt.xlabel("???")
+plt.ylabel("???")
+plt.grid(True)
+plt.show()
+```
+
+<!-- <v-click>
 
 > **Gabarito:**
 > ```python
@@ -407,7 +412,7 @@ card: true
 > plt.show()
 > ```
 
-</v-click>
+</v-click> -->
 
 ---
 layout: default
