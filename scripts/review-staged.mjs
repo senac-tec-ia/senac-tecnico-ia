@@ -136,7 +136,7 @@ if (categories.slides) {
   for (const { filepath } of categories.slides) {
     const fullpath = join(ROOT, filepath)
     if (existsSync(fullpath)) {
-      const content = readFileSync(fullpath, 'utf8')
+      const content = readFileSync(fullpath, 'utf8').replace(/^\uFEFF/, '') // strip UTF-8 BOM
       const lines = content.split('\n')
 
       // Check frontmatter exists
