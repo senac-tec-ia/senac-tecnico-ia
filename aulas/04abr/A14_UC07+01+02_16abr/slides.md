@@ -1,8 +1,9 @@
 ---
-theme: ../slidev-theme-neural
+theme: ../../../neural-slides-template
 colorSchema: dark
 title: "Técnico em IA — Aula 14"
 author: Leonardo Zanini
+github: LeoZanini
 courseTitle: Técnico em Inteligência Artificial
 aulaNum: "Aula 14"
 bgPreset: palette

@@ -8,6 +8,7 @@ colorSchema: dark                # não alterar
 # Metadados da aula
 title: "Técnico em IA — Aula NN"  # título da janela/aba do browser
 author: Leonardo Zanini
+github: LeoZanini                  # handle GitHub — usado no slide de encerramento
 courseTitle: Técnico em Inteligência Artificial  # rodapé centro
 aulaNum: "Aula NN"
 

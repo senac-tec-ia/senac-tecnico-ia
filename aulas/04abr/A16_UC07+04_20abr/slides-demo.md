@@ -3,7 +3,7 @@
 #  DEMO DE LAYOUTS — um exemplo por layout disponível
 #  Execute com: npm run dev:demo
 # ─────────────────────────────────────────────────────────
-theme: ./
+theme: ../../../neural-slides-template
 title: "Demo de Layouts — Neural Theme"
 colorSchema: dark
 author: Leonardo Zanini

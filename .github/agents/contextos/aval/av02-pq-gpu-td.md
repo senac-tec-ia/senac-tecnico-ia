@@ -1,284 +1,165 @@
 ---
 id: av02
-titulo: Desafio GPU e TD — Quiz Digital
-tipo: PQ
-alternativa-escolhida: "2 — Quiz Digital (15 questões, formulário online)"
-ucs: UC01, UC04, UC06, UC07
-indicadores: "UC01: Ind.1 · UC02: Ind.2 · UC04: Ind.2 · UC06: Ind.1+2 · UC07: Ind.1+2+3+4"
+titulo: Relatório de Visita Técnica - Limber
+tipo: MP
+alternativa-escolhida: "Relatório em Word (ABNT), em dupla, entrega por e-mail como PDF"
+ucs: UC07
+indicadores: "UC07: Ind.1+2+3+4"
 data-alvo: "23/04/2026 (Quinta-feira)"
-aula-alvo: A15
+aula-alvo: A17
+prazo-entrega: "[a definir com a turma]"
 status: detalhada
 ---
 
-# Av.02 — Desafio GPU e TD: Quiz Digital
+# Av.02 — Relatório de Visita Técnica: Limber
 
-> **Status:** ✅ Detalhada
+> **Status:** Detalhada
 
-**Tipo:** PQ — Prova/Quiz  
-**Data:** 23/04/2026 (Quinta-feira, A15) — início do bloco UC07  
-**Formação:** Individual  
-**UCs cobertas:** UC01, UC02, UC04, UC06, UC07  
-**Indicadores:** UC01 Ind.1 · UC02 Ind.2 · UC04 Ind.2 · UC06 Ind.1+2 · UC07 Ind.1+2+3+4  
-**Tempo estimado (aluno):** ~25 minutos  
-**Plataforma:** Google Forms — acessado via link compartilhado pelo professor na tela/quadro  
-**Dispositivo:** celular ou notebook do aluno
-
----
-
-## Enunciado (texto que abre o formulário)
-
-### 🎮 Desafio GPU e Transformação Digital
-**Avaliação individual — 23/04/2026**
-
-Responda sozinho. São 15 questões de múltipla escolha sobre o que estudamos nas últimas semanas: hardware, IA, GPU e Transformação Digital.
-
-Não existe consulta — confie no que você já sabe.
+**Tipo:** MP — Mini Projeto  
+**Data de aplicação:** 23/04/2026 (Quinta-feira, A17) — introduzida ao final da aula  
+**Formação:** Dupla  
+**UCs cobertas:** UC07  
+**Indicadores:** UC07 Ind.1 · UC07 Ind.2 · UC07 Ind.3 · UC07 Ind.4  
+**Tempo estimado (aluno):** ~2-3 horas (parte em sala + complemento em casa)  
+**Plataforma de entrega:** E-mail para `leonardo.niclote@docente.pr.senac.br`  
+**Formato:** Documento Word salvo como PDF, formatação ABNT
 
 ---
 
-## Questões (15 no total)
+## Contexto pedagógico
 
-> **Distribuição:** Q1–2 → UC01 Ind.1 · Q3–6 → UC04 Ind.2 · Q7–8 → UC06 Ind.1 · Q9–10 → UC06 Ind.2 · Q11–15 → UC07 Ind.1–4 · Q16 → UC02 Ind.2
-
----
-
-### Q1 — UC01 Ind.1
-
-Qual componente de hardware é responsável por **executar as instruções dos programas** no computador?
-
-- A) RAM (memória)
-- B) CPU (processador) ✔️
-- C) SSD (armazenamento)
-- D) GPU (placa de vídeo)
+A visita técnica à **Limber** permitiu que os alunos observassem uma empresa real em funcionamento. Este relatório transforma essa experiência em aprendizagem estruturada: os alunos precisam organizar o que viram, ouviram e perguntaram em um documento formal que demonstra compreensão de conceitos de Transformação Digital (UC07).
 
 ---
 
-### Q2 — UC01 Ind.1
+## Enunciado (para o aluno)
 
-Qual das opções abaixo é um exemplo de **software**?
+### Relatório de Visita Técnica — Limber
 
-- A) Teclado
-- B) Processador
-- C) Memória RAM
-- D) Sistema Operacional Windows ✔️
+Você e sua dupla visitaram a Limber e tiveram a oportunidade de conhecer como a empresa funciona por dentro.
 
----
+Agora é hora de transformar o que vocês viram em um relatório formal. O relatório deve ter **4 seções obrigatórias**, respondendo às perguntas abaixo com base no que foi observado e nas respostas obtidas durante a visita.
 
-### Q3 — UC04 Ind.2
-
-**Machine Learning** é uma técnica de IA em que:
-
-- A) O programador escreve todas as regras manualmente
-- B) O sistema aprende padrões a partir de exemplos (dados de treino) ✔️
-- C) O robô recebe comandos por voz
-- D) A IA sempre precisa de conexão com a internet
+Escreva com suas próprias palavras, usando textos corridos — não apenas tópicos. Seja específico: prefira escrever *"a empresa usa o ChatGPT para redigir e-mails comerciais"* a *"eles usam IA"*.
 
 ---
 
-### Q4 — UC04 Ind.2
+## Seções Obrigatórias
 
-Qual técnica de IA é usada principalmente para **entender e gerar texto**, como em chatbots e tradutores?
+### Seção 1 — Estrutura Organizacional da Empresa
 
-- A) Visão Computacional
-- B) Robótica
-- C) NLP (Processamento de Linguagem Natural) ✔️
-- D) Redes Bayesianas
+Descreva como a Limber está organizada internamente:
 
----
+- Quais departamentos ou setores existem?
+- Quantos funcionários a empresa possui (aproximadamente)?
+- Como funciona a hierarquia — quem responde a quem?
+- Como os times se comunicam no dia a dia (reuniões, ferramentas digitais, etc.)?
 
-### Q5 — UC04 Ind.2
-
-**Deep Learning** é:
-
-- A) Uma forma de programação básica em Python
-- B) Um tipo de Machine Learning que usa redes neurais com muitas camadas ✔️
-- C) Um banco de dados muito grande
-- D) Um processador mais rápido que a CPU
+> **O que demonstra aprendizagem:** o aluno consegue mapear a estrutura de uma organização real e identificar como as áreas se relacionam — UC07 Ind.1.
 
 ---
 
-### Q6 — UC04 Ind.2
+### Seção 2 — Ramo de Atuação e Tempo de Mercado
 
-Um sistema de IA que **identifica automaticamente objetos em fotos** está usando qual área?
+Contextualize a empresa:
 
-- A) NLP
-- B) Visão Computacional (Computer Vision) ✔️
-- C) Robótica
-- D) Banco de Dados
+- O que a Limber faz? Qual produto ou serviço oferece?
+- Quem são os clientes (empresas, consumidores finais, governo)?
+- Há quanto tempo a empresa existe no mercado?
+- A empresa atua localmente, no Brasil inteiro ou internacionalmente?
+- Quais são os principais diferenciais competitivos ou concorrentes?
 
----
-
-### Q7 — UC06 Ind.1
-
-A principal diferença entre **CPU e GPU** é:
-
-- A) CPU é mais rápida que GPU em todos os casos
-- B) GPU tem muito mais núcleos e é melhor para tarefas paralelas, como treinar modelos de IA ✔️
-- C) GPU só serve para jogos — não funciona para IA
-- D) CPU e GPU fazem exatamente a mesma coisa
+> **O que demonstra aprendizagem:** o aluno situa a empresa no contexto do mercado e entende o posicionamento estratégico — UC07 Ind.1 e Ind.2.
 
 ---
 
-### Q8 — UC06 Ind.1
+### Seção 3 — Uso de Inteligência Artificial
 
-Por que **GPUs são usadas para treinar modelos de IA**?
+Analise se e como a empresa utiliza IA:
 
-- A) Porque são mais baratas que CPUs
-- B) Porque conseguem processar milhares de cálculos ao mesmo tempo (processamento paralelo) ✔️
-- C) Porque têm mais armazenamento que CPUs
-- D) Porque são menores e ocupam menos espaço
+- A empresa utiliza IA em algum setor ou processo? Em qual?
+- Qual ferramenta ou modelo é utilizado? (ChatGPT, Gemini, Copilot, solução interna, etc.)
+- Como a IA é usada na prática — quais tarefas ela realiza ou apoia?
+- Quem opera a IA: apenas o time técnico, todos os funcionários ou um time específico?
+- A empresa percebe benefícios concretos? Quais?
+- Se a empresa **não usa IA**, explique por quê e se há planos futuros de adoção.
 
----
-
-### Q9 — UC06 Ind.2
-
-No **pipeline de processamento de uma GPU**, qual é o papel da etapa de "rasterização"?
-
-- A) Definir os vértices (pontos) do objeto 3D
-- B) Converter a imagem vetorial 3D em pixels para exibir na tela ✔️
-- C) Calcular a cor final de cada pixel
-- D) Transferir dados da RAM para a GPU
+> **O que demonstra aprendizagem:** o aluno identifica aplicações reais de IA em uma organização e consegue relacionar com os conceitos de modelos e ferramentas estudados — UC07 Ind.2 e Ind.3.
 
 ---
 
-### Q10 — UC06 Ind.2
+### Seção 4 — Estratégia da Empresa e o Papel da IA
 
-Qual afirmação sobre **processamento paralelo em GPUs** está CORRETA?
+Reflita sobre a visão de futuro da organização:
 
-- A) Uma GPU pode processar milhares de operações ao mesmo tempo — essencial para treinar IA ✔️
-- B) GPUs são mais lentas que CPUs por terem muitos núcleos pequenos
-- C) GPUs só funcionam com jogos — não servem para IA
-- D) Processamento paralelo significa fazer uma tarefa de cada vez com mais velocidade
+- Qual é a estratégia de negócio da Limber nos próximos anos?
+- A IA já faz parte do plano estratégico ou ainda é experimental/pontual?
+- Em quais processos a IA poderia complementar ou substituir tarefas manuais?
+- Que riscos ou desafios a empresa enfrenta ao adotar (ou ao não adotar) IA?
+- Qual foi a sua percepção pessoal: a empresa está preparada para a transformação digital?
 
----
-
-### Q11 — UC07 Ind.1
-
-O que significa **Transformação Digital** para uma empresa?
-
-- A) Trocar todos os computadores por modelos mais novos
-- B) Usar tecnologia digital para transformar processos, produtos e a forma de trabalhar — gerando mais valor ✔️
-- C) Criar um site institucional para a empresa
-- D) Instalar câmeras de segurança e sistema de senhas
+> **O que demonstra aprendizagem:** o aluno conecta IA à estratégia empresarial e demonstra pensamento crítico sobre impactos e oportunidades — UC07 Ind.3 e Ind.4.
 
 ---
 
-### Q12 — UC07 Ind.2
+## O que deve ser entregue
 
-Qual das ferramentas abaixo é um exemplo de **IA generativa** usada por empresas no dia a dia?
-
-- A) Excel
-- B) Photoshop
-- C) ChatGPT / Gemini ✔️
-- D) WhatsApp
-
----
-
-### Q13 — UC07 Ind.3
-
-A **LGPD (Lei Geral de Proteção de Dados)** protege:
-
-- A) Apenas empresas grandes e bancos
-- B) Todas as pessoas — seus dados pessoais não podem ser coletados ou usados sem consentimento ✔️
-- C) Somente dados financeiros como CPF e conta bancária
-- D) Apenas dados armazenados fora do Brasil
+- [ ] Documento Word (.docx) formatado em ABNT
+- [ ] Salvo como PDF antes de enviar
+- [ ] Capa com nome da escola, título, nomes da dupla e data
+- [ ] As 4 seções respondidas com texto próprio (sem copiar ou usar IA para redigir)
+- [ ] Mínimo de 1 página por seção (sem contar a capa)
 
 ---
 
-### Q14 — UC07 Ind.4
+## Formatação ABNT obrigatória
 
-A **4ª Revolução Industrial** é caracterizada principalmente por:
+| Item | Especificação |
+|---|---|
+| Fonte | Arial, tamanho 12 |
+| Margens | Superior e Esquerda: 3 cm - Inferior e Direita: 2 cm |
+| Espaçamento entre linhas | 1,5 |
+| Recuo de parágrafo | 1,25 cm no início de cada parágrafo |
+| Numeração de páginas | Canto superior direito, a partir da 2ª página |
+| Títulos das seções | Negrito, tamanho 12, alinhado à esquerda |
 
-- A) Invenção do motor a vapor e início das fábricas
-- B) Produção em massa com linha de montagem
-- C) Surgimento da internet e computadores pessoais
-- D) Fusão do mundo físico e digital com IA, IoT, automação e Big Data ✔️
-
----
-
-### Q15 — UC07 Ind.4
-
-Qual setor foi significativamente transformado pela IA na **análise de exames e diagnóstico de doenças**?
-
-- A) Varejo
-- B) Transporte
-- C) Saúde ✔️
-- D) Construção Civil
+**Capa obrigatória contendo:**
+- Instituição: Senac — Técnico em Inteligência Artificial
+- Título: Relatório de Visita Técnica — Limber
+- Nomes completos da dupla
+- Cidade e data de entrega
 
 ---
 
-### Q16 — UC02 Ind.2
+## Entrega
 
-Leia a instrução abaixo, retirada de um manual de software:
+**E-mail:** `leonardo.niclote@docente.pr.senac.br`  
+**Assunto:** `Av02 - Relatório Limber - [Nome1] e [Nome2]`  
+**Anexo:** PDF do relatório completo
 
-> *"Click **Settings**, then select **Privacy**. Turn off **Location Access** to prevent apps from tracking your position."*
-
-O que essa instrução manda fazer?
-
-- A) Ligar o GPS para que os aplicativos encontrem sua localização
-- B) Desligar o acesso à localização para que os aplicativos não rastreiem você ✔️
-- C) Atualizar o sistema operacional pelo menu de configurações
-- D) Apagar todos os aplicativos instalados no dispositivo
-
----
-
-## Gabarito
-
-| Q | Resposta | UC / Indicador |
-|---|---|---|
-| 1 | B | UC01 Ind.1 |
-| 2 | D | UC01 Ind.1 |
-| 3 | B | UC04 Ind.2 |
-| 4 | C | UC04 Ind.2 |
-| 5 | B | UC04 Ind.2 |
-| 6 | B | UC04 Ind.2 |
-| 7 | B | UC06 Ind.1 |
-| 8 | B | UC06 Ind.1 |
-| 9 | B | UC06 Ind.2 |
-| 10 | A | UC06 Ind.2 |
-| 11 | B | UC07 Ind.1 |
-| 12 | C | UC07 Ind.2 |
-| 13 | B | UC07 Ind.3 |
-| 14 | D | UC07 Ind.4 |
-| 15 | C | UC07 Ind.4 |
-| 16 | B | UC02 Ind.2 |
+**Prazo:** [a definir com a turma]
 
 ---
 
 ## Critérios de Avaliação por Indicador
 
-| UC | Indicador | Questões | O que evidencia **A** | O que evidencia **PA** | O que evidencia **NA** |
-|---|---|---|---|---|---|
-| UC01 | Ind.1 | Q1 + Q2 | 2/2 corretas | 1/2 correta | 0/2 corretas |
-| UC04 | Ind.2 | Q3 + Q4 + Q5 + Q6 | 3–4/4 corretas | 2/4 corretas | 0–1/4 corretas |
-| UC06 | Ind.1 | Q7 + Q8 | 2/2 corretas | 1/2 correta | 0/2 corretas |
-| UC06 | Ind.2 | Q9 + Q10 | 2/2 corretas | 1/2 correta | 0/2 corretas |
-| UC07 | Ind.1–4 | Q11 + Q12 + Q13 + Q14 + Q15 | 4–5/5 corretas | 2–3/5 corretas | 0–1/5 corretas |
-| UC02 | Ind.2 | Q16 | Interpreta corretamente o trecho em inglês e escolhe a ação descrita | — | Erra ou chuta sem demonstrar compreensão |
+| UC | Indicador | O que evidencia **A** | O que evidencia **PA** | O que evidencia **NA** |
+|---|---|---|---|---|
+| UC07 | Ind.1 | Descreve estrutura organizacional com clareza: setores, hierarquia e comunicação identificados | Cita setores mas sem descrever hierarquia ou formas de comunicação | Não descreve a estrutura ou reproduz informações genéricas |
+| UC07 | Ind.2 | Relaciona ramo de atuação e tempo de mercado com contexto competitivo; identifica clientes e diferenciais | Cita o que a empresa faz mas sem contexto de mercado ou diferenciais | Não descreve o ramo de atuação ou entrega texto superficial |
+| UC07 | Ind.3 | Identifica ferramenta de IA, setor de uso, quem opera e impacto real percebido; ou argumenta coerentemente a ausência de IA | Menciona que a empresa usa IA mas sem especificar ferramenta, setor ou impacto | Não aborda o uso de IA ou entrega resposta genérica desconectada da visita |
+| UC07 | Ind.4 | Conecta IA à estratégia da empresa, aponta oportunidades e riscos e demonstra reflexão crítica própria | Menciona estratégia ou papel da IA mas sem reflexão crítica | Não aborda estratégia ou entrega opinião sem embasamento na visita |
 
 ---
 
 ## Orientações para o Professor
 
-**Preparação:** Criar o formulário no Google Forms com as 15 questões **antes de A15**. Configurar:
-- Embaralhar a ordem das alternativas (opção do Forms) — dificulta cópia entre alunos
-- Mostrar pontuação ao final (correção automática)
-- Aceitar somente uma resposta por email OU compartilhar via link sem login (mais simples)
+**Introdução em A17:** Apresentar nos slides finais da aula. Ler as seções com a turma. Esclarecer dúvidas antes de liberar.
 
-**UC02 Ind.2 (Q16):** uma só questão — avaliar como A (acertou) ou NA (errou). PA não se aplica a questão única.
+**Trabalho em sala:** se restar tempo em A17, as duplas iniciam o esboço — estimular que anotem tudo o que lembram enquanto está fresco.
 
-**Aplicação:** Projetar o link na tela (encurtar com bit.ly se necessário). Abrir o link só após explicar as instruções. Tempo: **25 min**. Circular pela sala durante o quiz.
+**Plágio e uso de IA para redigir:** atentar para respostas genéricas que não mencionam nomes, setores ou situações específicas da visita à Limber. Se o texto puder descrever qualquer empresa, provavelmente não é do aluno.
 
-**Se algum aluno não tiver dispositivo:** imprimir a versão papel das questões (copiar o enunciado deste arquivo) e corrigir manualmente com o gabarito acima.
+**Seção 3 (IA):** se a Limber não usar IA de forma significativa, a resposta esperada é uma análise de onde *poderia* usar — não deixar em branco.
 
-**Devolução:** o Google Forms já mostra o resultado ao aluno ao terminar. Após o quiz, fazer 10 min de devolutiva coletiva focando nas questões mais erradas. Registrar A/PA/NA por indicador usando a tabela acima.
-
-**Atenção:** Q9 e Q10 (pipeline GPU) tendem a ser as mais difíceis — se a maioria errar, revisar brevemente antes de avançar no conteúdo de A15.
-
-**UC02 Ind.2:** não foi incluído nesta avaliação. O indicador ficou sem cobertura formal no Plano E2 — considerar se há necessidade de ajuste em avaliação futura.
-
----
-
-## Link do formulário
-
-`[preencher após criar o Google Forms]`
+**Avaliação:** registrar A/PA/NA por indicador após leitura do PDF. Feedback oral na próxima aula é suficiente.

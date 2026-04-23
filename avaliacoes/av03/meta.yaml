@@ -1,7 +1,7 @@
 ﻿id: av03
-titulo: "Avaliação 03"
-tipo: TC
-prazo: "TBD"
-prazoLabel: "A definir"
-ucs: []
-status: em-planejamento
+titulo: "TokenLab — Calculadora de Custo de IA"
+tipo: AS
+prazo: "23/04/2026"
+prazoLabel: "Quinta-feira, 23/04 — fim da aula"
+ucs: [UC05, UC03, UC04]
+status: published

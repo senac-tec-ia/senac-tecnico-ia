@@ -1,9 +1,10 @@
 ---
-theme: ../slidev-theme-neural
+theme: ../../../neural-slides-template
 title: "Aula 01 — Introdução à Inteligência Artificial"
 titleTemplate: "%s | Técnico em IA"
 colorSchema: dark
 author: Leonardo Zanini
+github: LeoZanini
 courseTitle: Técnico em Inteligência Artificial
 footerLogo: /assets/senac-logo.png
 transition: slide-left

@@ -118,7 +118,22 @@ Após aprovação, gerar slides conforme a estrutura aprovada. Seguir as regras 
 
 ### Passo 5 — Exercícios são INLINE no slides.md
 
-Todos os exercícios com gabaritos são gerados **dentro do `slides.md`** usando `<v-click>`. Não existe handoff para `@autor-exercicios` para exercícios de slide — isso causaria um arquivo separado que não é o que queremos.
+Todos os exercícios com gabaritos são gerados **dentro do `slides.md`** usando `<AdminOnly>`. Não existe handoff para `@autor-exercicios` para exercícios de slide — isso causaria um arquivo separado que não é o que queremos.
+
+**Gabaritos SEMPRE dentro de `<AdminOnly>`** — nunca em `<v-click>` puro, pois `<v-click>` é visível ao projetar os slides:
+
+```markdown
+<AdminOnly>
+
+**Gabarito:**
+```python
+while hp > 0:
+    dano = randint(0, 10)
+    hp -= dano
+```
+
+</AdminOnly>
+```
 
 O arquivo `exercicios.md` existe apenas como rascunho de referência para o professor — o conteúdo dos gabaritos já está nos slides.
 
@@ -203,6 +218,26 @@ bgPreset: palette
 
 ## Referência de componentes
 
+### `AdminOnly` — Gabarito protegido por horário/role ⚠️ OBRIGATÓRIO para respostas
+```markdown
+<AdminOnly>
+
+**Gabarito:**
+```python
+# solução aqui
+```
+
+</AdminOnly>
+```
+O conteúdo só aparece após `unlockHour` da `aulaDate` (definidos no frontmatter global) **ou** para o professor logado com JWT admin.
+Nunca coloque gabaritos fora deste componente — `<v-click>` expõe a resposta ao projetar.
+
+Frontmatter global que controla o unlock:
+```yaml
+aulaDate:   "2026-04-17"   # data da aula
+unlockHour: 13             # hora de liberação (padrão 13 se omitido)
+```
+
 ### `MLToast` — Notificação com clique
 ```markdown
 <MLToast title="ATENÇÃO">
@@ -282,7 +317,7 @@ Conteúdo textual.
 - [ ] Ao menos 1 `[DEBATE]` por aulaNum
 - [ ] Zero em-dashes (`—`) em qualquer texto de slide
 - [ ] Todo texto visível em pt-BR
-- [ ] Exercícios com gabaritos em `<v-click>` dentro do `slides.md` — sem arquivo separado
+- [ ] Exercícios com gabaritos **dentro de `<AdminOnly>`** no `slides.md` — nunca em `<v-click>` puro, nunca em arquivo separado
 - [ ] `.github/agents/contextos/contexto-*.md` atualizado ao final da sessão
 - [ ] ⚠️ NÃO leu slides.md de aulas anteriores
 - [ ] ⚠️ NÃO rodou semantic_search
