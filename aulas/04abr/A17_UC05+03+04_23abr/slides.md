@@ -525,17 +525,126 @@ git push origin main
 > **Entrega:** envie o link do repositório GitHub por mensagem até o final da aula 🔗
 
 ---
-layout: end
+layout: center
 bgPreset: palette
+pulse: true
+---
+
+<!-- SLIDE 26 — [DIVISOR] Av.02 Relatório Limber -->
+
+# 📝 Av.02 — Relatório de Visita Técnica
+## Limber · em dupla · entrega por e-mail
+
+---
+layout: default
+bgPreset: default
+card: true
+---
+
+<!-- SLIDE 27 — [TEORIA] O que é o relatório -->
+
+# O que é este trabalho?
+
+Vocês visitaram a **Limber** e viram como uma empresa real funciona. Agora é hora de organizar isso em um relatório formal.
+
+**4 seções obrigatórias:**
+
+1. Estrutura organizacional da empresa
+2. Ramo de atuação e tempo de mercado
+3. Uso de IA — qual ferramenta, em qual setor, como usa
+4. Estratégia da empresa e onde a IA entra
+
+> Escrito em dupla · Word formatado em ABNT · Entregue como **PDF por e-mail**
+
+---
+layout: two-cols-text
+bgPreset: default
+---
+
+<!-- SLIDE 28 — [TEORIA] As 4 seções -->
+
+# As 4 seções
+
+**Seção 1 — Estrutura organizacional**
+
+Quais departamentos existem? Quantos funcionários? Como a hierarquia funciona? Como os times se comunicam?
+
+**Seção 2 — Ramo de atuação**
+
+O que a empresa faz? Quem são os clientes? Há quanto tempo existe? Atua local, nacional ou internacionalmente?
+
+::right::
+
+**Seção 3 — Uso de IA**
+
+Usam IA em algum setor? Qual ferramenta (ChatGPT, Gemini, etc.)? Quem opera? Qual impacto percebido?
+
+**Seção 4 — Estratégia e IA**
+
+Qual é o plano da empresa? A IA faz parte da estratégia ou é experimental? Onde poderia complementar processos manuais?
+
+---
+layout: default
+bgPreset: default
+---
+
+<!-- SLIDE 29 — [TEORIA] Formatação ABNT -->
+
+# Formatação obrigatória — ABNT
+
+| Item | Especificação |
+|---|---|
+| Fonte | Arial, tamanho 12 |
+| Margens | Superior/Esquerda: 3 cm · Inferior/Direita: 2 cm |
+| Espaçamento | 1,5 entre linhas |
+| Recuo | 1,25 cm no início de cada parágrafo |
+| Numeração de páginas | Canto superior direito |
+
+**Capa obrigatória:**
+- Nome da escola e do curso
+- Título: *Relatório de Visita Técnica - Limber*
+- Nomes completos da dupla
+- Data de entrega
+
+---
+layout: default
+bgPreset: palette
+card: true
+---
+
+<!-- SLIDE 30 — [TEORIA] Como entregar o relatório -->
+
+# Como entregar o relatório
+
+**Formato:** salve o Word como PDF antes de enviar
+
+```
+Para: leonardo.niclote@docente.pr.senac.br
+Assunto: Av02 - Relatório Limber - [Nomes da dupla]
+Anexo: relatorio-limber-[nomes].pdf
+```
+
+**Checklist antes de enviar:**
+- [ ] As 4 seções respondidas com texto próprio
+- [ ] Capa com nomes e data
+- [ ] Fonte Arial 12, espaçamento 1,5
+- [ ] Salvo como PDF
+- [ ] E-mail com assunto correto
+
+> **Prazo:** a confirmar — anotem quando o professor informar
+
+---
+layout: end
+bgPreset: animate
 github: LeoZanini
 avatar: https://github.com/LeoZanini.png?size=256
 ---
 
-<!-- SLIDE 26 — [ENCERRAMENTO] -->
+<!-- SLIDE 31 — [ENCERRAMENTO] -->
 
-# Av.03 — TokenLab
+# Boa aula, pessoal! 🚀
 
-**Boa sorte, dupla!** 🧮
+TokenLab + Av.02 — dois desafios, um dia.
 
 Qualquer dúvida, chame o professor.
 
