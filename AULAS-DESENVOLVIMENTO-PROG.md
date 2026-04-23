@@ -10,7 +10,7 @@
 
 ---
 
-## Sprint atual: A14
+## Sprint atual: A18
 
 | Sessão | UC | Disciplina | HA produzidos | Aula destino | HA ainda pendentes |
 |--------|----|-----------:|:-------------:|:------------:|:------------------:|
@@ -29,7 +29,8 @@
 | A14 | UC02 | Inglês Instrumental | 1 | 16/04 | 2 |
 | A15 | UC05 | Python para IA | 2 | 17/04 | 10 |
 | A15 | UC08 | Banco de Dados | 2 | 17/04 | 7 |
-| A15 | UC06 | Arquitetura e GPU | 2 | 17/04 | 4 || A14 | UC07 | Transformação Digital | 3 | 16/04 | 2 |
+| A15 | UC06 | Arquitetura e GPU | 2 | 17/04 | 4 |
+| A18 | UC09 | Estatística Aplicada | 3 | 24/04 | 4 || A14 | UC07 | Transformação Digital | 3 | 16/04 | 2 |
 | A14 | UC01 | Fund. Computação | 2 | 16/04 | 5 |
 | A14 | UC02 | Inglês Instrumental | 1 | 16/04 | 8 |
 | A15 | UC05 | Python para IA | 2 | 17/04 | 6 |
