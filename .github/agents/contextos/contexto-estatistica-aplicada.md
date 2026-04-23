@@ -68,12 +68,12 @@ Conceitos que os alunos já têm (relevantes para esta disciplina):
 | 2 | Função linear: predição prática, erro de predição (MAE intuitivo) | 1 | 1 | Exercício: prever custo de treino com n epochs |
 | 3 | Função polinomial: quadrática, raízes, gráfico em forma de U | 1 | 2 | Curva de loss em overfitting (formato U) |
 | 4 | Função polinomial: cúbica e comportamento — padrões em séries temporais | 1 | 2 | Previsão de demanda em sazonalidade |
-| 5 | Função logarítmica: `log(x)`, propriedades, escala logarítmica | 1 | 3 | Log-transformação de dados enviesados |
-| 6 | Função logarítmica: entropia e cross-entropy — intuição sem fórmula pesada | 1 | 3 | Loss function de classificação |
-| 7 | Função exponencial: `e^x`, crescimento exponencial | 1 | 4 | Crescimento de parâmetros de LLMs (1B → 175B) |
-| 8 | Função exponencial: sigmoid, softmax — intuição como funções de ativação | 1 | 4 | Sigmoid classifica, softmax distribui probabilidade |
-| 9 | Revisão T1: identificar o tipo de função em gráficos de treino | 1 | 1–4 | Dado um gráfico de loss/accuracy, nomear a função |
-| 10–11 | Exercício integrador: análise de gráficos de treino de um modelo real | 2 | 1–4 | Dataset real do TensorFlow/Keras loss history |
+| 5 | matplotlib + numpy: importar, plotar `y = ax + b` em Python, personalizar eixos | 1 | 1 | Primeiro gráfico real — "ver a reta que vocês calcularam" |
+| 6 | Scatter plot: dados reais (~8 pontos, ex: horas de estudo vs nota), observar tendência visual | 1 | 1 | Dataset de exemplo tabular simples |
+| 7 | Pandas: `read_csv`, `.head()`, `.describe()` — explorar dataset aberto real | 1 | 1–2 | Primeiro contato com DataFrame |
+| 8 | Média e mediana: `np.mean()`, `np.median()` — o que dizem sobre os dados; linha de média no gráfico | 1 | 1 | Estatística descritiva + visual lado a lado |
+| 9 | Exercício integrador (pt.1): carregar CSV → scatter → calcular média/mediana → gráfico final | 1 | 1–4 | Dataset aberto (temperaturas, preços, notas) |
+| 10–11 | Exercício integrador (pt.2): análise em dupla → gráfico + conclusão em 3 linhas → apresentar | 2 | 1–4 | Laboratório de dados completo |
 
 ---
 
@@ -84,23 +84,20 @@ Conceitos que os alunos já têm (relevantes para esta disciplina):
 | função linear | f(x) = ax + b — relação proporcional | **Introduzido A05** |
 | coeficiente angular | `a` = inclinação da reta | **Introduzido A05** |
 | coeficiente linear | `b` = onde a reta cruza o eixo y | **Introduzido A05** |
-| regressão linear | modelo que ajusta uma reta a dados | Pendente |
-| coeficiente angular | `a` em `ax + b` — inclinação da reta | Pendente |
-| função quadrática | f(x) = ax² + bx + c — parábola | **Introduzido A06** |
-| logaritmo | inverso da exponencial — log₂(8) = 3 | **Introduzido A06** |
-| exponencial | crescimento multiplicativo — `e^x`, `2^n` | **Introduzido A06** |
-| sigmoid | função que mapeia qualquer valor para [0,1] | Pendente |
-| softmax | normaliza vetor de scores em distribuição de probabilidade | Pendente |
-| loss function | função que mede o erro do modelo | Mencionado em D04 |
-| cross-entropy | loss para classificação — baseada em logaritmo | Pendente |
+| matplotlib | biblioteca Python para criar gráficos (`plt.plot`, `plt.scatter`, `plt.show`) | Pendente — A18 |
+| numpy | biblioteca para cálculos numéricos com arrays (`np.mean`, `np.median`, `np.array`) | Pendente — A18 |
+| pandas | biblioteca para dados tabulares — `DataFrame`, `read_csv`, `.describe()` | Pendente — A18 |
+| scatter plot | gráfico de pontos — cada ponto é um par (x, y) de dados reais | Pendente — A18 |
+| dataset | conjunto de dados estruturado em linhas e colunas para análise | Pendente — A18 |
+
 
 ---
 
 ## Regras para o Copilot
 
-1. **Coordenar com UC03:** Verificar `contexto-fundamentos-matematicos.md` antes de gerar — nunca repetir o que foi coberto lá
-2. **Gráfico real de IA em toda aula:** Não introduzir função matemática sem mostrar onde ela aparece em treino de modelos
-3. **Python para plotar:** `import matplotlib.pyplot as plt; import numpy as np` — todo exercício deve ter versão em código
-4. **1 HA = 1 conceito + 1 exercício:** Disciplina enxuta — alta densidade de prática por HA
-5. **Sigma, log e e com intuição:** Não derivar — mostrar o comportamento visualmente e o uso em IA
-6. **Sigmoid/softmax como funções de ativação:** Introduzir a intuição, não a backpropagation completa (isso é D04)
+1. **Metodologia obrigatória:** Python + matplotlib + numpy + pandas em todo bloco UC09 — nunca gerar teoria pura sem código rodável em aula.
+2. **Baseline da turma:** Alunos sabem função linear y=ax+b (conceito), Python básico (variáveis, if, for, print, f-string). **Não assumir nenhum conhecimento de NumPy/Pandas/matplotlib** — introduzir do zero com scaffold visual.
+3. **Coordenar com UC03:** Verificar `contexto-fundamentos-matematicos.md` antes de gerar — nunca repetir conteúdo matemático já coberto lá.
+4. **1 HA = 1 conceito + 1 exercício em código:** Sempre terminar com alunos tendo um gráfico ou cálculo rodando na tela.
+5. **Datasets reais e abertos:** Usar CSVs simples (dados públicos, Kaggle) — não inventar dados fictícios. Preferir contextos próximos: notas, temperaturas, preços locais.
+6. **Sem funções avançadas em T1:** sigmoid, softmax, log, exponencial não são o foco agora — focar em linear + matplotlib + estatística descritiva básica até a turma consolidar o laboratório de dados.

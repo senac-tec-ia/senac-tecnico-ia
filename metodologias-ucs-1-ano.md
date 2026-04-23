@@ -13,8 +13,7 @@ Desenvolvimento de Banco de Dados A metodologia deve se concentrar na aplicaçã
 
 
 Utilização da estatística aplicada e lógica matemática em aplicações de Inteligência Artificial
-
-A prática deve ser realizada em laboratório de dados, utilizando a linguagem Python e suas principais bibliotecas (como NumPy e Pandas). O aprendizado deve ser contextualizado por meio de estudos de caso e a manipulação de datasets de fontes abertas para que o aluno modele padrões, realize análises de probabilidade e tome decisões baseadas em dados. Fundamentos de Computação
+A prática deve ser realizada em laboratório de dados, utilizando a linguagem Python e suas principais bibliotecas (como NumPy e Pandas). O aprendizado deve ser contextualizado por meio de estudos de caso e a manipulação de datasets de fontes abertas para que o aluno modele padrões, realize análises de probabilidade e tome decisões baseadas em dados.
 
 
 Fundamentos de Computação Aprofundamento das Áreas do Conhecimento — Matemática, Física e Sociologia — da Formação Geral Básica articulados com o Componente Curricular da Formação Técnica. Com a Matemática, promove o desenvolvimento do raciocínio lógico, análise de padrões, sequenciação de tarefas, fundamentais para a construção de algoritmos, e utilização de planilhas eletrônicas para organização e interpretação de dados. Com a Física, permite a compreensão da estrutura e o funcionamento básico de hardware, periféricos e sistemas digitais, explorando conceitos de energia, eletricidade e o desempenho dos mecanismos tecnológicos que sustentam a computação. Com a Sociologia, aborda a interação humana com a tecnologia, a ética digital, segurança da informação e impactos sociais, estimulando o uso consciente e crítico das ferramentas digitais. Inclui reflexões sobre inclusão digital e a proteção de dados pessoais, em conformidade com a LGPD (Lei Geral de Proteção de Dados).   

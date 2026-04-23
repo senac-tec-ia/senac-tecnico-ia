@@ -147,25 +147,16 @@ Tamanho         : curto
   Gemini Flash : R$ 0.012
 
 --------------------------------------------
- CUSTO PARA 1.000 CHAMADAS
---------------------------------------------
-  GPT-4        : R$ 3.6
-  GPT-3.5      : R$ 0.36
-  Gemini Flash : R$ 0.12
-
---------------------------------------------
- RECOMENDAÇÃO
---------------------------------------------
-  Mais barato : Gemini Flash
-  Mais capaz  : GPT-4
-
---------------------------------------------
  CONTEXT WINDOW
 --------------------------------------------
   GPT-4        : ✅ cabe    (12 / 8000 tokens)
   GPT-3.5      : ✅ cabe    (12 / 4000 tokens)
   Gemini Flash : ✅ cabe    (12 / 32000 tokens)
 
+--------------------------------------------
+ RECOMENDAÇÃO
+--------------------------------------------
+  Modelo mais barato: Gemini Flash
 ============================================
 ```
 
@@ -182,7 +173,7 @@ Tamanho         : curto
 
 ### Fase Bônus — se sobrar tempo 🚀
 
-Se a dupla terminar as 5 fases, transforme os cálculos de custo em **uma função**:
+Se a dupla terminar as 4 fases, transforme os cálculos de custo em **uma função**:
 
 ```python
 def calcular_custo(tokens, preco_por_mil):
@@ -346,29 +337,63 @@ Tamanho         : curto
   Gemini Flash : R$ 0.006
 
 --------------------------------------------
- CUSTO PARA 1.000 CHAMADAS
---------------------------------------------
-  GPT-4        : R$ 1.8
-  GPT-3.5      : R$ 0.18
-  Gemini Flash : R$ 0.06
-
---------------------------------------------
- RECOMENDAÇÃO
---------------------------------------------
-  Mais barato : Gemini Flash
-  Mais capaz  : GPT-4
-
---------------------------------------------
  CONTEXT WINDOW
 --------------------------------------------
   GPT-4        : ✅ cabe    (6 / 8000 tokens)
   GPT-3.5      : ✅ cabe    (6 / 4000 tokens)
   Gemini Flash : ✅ cabe    (6 / 32000 tokens)
 
+--------------------------------------------
+ RECOMENDAÇÃO
+--------------------------------------------
+  Modelo mais barato: Gemini Flash
 ============================================
 ```
 
 > ⚠️ A formatação dos decimais vai variar dependendo de como o aluno usou f-strings. Aceite qualquer representação numérica correta (0.0018 / 1.8e-3 / etc.) — o valor precisa estar certo, não o formato.
+
+---
+
+## 📌 Nota de produção — A18 (slide de apoio)
+
+> Instrução para o @produtor-aula ao gerar os slides da A18: incluir um slide de **starter code** no início da aula, para os alunos que ainda não terminaram a Av.03 copiarem como ponto de partida da estrutura de `print`.
+
+**Conteúdo do slide (inserir como slide de código, layout `default` ou `two-cols`):**
+
+```python
+# av03_tokenlab.py
+# Dupla: _____________ e _____________
+
+texto = input("Digite o prompt: ")
+caracteres = len(texto)
+tokens = caracteres // 4
+if tokens == 0:
+    tokens = 1
+
+print("============================================")
+print("       TOKENLAB — Calculadora de Custo IA")
+print("============================================")
+print()
+print(f"Texto analisado : {texto}")
+print(f"Caracteres      : {caracteres}")
+print(f"Tokens estimados: {tokens}")
+
+# --- Fase 1: classifique o tamanho ---
+# tamanho = ???
+
+# --- Fase 2: custo para 1 chamada ---
+# custo_gpt4   = ???
+# custo_gpt35  = ???
+# custo_gemini = ???
+
+print("--------------------------------------------")
+print(" CUSTO POR MODELO (1 chamada)")
+print("--------------------------------------------")
+# print(f"  GPT-4        : R$ {custo_gpt4}")
+# ...
+```
+
+**Contexto do slide:** "Copie esse esqueleto e preencha os `???`. A estrutura do `print` já está pronta — o trabalho de vocês é calcular os valores."
 
 ---
 
