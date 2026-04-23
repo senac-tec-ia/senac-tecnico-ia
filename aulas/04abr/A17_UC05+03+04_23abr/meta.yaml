@@ -3,7 +3,7 @@
 
 aula: "17"
 slug: "a17-uc05-03-04-23abr"
-title: "Aula 17 — Python + Matemática + Fund. IA"
+title: "Aula 17 — Av.03 TokenLab"
 author: "Leonardo Zanini"
 courseTitle: "Técnico em Inteligência Artificial"
 
@@ -12,7 +12,11 @@ disciplines: ["UC05", "UC03", "UC04"]
 date: "23/04/2026"
 
 # draft | em-planejamento | ready | published
-status: em-planejamento
+status: published
+
+slideCount: 26
+
+agentsUsed: ["produtor-aula"]
 
 deployUrl: ""
 
