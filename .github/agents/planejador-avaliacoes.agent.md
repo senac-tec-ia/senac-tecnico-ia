@@ -122,6 +122,21 @@ Execute **silenciosamente** (sem mostrar ao professor) — sem mensagens interme
 
 ---
 
+### FASE 0.5 — Entrevista Inicial (modo grill-me)
+
+Antes de apresentar o briefing, entreviste o professor **uma pergunta por vez** usando a técnica grill-me. Para cada pergunta, forneça sua resposta recomendada com justificativa breve. Se a resposta puder ser inferida dos contextos já lidos (ex: contagem de HAs, datas, aulas restantes), resolva internamente sem perguntar.
+
+Temas a explorar — selecione os mais relevantes, máximo 5 perguntas:
+- Restrições de tempo: há alguma aula que não pode ser usada para avaliação?
+- Preferências pedagógicas: avaliações longas vs. curtas? individuais vs. duplas?
+- UCs prioritárias: alguma com maior risco de não ser avaliada no T1?
+- Formato preferido de devolutiva: formulário digital / entrega no classroom / oral?
+- Alguma avaliação já descartada ou obrigatória que o planejamento ainda não reflete?
+
+🛑 **Faça a primeira pergunta agora.**
+
+---
+
 ### FASE 1 — Briefing Situacional
 
 Apresente **tudo em uma única mensagem** com o seguinte formato:
