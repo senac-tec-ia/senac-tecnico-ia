@@ -1,0 +1,24 @@
+# Metadados da Aula — Neural Slides
+# Preenchido pelo CLI ao rodar `course new`
+
+aula: "19"
+slug: "a19-uc07-01-02-30abr"
+title: "Aula 19 — Transformação Digital + Fundamentos da Computação + Inglês Instrumental"
+author: "Leonardo Zanini"
+courseTitle: "Técnico em Inteligência Artificial"
+
+disciplines:
+  - UC07
+  - UC01
+  - UC02
+
+date: "30/04/2026"
+
+# draft | em-planejamento | published
+status: em-planejamento
+
+deployUrl: ""
+
+slideCount: 0
+
+agentsUsed: []
