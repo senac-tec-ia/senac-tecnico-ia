@@ -11,11 +11,11 @@
 | Campo | Valor |
 |---|---|
 | Trimestre | T1 2026 |
-| Data de hoje | 06/04/2026 |
-| Fim do trimestre | 14/05/2026 (A20) |
-| Última atualização deste arquivo | 07/04/2026 |
-| Estado do planejamento | `AV3_ELABORADA` — Av.1, Av.2 e Av.3 detalhadas, próxima Av.4 |
-| Avaliação atual | Av.4 — Python N2: Scripts Avançados com Listas e Integração |
+| Data de hoje | 27/04/2026 |
+| Fim do trimestre | 14/05/2026 (A22) |
+| Última atualização deste arquivo | 27/04/2026 |
+| Estado do planejamento | `AV6_ELABORADA` — Av.1–6 detalhadas · 14/05 = recuperação |
+| Avaliação atual | Concluído — plano completo com 6 avaliações |
 
 ---
 
@@ -51,7 +51,7 @@
 
 | Ind. | Descrição resumida | Status pedagógico | Avaliação prevista |
 |---|---|---|---|
-| 1 | Diferencia hw/sw e opera Windows | Em andamento | Av.2 (PQ) |
+| 1 | Diferencia hw/sw e opera Windows | Em andamento | Av.4 (PQ) |
 | 2 | Cria, edita, formata documentos no Word | Parcialmente dado | Av.1 (TC) |
 | 3 | Aplica edição e revisão em documentos Word | Parcialmente dado | Av.1 (TC) |
 
@@ -60,7 +60,7 @@
 | Ind. | Descrição resumida | Status pedagógico | Avaliação prevista |
 |---|---|---|---|
 | 1 | Reconhece vocabulário técnico em inglês | Em andamento | Av.1 (TC) |
-| 2 | Interpreta instruções simples em inglês | Pendente | Av.2 (PQ) — Q16 |
+| 2 | Interpreta instruções simples em inglês | Pendente | Av.4 (PQ) — Q8 |
 
 ### UC03 — Fundamentos Matemáticos
 
@@ -68,7 +68,7 @@
 |---|---|---|---|
 | 1 | Aplica aritmética e álgebra em problemas de computação | Em progresso | Av.3 (AS Python N1) |
 | 2 | Utiliza lógica matemática para estruturar raciocínios | Em progresso | Av.3 (AS Python N1) |
-| 3 | Emprega conjuntos, funções e matrizes | Pendente | Av.4 (AS Python N2) |
+| 3 | Emprega conjuntos, funções e matrizes | Pendente | Av.5 (AS Python N2) |
 | 4 | Reconhece padrões e sequências numéricas | Pendente | Av.6 (MP) |
 
 ### UC04 — Fundamentos e Conceitos de IA
@@ -76,63 +76,74 @@
 | Ind. | Descrição resumida | Status pedagógico | Avaliação prevista |
 |---|---|---|---|
 | 1 | Identifica conceitos e fundamentos de IA | Em andamento | Av.1 (TC) |
-| 2 | Classifica métodos, algoritmos e técnicas em IA | Avançado | Av.2 (PQ) |
+| 2 | Classifica métodos, algoritmos e técnicas em IA | Avançado | Av.4 (PQ) |
 
 ### UC05 — Python para IA
 
 | Ind. | Descrição resumida | Status pedagógico | Avaliação prevista |
 |---|---|---|---|
-| 1 | Elabora código Python (lógica, condicionais, funções) | Em andamento | Av.3 (AS N1) + Av.4 (AS N2) |
-| 2 | Utiliza comandos de integração (estruturas de dados, bibliotecas) | Pendente | Av.6 (MP) |
+| 1 | Elabora código Python (lógica, condicionais, funções) | Em andamento | Av.3 (AS N1) + Av.5 (AS N2) |
+| 2 | Utiliza comandos de integração (estruturas de dados, bibliotecas) | Pendente | Av.5 + Av.6 (MP) |
 
 ### UC06 — Arquitetura de Computadores e GPU
 
 | Ind. | Descrição resumida | Status pedagógico | Avaliação prevista |
 |---|---|---|---|
-| 1 | Reconhece modelos de arquitetura de computadores e GPU | Em andamento | Av.2 (PQ) |
-| 2 | Reconhece e aplica conceitos de Pipeline para GPU | Pendente | Av.2 (PQ) |
+| 1 | Reconhece modelos de arquitetura de computadores e GPU | Em andamento | Av.4 (PQ) |
+| 2 | Reconhece e aplica conceitos de Pipeline para GPU | Pendente | Av.4 (PQ) |
 
 ### UC07 — Transformação Digital
 
 | Ind. | Descrição resumida | Status pedagógico | Avaliação prevista |
 |---|---|---|---|
-| 1 | Fundamentos de TD | Em andamento | Av.2 (PQ) |
-| 2 | Ferramentas digitais de IA | Em andamento | Av.2 (PQ) |
-| 3 | Segurança digital na TD | Em andamento | Av.2 (PQ) |
-| 4 | Rupturas das tecnologias emergentes | Em andamento | Av.2 (PQ) |
+| 1 | Fundamentos de TD | Em andamento | Av.2 (MP Limber) |
+| 2 | Ferramentas digitais de IA | Em andamento | Av.2 (MP Limber) |
+| 3 | Segurança digital na TD | Em andamento | Av.2 (MP Limber) |
+| 4 | Rupturas das tecnologias emergentes | Em andamento | Av.2 (MP Limber) |
 
 ### UC08 — Banco de Dados
 
 | Ind. | Descrição resumida | Status pedagógico | Avaliação prevista |
 |---|---|---|---|
-| 1 | Propõe alteração no acesso a dados (FK/JOIN) | Pendente — conteúdo a ser dado em A14 | Av.6 (MP) |
-| 2 | Seleciona SGBD conforme necessidades | Pendente | Av.5 (AS SQL) |
-| 3 | Cria estrutura física de banco de dados | Parcialmente dado | Av.5 (AS SQL) |
+| 1 | Propõe alteração no acesso a dados (FK/JOIN) | Parcialmente dado | Av.6 (MP Integrado) |
+| 2 | Seleciona SGBD conforme necessidades | Parcialmente dado | Av.6 (MP Integrado) |
+| 3 | Cria estrutura física de banco de dados | Parcialmente dado | Av.6 (MP Integrado) |
 
 ### UC09 — Estatística Aplicada
 
 | Ind. | Descrição resumida | Status pedagógico | Avaliação prevista |
 |---|---|---|---|
-| 1 | Compreende e aplica funções lineares | Em andamento | Av.6 (MP) |
-| 2 | Compreende e aplica funções polinomiais | Em andamento | Av.6 (MP) |
-| 3 | Compreende e aplica funções logarítmicas | Em andamento | Av.6 (MP) |
-| 4 | Compreende e aplica funções exponenciais | Em andamento | Av.6 (MP) |
+| 1 | Compreende e aplica funções lineares | Em andamento | Av.6 (MP Integrado) |
+| 2 | Compreende e aplica funções polinomiais | Em andamento | Av.6 (MP Integrado) |
+| 3 | Compreende e aplica funções logarítmicas | Em andamento | Av.6 (MP Integrado) |
+| 4 | Compreende e aplica funções exponenciais | Em andamento | Av.6 (MP Integrado) |
 
 **Total de indicadores T1 a avaliar:** 26 indicadores em 9 UCs ✅
 
 ---
 
-## Plano de Avaliações — E2 Aprovado
+## Plano de Avaliações — Revisado em 27/04/2026
 
-> Plano "Duas Chances de Python" — aprovado pelo professor em 06/04/2026.  
-> Datas ajustadas para alinhar com `contexto-horario-trimestral.md`.
+> Plano final comprimido para fechar T1 até 08/05, com 14/05 reservado para recuperações.
+> Aprovado pelo professor em 27/04/2026.
 
-| # | Nome da Avaliação | Tipo | UCs / Indicadores | Data-alvo | Alinhamento horário | Status |
-|---|---|---|---|---|---|---|
-| 1 | Glossário IA: Identifica Fundamentos, Cria Word Bilíngue e Reflete sobre Ética | TC | UC01: Ind.2+3 · UC02: Ind.1 · UC04: Ind.1 | até A12 (10/04 Sex) | Entrega em casa — sem restrição | ✅ Detalhada → [av01-glossario-ia.md](aval/av01-glossario-ia.md) |
-| 2 | Desafio GPU e TD: Reconhece Arquitetura, Pipeline GPU, Classifica Técnicas IA e Avalia Ferramentas Digitais | PQ – individual | UC01: Ind.1 · UC02: Ind.2 · UC04: Ind.2 · UC06: Ind.1+2 · UC07: Ind.1+2+3+4 | A15 (23/04 Thu) | Sem2-Thu = UC07 3HA — bloco TD ideal para PQ | ✅ Detalhada → [av02](aval/av02-pq-gpu-td.md) |
-| 3 | Python N1: TriaBot 🏥 — Triagem com Condicionais Compostas (and/or) | AS – dupla, git | UC05: Ind.1 · UC03: Ind.1+2 | A13 (16/04 Thu) | Sem1-Thu = UC05 3HA ✅ | ✅ Detalhada → [av03](aval/av03-python-n1.md) |
-| 4 | Python N2: Utiliza Listas, Dicionários e Funções com Parâmetros para Organizar Dados | AS – dupla, git | UC05: Ind.1+2 · UC03: Ind.3 | A17 (30/04 Thu) | Sem1-Thu = UC05 3HA ✅ | Pendente |
+| # | Nome da Avaliação | Tipo | UCs / Indicadores | Data-alvo | Status |
+|---|---|---|---|---|---|
+| 1 | Glossário IA: Word Bilíngue + Minha Opinião | TC | UC01: Ind.2+3 · UC02: Ind.1 · UC04: Ind.1 | até A13 (10/04) | ✅ Detalhada |
+| 2 | Relatório de Visita Técnica: Limber | MP | UC07: Ind.1+2+3+4 | A17 (23/04) | ✅ Detalhada |
+| 3 | Pseudocódigo + TokenLab | AS dupla | UC05: Ind.1 · UC03: Ind.1+2+3 · UC04: Ind.1 | A17 (23/04) | ✅ Detalhada |
+| **4** | **Quiz: GPU + Arquitetura + IA** | **PQ individual · papel** | **UC06: Ind.1+2 · UC04: Ind.2 · UC01: Ind.1 · UC02: Ind.2** | **A19 abertura (30/04) — 25 min** | **✅ Detalhada** |
+| **5** | **Python N2: DataList** | **AS dupla · git** | **UC05: Ind.1+2 · UC03: Ind.3** | **A20 (07/05)** | **✅ Detalhada** |
+| **6** | **Projeto Integrado: SQL + Python + Pandas + Matplotlib** | **MP dupla · git + PDF** | **UC08: Ind.1+2+3 · UC09: Ind.1+2+3+4 · UC03: Ind.4 · UC05: Ind.2** | **A21 (08/05)** | **✅ Detalhada** |
+| — | **Recuperação** | Qualquer formato | Todos os PA/NA pendentes | **14/05 (A22) — dia inteiro** | Reservado |
+
+**Cobertura total: 26/26 indicadores T1 ✅**
+
+### Nota sobre 02/05 (Sábado — reposição)
+
+Dia reservado para **ensino**, não avaliação:
+- 6HA livres para UC05: `def`/`return`, listas, dicionários, Pandas, NumPy, Matplotlib
+- Pré-requisito para Av.05 (07/05) e Av.06 (08/05)
 | 5 | SQL na Prática: Seleciona SGBD, Cria Estrutura Física e Aplica DDL + DQL | AS – dupla, git | UC08: Ind.2+3 | A16 (24/04 Sex) | Sem2-Fri = UC08 2HA ✅ | Pendente |
 | 6 | Mini Projeto: Python + BD + Funções Matemáticas — análise de dados com entrevista oral 1-on-1 | MP | UC05: Ind.2 · UC08: Ind.1 · UC09: Ind.1-4 · UC03: Ind.4 | entrega A19 (08/05) · 1-on-1 A20 (14/05) | Sem2-Fri = UC05+UC08 time | Pendente |
 

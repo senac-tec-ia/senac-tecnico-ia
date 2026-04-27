@@ -1,4 +1,14 @@
 ﻿id: av06
+titulo: "Projeto Integrado — SQL + Python + Pandas + Matplotlib"
+tipo: MP
+prazo: 08/05/2026
+prazo-label: "08/05 — durante a aula, dupla"
+ucs:
+  - UC05
+  - UC08
+  - UC09
+  - UC03
+status: em-planejamento
 titulo: "Avaliação 06"
 tipo: TC
 prazo: "TBD"

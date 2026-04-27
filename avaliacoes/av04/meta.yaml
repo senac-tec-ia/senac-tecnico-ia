@@ -1,4 +1,14 @@
 ﻿id: av04
+titulo: "Quiz GPU + Arquitetura + IA"
+tipo: PQ
+prazo: 30/04/2026
+prazo-label: "30/04 — abertura da aula, 25 min"
+ucs:
+  - UC06
+  - UC04
+  - UC01
+  - UC02
+status: em-planejamento
 titulo: "Avaliação 04"
 tipo: TC
 prazo: "TBD"

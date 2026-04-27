@@ -115,6 +115,8 @@ if (categories.contexto) {
   for (const { filepath } of categories.contexto) {
     // Files inside the /aval sub-directory are evaluation sheets, not HA context files
     if (filepath.includes('/contextos/aval/')) continue
+    // Only discipline context files (contexto-*.md) require HA/Estado Geral structure
+    if (!filepath.split('/').pop().startsWith('contexto-')) continue
     const fullpath = join(ROOT, filepath)
     if (existsSync(fullpath)) {
       const content = readFileSync(fullpath, 'utf8')
