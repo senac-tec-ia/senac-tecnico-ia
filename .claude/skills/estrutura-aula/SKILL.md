@@ -1,3 +1,10 @@
+---
+name: estrutura-aula
+description: Ordem pedagógica T→E→D→TC, inferência de tags, blocos obrigatórios por aula e templates de debate e tarefa. Use ao criar ou auditar slides.
+---
+---
+name: estrutura-aula
+---
 # Skill: Estrutura de Aula — Técnico em IA (T→E→D→TC)
 
 Use esta skill ao criar ou auditar slides para garantir que a sequência pedagógica está correta.

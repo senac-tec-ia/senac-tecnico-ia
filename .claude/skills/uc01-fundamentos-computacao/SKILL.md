@@ -1,3 +1,10 @@
+---
+name: uc01-fundamentos-computacao
+description: Diretrizes pedagógicas, tópicos já cobertos e indicadores T1 de UC01 — Fundamentos de Computação.
+---
+---
+name: uc01-fundamentos-computacao
+---
 # Skill: UC01 — Fundamentos de Computação
 
 **Código:** UC01 | **Carga Total:** 34h (41 HA) | **Peso no dia:** Médio (2 HA/bloco)

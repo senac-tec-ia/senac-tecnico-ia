@@ -1,3 +1,10 @@
+---
+name: uc08-banco-de-dados
+description: Diretrizes pedagógicas, sequência sugerida T1 e indicadores de UC08 — Desenvolvimento de Banco de Dados.
+---
+---
+name: uc08-banco-de-dados
+---
 # Skill: UC08 — Desenvolvimento de Banco de Dados
 
 **Código:** UC08 | **Carga Total:** 67h (80 HA) | **Peso no dia:** Pesado (3 HA/bloco, Bloco 1)

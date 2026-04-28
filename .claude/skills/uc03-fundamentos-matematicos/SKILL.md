@@ -1,3 +1,10 @@
+---
+name: uc03-fundamentos-matematicos
+description: Diretrizes pedagógicas, sequência sugerida T1 e indicadores de UC03 — Fundamentos Matemáticos para Computação e IA.
+---
+---
+name: uc03-fundamentos-matematicos
+---
 # Skill: UC03 — Fundamentos Matemáticos para Computação e IA
 
 **Código:** UC03 | **Carga Total:** 33h (40 HA) | **Peso no dia:** Leve-Médio (1-2 HA/bloco)

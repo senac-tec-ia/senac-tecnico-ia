@@ -1,3 +1,10 @@
+---
+name: estilo-pedagogico
+description: Estilo de escrita para alunos do Técnico em IA (~14 anos): linguagem simples, exemplos em contexto IA/dados, sem en-dash, termos em inglês explicados na primeira ocorrência.
+---
+---
+name: estilo-pedagogico
+---
 # skillname:Estilo Pedagógico — Técnico em IA (Senac)
 
 Aplicar este estilo sempre que escrever conteúdo visível para os alunos: slides, enunciados de exercícios, tarefas e gabaritos.

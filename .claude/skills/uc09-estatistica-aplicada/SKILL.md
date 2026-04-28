@@ -1,3 +1,10 @@
+---
+name: uc09-estatistica-aplicada
+description: Diretrizes pedagógicas, sequência sugerida e indicadores de UC09 — Estatística Aplicada e Lógica Matemática em IA.
+---
+---
+name: uc09-estatistica-aplicada
+---
 # Skill: UC09 — Estatística Aplicada e Lógica Matemática em IA
 
 **Código:** UC09 | **Carga Total:** 33h (40 HA) | **Peso no dia:** Leve (1 HA/bloco, Bloco 3)
