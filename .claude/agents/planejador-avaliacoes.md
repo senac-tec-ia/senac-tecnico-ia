@@ -1,7 +1,7 @@
 ---
 name: planejador-avaliacoes
 description: Planejador interativo de atividades avaliativas do T1. Lê os contextos das 9 UCs, entende o modelo pedagógico Senac (Atendido/Parcialmente Atendido/Não Atendido), calcula o tempo restante até 14/05, apresenta 5 alternativas de organização das avaliações e elabora cada avaliação detalhadamente com 4 opções de estrutura. Opera em modo conversa iterativo — nunca avança sem aprovação. Armazena todo contexto em /contexto/ATIVIDADES_AVALIATIVAS.md de forma atômica.
-model: claude-opus-4-5
+model: opus
 tools:
   - Edit
   - Glob

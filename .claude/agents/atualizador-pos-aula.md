@@ -1,7 +1,7 @@
 ---
 name: atualizador-pos-aula
 description: Agente de sincronização pós-aula simplificado. Atualiza rapidamente o histórico e os contextos com base no relato do professor e nos títulos de slides da aula. NÃO faz planejamento nem análise extensa.
-model: claude-haiku-4-5
+model: haiku
 tools:
   - Edit
   - Glob

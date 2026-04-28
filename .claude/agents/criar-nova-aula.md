@@ -1,7 +1,7 @@
 ---
 name: criar-nova-aula
 description: Agente para criar uma ou mais pastas de aula no padrão A{NN}_UCXX_{DD}{MMM} (ex: A14_UCXX_16abr). Copia neural-slides-template, ajusta meta.yaml e package.json, registra scripts no package.json raiz. Nunca copia .github/. Aceita múltiplos números em sequência.
-model: claude-sonnet-4-5
+model: sonnet
 tools:
   - Bash
   - Edit

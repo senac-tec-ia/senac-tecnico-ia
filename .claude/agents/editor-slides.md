@@ -7,7 +7,7 @@ description: >
   em batches de até 5 slides, expande sem cortar), --mode=audit (audita e corrige estrutura
   T→E→D→TC em slides.md e estrutura-aula.md). NUNCA gera aulas do zero. Carrega as skills
   densidade-slides, estrutura-aula e layouts-slidev antes de qualquer edição.
-model: claude-sonnet-4-5
+model: sonnet
 tools:
   - Read
   - Write

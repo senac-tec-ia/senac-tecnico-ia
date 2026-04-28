@@ -1,7 +1,7 @@
 ---
 name: Leovio
 description: Agente de contexto e implementação da plataforma LMS do curso Técnico em IA SENAC. Use para: implementar issues pendentes da plataforma (ISSUE-1 a ISSUE-6), setup Cloudflare D1, CI/CD GitHub Actions, build do portal, instalação de deps, documentar convenções. Conhece a arquitetura completa do monorepo, convenções de nomenclatura, sistema de release, stack Vite+Vue+Cloudflare.
-model: claude-opus-4-5
+model: opus
 tools:
   - Bash
   - Edit
