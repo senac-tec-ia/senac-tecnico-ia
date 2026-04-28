@@ -1,7 +1,7 @@
 ---
 name: gerador-uc
 description: Agente genérico para geração de slides e exercícios de qualquer UC do curso Técnico em IA (Senac). Substitui os 9 agentes individuais de UC. Recebe o código da UC (UC01–UC09), carrega a skill correspondente, lê o contexto vivo, determina o próximo conteúdo e delega para o produtor-aula. Suporta modo executor (padrão) e modo consultor.
-model: claude-sonnet-4-5
+model: sonnet
 tools:
   - Edit
   - Glob

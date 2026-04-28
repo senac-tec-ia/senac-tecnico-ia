@@ -1,7 +1,7 @@
 ---
 name: revisor-commit
 description: Revisor pré-commit para o repositório Senac Técnico em IA. Analisa diffs staged, avalia impacto em agentes/contextos/slides/scripts, detecta problemas estruturais, e sugere melhorias antes de commitar. Pode ser invocado manualmente (@revisor-commit) ou automaticamente via git hook pre-commit.
-model: claude-sonnet-4-5
+model: sonnet
 tools:
   - Bash
   - Edit
