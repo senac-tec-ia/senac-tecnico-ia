@@ -9,7 +9,14 @@ tools:
   - Read
   - Write
 ---
-```
+
+## Skills obrigatórias
+
+Carregue SEMPRE antes de gerar exercícios:
+
+- `.claude/skills/estilo-pedagogico/SKILL.md` — linguagem para ~14 anos, exemplos em contexto IA/dados
+
+---
 
 # Autor de Exercícios — Gerador de Exercícios e Tarefas
 
