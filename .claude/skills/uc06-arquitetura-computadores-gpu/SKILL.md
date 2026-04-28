@@ -1,3 +1,10 @@
+---
+name: uc06-arquitetura-computadores-gpu
+description: Diretrizes pedagógicas, consolidado (A03), próximos tópicos e indicadores de UC06 — Arquitetura de Computadores e GPU.
+---
+---
+name: uc06-arquitetura-computadores-gpu
+---
 # Skill: UC06 — Arquitetura de Computadores e GPU
 
 **Código:** UC06 | **Carga Total:** 33h (40 HA) | **Peso no dia:** Médio (2 HA/bloco)

@@ -1,3 +1,10 @@
+---
+name: layouts-slidev
+description: Layouts disponíveis, frontmatter de slide, componentes Vue (AdminOnly, MLToast, SlideTable, v-click) e convenções visuais. Use ao escrever qualquer slide.
+---
+---
+name: layouts-slidev
+---
 # Skill: Layouts Slidev — Técnico em IA
 
 Use esta skill ao escrever ou editar qualquer slide do curso.

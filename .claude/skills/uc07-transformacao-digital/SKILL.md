@@ -1,3 +1,10 @@
+---
+name: uc07-transformacao-digital
+description: Diretrizes pedagógicas, consolidado (A01/A02) e indicadores T1 de UC07 — Transformação Digital e Estratégias de Informação para IA.
+---
+---
+name: uc07-transformacao-digital
+---
 # Skill: UC07 — Transformação Digital e Estratégias de Informação para IA
 
 **Código:** UC07 | **Carga Total:** 67h (80 HA) | **Peso no dia:** Pesado (3 HA/bloco, Bloco 1 ou 2)

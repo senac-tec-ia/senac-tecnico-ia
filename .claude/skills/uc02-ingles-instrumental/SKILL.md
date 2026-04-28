@@ -1,3 +1,10 @@
+---
+name: uc02-ingles-instrumental
+description: Diretrizes pedagógicas, vocabulário já consolidado (A01-A04) e indicadores T1 de UC02 — Inglês Instrumental.
+---
+---
+name: uc02-ingles-instrumental
+---
 # Skill: UC02 — Inglês Instrumental
 
 **Código:** UC02 | **Carga Total:** 33h (40 HA) | **Peso no dia:** Leve (1 HA/bloco, Bloco 3)

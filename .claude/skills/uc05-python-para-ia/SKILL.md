@@ -1,3 +1,10 @@
+---
+name: uc05-python-para-ia
+description: Diretrizes pedagógicas, consolidado já dado (nunca rever), níveis de exercícios e indicadores de UC05 — Python para IA.
+---
+---
+name: uc05-python-para-ia
+---
 # Skill: UC05 — Desenvolvimento de Linguagem Python
 
 **Código:** UC05 | **Carga Total:** 67h (80 HA) | **Peso no dia:** Pesado (3 HA/bloco, Bloco 1)

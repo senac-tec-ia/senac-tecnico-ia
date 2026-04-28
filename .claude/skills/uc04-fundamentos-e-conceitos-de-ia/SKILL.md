@@ -1,3 +1,10 @@
+---
+name: uc04-fundamentos-e-conceitos-de-ia
+description: Diretrizes pedagógicas, conteúdo já coberto (A01/A03/A04) e indicadores T1 de UC04 — Fundamentos e Conceitos de IA.
+---
+---
+name: uc04-fundamentos-e-conceitos-de-ia
+---
 # Skill: UC04 — Fundamentos e Conceitos de IA
 
 **Código:** UC04 | **Carga Total:** 33h (41 HA) | **Peso no dia:** Médio (2 HA/bloco)

@@ -1,3 +1,10 @@
+---
+name: revisao-conteudo
+description: Checklists de revisão por tipo de arquivo (agentes, contextos, slides, scripts), critérios de aprovação/bloqueio e impacto. Use ao revisar ou fazer commit.
+---
+---
+name: revisao-conteudo
+---
 # Skill: Revisão de Conteúdo — Técnico em IA
 
 Use esta skill ao revisar qualquer arquivo do repositório antes de commitar ou ao auditar qualidade de conteúdo gerado.

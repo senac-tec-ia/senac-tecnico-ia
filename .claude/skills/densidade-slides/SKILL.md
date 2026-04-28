@@ -1,3 +1,10 @@
+---
+name: densidade-slides
+description: Limites de conteúdo por layout Slidev, regras de corte natural e prevenção de ghost slides. Use ao criar ou revisar slides.
+---
+---
+name: densidade-slides
+---
 # Skill: Densidade de Slides — Técnico em IA
 
 Use esta skill ao criar ou editar slides para verificar se o conteúdo cabe no layout. Quando um slide ultrapassa os limites, **expanda em múltiplos slides — nunca corte conteúdo**.
