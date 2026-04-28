@@ -7,19 +7,25 @@ Este workspace é um monorepo de apresentações Slidev para o **Curso Técnico 
 ```
 senac-tecnico-ia/
 ├── .github/agents/             ← FONTE DA VERDADE — agentes e contextos (Copilot)
-├── .claude/agents/             ← Agentes para Claude Code (mesmas instruções, frontmatter Claude)
-│   ├── produtor-aula.md
+├── .claude/agents/             ← Agentes para Claude Code (11 agentes)
+│   ├── produtor-aula.md        ← orquestrador de aula completa
+│   ├── autor-slides.md         ← gera slides via Handoff Card
+│   ├── autor-exercicios.md
+│   ├── editor-slides.md        ← edição + overflow + auditoria (4 modos)
+│   ├── gerador-uc.md           ← consultor de disciplina (substitui os 9 UC agents)
 │   ├── atualizador-pos-aula.md
 │   ├── criar-nova-aula.md
-│   ├── auditor-estrutura.md
-│   ├── autor-slides.md
-│   ├── autor-exercicios.md
-│   ├── editor-slides.md
-│   ├── editor-tamanho.md
-│   ├── planejador-avaliacoes.md
 │   ├── revisor-commit.md
-│   ├── uc01-fundamentos-computacao.md … uc09-estatistica-aplicada.md
+│   ├── planejador-avaliacoes.md
+│   ├── planejador-curricular.md
 │   └── platform-agent.md (name: Leovio)
+├── .claude/skills/             ← Skills reutilizáveis (14 skills)
+│   ├── estilo-pedagogico/      ← linguagem ~14 anos, sem en-dash
+│   ├── layouts-slidev/         ← frontmatter, componentes Vue, convenções visuais
+│   ├── densidade-slides/       ← limites por layout, corte natural
+│   ├── estrutura-aula/         ← ordem T→E→D→TC, tags, templates
+│   ├── revisao-conteudo/       ← checklists de revisão e commit
+│   └── uc01/ … uc09/           ← diretrizes, consolidado e indicadores por disciplina
 ├── .github/agents/contextos/   ← memória viva por disciplina (compartilhada por ambos)
 │   ├── contexto-calendario.md
 │   ├── ATIVIDADES_AVALIATIVAS.md
