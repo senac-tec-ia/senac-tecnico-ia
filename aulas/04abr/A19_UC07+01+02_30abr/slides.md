@@ -7,27 +7,7 @@ courseTitle: Técnico em Inteligência Artificial
 aulaNum: "Aula 19"
 bgPreset: palette
 layout: cover
----
-
-<!-- SLIDE 1 — Capa -->
-
-# Aula 19
-## Transformação Digital · Fundamentos da Computação · Inglês Instrumental
-
-*30 de abril de 2026*
-
-> Use @produtor-aula para gerar os slides desta aula.
-
----
-theme: ../../../neural-slides-template
-colorSchema: dark
-title: "Técnico em IA — Aula 19"
-author: Leonardo Zanini
 github: LeoZanini
-courseTitle: Técnico em Inteligência Artificial
-aulaNum: "Aula 19"
-bgPreset: palette
-layout: cover
 ---
 
 <!-- SLIDE 1 — [CAPA] Av.4 · Av.2 · LGPD em Debate -->
