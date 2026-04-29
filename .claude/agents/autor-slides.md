@@ -3,6 +3,7 @@ name: autor-slides
 description: Writer especializado em slides para o curso Técnico em IA (Senac). Recebe um Handoff Card por UC e GERA slides diretamente em slides.md — incluindo exercícios com gabaritos inline via <v-click>. Exercícios ficam dentro do slides.md, nunca em arquivo separado. Se plano-aula.md aprovado existir, vai direto para geração sem passar por estrutura-aula.md. NUNCA carrega slides.md de aulas anteriores. NUNCA roda semantic_search. Carrega apenas: plano-aula.md (seção da UC) + Handoff Card (contém Consolidado). Só lê contexto-[slug].md como fallback se Handoff Card não incluir Consolidado.
 model: opus
 tools:
+  - Bash
   - Edit
   - Glob
   - Grep
@@ -153,9 +154,37 @@ while hp > 0:
 
 O arquivo `exercicios.md` existe apenas como rascunho de referência para o professor — o conteúdo dos gabaritos já está nos slides.
 
-Ao finalizar um bloco de UC, emita apenas:
+### Passo 6 — Lint pós-geração (obrigatório antes de encerrar)
+
+Após escrever os slides, rode:
+
+```bash
+node scripts/lint-slides.mjs [caminho/para/slides.md]
 ```
-✅ Bloco [UC slug] gerado: N slides adicionados em slides.md (slides X–Y).
+
+**Se lint retornar erros (`exit code 1`):** NÃO emita `✅`. Emita:
+
+```
+⚠️ LINT — N erro(s) detectado(s) no bloco [slug]:
+  ❌ Slide X "[título]": [em-dash | emoji | code-overflow | ...]
+  ❌ Slide Y "[título]": ...
+
+Corrija antes de continuar para a próxima UC. Sugestões:
+- em-dash: substitua "—" por ":" ou "-"
+- emoji: remova ou substitua por texto
+- code-overflow: divida o bloco de código em 2 slides
+```
+
+**Se lint retornar apenas avisos (`exit code 0`):** Emita `✅` incluindo os avisos:
+
+```
+✅ Bloco [slug] gerado: N slides (X–Y). Lint: OK (N aviso(s) — overflow leve, revisar no dev).
+```
+
+**Se lint passar limpo:** Emita:
+
+```
+✅ Bloco [slug] gerado: N slides (X–Y). Lint: limpo.
 ```
 
 ---

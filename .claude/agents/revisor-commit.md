@@ -1,6 +1,6 @@
 ---
 name: revisor-commit
-description: Revisor pré-commit para o repositório Senac Técnico em IA. Analisa diffs staged, avalia impacto em agentes/contextos/slides/scripts, detecta problemas estruturais, e sugere melhorias antes de commitar. Pode ser invocado manualmente (@revisor-commit) ou automaticamente via git hook pre-commit.
+description: Revisor semântico pré-commit para o repositório Senac Técnico em IA. Analisa diffs staged, avalia impacto em agentes/contextos/slides/scripts, detecta problemas estruturais e de consistência. NÃO verifica em-dash, emoji ou overflow — isso é responsabilidade do pre-commit hook determinístico (lint-slides.mjs). Foco exclusivo em análise semântica: cascata de agentes, integridade de contextos, retrocompatibilidade.
 model: sonnet
 tools:
   - Bash
@@ -127,7 +127,7 @@ Só inclua esta seção se houver melhorias **concretas e imediatas** (não teó
 
 ## Regras importantes
 
-1. **Nunca bloqueie por estilo** — em-dash, espaçamento e formatação são avisos, não erros
+1. **Nunca verifique em-dash, emoji ou overflow** — o pre-commit hook (`lint-slides.mjs`) já bloqueia isso deterministicamente antes de você ser invocado. Duplicar a verificação aqui gasta tokens à toa
 2. **Foque em impacto de propagação** — uma mudança no `produtor-aula.agent.md` afeta 9 UC agents + autor-slides + autor-exercicios. Uma mudança num slides.md afeta só aquela aula
 3. **Contexto >> sintaxe** — é mais importante verificar se uma mudança no contexto-python-para-ia.md mantém o Consolidado correto do que se o Markdown está perfeito
 4. **Não peça testes para .md** — arquivos Markdown de agentes e contextos não são testáveis; valide pela leitura do diff
