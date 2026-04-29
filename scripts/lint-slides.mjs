@@ -86,9 +86,20 @@ function lintSlide(slide) {
   // ── Em-dash check ──
   if (body.includes('—')) {
     slide.issues.push({
-      severity: 'warn',
+      severity: 'error',
       rule: 'em-dash',
-      msg: 'Contém em-dash (—) — usar "-", ":" ou "," no lugar'
+      msg: 'Contém em-dash (—) — substituir por "-", ":" ou "," (regra inviolável)'
+    })
+  }
+
+  // ── Emoji check ──
+  const emojiRegex = /\p{Emoji_Presentation}|\p{Extended_Pictographic}/gu
+  const emojiMatches = body.match(emojiRegex)
+  if (emojiMatches) {
+    slide.issues.push({
+      severity: 'error',
+      rule: 'emoji',
+      msg: `Contém emoji(s): ${[...new Set(emojiMatches)].join(' ')} — proibido em slides (quebra tipografia do tema)`
     })
   }
 

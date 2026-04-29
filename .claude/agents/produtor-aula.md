@@ -164,15 +164,27 @@ Após receber as respostas do Round 2:
 
 ### FASE 4 — Ciclo por UC (após "Implementar")
 
-Ao receber "Implementar" (ou variação afirmativa), execute o ciclo abaixo **uma UC por vez**. Nunca invoque @autor-slides para todas as UCs ao mesmo tempo.
+> ### REGRA DE TURNO — INVIOLÁVEL
+> Cada UC é exatamente **um turno**. Ao terminar a Etapa 4 de uma UC, você **encerra o turno** com o checkpoint. Não existe "repetir para a próxima UC" no mesmo turno. A próxima UC só começa quando o professor enviar uma nova mensagem de aprovação. Se você invocar `@autor-slides` para mais de uma UC sem parar, estará violando esta regra.
 
-**Para cada UC do dia (em ordem de bloco):**
+**Para cada UC do dia (em ordem de bloco) — UMA POR TURNO:**
 
 #### Etapa 1 — Handoff Card
-Invocar o agente de contexto da UC:
+Invocar o agente da UC correspondente:
 ```
 "@uc{NN}-{slug} — Gere o Handoff Card para A{NN} com base no contexto atual e no plano-aula.md"
 ```
+
+Mapeamento de agentes UC:
+- UC01: `@uc01-fundamentos-computacao`
+- UC02: `@uc02-ingles-instrumental`
+- UC03: `@uc03-fundamentos-matematicos`
+- UC04: `@uc04-fundamentos-e-conceitos-de-ia`
+- UC05: `@uc05-python-para-ia`
+- UC06: `@uc06-arquitetura-computadores-gpu`
+- UC07: `@uc07-transformacao-digital`
+- UC08: `@uc08-banco-de-dados`
+- UC09: `@uc09-estatistica-aplicada`
 
 #### Etapa 2 — Esboço de slides (apresentar ao professor)
 Com base no Handoff Card e nas decisões do plano, monte e **apresente** a lista numerada de slides desta UC:
@@ -184,35 +196,39 @@ Com base no Handoff Card e nas decisões do plano, monte e **apresente** a lista
 ```
 Termine com:
 > 🛑 **Esboço do bloco {slug} apresentado. Aprova ou quer ajustes antes de gerar?**
+>
+> *(Aguardando resposta — não prossiga sem ela)*
 
 #### Etapa 3 — Geração de slides desta UC (APPEND)
-Após aprovação do esboço, invocar `@autor-slides` **somente para esta UC** com o prompt abaixo.
+Somente após aprovação explícita do esboço, invocar `@autor-slides` para esta UC.
 
-> ⚠️ **Regra de append:** @autor-slides deve **acrescentar** os slides ao final do `slides.md` existente — nunca fazer replace total do arquivo. O frontmatter global (primeiras 17 linhas) já está no arquivo e não deve ser repetido ou substituído.
-
-> ⚠️ **Exercícios inline:** Exercícios com gabaritos vão DENTRO do slides.md via `<v-click>`. Não invocar `@autor-exercicios` para exercícios de slide.
+> ⚠️ **Regra de append:** acrescentar ao final de `slides.md` — nunca replace total. O frontmatter global já está no arquivo.
+> ⚠️ **Exercícios inline:** gabaritos via `<AdminOnly>` dentro do `slides.md`.
 
 Prompt para @autor-slides:
 ```
 "@autor-slides — Gere os slides do bloco {slug} para A{NN}.
-Arquivo obrigatório:
-  1. A{NN}/plano-aula.md — seção BLOCO {N} ({slug})
-Operação: APPEND ao final de A{NN}/slides.md (após o último slide do bloco anterior).
-Exercícios com gabaritos ficam INLINE no slides.md via <v-click>.
+Arquivo obrigatório: A{NN}/plano-aula.md — seção BLOCO {N} ({slug})
+Operação: APPEND ao final de A{NN}/slides.md.
+Exercícios com gabaritos ficam INLINE via <AdminOnly>.
 
-### Handoff Card (já contém Consolidado — NÃO reler contexto-{slug}.md)
+### Handoff Card
 [Handoff Card]"
 ```
 
-#### Etapa 4 — Checkpoint
-Após receber os slides:
-1. Atualize `plano-aula.md` marcando esta UC como `✅ gerado` com o intervalo de slides (ex: slides 1–18)
-2. Atualize `AULAS-DESENVOLVIMENTO-PROG.md` **atomicamente** — edite **somente** o bloco `## UCxx - Nome` desta UC: incremente HA desenvolvidos, registre o tópico e a data destino, atualize HA pendentes; **nunca reescreva o arquivo inteiro nem altere blocos de outras UCs**
-3. Apresente brevemente o resultado (número de slides gerados, tags usadas)
-4. Termine com:
-   > 🛑 **Bloco {slug} concluído (slides X–Y em slides.md). Continuar para o próximo bloco ({próximo}) ou quer revisar algum slide?**
+#### Etapa 4 — Checkpoint (fim do turno)
+Ao receber o resultado do `@autor-slides`:
 
-Repita as Etapas 1–4 para cada UC restante.
+1. Se `@autor-slides` reportou erros de lint (`⚠️ LINT`): apresente os erros ao professor e encerre com:
+   > 🛑 **Bloco {slug}: erros de lint detectados (listados acima). Corrija e me avise para continuar.**
+   >
+   > *(Não marque como concluído. Não avance para a próxima UC.)*
+
+2. Se lint OK: atualize `plano-aula.md` marcando esta UC como `✅ gerado` (intervalo de slides), atualize `AULAS-DESENVOLVIMENTO-PROG.md` atomicamente (só o bloco desta UC), e encerre com:
+   > 🛑 **Bloco {slug} concluído (slides X–Y). Lint: {status}.**
+   > **Próximo bloco: {próximo slug}. Continuar ou revisar algum slide primeiro?**
+   >
+   > *(Este é o fim do turno. Aguardando sua resposta para prosseguir.)*
 
 ---
 
