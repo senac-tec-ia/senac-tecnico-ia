@@ -1,7 +1,7 @@
 ---
 theme: ../../../neural-slides-template
 colorSchema: dark
-title: "Técnico em IA — Aula 19"
+title: "Técnico em IA: Aula 19"
 author: Leonardo Zanini
 courseTitle: Técnico em Inteligência Artificial
 aulaNum: "Aula 19"
@@ -10,7 +10,7 @@ layout: cover
 github: LeoZanini
 ---
 
-<!-- SLIDE 1 — [CAPA] Av.4 · Av.2 · LGPD em Debate -->
+<!-- SLIDE 1: [CAPA] Av.4 · Av.2 · LGPD em Debate -->
 
 # Av.4 · Av.2 · LGPD em Debate
 ## Aula 19 · 30/04/2026
@@ -22,21 +22,21 @@ layout: center
 bgPreset: animate
 ---
 
-<!-- SLIDE 2 — [TEORIA] Agenda do Dia -->
+<!-- SLIDE 2: [TEORIA] Agenda do Dia -->
 
-# 📋 Agenda — Aula 19
+# Agenda: Aula 19
 ## 30/04/2026 · Quinta-feira
 
 | Horário | Bloco | O que acontece |
 |---|---|---|
-| 7h10–7h35 | UC07 | 🎮 **Av.4 Kahoot** — Quiz GPU (15 q) |
-| 7h35–9h35 | UC07 | 📝 **Av.2 Google Forms** — Quiz Geral (16 q) |
-| 9h35–9h50 | — | ☕ Intervalo |
-| 9h50–10h10 | UC01 | 📊 **Feedback Av.2** ao vivo |
-| 10h10–11h30 | UC01 | 🗣️ **Debate LGPD** — Caso Serasa (trios) |
-| 11h30–12h20 | UC02 | 🇬🇧 **Inglês** — vocabulário de privacidade |
+| 7h10–7h35 | UC07 | **Av.4 Kahoot**: Quiz GPU (15 q) |
+| 7h35–9h35 | UC07 | **Av.2 Google Forms**: Quiz Geral (16 q) |
+| 9h35–9h50 | - | Intervalo |
+| 9h50–10h10 | UC01 | **Feedback Av.2** ao vivo |
+| 10h10–11h30 | UC01 | **Debate LGPD**: Caso Serasa (trios) |
+| 11h30–12h20 | UC02 | **Inglês**: vocabulário de privacidade |
 
-> ⚠️ **Celular:** permitido apenas durante as avaliações digitais. Fora disso, virado na mesa.
+> **Celular:** permitido apenas durante as avaliações digitais. Fora disso, virado na mesa.
 
 ---
 layout: center
@@ -44,7 +44,7 @@ bgPreset: animate
 card: true
 ---
 
-<!-- SLIDE 3 — [TEORIA] Divisor Bloco 1 UC07 -->
+<!-- SLIDE 3: [TEORIA] Divisor Bloco 1 UC07 -->
 
 # Bloco 1 · Transformação Digital
 ## 7h10–9h40 · UC07
@@ -57,9 +57,9 @@ bgPreset: animate
 card: true
 ---
 
-<!-- SLIDE 4 — [ATIV AVALIATIVA] Av.4 Kahoot GPU -->
+<!-- SLIDE 4: [ATIV AVALIATIVA] Av.4 Kahoot GPU -->
 
-# 🎮 Av.4 — Quiz GPU
+# Av.4: Quiz GPU
 ## Kahoot · 15 questões · ~25 minutos
 
 **PIN na tela do professor**
@@ -72,7 +72,7 @@ card: true
 | Computação | 2 |
 | Inglês Técnico | 2 |
 
-> ⏱️ 20 segundos por questão · Celular liberado agora
+> 20 segundos por questão · Celular liberado agora
 
 ---
 layout: default
@@ -80,16 +80,16 @@ bgPreset: animate
 card: true
 ---
 
-<!-- SLIDE 5 — [ATIV AVALIATIVA] Av.2 Google Forms -->
+<!-- SLIDE 5: [ATIV AVALIATIVA] Av.2 Google Forms -->
 
-## 📝 Av.2 — Quiz Geral
+## Av.2: Quiz Geral
 ### Google Forms · 16 questões
 
 **Link/QR no quadro**
 
-- 🔗 Acesse pelo celular ou computador do lab
-- ⏰ Prazo: **9h35** (encerra automaticamente)
-- 📵 Apenas o Forms pode estar aberto — nada de outras abas
+- Acesse pelo celular ou computador do lab
+- Prazo: **9h35** (encerra automaticamente)
+- Apenas o Forms pode estar aberto: nada de outras abas
 
 **Distribuição das 16 questões:**
 - Computação + Hardware: 4 q
@@ -97,21 +97,21 @@ card: true
 - Python básico: 4 q
 - Inglês técnico: 4 q
 
-> Dúvida sobre enunciado? Levante a mão — não pergunte pro colega.
+> Dúvida sobre enunciado? Levante a mão: não pergunte pro colega.
 
 ---
 layout: default
 card: true
 ---
 
-<!-- SLIDE 6 — [TEORIA] Regras durante Av.2 -->
+<!-- SLIDE 6: [TEORIA] Regras durante Av.2 -->
 
-## Regras — Av.2
+## Regras: Av.2
 
 <div class="grid grid-cols-2 gap-8">
 <div>
 
-**✅ Permitido**
+** Permitido**
 - Celular/notebook aberto **só no Forms**
 - Consultar caderno/anotações próprias
 - Levantar a mão para dúvida
@@ -119,7 +119,7 @@ card: true
 </div>
 <div>
 
-**❌ Não permitido**
+** Não permitido**
 - Outras abas abertas
 - Conversar com colega
 - Compartilhar respostas
@@ -133,12 +133,12 @@ layout: center
 bgPreset: palette
 ---
 
-<!-- SLIDE 7 — [TEORIA] Encerra Quiz -->
+<!-- SLIDE 7: [TEORIA] Encerra Quiz -->
 
-# Quiz encerrado ✅
-## Bom trabalho, pessoal! 💪
+# Quiz encerrado 
+## Bom trabalho, pessoal! 
 
-*9h35 — Salvando respostas automaticamente*
+*9h35: Salvando respostas automaticamente*
 
 > Feche o celular. Intervalo em instantes.
 
@@ -147,27 +147,27 @@ layout: center
 bgPreset: animate
 ---
 
-<!-- SLIDE 8 — [TEORIA] Divisor Bloco 2 UC01 -->
+<!-- SLIDE 8: [TEORIA] Divisor Bloco 2 UC01 -->
 
 # Bloco 2 · Fundamentos da Computação
 ## 9h50–11h30 · UC01
 
-*Feedback Av.2 + Debate LGPD — Caso Serasa*
+*Feedback Av.2 + Debate LGPD: Caso Serasa*
 
 ---
 layout: default
 card: true
 ---
 
-<!-- SLIDE 9 — [TEORIA] Feedback Av.2 ao vivo -->
+<!-- SLIDE 9: [TEORIA] Feedback Av.2 ao vivo -->
 
-## 📊 Feedback — Av.2
+## Feedback: Av.2
 ### Resultados ao vivo no Forms
 
 O professor vai compartilhar a tela com:
 
-1. **Distribuição de notas** — média, máxima, mínima
-2. **Questões mais erradas** — percepção geral (sem revelar gabarito agora)
+1. **Distribuição de notas**: média, máxima, mínima
+2. **Questões mais erradas**: percepção geral (sem revelar gabarito agora)
 3. **Comentário breve** sobre os 3 temas com mais erros
 
 > Gabarito completo: será disponibilizado após a aula no grupo da turma.
@@ -177,32 +177,32 @@ layout: default
 card: true
 ---
 
-<!-- SLIDE 10 — [DEBATE] Top 3 Erros — Reflexão -->
+<!-- SLIDE 10: [DEBATE] Top 3 Erros: Reflexão -->
 
-## 🤔 O que a turma achou difícil?
+## O que a turma achou difícil?
 
-**3 temas com mais erros — sem revelar a resposta certa ainda:**
+**3 temas com mais erros: sem revelar a resposta certa ainda:**
 
-1. **Tema A** — _levantamento coletivo: o que vocês responderam?_
-2. **Tema B** — _o que confundiu?_
-3. **Tema C** — _alguém tem argumento para a resposta que deu?_
+1. **Tema A**: _levantamento coletivo: o que vocês responderam?_
+2. **Tema B**: _o que confundiu?_
+3. **Tema C**: _alguém tem argumento para a resposta que deu?_
 
-> A conversa aqui vai ajudar no debate de LGPD — os temas se conectam.
+> A conversa aqui vai ajudar no debate de LGPD: os temas se conectam.
 
 ---
 layout: default
 card: true
 ---
 
-<!-- SLIDE 11 — [TEORIA] Dinâmica dos Grupos — 6 Passos -->
+<!-- SLIDE 11: [TEORIA] Dinâmica dos Grupos: 6 Passos -->
 
-## 🗣️ Debate LGPD — Como Vai Funcionar
+## Debate LGPD: Como Vai Funcionar
 
 | Etapa | Tempo | O que acontece |
 |---|---|---|
 | 1. Formação | 3 min | Professor sorteia os trios |
 | 2. Distribuição | 2 min | Cada trio recebe papel + artigo impresso |
-| 3. Leitura | 10 min | Leitura silenciosa — sem celular |
+| 3. Leitura | 10 min | Leitura silenciosa, sem celular |
 | 4. Respostas | 10 min | Trio preenche a folha de respostas |
 | 5. Debate | 15 min | Porta-voz de cada papel defende a posição |
 | 6. Síntese | 5 min | Professor fecha com conexão à LGPD |
@@ -212,29 +212,29 @@ layout: default
 card: true
 ---
 
-<!-- SLIDE 12 — [TEORIA] Os 4 Papéis do Debate -->
+<!-- SLIDE 12: [TEORIA] Os 4 Papéis do Debate -->
 
 ## Os 4 Papéis
 
 <div class="grid grid-cols-2 gap-6">
 <div>
 
-**🏢 Empresa (Serasa)**
+** Empresa (Serasa)**
 - Defende o modelo de negócio
 - Argumento: dados públicos, serviço gratuito
 
-**👤 Usuário / Titular dos Dados**
+** Usuário / Titular dos Dados**
 - Perspectiva de quem teve os dados usados
 - Argumento: sem consentimento, sem escolha
 
 </div>
 <div>
 
-**🏛️ ANPD (regulador)**
+** ANPD (regulador)**
 - Fiscaliza e aplica a lei
 - Argumento: LGPD exige base legal explícita
 
-**🌍 Sociedade Civil / Mídia**
+** Sociedade Civil / Mídia**
 - Impacto coletivo, transparência
 - Argumento: 223 milhões de CPFs expostos
 
@@ -246,7 +246,7 @@ layout: default
 card: true
 ---
 
-<!-- SLIDE 13 — [TEORIA] Perguntas Guia por Papel -->
+<!-- SLIDE 13: [TEORIA] Perguntas Guia por Papel -->
 
 ## Perguntas para Guiar o Trio
 
@@ -264,15 +264,15 @@ layout: center
 card: true
 ---
 
-<!-- SLIDE 14 — [DINAMICA] Leitura — 10 Minutos -->
+<!-- SLIDE 14: [DINAMICA] Leitura: 10 Minutos -->
 
-# 📄 Leitura Silenciosa
+# Leitura Silenciosa
 ## 10 minutos
 
 **Artigo impresso na sua mesa**
 *"Serasa Experian: vazamento de 223 milhões de CPFs e o scoring sem consentimento"*
 
-> 📵 Sem celular · Apenas o artigo e a folha de respostas
+> Sem celular · Apenas o artigo e a folha de respostas
 
 ---
 layout: default
@@ -280,17 +280,17 @@ bgPreset: animate
 card: true
 ---
 
-<!-- SLIDE 15 — [DEBATE] Debate — Porta-Vozes -->
+<!-- SLIDE 15: [DEBATE] Debate: Porta-Vozes -->
 
-## 🎤 Debate — Porta-Vozes
+## Debate: Porta-Vozes
 
 **Ordem de fala (sorteada pelo professor):**
 
-1. 🏢 **Empresa** — 2–3 min
-2. 👤 **Usuário** — 2–3 min
-3. 🏛️ **ANPD** — 2–3 min
-4. 🌍 **Sociedade Civil** — 2–3 min
-5. 🔄 **Réplicas** — 1 min por papel (se houver tempo)
+1. **Empresa**: 2–3 min
+2. **Usuário**: 2–3 min
+3. **ANPD**: 2–3 min
+4. **Sociedade Civil**: 2–3 min
+5. **Réplicas**: 1 min por papel (se houver tempo)
 
 **Regras:** Fale pelo seu papel. Cite o artigo. Não interrompa.
 
@@ -299,9 +299,9 @@ layout: default
 card: true
 ---
 
-<!-- SLIDE 16 — [DEBATE] Síntese — LGPD e o Caso Serasa -->
+<!-- SLIDE 16: [DEBATE] Síntese: LGPD e o Caso Serasa -->
 
-## ✅ Síntese — O Que a LGPD Mudou
+## Síntese: O Que a LGPD Mudou
 
 | Antes da LGPD | Depois da LGPD |
 |---|---|
@@ -310,23 +310,23 @@ card: true
 | Scoring sem consentimento = ok | Scoring exige transparência e opt-out |
 | Sanção: moral/reputacional | Sanção: multa até 2% do faturamento |
 
-> **Conexão com Av.2:** as questões 10–13 exploraram exatamente esses conceitos.
+> **Conexão com Av.2:** as questões 10-13 exploraram exatamente esses conceitos.
 
 ---
 layout: center
 card: true
 ---
 
-<!-- SLIDE 17 — [TEORIA] Entregável — Folha de Respostas -->
+<!-- SLIDE 17: [TEORIA] Entregável: Folha de Respostas -->
 
-# 📋 Entregável do Trio
+# Entregável do Trio
 
 **Antes de sair do bloco, entregue ao professor:**
 
-- ✅ Nomes dos 3 integrantes do trio
-- ✅ Papel que o trio recebeu
-- ✅ Respostas às 4 perguntas guia (pelo menos 2 linhas cada)
-- ✅ Frase do artigo citada
+- Nomes dos 3 integrantes do trio
+- Papel que o trio recebeu
+- Respostas às 4 perguntas guia (pelo menos 2 linhas cada)
+- Frase do artigo citada
 
 > Critério: participação + uso do artigo como evidência
 
@@ -335,21 +335,21 @@ layout: center
 bgPreset: animate
 ---
 
-<!-- SLIDE 18 — [TEORIA] Divisor Bloco 3 UC02 -->
+<!-- SLIDE 18: [TEORIA] Divisor Bloco 3 UC02 -->
 
 # Bloco 3 · Inglês Instrumental
 ## 11h30–12h20 · UC02
 
-*Vocabulário de privacidade digital — mesmo artigo, agora em inglês*
+*Vocabulário de privacidade digital: mesmo artigo, agora em inglês*
 
 ---
 layout: default
 card: true
 ---
 
-<!-- SLIDE 19 — [TEORIA] Vocabulário — 5 Termos-Chave -->
+<!-- SLIDE 19: [TEORIA] Vocabulário: 5 Termos-Chave -->
 
-## 🇬🇧 Vocabulário de Privacidade Digital
+## Vocabulário de Privacidade Digital
 
 | Termo | Pronúncia | Tradução | Contexto Serasa |
 |---|---|---|---|
@@ -364,9 +364,9 @@ layout: default
 card: true
 ---
 
-<!-- SLIDE 20 — [EXERCICIO] Encontre no Texto -->
+<!-- SLIDE 20: [EXERCICIO] Encontre no Texto -->
 
-## ✏️ Exercício — Encontre no Artigo
+## Exercício: Encontre no Artigo
 
 **Instruções:** No artigo impresso (versão em inglês), localize e sublinhe os 5 termos:
 `data breach` · `personal data` · `consent` · `compliance` · `enforcement`
@@ -377,7 +377,7 @@ card: true
 
 <v-click>
 
-> **Gabarito — exemplos de frases do artigo:**
+> **Gabarito: exemplos de frases do artigo:**
 > - _"The **data breach** exposed 223 million CPF numbers..."_
 > - _"Serasa collected **personal data** without explicit **consent**..."_
 > - _"The ANPD's **enforcement** action resulted in..."_
@@ -390,28 +390,28 @@ layout: default
 card: true
 ---
 
-<!-- SLIDE 21 — [TEORIA] Tradução em Contexto -->
+<!-- SLIDE 21: [TEORIA] Tradução em Contexto -->
 
-## 🔄 Tradução em Contexto
+## Tradução em Contexto
 
 | Termo | Tradução genérica | Significado no caso Serasa |
 |---|---|---|
 | **data breach** | "brecha de dados" | Vazamento que expôs dados sensíveis de toda a população |
 | **personal data** | "dados pessoais" | CPF + score de crédito = informação financeira sensível |
 | **consent** | "concordância" | Autorização prévia e explícita que a Serasa NÃO obteve |
-| **compliance** | "cumprimento" | Adequação às normas da LGPD — faltou na Serasa |
+| **compliance** | "cumprimento" | Adequação às normas da LGPD: faltou na Serasa |
 | **enforcement** | "execução" | Poder da ANPD de notificar, multar e exigir correção |
 
-> **Dica de estudo:** em inglês técnico, `consent` ≠ simplesmente "sim" — é um ato formal e revogável.
+> **Dica de estudo:** em inglês técnico, `consent` não é simplesmente "sim": é um ato formal e revogável.
 
 ---
 layout: default
 card: true
 ---
 
-<!-- SLIDE 22 — [TEORIA] Vocabulário Extra -->
+<!-- SLIDE 22: [TEORIA] Vocabulário Extra -->
 
-## 🔡 Vocabulário Extra — LGPD em Inglês
+## Vocabulário Extra: LGPD em Inglês
 
 | Termo | Equivalente LGPD | Uso |
 |---|---|---|
@@ -422,104 +422,37 @@ card: true
 | **right to erasure** | Direito ao esquecimento | "LGPD grants the _right to erasure_" |
 
 ---
+layout: default
+card: true
+---
+
+<!-- SLIDE 23: [TAREFA DE CASA] Tarefa para A20 -->
+
+## Tarefa de Casa: A19
+
+> **Prazo: início da aula A20 (07/05)**
+
+Pesquise um caso de vazamento ou uso indevido de dados pessoais no Brasil, **diferente do caso Serasa**.
+
+Identifique e anote:
+1. Qual dado foi exposto ou usado sem consentimento
+2. Qual empresa ou organização era responsável
+3. Qual artigo da LGPD foi potencialmente violado (Art. 5, 7 ou 18)
+
+Salve em `SENAC-TecIA/Aula-19/tarefa-lgpd.txt` e traga na próxima aula.
+
+---
 layout: end
 github: LeoZanini
 ---
 
-<!-- SLIDE 23 — [TEORIA] Encerramento -->
+<!-- SLIDE 24: Encerramento -->
 
-## Próxima Aula — A20
+## Próxima Aula: A20
 
 **O que vem aí:**
-- 🐍 **UC05** — Av.4 Python N2: DataList + Matrizes
-- 📅 Prazo **Av.6** (projeto integrador) — verificar no cronograma
-- 📖 Revisão: listas, funções e loops antes da avaliação
+- **UC05**: Av.4 Python N2 - DataList + Matrizes
+- Prazo **Av.6** (projeto integrador): verificar no cronograma
+- Revisão: listas, funções e loops antes da avaliação
 
-*Até a próxima! 👋*
-colorSchema: dark                # não alterar
-
-# Metadados da aula
-title: "Técnico em IA — Aula NN"  # título da janela/aba do browser
-author: Leonardo Zanini
-github: LeoZanini                  # handle GitHub — usado no slide de encerramento
-courseTitle: Técnico em Inteligência Artificial  # rodapé centro
-aulaNum: "Aula NN"
-
-# Plano de fundo padrão para todos os slides
-# "default"  → rede neural em repouso (sutil)
-# "animate"  → rede neural pulsando uniformemente
-# "palette"  → rede neural pulsando com cores variadas (mais vibrante)
-bgPreset: palette
-# ─────────────────────────────────────────────────────────────────
----
-
----
-layout: cover
-bgPreset: palette
----
-
-<!-- capa da aula -->
-
-# Aula NN
-## Título da Aula
-
-*Subtítulo ou contexto breve*
-
----
-layout: center
-card: true
-bgPreset: palette
----
-
-<!-- divisor de bloco -->
-
-# Bloco 1
-## Nome do Bloco
-
-*Descrição breve do bloco*
-
----
-layout: default
-card: true
-bgPreset: palette
----
-
-<!-- slide de conteúdo padrão -->
-
-# Título do Slide
-
-- **Tópico A** — Descrição do primeiro item
-- **Tópico B** — Descrição do segundo item
-- **Tópico C** — Descrição do terceiro item
-
-> Dica ou citação relevante.
-
----
-layout: brainstorm
-card: true
-bgPreset: palette
-pulse: true
----
-
-<!-- debate / brainstorming -->
-
-# Pergunta para a Turma
-
-**Discussão coletiva — X minutos**
-
-- Questão 1?
-- Questão 2?
-- Questão 3?
-
-> Reflexão final ou conexão com o próximo conteúdo.
-
----
-layout: end
-bgPreset: palette
----
-
-<!-- encerramento -->
-
-# Até a próxima aula!
-
-*Resumo do que foi aprendido e gancho para a próxima.*
+*Até a próxima!*
