@@ -26,6 +26,8 @@
     "theme:build": "npm run build --workspace=slidev-theme-neural",
     "validate:ha": "node scripts/validate-ha.mjs",
     "lint:slides": "node scripts/lint-slides.mjs",
+    "setup:hooks": "bash scripts/setup-hooks.sh",
+    "check:overflow": "node scripts/check-overflow.mjs",
     "dashboard": "node scripts/generate-dashboard.mjs",
     "review": "node scripts/review-staged.mjs",
     "review:json": "node scripts/review-staged.mjs --json",
@@ -93,6 +95,7 @@
   },
   "devDependencies": {
     "@slidev/cli": "^0.49.0",
+    "playwright": "^1.59.1",
     "shiki": "^1.29.2"
   },
   "dependencies": {

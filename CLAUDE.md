@@ -1,4 +1,4 @@
-# GitHub Copilot — Instruções do Workspace
+# Claude Code — Instruções do Workspace
 
 Este workspace é um monorepo de apresentações Slidev para o **Curso Técnico em Inteligência Artificial do SENAC**.
 
@@ -7,22 +7,6 @@ Este workspace é um monorepo de apresentações Slidev para o **Curso Técnico 
 ```
 senac-tecnico-ia/
 ├── .github/agents/             ← FONTE DA VERDADE — agentes e contextos (Copilot)
-│   ├── produtor-aula.agent.md
-│   ├── atualizador-pos-aula.agent.md
-│   ├── criar-nova-aula.agent.md
-│   ├── auditor-estrutura.agent.md
-│   ├── autor-slides.agent.md
-│   ├── autor-exercicios.agent.md
-│   ├── editor-slides.agent.md
-│   ├── editor-tamanho.agent.md
-│   ├── planejador-avaliacoes.agent.md
-│   ├── revisor-commit.agent.md
-│   ├── uc01-fundamentos-computacao.agent.md … uc09-estatistica-aplicada.agent.md
-│   ├── contextos/                       ← memória viva por disciplina
-│   │   ├── contexto-calendario.md
-│   │   ├── ATIVIDADES_AVALIATIVAS.md
-│   │   └── … (9 arquivos contexto-*.md)
-│   └── referencia-tecnica.md
 ├── .claude/agents/             ← Agentes para Claude Code (11 agentes)
 │   ├── produtor-aula.md        ← orquestrador de aula completa
 │   ├── autor-slides.md         ← gera slides via Handoff Card
@@ -35,13 +19,20 @@ senac-tecnico-ia/
 │   ├── planejador-avaliacoes.md
 │   ├── planejador-curricular.md
 │   └── platform-agent.md (name: Leovio)
-├── .claude/skills/             ← Skills reutilizáveis para Claude Code (14 skills)
+├── .claude/skills/             ← Skills reutilizáveis (14 skills)
 │   ├── estilo-pedagogico/      ← linguagem ~14 anos, sem en-dash
 │   ├── layouts-slidev/         ← frontmatter, componentes Vue, convenções visuais
 │   ├── densidade-slides/       ← limites por layout, corte natural
 │   ├── estrutura-aula/         ← ordem T→E→D→TC, tags, templates
 │   ├── revisao-conteudo/       ← checklists de revisão e commit
 │   └── uc01/ … uc09/           ← diretrizes, consolidado e indicadores por disciplina
+├── .github/agents/contextos/   ← memória viva por disciplina (compartilhada por ambos)
+│   ├── contexto-calendario.md
+│   ├── ATIVIDADES_AVALIATIVAS.md
+│   ├── contexto-banco-de-dados.md
+│   ├── contexto-python-para-ia.md
+│   └── … (9 arquivos contexto-*.md)
+├── .github/agents/referencia-tecnica.md  ← referência técnica (ler antes de gerar slides)
 ├── AULAS-DADAS.md              ← histórico cronológico de todas as aulas (A01–atual)
 ├── AULAS-DESENVOLVIMENTO-PROG.md ← tracking de produção de slides por sprint
 ├── slidev-theme-neural/        ← tema Slidev personalizado (NÃO editar para criar conteúdo)
@@ -51,18 +42,34 @@ senac-tecnico-ia/
 └── package.json                ← raiz do monorepo
 ```
 
+## Como usar com Claude Code
+
+```bash
+# Iniciar o Claude Code na raiz do projeto
+cd /home/leo-zanini/Documents/senac-tecnico-ia
+claude
+
+# No REPL do Claude Code, invocar agentes por nome:
+# "use produtor-aula" → produz uma aula completa no modo iterativo
+# "use atualizador-pos-aula" → atualiza contextos após uma aula dada
+# "use criar-nova-aula" → cria nova pasta de aula (ex: A20 05mai)
+# "use autor-slides" → gera slides para uma UC
+# "use editor-slides" → edita slides existentes cirurgicamente
+```
+
 ## Regras Fundamentais
 
-1. **Agentes Copilot vivem em `.github/agents/`**, agentes Claude Code em `.claude/agents/` — nunca criar `.github/` dentro de subpastas de aula
+1. **Agentes vivem em `.claude/agents/`** (Claude Code) ou `.github/agents/` (Copilot) — nunca criar `.github/` dentro de subpastas de aula
 2. **Contextos são a memória viva** — antes de gerar qualquer slide, leia `.github/agents/contextos/contexto-{disciplina}.md`
 3. **Horário trimestral** — para montar blocos de aulas e planejar avaliações, leia `.github/agents/contextos/contexto-horario-trimestral.md`
 4. **Plano de avaliações T1** — para saber avaliações pendentes e aprovadas, leia `.github/agents/contextos/ATIVIDADES_AVALIATIVAS.md`
 5. **Nunca** criar arquivos de apresentação dentro de `slidev-theme-neural/`
 6. **Nunca** copiar `.github/agents/` para pastas de aula — os agentes são globais
+7. **referencia-tecnica.md** — leia SEMPRE em `.github/agents/referencia-tecnica.md` antes de gerar qualquer slide
 
 ## Fluxo Pós-Aula (após cada aula dada)
 
-Use `@atualizador-pos-aula` com um relato em linguagem natural:
+Use o agente `atualizador-pos-aula` com um relato em linguagem natural:
 > "Na A07 dei Python: operadores de comparação ==, !=, <, > e lógicos and/or/not, if/elif/else com comparação. ~3 HA. Turma teve dificuldade com precedência de operadores."
 
 O agente vai atualizar automaticamente:
@@ -71,24 +78,19 @@ O agente vai atualizar automaticamente:
 
 ## Fluxo de Nova Aula
 
-Use `@criar-nova-aula` para criar a próxima pasta de aula. O agente copia a estrutura Slidev do `neural-slides-template/`, configura `package.json`. Nunca cria `.github/` na nova pasta.
+Use o agente `criar-nova-aula` para criar a próxima pasta de aula. O agente copia a estrutura Slidev do `neural-slides-template/`, configura `package.json`. Nunca cria `.github/` na nova pasta.
 
-## Contexto Atual do Curso (atualizar conforme avança)
+## Contexto Atual do Curso
 
 - **Última aula ministrada**: A18 (24/04/2026) — UC08 (SQL avançado: JOIN, índices, subconsultas), UC09 (estatística descritiva com Python)
 - **Próxima aula**: A19 (30/04/2026) — UC07+UC01+UC02 — abertura: Av.04 Quiz GPU (25 min)
-- **Avaliações aplicadas**: Av.01 (concluída), Av.03 (23/04 — TriaBot TokenLab)
-- **Avaliações pendentes**: Av.02 (30/04 Limber), Av.04 (30/04 Quiz GPU), Av.05 (07/05), Av.06 (08/05)
-- **Histórico completo**: ver `AULAS-DADAS.md` — UC08 (SQL avançado: JOIN, índices, subconsultas), UC09 (estatística descritiva com Python)
-- **Próxima aula**: A19 (30/04/2026) — UC07+UC01+UC02 — abertura: Av.04 Quiz GPU (25 min)
-- **Aulas produzidas até A18**: ver `aulas/04abr/`
 - **Avaliações aplicadas**: Av.01 (concluída), Av.03 (23/04 — TriaBot TokenLab)
 - **Avaliações pendentes**: Av.02 (30/04 Limber), Av.04 (30/04 Quiz GPU), Av.05 (07/05), Av.06 (08/05)
 - **Histórico completo**: ver `AULAS-DADAS.md`
 - **Calendário e composição de UCs**: ver `.github/agents/contextos/contexto-calendario.md`
 - **Plano de avaliações T1**: ver `.github/agents/contextos/ATIVIDADES_AVALIATIVAS.md`
 
-> ⚠️ **Manter esta seção atualizada** após cada uso de `@atualizador-pos-aula`.
+> ⚠️ **Manter esta seção atualizada** após cada uso de `atualizador-pos-aula`.
 
 ## Comandos Principais
 
