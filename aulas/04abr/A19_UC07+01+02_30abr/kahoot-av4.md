@@ -46,14 +46,12 @@ Tempo sugerido por questão está indicado. Resposta correta marcada com ✅.
 
 ### Q04 · TD · 20s
 
-**Qual das ferramentas abaixo pertence à família de IA para IMAGEM?**
+**Você quer pedir ao ChatGPT para agir como professor. Qual componente do prompt faz isso?**
 
-- A) ChatGPT
-- ✅ B) Midjourney
-- C) GitHub Copilot
-- D) Whisper
-
-> 💡 *4 famílias: Texto · Imagem · Código · Voz/Áudio*
+- A) Contexto
+- B) Tarefa
+- ✅ C) Papel
+- D) Formato
 
 ---
 
