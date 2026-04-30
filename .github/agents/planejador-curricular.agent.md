@@ -67,6 +67,22 @@ Slugs das UCs:
 
 ---
 
+### PASSO 2.5 — Validação de Intenção (modo grill-me)
+
+Antes de pesquisar fontes, entreviste o professor **uma pergunta por vez** para calibrar o conteúdo. Para cada pergunta, forneça sua resposta recomendada. Se a resposta puder ser inferida dos contextos já carregados, resolva internamente sem perguntar.
+
+Temas a explorar — selecione os mais relevantes, máximo 4 perguntas:
+- Profundidade esperada: introdutório, intermediário ou aprofundado para alguma UC do dia?
+- Há tópico obrigatório que o `roadmap-t1.md` pode não ter capturado?
+- Conexões cross-UC relevantes a destacar nos slides?
+- Preferência por exemplos: práticos / teóricos / mix?
+
+Após todas as respostas, prossiga para **PASSO 3**.
+
+🛑 **Faça a primeira pergunta agora.**
+
+---
+
 ### PASSO 3 — Pesquisar Fontes Web
 
 Para cada UC na aula, pesquise **2-4 fontes reais** usando `fetch`. Priorize os domínios listados abaixo, mas aceite outras fontes confiáveis.

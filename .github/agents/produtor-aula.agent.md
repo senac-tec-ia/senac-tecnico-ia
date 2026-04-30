@@ -76,14 +76,17 @@ Ao receber qualquer trigger de produção ("Gere A0N", "Prepare A0N", "Aula NN")
 
 ---
 
-### FASE 1 — Round 1: Perguntas Gerais
+### FASE 1 — Round 1: Perguntas Gerais (modo grill-me)
 
-Apresente **tudo em uma única mensagem**. Máximo 6 perguntas. Use formato A/B ou A/B/C + D (texto livre). Cubra apenas aspectos que mudariam estruturalmente a aula (ritmo, foco principal, dinâmica, perfil da turma naquele dia, restrições de tempo).
+Use a técnica grill-me: **uma pergunta por vez**, com sua resposta recomendada ao professor. Máximo 6 perguntas ao todo. Cubra apenas aspectos que mudariam estruturalmente a aula (ritmo, foco principal, dinâmica, perfil da turma naquele dia, restrições de tempo).
+
+> 💡 Se a resposta puder ser inferida consultando o codebase (contextos, AULAS-DADAS.md, roadmap), resolva internamente sem perguntar.
 
 **Formato de cada pergunta:**
 
 ```
 [N/6] 🎯 {título curto da dúvida}
+💡 Minha recomendação: {opção preferida com justificativa breve}
 A) {opção A}
 B) {opção B}
 C) {opção C — opcional}
@@ -97,19 +100,22 @@ D) [texto livre] ________________________
 - Restrições de tempo ou eventos especiais (visita, avaliação, turma reduzida)
 - Preferência de debate para o bloco maior (tema aberto / tema direcionado / sem debate)
 
-Termine o Round 1 com:
-> 🛑 **Aguardando suas respostas antes de continuar para o detalhamento por UC.**
+Após cada resposta, processe internamente e faça a próxima pergunta. Quando todas forem respondidas, confirme:
+> ✅ **Round 1 concluído. Passando para as perguntas por UC.**
 
 ---
 
-### FASE 2 — Round 2: Perguntas por UC
+### FASE 2 — Round 2: Perguntas por UC (modo grill-me)
 
-Após receber as respostas do Round 1, processe-as internamente e identifique as dúvidas não óbvias de cada bloco. Então apresente **tudo em uma única mensagem**. Máximo 4 perguntas por UC — apenas quando houver escolha real que mude o slide.
+Após receber as respostas do Round 1, processe-as internamente e identifique as dúvidas não óbvias de cada bloco. Use a técnica grill-me: **uma pergunta por vez**, com sua resposta recomendada. Máximo 4 perguntas por UC — apenas quando houver escolha real que mude o slide.
+
+> 💡 Se a decisão já puder ser inferida do contexto ou das respostas do Round 1, resolva internamente sem perguntar.
 
 **Formato de cada pergunta:**
 
 ```
 [UC{NN} — Slide N] "{título provável do slide}"
+💡 Minha recomendação: {opção preferida com justificativa breve}
 A) {opção conservadora / padrão}
 B) {opção alternativa}
 C) {opção mais expandida / diferente — opcional}
@@ -121,8 +127,8 @@ D) ________________________
 - A decisão já foi resolvida pelo Round 1
 - O conteúdo é curricular fixo sem margem criativa
 
-Termine o Round 2 com:
-> 🛑 **Aguardando suas respostas para montar o plano final.**
+Após cada resposta, processe internamente e faça a próxima pergunta. Ao concluir todas as UCs:
+> ✅ **Round 2 concluído. Montando o plano final.**
 
 ---
 
