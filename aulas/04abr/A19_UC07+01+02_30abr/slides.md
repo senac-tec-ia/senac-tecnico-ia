@@ -12,14 +12,14 @@ github: LeoZanini
 
 <!-- SLIDE 1: [CAPA] Av.4 · Av.2 · LGPD em Debate -->
 
-# Av.4 · Av.2 · LGPD em Debate
+# Av.4 
 ## Aula 19 · 30/04/2026
 
 *UC07 · UC01 · UC02*
 
 ---
 layout: center
-bgPreset: animate
+bgPreset: palette
 ---
 
 <!-- SLIDE 2: [TEORIA] Agenda do Dia -->
@@ -36,11 +36,9 @@ bgPreset: animate
 | 10h10–11h30 | UC01 | **Debate LGPD**: Caso Serasa (trios) |
 | 11h30–12h20 | UC02 | **Inglês**: vocabulário de privacidade |
 
-> **Celular:** permitido apenas durante as avaliações digitais. Fora disso, virado na mesa.
-
 ---
 layout: center
-bgPreset: animate
+bgPreset: palette
 card: true
 ---
 
@@ -53,13 +51,13 @@ card: true
 
 ---
 layout: center
-bgPreset: animate
+bgPreset: palette
 card: true
 ---
 
 <!-- SLIDE 4: [ATIV AVALIATIVA] Av.4 Kahoot GPU -->
 
-# Av.4: Quiz GPU
+# Quiz de aquecimento!
 ## Kahoot · 15 questões · ~25 minutos
 
 **PIN na tela do professor**
@@ -72,17 +70,16 @@ card: true
 | Computação | 2 |
 | Inglês Técnico | 2 |
 
-> 20 segundos por questão · Celular liberado agora
 
 ---
 layout: default
-bgPreset: animate
+bgPreset: palette
 card: true
 ---
 
 <!-- SLIDE 5: [ATIV AVALIATIVA] Av.2 Google Forms -->
 
-## Av.2: Quiz Geral
+## Av.4: Quiz Geral
 ### Google Forms · 16 questões
 
 **Link/QR no quadro**
@@ -106,7 +103,7 @@ card: true
 
 <!-- SLIDE 6: [TEORIA] Regras durante Av.2 -->
 
-## Regras: Av.2
+## Regras: Av.4
 
 <div class="grid grid-cols-2 gap-8">
 <div>
@@ -128,23 +125,10 @@ card: true
 </div>
 </div>
 
+
 ---
 layout: center
 bgPreset: palette
----
-
-<!-- SLIDE 7: [TEORIA] Encerra Quiz -->
-
-# Quiz encerrado 
-## Bom trabalho, pessoal! 
-
-*9h35: Salvando respostas automaticamente*
-
-> Feche o celular. Intervalo em instantes.
-
----
-layout: center
-bgPreset: animate
 ---
 
 <!-- SLIDE 8: [TEORIA] Divisor Bloco 2 UC01 -->
@@ -276,7 +260,7 @@ card: true
 
 ---
 layout: default
-bgPreset: animate
+bgPreset: palette
 card: true
 ---
 
@@ -332,7 +316,7 @@ card: true
 
 ---
 layout: center
-bgPreset: animate
+bgPreset: palette
 ---
 
 <!-- SLIDE 18: [TEORIA] Divisor Bloco 3 UC02 -->
@@ -392,7 +376,7 @@ card: true
 
 <!-- SLIDE 21: [TEORIA] Tradução em Contexto -->
 
-## Tradução em Contexto
+#Tradução em Contexto
 
 | Termo | Tradução genérica | Significado no caso Serasa |
 |---|---|---|
@@ -428,9 +412,8 @@ card: true
 
 <!-- SLIDE 23: [TAREFA DE CASA] Tarefa para A20 -->
 
-## Tarefa de Casa: A19
+# Tarefa de Casa: A19
 
-> **Prazo: início da aula A20 (07/05)**
 
 Pesquise um caso de vazamento ou uso indevido de dados pessoais no Brasil, **diferente do caso Serasa**.
 
@@ -439,7 +422,7 @@ Identifique e anote:
 2. Qual empresa ou organização era responsável
 3. Qual artigo da LGPD foi potencialmente violado (Art. 5, 7 ou 18)
 
-Salve em `SENAC-TecIA/Aula-19/tarefa-lgpd.txt` e traga na próxima aula.
+Cite quando debatermos
 
 ---
 layout: end
@@ -448,11 +431,4 @@ github: LeoZanini
 
 <!-- SLIDE 24: Encerramento -->
 
-## Próxima Aula: A20
-
-**O que vem aí:**
-- **UC05**: Av.4 Python N2 - DataList + Matrizes
-- Prazo **Av.6** (projeto integrador): verificar no cronograma
-- Revisão: listas, funções e loops antes da avaliação
-
-*Até a próxima!*
+# Até a próxima!
