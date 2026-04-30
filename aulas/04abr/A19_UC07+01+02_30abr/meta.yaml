@@ -15,7 +15,7 @@ disciplines:
 date: "30/04/2026"
 
 # draft | em-planejamento | published
-status: em-planejamento
+status: published
 
 deployUrl: ""
 
