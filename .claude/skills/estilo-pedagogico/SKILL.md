@@ -27,6 +27,11 @@ Alunos com 14–17 anos, sem formação técnica prévia em TI ou programação.
   - vírgula em prosa natural
 - **Sem emojis** no corpo de slides e enunciados
 - **Sem jargão sem âncora**: nunca use um termo técnico em inglês sem explicá-lo na primeira ocorrência da aula
+- **Proibida linguagem voltada ao professor** em slides visíveis aos alunos. Exemplos proibidos:
+  - "Professor projeta...", "Professor apresenta...", "Professor circula..."
+  - "Orientação para o docente:", "Nota pedagógica:", "Dinâmica sugerida:"
+  - Qualquer frase que descreva o que o professor fará em vez do que o aluno verá
+  - Se precisar de instrução ao professor, use `<!-- comentário HTML -->` — invisível no Slidev
 
 ### Termos em inglês
 
