@@ -83,6 +83,7 @@ bgPreset: palette
 - Vantagem: você detecta erros de lógica no papel, onde é mais fácil corrigir
 
 **Regra de hoje:** escreva TUDO no papel antes de digitar qualquer linha E NÃO VAMOS SER GENÉRICOS IGUAL A ÚLTIMA VEZ
+
 ---
 layout: brainstorm
 card: true
@@ -90,7 +91,7 @@ bgPreset: palette
 pulse: true
 ---
 
-# Regra de ouro: caneta e papel
+# Caneta e papel
 
 **Dinâmica: ~35 minutos escrevendo no papel**
 
@@ -99,6 +100,41 @@ pulse: true
 - Como um engenheiro de dados planeja um script de 500 linhas?
 
 >Escreva no papel agora - você vai usar essa folha como guia durante o lab.
+
+---
+layout: default
+card: true
+bgPreset: palette
+pulse: true
+---
+
+# Problema
+
+Um professor precisa organizar as **notas de seus alunos**, mas não sabe usar Excel e decidiu utilizar um **programa em Python com banco de dados** para resolver isso. Ele precisa armazenar os dados de forma estruturada, garantindo que seja possível **registrar os alunos e suas respectivas notas**.
+
+## Além disso, ele deseja:
+
+- Cadastrar uma quantidade grande de alunos automaticamente (100) 
+- Consultar os dados armazenados sempre que necessário  
+- Corrigir ou atualizar a informação de um aluno específico  
+- Analisar o desempenho da turma como um todo  
+- A média das notas da turma, Qual foi a maior nota e menor nota
+
+---
+layout: default
+card: true
+bgPreset: palette
+pulse: true
+---
+
+# Problema
+
+Com base nesse problema, vocês devem:
+
+- Definir quais estruturas serão necessárias  
+- Planejar como os dados serão armazenados e manipulados  
+- Descrever o passo a passo da solução em pseudocódigo  
+
 
 ---
 layout: default
@@ -198,13 +234,13 @@ BUSCAR todos os valores da coluna nota com SELECT
 
 GUARDAR os resultados numa lista
 
-CALCULAR: média = soma / quantidade
-CALCULAR: maior = max(lista)
-CALCULAR: menor = min(lista)
+CALCULAR: média 
+CALCULAR: maior 
+CALCULAR: menor 
 
 IMPRIMIR os três valores com f-string
 
-SE média >= 6: IMPRIMIR mensagem positiva
+SE média > q algo: IMPRIMIR mensagem positiva
 SENÃO: IMPRIMIR alerta
 
 FECHAR a conexão com o banco
@@ -464,6 +500,7 @@ import random
 
 for i in range(1, 101):
     nome = f"Aluno {i}"
+    # `random.uniform(0, 10)` gera um decimal aleatório entre 0 e 10.
     nota = round(random.uniform(0, 10), 1)
 
     cursor.execute(
@@ -478,7 +515,7 @@ for i in range(1, 101):
 conn.commit()
 ```
 
-> `random.uniform(0, 10)` gera um decimal aleatório entre 0 e 10.
+
 
 ---
 layout: default

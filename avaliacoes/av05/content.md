@@ -63,14 +63,14 @@ Atualize a turma de um aluno com `UPDATE ... WHERE`. Depois mostre a tabela de a
 cursor.execute("SELECT valor FROM nota")
 notas = [row[0] for row in cursor.fetchall()]
 
-media = sum(notas) / len(notas)
-maior = max(notas)
-menor = min(notas)
+media = implementar codigo
+maior = implementar codigo
+menor = implementar codigo
 
 print(f"Media: {media:.2f}")
 print(f"Maior: {maior} | Menor: {menor}")
 
-if media >= 6:
+if implementar codigo:
     print("Turma aprovada!")
 else:
     print("Turma precisa de reforco.")
