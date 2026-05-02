@@ -1,31 +1,23 @@
 ---
 id: av05
-titulo: SQL na Prática — DDL + DQL
+titulo: SQL+Python — Banco na Prática (SQLite, sem def)
 tipo: AS
-ucs: UC08
-indicadores: "UC08: Ind.2+3"
-data-alvo: "24/04/2026"
-aula-alvo: A16
----
-id: av05
-titulo: Python N2 — DataList (Listas + Dicionários + Funções + Pandas)
-tipo: AS
-ucs: UC05, UC03
-indicadores: "UC05: Ind.1+2 · UC03: Ind.3"
+ucs: UC08, UC05, UC03
+indicadores: "UC08: Ind.2+3 · UC05: Ind.1+2 · UC03: Ind.3"
 data-alvo: "07/05/2026"
 aula-alvo: A20
 status: detalhada
 ---
 
-# Av.05 — Python N2: DataList
+# Av.05 — SQL+Python: Banco na Prática
 
 > **Status:** ✅ Detalhada
 
 **Tipo:** AS — Atividade em Sala  
 **Data:** 07/05/2026 (Quinta-feira, A20 — UC05 3HA)  
 **Formação:** Dupla  
-**UCs cobertas:** UC05, UC03  
-**Indicadores:** UC05 Ind.1+2 · UC03 Ind.3  
+**UCs cobertas:** UC08, UC05, UC03  
+**Indicadores:** UC08 Ind.2+3 · UC05 Ind.1+2 · UC03 Ind.3  
 **Plataforma de entrega:** GitHub (git push em sala) + link ao professor  
 **Slot disponível:** Sem1-Qui — UC05 (3HA)
 
@@ -33,7 +25,11 @@ status: detalhada
 
 ## Contexto pedagógico
 
-02/05 (Sáb) ensina `def`/`return`, listas, dicionários, Pandas e NumPy. Esta avaliação (07/05) é aplicação direta desses conteúdos. Substitui a Av.05 original de SQL (que migrou para a Av.06 integrada).
+Alunos conhecem: CREATE TABLE, INSERT, SELECT, UPDATE, ALTER — tudo visto em A06/A08/A10/A18. Python: variáveis, tipos, for, if/elif — **sem `def`/`return`** (funções não foram ensinadas). Pandas visto em 02/05 (sábado de reposição).
+
+Esta avaliação integra SQL + Python em um único script: criar duas tabelas no SQLite, inserir dados, mostrar no terminal, alterar um registro, mostrar de novo, e usar Pandas para estatísticas simples.
+
+Substitui a Av.05 original de Python N2 (DataList com def) — simplificada porque alunos não dominam funções ainda.
 
 ---
 
@@ -41,31 +37,19 @@ status: detalhada
 
 | UC | Indicador | O que evidencia **A** | O que evidencia **PA** | O que evidencia **NA** |
 |---|---|---|---|---|
-| UC05 | Ind.1 | Funções com `def`+`return` funcionais, listas e dicionários corretos | Estruturas parciais | Sem `def`, sem estruturas |
-| UC05 | Ind.2 | `pd.DataFrame`, `.apply()`, `.mean()`, `.max()`, `.min()` usados corretamente | Pandas parcialmente usado | Sem Pandas |
-| UC03 | Ind.3 | `calcular_media()` implementa corretamente a fórmula | Função presente mas valor errado | Sem função de média |
+| UC08 | Ind.2 | Usa SQLite com comentário justificando a escolha (SGBD embutido, sem instalação) | Usa SQLite sem justificativa | Não conecta ao SQLite |
+| UC08 | Ind.3 | `CREATE TABLE` correto com tipos (`TEXT`, `INTEGER`, `REAL`) e `PRIMARY KEY` para as duas tabelas | Uma tabela correta ou tipos errados | Sem `CREATE TABLE` funcional |
+| UC05 | Ind.1 | Script Python funcional com `for` + `if/elif` corretos | Parcialmente funcional (executa mas com erro lógico) | Sem nenhuma estrutura de controle |
+| UC05 | Ind.2 | `sqlite3` e `pandas` usados corretamente (conexão + `read_sql_query` + DataFrame) | Um dos dois funcional | Sem sqlite3 e sem Pandas |
+| UC03 | Ind.3 | `.mean()`, `.max()`, `.min()` aplicados sobre coluna numérica com valores corretos | Cálculo presente mas valor incorreto | Sem nenhum cálculo estatístico |
 
 ---
 
 ## Orientações para o Professor
 
-- Ter starter code pronto com esqueleto das 4 fases
-- Fase 4 (Pandas): blocos na lousa para copiar e adaptar — é andaime, não cola
+- Ter starter code com esqueleto das 4 fases (conexão, INSERT+SELECT, UPDATE+SELECT, Pandas)
+- Fase 4: deixar `.mean()` / `.max()` / `.min()` e `pd.read_sql_query()` visíveis na lousa — andaime, não cola
+- UC08 Ind.2: exigir comentário no topo explicando por que SQLite (sem instalação, arquivo local)
+- Se algum aluno perguntar sobre `def`: dizer que não é necessário aqui — o script funciona sem
 
 Enunciado completo: [avaliacoes/av05/content.md](../../../../avaliacoes/av05/content.md)
-
-**Tipo:** AS (Atividade em Sala) com entrega via git push  
-**Data:** A16 — 24/04/2026 (Sexta-feira)  
-**Formação:** Dupla  
-**UCs cobertas:** UC08  
-**Indicadores:** UC08 Ind.2+3  
-**Plataforma de entrega:** GitHub (git push em sala) + link no Classroom  
-**Slot disponível:** Sem2-Fri — UC08 (2HA)
-
-**Atenção:** UC08 Ind.1 (modelagem ER / FK / JOIN) ainda não foi ensinado completamente.
-O conteúdo de A14 (17/04, Sem1-Fri, UC08 3HA) é RESERVADO para ensino de FK+JOIN — não avaliação.
-Esta AS cobre apenas Ind.2 (DDL) e Ind.3 (DQL básico).
-
----
-
-> _Detalhamento será adicionado após Av.02 ser concluída._

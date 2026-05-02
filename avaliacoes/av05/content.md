@@ -1,100 +1,110 @@
-# Av.05 — Python N2: DataList 📊
+# Av.05 - SQL+Python: Banco na Prática
 
-**Tipo:** AS — Atividade em Sala · **Em dupla** · **Entrega: git push**
+**Tipo:** AS - Atividade em Sala · **Em dupla** · **Entrega: link do Colab**
 
-**UCs:** UC05 Python · UC03 Fundamentos Matemáticos
+**UCs:** UC08 Banco de Dados · UC05 Python · UC03 Fundamentos Matemáticos
 
-**Data:** 07/05/2026 — durante a aula A20 (UC05 3HA)
-
----
-
-Você já sabe criar variáveis, condicionais e calcular custos de tokens. Agora vamos dar um passo a mais: organizar dados em **listas** e **dicionários**, criar **funções reutilizáveis**, e começar a usar o **Pandas** para trabalhar com tabelas de verdade.
-
-Neste projeto, você e sua dupla vão construir um **analisador de notas** de uma turma imaginária.
+**Data:** 07/05/2026 - durante a aula A20 (UC05 3HA)
 
 ---
 
-## Fase 1 — Dados e Listas
+Você já sabe criar tabelas no SQL e escrever scripts em Python. Agora vamos unir os dois: criar um banco de dados em SQLite, inserir 100 registros com um loop, consultar no terminal, alterar um dado e calcular estatísticas com Python puro.
 
-Crie uma lista com os nomes de 5 alunos e outra com as notas deles (0 a 10). Use dados inventados pela dupla.
+Neste projeto, você e sua dupla vão construir um **registro de alunos e notas** do zero.
+
+---
+
+## Fase 1 - Conectar e Criar as Tabelas
 
 ```python
-nomes = ["Ana", "Bruno", "Carla", "Diego", "Elena"]
-notas = [8.5, 6.0, 9.2, 4.5, 7.8]
+# Dupla: Nome1 e Nome2
+# SQLite: SGBD embutido no Python, sem instalacao.
+
+import sqlite3
+import random
+
+conn = sqlite3.connect('escola.db')
+cursor = conn.cursor()
 ```
 
-Imprima cada aluno com sua nota usando `for` e `range()`.
+Crie duas tabelas usando `DROP TABLE IF EXISTS` antes de `CREATE TABLE IF NOT EXISTS`. A dupla decide os nomes dos campos.
+
+> Dica: uma tabela guarda os alunos, a outra guarda as notas. Pense em quais campos cada uma precisa.
 
 ---
 
-## Fase 2 — Dicionário por Aluno
+## Fase 2 - Inserir 100 Alunos com For
 
-Crie um dicionário onde a chave é o nome e o valor é a nota:
+Use um `for` loop para inserir 100 alunos com notas aleatórias. Consulte o slide de referência do `random`.
 
 ```python
-turma = {
-    "Ana": 8.5,
-    "Bruno": 6.0,
-    ...
-}
+for i in range(1, 101):
+    nome = f"Aluno {i}"
+    nota = round(random.uniform(0, 10), 1)
+    # insira na tabela de alunos
+    # insira na tabela de notas
+
+conn.commit()
 ```
 
-Imprime o aluno com maior nota e o com menor nota.
+Depois do loop, mostre os primeiros registros no terminal com `cursor.fetchall()`.
 
 ---
 
-## Fase 3 — Funções
+## Fase 3 - Alterar e Mostrar de Novo
 
-Crie as duas funções abaixo:
-
-```python
-def calcular_media(notas):
-    # recebe lista de notas, retorna a média
-    ...
-
-def classificar_aluno(nota):
-    # retorna "Aprovado" se nota >= 6, "Recuperação" se < 6
-    ...
-```
-
-Use as funções para cada aluno da turma.
+Atualize a turma de um aluno com `UPDATE ... WHERE`. Depois mostre a tabela de alunos completa com `SELECT` para confirmar a mudança.
 
 ---
 
-## Fase 4 — Pandas
+## Fase 4 - Estatísticas com Python Puro
 
 ```python
-import pandas as pd
+cursor.execute("SELECT valor FROM nota")
+notas = [row[0] for row in cursor.fetchall()]
 
-df = pd.DataFrame({
-    "Nome": nomes,
-    "Nota": notas
-})
+media = sum(notas) / len(notas)
+maior = max(notas)
+menor = min(notas)
 
-df["Situação"] = df["Nota"].apply(classificar_aluno)
+print(f"Media: {media:.2f}")
+print(f"Maior: {maior} | Menor: {menor}")
 
-print(df)
-print(f"\nMédia da turma: {df['Nota'].mean():.2f}")
-print(f"Maior nota: {df['Nota'].max()}")
-print(f"Menor nota: {df['Nota'].min()}")
+if media >= 6:
+    print("Turma aprovada!")
+else:
+    print("Turma precisa de reforco.")
+
+conn.close()
 ```
+
+---
+
+## Fase Bonus - se der tempo
+
+Importe `pandas` e carregue a tabela de notas com `pd.read_sql_query()`. Calcule a media com `.mean()` e compare com o resultado da Fase 4.
 
 ---
 
 ## Como entregar
 
-1. Salve como `av05_datalist.py` na pasta `SENAC-TecIA/Av05/`
-2. Comentário no topo: `# Dupla: Nome1 e Nome2`
-3. `git push` até o final da aula
-4. Envie o link do repositório ao professor
+1. Renomear o notebook para: `Av05 - Nome1 e Nome2`
+2. Salvar no Colab (Ctrl+S)
+3. Clicar em **Compartilhar** - "Qualquer pessoa com o link pode ver"
+4. Enviar o link pelo WhatsApp da turma
 
 ---
 
-## Checklist
+## Checklist obrigatório
 
-- [ ] Lista `nomes` e `notas` com 5 entradas
-- [ ] Dicionário `turma` criado
-- [ ] Função `calcular_media()` com `def` e `return`
-- [ ] Função `classificar_aluno()` com `def` e `return`
-- [ ] DataFrame Pandas com coluna `Situação`
-- [ ] `git push` feito
+- [ ] Duas tabelas criadas com `DROP TABLE IF EXISTS` + `CREATE TABLE IF NOT EXISTS`
+- [ ] 100 alunos inseridos com `for` + `random.uniform()`
+- [ ] `SELECT` + `fetchall()` mostrando os registros no terminal
+- [ ] `UPDATE` em 1 registro + `SELECT` para confirmar
+- [ ] `sum/len/max/min` sobre lista de notas + if/else sobre a média
+- [ ] Link do Colab enviado ao professor
+
+## Checklist bonus
+
+- [ ] `pd.read_sql_query()` carregando a tabela de notas
+- [ ] `.mean()` calculando a media via Pandas

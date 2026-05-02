@@ -46,8 +46,6 @@ Fechamento do T1. Integra todo conteúdo técnico do trimestre. Tema livre para 
 | UC | Indicador | O que evidencia **A** | O que evidencia **PA** | O que evidencia **NA** |
 |---|---|---|---|---|
 | UC08 | Ind.1 | JOIN funcional entre 2 tabelas com FK declarada | JOIN presente mas sem FK | Sem JOIN ou sem relação |
-| UC08 | Ind.2 | Justifica uso do SQLite no relatório | Usa SQLite sem comentar | Não cria banco |
-| UC08 | Ind.3 | CREATE TABLE correto com tipos e constraints | CREATE TABLE funciona sem constraints | Sem DDL válido |
 | UC09 | Ind.1–4 | 3+ funções matemáticas aplicadas com NumPy | 1–2 funções | Nenhuma |
 | UC03 | Ind.4 | Relatório identifica padrões nos dados | Descreve mas não identifica padrões | Sem relatório |
 | UC05 | Ind.2 | `pd.read_sql`, `np.polyfit`, `plt.plot` usados corretamente | 1–2 bibliotecas com erros | Sem bibliotecas |

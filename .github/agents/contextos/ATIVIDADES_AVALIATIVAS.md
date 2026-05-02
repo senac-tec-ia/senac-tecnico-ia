@@ -106,8 +106,8 @@
 | Ind. | Descrição resumida | Status pedagógico | Avaliação prevista |
 |---|---|---|---|
 | 1 | Propõe alteração no acesso a dados (FK/JOIN) | Parcialmente dado | Av.6 (MP Integrado) |
-| 2 | Seleciona SGBD conforme necessidades | Parcialmente dado | Av.6 (MP Integrado) |
-| 3 | Cria estrutura física de banco de dados | Parcialmente dado | Av.6 (MP Integrado) |
+| 2 | Seleciona SGBD conforme necessidades | Parcialmente dado | Av.5 (AS SQL+Python) |
+| 3 | Cria estrutura física de banco de dados | Parcialmente dado | Av.5 (AS SQL+Python) |
 
 ### UC09 — Estatística Aplicada
 
@@ -133,8 +133,8 @@
 | 2 | Relatório de Visita Técnica: Limber | MP | UC07: Ind.1+2+3+4 | A17 (23/04) | ✅ Detalhada |
 | 3 | Pseudocódigo + TokenLab | AS dupla | UC05: Ind.1 · UC03: Ind.1+2+3 · UC04: Ind.1 | A17 (23/04) | ✅ Detalhada |
 | **4** | **Quiz: GPU + Arquitetura + IA** | **PQ individual · papel** | **UC06: Ind.1+2 · UC04: Ind.2 · UC01: Ind.1 · UC02: Ind.2** | **A19 abertura (30/04) — 25 min** | **✅ Detalhada** |
-| **5** | **Python N2: DataList** | **AS dupla · git** | **UC05: Ind.1+2 · UC03: Ind.3** | **A20 (07/05)** | **✅ Detalhada** |
-| **6** | **Projeto Integrado: SQL + Python + Pandas + Matplotlib** | **MP dupla · git + PDF** | **UC08: Ind.1+2+3 · UC09: Ind.1+2+3+4 · UC03: Ind.4 · UC05: Ind.2** | **A21 (08/05)** | **✅ Detalhada** |
+| **5** | **SQL+Python: Banco na Prática (SQLite, sem def)** | **AS dupla · git** | **UC08: Ind.2+3 · UC05: Ind.1+2 · UC03: Ind.3** | **A20 (07/05)** | **✅ Detalhada** |
+| **6** | **Projeto Integrado: SQL + Python + Pandas + Matplotlib** | **MP dupla · git + PDF** | **UC08: Ind.1 · UC09: Ind.1+2+3+4 · UC03: Ind.4 · UC05: Ind.2** | **A21 (08/05)** | **✅ Detalhada** |
 | — | **Recuperação** | Qualquer formato | Todos os PA/NA pendentes | **14/05 (A22) — dia inteiro** | Reservado |
 
 **Cobertura total: 26/26 indicadores T1 ✅**
@@ -193,3 +193,4 @@ Dia reservado para **ensino**, não avaliação:
 | 06/04/2026 | Av.1 detalhada — Alt.4 escolhida | Glossário 10 termos + Minha Opinião · UC02 Ind.2 não coberto |
 | 06/04/2026 | Av.2 detalhada — Alt.2 escolhida | Quiz Digital Google Forms 15 q · UC02 Ind.2 não incluído — indicador sem cobertura formal |
 | 07/04/2026 | Av.3 detalhada — tema TriaBot 🏥 | Triagem médica · 3 sinais vitais · condicionais and/or · 4 níveis · Viral Check descartado |
+| 01/05/2026 | Av.5 redesenhada — Python N2 DataList → SQL+Python sem def | Alunos não dominam def/return; TriaBot não foi aplicado. Av.5 passa a integrar SQL+Python: duas tabelas SQLite, INSERT, SELECT, UPDATE, SELECT, Pandas stats. Cobre UC08 Ind.2+3 + UC05 Ind.1+2 + UC03 Ind.3. Av.6 perde UC08 Ind.2+3. |
