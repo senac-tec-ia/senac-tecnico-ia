@@ -1,136 +1,123 @@
-# Av.05 — SQL+Python: Banco na Prática
+# Av.05 - SQL+Python: Banco na Prática
 
-**Tipo:** AS — Atividade em Sala · **Em dupla** · **Entrega: git push**
+**Tipo:** AS - Atividade em Sala · **Em dupla** · **Entrega: git push**
 
 **UCs:** UC08 Banco de Dados · UC05 Python · UC03 Fundamentos Matemáticos
 
-**Data:** 07/05/2026 — durante a aula A20 (UC05 3HA)
+**Data:** 07/05/2026 - durante a aula A20 (UC05 3HA)
 
 ---
 
-Você já sabe criar tabelas no SQL e escrever scripts em Python. Agora vamos unir os dois: criar um banco de dados diretamente no Python com SQLite, inserir dados, consultar no terminal, alterar um registro, consultar de novo, e analisar com Pandas.
+Você já sabe criar tabelas no SQL e escrever scripts em Python. Agora vamos unir os dois: criar um banco de dados em SQLite, inserir 100 registros com um loop, consultar no terminal, alterar um dado, e analisar com Pandas e Matplotlib.
 
-Neste projeto, você e sua dupla vão construir um **registro de alunos e notas** em SQLite.
+Neste projeto, você e sua dupla vão construir um **registro de alunos e notas** do zero.
 
 ---
 
-## Fase 1 — Conectar e Criar as Tabelas
+## Fase 1 - Conectar e Criar as Tabelas
 
 ```python
 # Dupla: Nome1 e Nome2
-# SQLite foi escolhido porque é um SGBD embutido — não precisa de instalação.
-# Funciona como um arquivo .db salvo na pasta do projeto.
+# SQLite: SGBD embutido no Python, sem instalacao.
 
 import sqlite3
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import random
 
 conn = sqlite3.connect('escola.db')
 cursor = conn.cursor()
-
-cursor.execute('''
-    CREATE TABLE IF NOT EXISTS aluno (
-        id INTEGER PRIMARY KEY,
-        nome TEXT NOT NULL,
-        turma TEXT
-    )
-''')
-
-cursor.execute('''
-    CREATE TABLE IF NOT EXISTS nota (
-        id INTEGER PRIMARY KEY,
-        aluno_id INTEGER,
-        disciplina TEXT,
-        valor REAL
-    )
-''')
-
-conn.commit()
-print("Tabelas criadas!")
 ```
 
-**O que você fez:** escolheu o SQLite como SGBD e criou a estrutura física do banco com duas tabelas.
+Crie duas tabelas usando `CREATE TABLE IF NOT EXISTS`. A dupla decide os nomes dos campos - consulte os slides de referência para ver quais tipos de dados usar e quais constraints aplicar.
+
+> Dica: uma tabela guarda os alunos, a outra guarda as notas. Pense em quais campos cada uma precisa.
 
 ---
 
-## Fase 2 — Inserir e Mostrar
+## Fase 2 - Inserir 100 Alunos com For
 
-Insira pelo menos **3 alunos** e **3 notas** (uma por aluno). Use dados inventados pela dupla.
+Use um `for` loop para inserir 100 alunos com notas aleatórias. Consulte o slide de referência do `random`.
 
 ```python
-cursor.execute("INSERT INTO aluno VALUES (1, 'Ana', 'IA-T1')")
-cursor.execute("INSERT INTO aluno VALUES (2, 'Bruno', 'IA-T1')")
-cursor.execute("INSERT INTO aluno VALUES (3, 'Carla', 'IA-T1')")
+for i in range(1, 101):
+    nome = f"Aluno {i}"
+    nota = round(random.uniform(0, 10), 1)
+    # insira na tabela de alunos
+    # insira na tabela de notas
 
-cursor.execute("INSERT INTO nota VALUES (1, 1, 'Python', 8.5)")
-cursor.execute("INSERT INTO nota VALUES (2, 2, 'Python', 6.0)")
-cursor.execute("INSERT INTO nota VALUES (3, 3, 'Python', 9.2)")
 conn.commit()
-
-print("\n--- ANTES da alteração ---")
-cursor.execute("SELECT * FROM aluno")
-for linha in cursor.fetchall():
-    print(linha)
 ```
+
+Depois do loop, mostre os primeiros 5 registros no terminal com `SELECT`.
 
 ---
 
-## Fase 3 — Alterar e Mostrar de Novo
+## Fase 3 - Alterar e Mostrar de Novo
 
-Altere a turma de um aluno com `UPDATE`. Depois mostre a tabela completa de novo.
-
-```python
-cursor.execute("UPDATE aluno SET turma = 'IA-T2' WHERE id = 2")
-conn.commit()
-
-print("\n--- DEPOIS da alteração ---")
-cursor.execute("SELECT * FROM aluno")
-for linha in cursor.fetchall():
-    print(linha)
-```
+Atualize a turma de um aluno com `UPDATE ... WHERE`. Depois mostre a tabela de alunos completa com `SELECT` para confirmar a mudança.
 
 ---
 
-## Fase 4 — Pandas e Análise
+## Fase 4 - Pandas e Estatísticas
 
 ```python
-df = pd.read_sql_query("SELECT * FROM nota", conn)
+df_notas = pd.read_sql_query("SELECT * FROM nota", conn)
 
-print("\n--- Tabela de notas ---")
-print(df)
+media = df_notas["valor"].mean()
+maior = df_notas["valor"].max()
+menor = df_notas["valor"].min()
 
-media = df['valor'].mean()
-maxima = df['valor'].max()
-minima = df['valor'].min()
+print(f"Media: {media:.2f}")
+print(f"Maior: {maior} | Menor: {menor}")
 
-print(f"\nMédia: {media:.2f}")
-print(f"Maior nota: {maxima}")
-print(f"Menor nota: {minima}")
-
-if media >= 7:
-    print("Turma acima da média!")
+if media >= 6:
+    print("Turma aprovada!")
 else:
-    print("Turma precisa de reforço.")
-
-conn.close()
+    print("Turma precisa de reforco.")
 ```
+
+---
+
+## Fase 5 - Grafico com Matplotlib
+
+Plote as notas dos 100 alunos como pontos e adicione uma reta de tendência. Consulte o slide de referência do matplotlib.
+
+O gráfico deve ter:
+- Eixo X: número do aluno
+- Eixo Y: nota
+- Pontos azuis para cada aluno
+- Reta vermelha tracejada mostrando a tendência
+- Título e legendas
+
+---
+
+## Fase Bonus - se der tempo
+
+Plote as notas dos 100 alunos como dispersão e adicione uma reta de tendência. Consulte o slide de referência do matplotlib. O gráfico deve ter pontos azuis, reta vermelha tracejada, eixos com label e título.
 
 ---
 
 ## Como entregar
 
-1. Salve como `av05_banco.py` na pasta `SENAC-TecIA/Av05/`
-2. Comentário no topo: `# Dupla: Nome1 e Nome2` + por que o SQLite foi escolhido
-3. `git push` até o final da aula
-4. Envie o link do repositório ao professor
+1. Renomear o notebook para: `Av05 - Nome1 e Nome2`
+2. Salvar no Colab (Ctrl+S)
+3. Clicar em **Compartilhar** - "Qualquer pessoa com o link pode ver"
+4. Enviar o link pelo WhatsApp da turma
 
 ---
 
-## Checklist
+## Checklist obrigatório
 
-- [ ] Comentário no topo com a dupla + justificativa do SQLite
-- [ ] Duas tabelas criadas com `CREATE TABLE` (tipos e `PRIMARY KEY` corretos)
-- [ ] Pelo menos 3 alunos e 3 notas inseridos
-- [ ] `SELECT` antes e `SELECT` depois do `UPDATE` (mostrar a diferença)
-- [ ] `pd.read_sql_query()` + `.mean()` + `.max()` + `.min()`
-- [ ] `if/else` interpretando a média
-- [ ] `git push` feito
+- [ ] Duas tabelas criadas com `CREATE TABLE IF NOT EXISTS`
+- [ ] 100 alunos inseridos com `for` + `random.uniform()`
+- [ ] `SELECT` mostrando os primeiros registros no terminal
+- [ ] `UPDATE` em 1 registro + `SELECT` para confirmar
+- [ ] Pandas: `.mean()` / `.max()` / `.min()` + if/else sobre a média
+- [ ] Link do Colab enviado ao professor
+
+## Checklist bonus
+
+- [ ] Gráfico de dispersão com 100 pontos
+- [ ] Reta de tendência com `np.polyfit`

@@ -56,15 +56,17 @@ bgPreset: palette
 
 # O que vamos construir hoje
 
-**4 fases - todas em um único script Python**
+**4 fases obrigatórias + 1 bônus**
 
-**Fase 1 - Conectar:** criar o banco `escola.db` e abrir conexão com `sqlite3`
+**Fase 1 - Conectar:** criar o banco e abrir conexão com `sqlite3`
 
-**Fase 2 - Inserir:** criar tabelas `aluno` e `nota`, inserir registros reais
+**Fase 2 - Inserir:** criar tabelas + 100 alunos com `for` + `random`
 
-**Fase 3 - Alterar:** UPDATE em um registro, SELECT para confirmar a mudança
+**Fase 3 - Alterar:** `UPDATE` em 1 registro + `SELECT` para confirmar
 
-**Fase 4 - Analisar:** Pandas + `.mean()` / `.max()` / `.min()` + if/else sobre a média
+**Fase 4 - Analisar:** Pandas `.mean()` / `.max()` / `.min()` + if/else
+
+**Fase Bonus - Gráfico:** dispersão + reta de tendência com matplotlib
 
 ---
 layout: center
@@ -109,7 +111,7 @@ pulse: true
 - O que acontece quando você começa a codar sem um plano?
 - Como um engenheiro de dados planeja um script de 500 linhas?
 
-> Nas próximas páginas: o professor escreve o pseudocódigo coletivamente no quadro - vocês copiam no papel.
+> Escreva no papel agora - você vai usar essa folha como guia durante o lab.
 
 ---
 layout: default
@@ -140,19 +142,21 @@ bgPreset: palette
 # Pseudocódigo - Passo 2: Criar as tabelas
 
 ```
-CRIAR TABELA aluno SE NÃO EXISTIR:
-  - id: número inteiro, chave primária
-  - nome: texto, obrigatório
-  - turma: texto
+CRIAR TABELA 1 SE NÃO EXISTIR:
+  - campo de identificação única (inteiro, chave primária)
+  - campo de texto obrigatório
+  - campo de texto opcional
 
-CRIAR TABELA nota SE NÃO EXISTIR:
-  - id: número inteiro, chave primária
-  - aluno_id: número inteiro (liga ao aluno)
-  - disciplina: texto
-  - valor: número decimal
+CRIAR TABELA 2 SE NÃO EXISTIR:
+  - campo de identificação única (inteiro, chave primária)
+  - campo que liga à Tabela 1
+  - campo de texto (nome da disciplina)
+  - campo numérico decimal (a nota)
+
+CONFIRMAR as mudanças no banco
 ```
 
-**CONFIRMAR (commit) as mudanças no banco**
+*Quais campos cada tabela vai ter? A dupla decide os nomes.*
 
 ---
 layout: default
@@ -160,22 +164,22 @@ card: true
 bgPreset: palette
 ---
 
-# Pseudocódigo - Passos 3-5: Inserir e mostrar
+# Pseudocódigo - Passo 3: Inserir 100 alunos com for
 
 ```
-INSERIR na tabela aluno:
-  - (1, nome_inventado_pela_dupla, turma_inventada)
-  - (2, outro_nome, outra_turma)
-  - (3, mais_um_nome, turma)
+PARA cada número de 1 até 100:
+  GERAR um nome: "Aluno 1", "Aluno 2", ... "Aluno 100"
+  GERAR uma nota aleatória entre 0.0 e 10.0
 
-INSERIR na tabela nota:
-  - (1, 1, "Python", nota_inventada)
-  - (2, 2, "Python", nota_inventada)
-  - (3, 3, "Python", nota_inventada)
+  INSERIR na Tabela 1: (número, nome, "TurmaA")
+  INSERIR na Tabela 2: (número, número, "Python", nota)
 
-CONFIRMAR inserções
-MOSTRAR todos os alunos no terminal (SELECT *)
+CONFIRMAR todas as inserções de uma vez
+
+MOSTRAR os primeiros 5 registros no terminal
 ```
+
+*Use `import random` e `random.uniform(0, 10)` para as notas*
 
 ---
 layout: default
@@ -201,19 +205,24 @@ card: true
 bgPreset: palette
 ---
 
-# Pseudocódigo - Passos 8-10: Pandas e fechamento
+# Pseudocódigo - Passos 8-11: Pandas + Matplotlib
 
 ```
-CARREGAR a tabela nota em um DataFrame do Pandas
-  usando pd.read_sql_query()
+CARREGAR a tabela de notas em um DataFrame
 
-CALCULAR: média de "valor", maior nota, menor nota
+CALCULAR: média, maior nota, menor nota
+SE a média >= 6: IMPRIMIR mensagem positiva
+SENÃO: IMPRIMIR alerta
 
-SE a média >= 6:
-  IMPRIMIR "Turma aprovada"
-SENÃO:
-  IMPRIMIR "Turma precisa de reforço"
+CRIAR um gráfico de pontos:
+  eixo X = número do aluno (id)
+  eixo Y = nota
 
+CALCULAR a reta de tendência sobre esses pontos
+
+PLOTAR a reta por cima dos pontos
+
+MOSTRAR o gráfico
 FECHAR a conexão com o banco
 ```
 
@@ -246,7 +255,7 @@ pulseDuration: 8
 ---
 
 # PARTE 2 - Slides de Referência
-*Cola permitida - ficam projetados durante todo o lab*
+*Consulte no seu dispositivo quando precisar*
 
 ---
 layout: default
@@ -287,23 +296,30 @@ bgPreset: palette
 # Referência: SQL DDL - CREATE TABLE
 
 ```python
+# Se rodar o script de novo: limpe as tabelas antes
+cursor.execute("DROP TABLE IF EXISTS nota")
+cursor.execute("DROP TABLE IF EXISTS aluno")
+conn.commit()
+
 cursor.execute("""
-    CREATE TABLE IF NOT EXISTS aluno (
+    CREATE TABLE IF NOT EXISTS nome_tabela1 (
         id    INTEGER PRIMARY KEY,
-        nome  TEXT NOT NULL,
-        turma TEXT
+        campo TEXT NOT NULL,
+        outro TEXT
     )
 """)
 cursor.execute("""
-    CREATE TABLE IF NOT EXISTS nota (
-        id        INTEGER PRIMARY KEY,
-        aluno_id  INTEGER,
-        disciplina TEXT,
-        valor     REAL
+    CREATE TABLE IF NOT EXISTS nome_tabela2 (
+        id       INTEGER PRIMARY KEY,
+        liga_id  INTEGER,
+        texto    TEXT,
+        numero   REAL
     )
 """)
 conn.commit()
 ```
+
+> Drope `nota` antes de `aluno` - sempre na ordem inversa.
 
 ---
 layout: default
@@ -458,19 +474,91 @@ card: true
 bgPreset: palette
 ---
 
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- objetivo: aluno gera dados com for + random sem ter o código pronto -->
+
+# Referência: for loop + random
+
+```python
+import random
+
+for i in range(1, 101):
+    nome = f"Aluno {i}"
+    nota = round(random.uniform(0, 10), 1)
+
+    cursor.execute(
+        "INSERT INTO aluno VALUES (?, ?, ?)",
+        (i, nome, "TurmaA")
+    )
+    cursor.execute(
+        "INSERT INTO nota VALUES (?, ?, ?, ?)",
+        (i, i, "Python", nota)
+    )
+
+conn.commit()
+```
+
+> `random.uniform(0, 10)` gera um decimal aleatório entre 0 e 10.
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- objetivo: aluno plota pontos e reta de tendência - padrão completo copiável pois nunca usou matplotlib -->
+
+# Referência: Matplotlib - pontos + reta de tendência
+
+**Padrão completo - copie exatamente assim:**
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = df_notas["id"]
+y = df_notas["valor"]
+
+# Pontos dos alunos
+plt.scatter(x, y, color="blue", alpha=0.5, label="Notas")
+
+# Reta de tendência
+z = np.polyfit(x, y, 1)
+p = np.poly1d(z)
+plt.plot(x, p(x), "r--", label="Tendência")
+
+plt.xlabel("Aluno")
+plt.ylabel("Nota")
+plt.title("Notas da Turma - Python")
+plt.legend()
+plt.show()
+```
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
 <!-- [ATIV AVALIATIVA] -->
 
 # Checklist da Av.05
 
-**Antes do git push - confirme cada item:**
+**Obrigatório - antes de entregar:**
 
-- [ ] Arquivo `av05_banco.py` na pasta `SENAC-TecIA/Av05/` com nome da dupla no topo
-- [ ] Tabelas `aluno` e `nota` criadas com `CREATE TABLE IF NOT EXISTS`
-- [ ] Pelo menos 3 alunos e 3 notas inseridos
-- [ ] `UPDATE` em pelo menos 1 registro + `SELECT` para confirmar
-- [ ] Pandas: `.mean()` / `.max()` / `.min()` + if/else sobre a média
-- [ ] Script roda do início ao fim sem erro
-- [ ] `git push` feito + link enviado
+- [ ] Duas tabelas criadas com `CREATE TABLE IF NOT EXISTS`
+- [ ] 100 alunos inseridos com `for` + `random.uniform()`
+- [ ] `SELECT` mostrando os primeiros registros
+- [ ] `UPDATE` em 1 registro + `SELECT` para confirmar
+- [ ] Pandas: `.mean()` / `.max()` / `.min()` + if/else
+
+**Bonus - se der tempo:**
+
+- [ ] Gráfico de dispersão + reta de tendência com matplotlib
 
 ---
 layout: center
@@ -493,22 +581,23 @@ bgPreset: palette
 
 # Mão na massa - Abram o Colab!
 
-**Setup inicial (faça agora antes de começar):**
+**Setup - faça agora antes de começar:**
 
-1. Abrir o Google Colab em `colab.research.google.com`
-2. Criar novo notebook - renomear para `av05_banco`
-3. Na primeira célula, adicionar o cabeçalho:
+1. Abrir `colab.research.google.com`
+2. Criar novo notebook
+3. Renomear para: `Av05 - Nome1 e Nome2`
+4. Primeira célula:
 
 ```python
-# Av.05 - Banco na Prática
+# Av.05 - Banco na Pratica
 # Dupla: Nome1 e Nome2
 # Data: 07/05/2026
 ```
 
-4. Usar os **slides de referência** como cola - eles ficam projetados
-5. **Sem IA** - professor circula para ajudar
+5. Os **slides de referência** ficam projetados - use como cola
+6. **Sem IA** para gerar o código
 
-> Dúvida? Levanta a mão. Não fica parado esperando.
+> Travou? Levanta a mão. Nao fica parado olhando pra tela.
 
 ---
 layout: default
@@ -522,15 +611,17 @@ bgPreset: palette
 
 **Acompanhe seu progresso durante o lab:**
 
-**Fase 1 - Conectar** - `sqlite3.connect()` + `cursor` funcionando
+**Fase 1 - Conectar** - banco criado + `cursor` funcionando
 
-**Fase 2 - Inserir** - tabelas criadas + 3 alunos + 3 notas inseridas + SELECT mostrando
+**Fase 2 - Inserir** - tabelas + 100 alunos via `for` + `SELECT` mostrando os primeiros
 
-**Fase 3 - Alterar** - UPDATE executado + SELECT confirmando mudança
+**Fase 3 - Alterar** - `UPDATE` executado + `SELECT` confirmando mudança
 
-**Fase 4 - Analisar** - Pandas carregado + media/max/min calculados + if/else imprimindo resultado
+**Fase 4 - Analisar** - Pandas + media/max/min + if/else imprimindo resultado
 
-> Se terminou a Fase 4: revise o código, adicione comentários, ajude o colega ao lado.
+**Fase Bonus - Grafico** - dispersão + reta de tendência plotadas
+
+> Terminou a Fase 4? Vai pro bônus ou ajuda o colega ao lado.
 
 ---
 layout: center
@@ -550,27 +641,22 @@ bgPreset: palette
 
 <!-- [ATIV AVALIATIVA] -->
 
-# Como entregar: git push
+# Como entregar: link do Colab
 
-**Passo a passo - execute no terminal do VS Code ou Colab:**
+**3 passos - faça agora:**
 
-```bash
-# 1. Navegar para a pasta do projeto
-cd SENAC-TecIA/Av05/
+**1. Salvar o notebook**
+- No Colab: `Arquivo → Salvar` (ou Ctrl+S)
+- Confirme que o nome do notebook tem o nome da dupla
 
-# 2. Adicionar o arquivo
-git add av05_banco.py
+**2. Compartilhar o link**
+- Botão **Compartilhar** (canto superior direito)
+- Trocar para: "Qualquer pessoa com o link pode ver"
+- Copiar o link
 
-# 3. Criar o commit
-git commit -m "Av05: banco escola.db completo - NomesDaDupla"
-
-# 4. Enviar para o GitHub
-git push
-```
-
-**Depois do push:**
-- Copiar o link do repositório no GitHub
-- Enviar pelo WhatsApp da turma com: `Av05 entregue - NomesDaDupla`
+**3. Enviar ao professor**
+- Mande o link pelo WhatsApp da turma
+- Formato: `Av05 - Nome1 e Nome2: [link]`
 
 ---
 layout: default
