@@ -12,7 +12,7 @@ disciplines: []
 date: ""
 
 # draft | ready | published
-status: draft
+status: published
 
 deployUrl: ""
 

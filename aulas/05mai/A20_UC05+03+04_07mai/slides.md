@@ -1,33 +1,21 @@
-﻿---
-# ─────────────────────────────────────────────────────────────────
-#  CONFIGURAÇÃO GLOBAL DA AULA
-# ─────────────────────────────────────────────────────────────────
-theme: ./
+---
+theme: ../../../neural-slides-template
 colorSchema: dark
-
 title: "Técnico em IA - Aula 20"
 author: Leonardo Zanini
 github: LeoZanini
 courseTitle: Técnico em Inteligência Artificial
 aulaNum: "Aula 20"
-
 aulaDate: "2026-05-07"
 unlockHour: 13
-
 bgPreset: palette
-# ─────────────────────────────────────────────────────────────────
----
-
----
 layout: cover
-bgPreset: palette
 ---
 
 # Aula 20
 
-*SQL + Python + Pandas: o Projeto Completo*
-
-*Av.05 - Banco na Prática | 07/05/2026*
+## SQL + Python: o Projeto Completo
+## Av.05 - Banco na Prática | 07/05/2026
 
 ---
 layout: default
@@ -64,9 +52,9 @@ bgPreset: palette
 
 **Fase 3 - Alterar:** `UPDATE` em 1 registro + `SELECT` para confirmar
 
-**Fase 4 - Analisar:** Pandas `.mean()` / `.max()` / `.min()` + if/else
+**Fase 4 - Analisar:** `sum/len/max/min` em lista Python + if/else
 
-**Fase Bonus - Gráfico:** dispersão + reta de tendência com matplotlib
+**Fase Bonus:** Pandas `.mean()` - só se der tempo
 
 ---
 layout: center
@@ -94,8 +82,7 @@ bgPreset: palette
 - Programador experiente **nunca abre o editor sem planejar**
 - Vantagem: você detecta erros de lógica no papel, onde é mais fácil corrigir
 
-**Regra de hoje:** escreva TUDO no papel antes de digitar qualquer linha
-
+**Regra de hoje:** escreva TUDO no papel antes de digitar qualquer linha E NÃO VAMOS SER GENÉRICOS IGUAL A ÚLTIMA VEZ
 ---
 layout: brainstorm
 card: true
@@ -111,7 +98,7 @@ pulse: true
 - O que acontece quando você começa a codar sem um plano?
 - Como um engenheiro de dados planeja um script de 500 linhas?
 
-> Escreva no papel agora - você vai usar essa folha como guia durante o lab.
+>Escreva no papel agora - você vai usar essa folha como guia durante o lab.
 
 ---
 layout: default
@@ -123,7 +110,6 @@ bgPreset: palette
 
 ```
 IMPORTAR sqlite3
-IMPORTAR pandas como pd
 
 CONECTAR ao arquivo "escola.db"
 CRIAR um cursor para executar comandos SQL
@@ -205,24 +191,22 @@ card: true
 bgPreset: palette
 ---
 
-# Pseudocódigo - Passos 8-11: Pandas + Matplotlib
+# Pseudocódigo - Passo 4: Estatísticas com Python puro
 
 ```
-CARREGAR a tabela de notas em um DataFrame
+BUSCAR todos os valores da coluna nota com SELECT
 
-CALCULAR: média, maior nota, menor nota
-SE a média >= 6: IMPRIMIR mensagem positiva
+GUARDAR os resultados numa lista
+
+CALCULAR: média = soma / quantidade
+CALCULAR: maior = max(lista)
+CALCULAR: menor = min(lista)
+
+IMPRIMIR os três valores com f-string
+
+SE média >= 6: IMPRIMIR mensagem positiva
 SENÃO: IMPRIMIR alerta
 
-CRIAR um gráfico de pontos:
-  eixo X = número do aluno (id)
-  eixo Y = nota
-
-CALCULAR a reta de tendência sobre esses pontos
-
-PLOTAR a reta por cima dos pontos
-
-MOSTRAR o gráfico
 FECHAR a conexão com o banco
 ```
 
@@ -238,11 +222,11 @@ bgPreset: palette
 
 Confira seu papel com o pseudocódigo no quadro:
 
-- [ ] Passo 1: conectar e cursor
+- [ ] Passo 1: conectar ao banco de dados
 - [ ] Passo 2: criar tabelas (aluno + nota)
 - [ ] Passos 3-5: inserir 3 alunos + notas, mostrar com SELECT
 - [ ] Passos 6-7: UPDATE, mostrar de novo
-- [ ] Passos 8-10: Pandas, média/max/min, if/else, fechar conexão
+- [ ] Passo 4: lista de notas, sum/len/max/min, if/else, fechar conexão
 
 > Corrija seu papel agora - ele vai ser sua cola durante o laboratório.
 
@@ -267,7 +251,7 @@ bgPreset: palette
 
 # Referência: sqlite3 - Conectar e criar cursor
 
-```python {1-2|4-5|7-8|10}
+```python 
 import sqlite3
 import pandas as pd
 
@@ -331,7 +315,7 @@ bgPreset: palette
 
 # Referência: SQL DML - INSERT INTO
 
-```python {1-4|6-11|13}
+```python 
 # Inserir UM registro
 cursor.execute(
     "INSERT INTO aluno VALUES (?, ?, ?)",
@@ -399,12 +383,10 @@ for linha in resultados:
     print(linha)
 ```
 
-**O que cada parte faz:**
 - `cursor.fetchall()` - pega todos os registros como lista de tuplas
 - `for linha in resultados:` - passa por cada registro um a um
 - `print(linha)` - imprime cada registro no terminal
-
-> Exemplo de saída: `(1, 'Maria Silva', 'TurmaA')`
+- Exemplo de saída: `(1, 'Maria Silva', 'TurmaA')`
 
 ---
 layout: default
@@ -412,67 +394,60 @@ card: true
 bgPreset: palette
 ---
 
-<!-- objetivo: aluno carrega tabela SQL no Pandas sem ter visto Pandas antes - padrão completo e copiável -->
+<!-- objetivo: aluno calcula média/max/min com Python puro a partir de fetchall() -->
 
-# Referência: Pandas com SQLite
+# Referência: Estatísticas com Python puro
 
-**Padrão completo - copie exatamente assim:**
+```python
+# Busca todos os valores de nota
+cursor.execute("SELECT valor FROM nota")
+notas = [row[0] for row in cursor.fetchall()]
+
+# Calcula com funções nativas do Python
+media = IMPLEMENTE O CODIGO
+maior = IMPLEMENTE O CODIGO
+menor = IMPLEMENTE O CODIGO
+
+print(f"Media: {media:.2f}")
+print(f"Maior: {maior} | Menor: {menor}")
+
+if IMPLEMENTE O CODIGO:
+    print("Turma aprovada!")
+else:
+    print("Turma precisa de reforco.")
+
+conn.close()
+```
+
+> `sum()` soma tudo · `len()` conta quantos · `max()` / `min()` maior e menor.
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- objetivo: aluno entende o que é Pandas como bônus, sem pressão de entrega -->
+
+# Referência Bonus: Pandas com SQLite
+
+ NÃO PRECISA DE PANDAS NESSA ENTREGA
 
 ```python
 import pandas as pd
 
-# Carrega a tabela 'nota' inteira em um DataFrame
-df_notas = pd.read_sql_query("SELECT * FROM nota", conn)
+# Carrega a tabela inteira num DataFrame (tabela Python)
+df = pd.read_sql_query("SELECT * FROM nota", conn)
 
-# Ver as primeiras linhas
-print(df_notas)
-
-# Ver só a coluna 'valor'
-print(df_notas["valor"])
+# Mesma média, mas com Pandas
+media_pd = df["valor"].mean()
+print(f"Media via Pandas: {media_pd:.2f}")
 ```
 
-**O que é um DataFrame?**
-- Uma tabela do Python - linhas e colunas, como Excel
-- `pd.read_sql_query(...)` roda o SQL e devolve o resultado como DataFrame
-- Você **não precisa** de `cursor.execute()` aqui - o Pandas faz tudo por dentro
+- `pd.read_sql_query(...)` roda o SELECT e devolve uma tabela Python
+- `.mean()` calcula a média direto na coluna
+- Compare com o resultado da Fase 4 - tem que ser o mesmo!
 
----
-layout: default
-card: true
-bgPreset: palette
----
-
-<!-- objetivo: aluno usa .mean(), .max(), .min() e if/else sobre a média - padrão completo e copiável -->
-
-# Referência: Pandas - média, max, min
-
-**Padrão completo - copie exatamente assim:**
-
-```python {1-5|7-11|13-17}
-# Calcular estatísticas da coluna "valor"
-media = df_notas["valor"].mean()
-maior = df_notas["valor"].max()
-menor = df_notas["valor"].min()
-
-# Mostrar os resultados com f-string
-print(f"Média das notas: {media:.2f}")
-print(f"Maior nota:      {maior}")
-print(f"Menor nota:      {menor}")
-
-# Decisão com if/else
-if media >= 6:
-    print("Turma aprovada!")
-else:
-    print("Turma precisa de reforço.")
-```
-
-> `.mean()` - média aritmética | `.max()` - maior valor | `.min()` - menor valor
-
----
-layout: default
-card: true
-bgPreset: palette
----
 
 ---
 layout: default
@@ -511,9 +486,9 @@ card: true
 bgPreset: palette
 ---
 
-<!-- objetivo: aluno plota pontos e reta de tendência - padrão completo copiável pois nunca usou matplotlib -->
+<!-- objetivo: aluno plota pontos e reta de tendência - bônus para quem terminou cedo -->
 
-# Referência: Matplotlib - pontos + reta de tendência
+# Referência Bonus: Matplotlib - dispersão + tendência
 
 **Padrão completo - copie exatamente assim:**
 
@@ -554,7 +529,7 @@ bgPreset: palette
 - [ ] 100 alunos inseridos com `for` + `random.uniform()`
 - [ ] `SELECT` mostrando os primeiros registros
 - [ ] `UPDATE` em 1 registro + `SELECT` para confirmar
-- [ ] Pandas: `.mean()` / `.max()` / `.min()` + if/else
+- [ ] `mean()` / `max()` / `min()` + if/else
 
 **Bonus - se der tempo:**
 
@@ -597,8 +572,6 @@ bgPreset: palette
 5. Os **slides de referência** ficam projetados - use como cola
 6. **Sem IA** para gerar o código
 
-> Travou? Levanta a mão. Nao fica parado olhando pra tela.
-
 ---
 layout: default
 card: true
@@ -617,7 +590,7 @@ bgPreset: palette
 
 **Fase 3 - Alterar** - `UPDATE` executado + `SELECT` confirmando mudança
 
-**Fase 4 - Analisar** - Pandas + media/max/min + if/else imprimindo resultado
+**Fase 4 - Analisar** -  media/max/min + if/else imprimindo resultado
 
 **Fase Bonus - Grafico** - dispersão + reta de tendência plotadas
 
@@ -649,13 +622,21 @@ bgPreset: palette
 - No Colab: `Arquivo → Salvar` (ou Ctrl+S)
 - Confirme que o nome do notebook tem o nome da dupla
 
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+# Como entregar: link do Colab
+
 **2. Compartilhar o link**
 - Botão **Compartilhar** (canto superior direito)
 - Trocar para: "Qualquer pessoa com o link pode ver"
 - Copiar o link
 
 **3. Enviar ao professor**
-- Mande o link pelo WhatsApp da turma
+- Mande o link pelo Email do professor
 - Formato: `Av05 - Nome1 e Nome2: [link]`
 
 ---
@@ -668,7 +649,7 @@ bgPreset: palette
 
 # Exit Ticket - Antes de sair, me conta
 
-**Cada dupla responde em voz alta ou no papel:**
+**Cada dupla responde em voz alta:**
 
 **1. O que você fez hoje?**
 - Descreva em 1 frase o que seu script faz
@@ -676,8 +657,7 @@ bgPreset: palette
 **2. O que ainda está travado?**
 - Qual parte não funcionou? Qual erro apareceu?
 - Não terminou? Em que fase parou?
-
-> Professor coleta o feedback agora - isso vai definir o início da próxima aula.
+- Quais as dificuldades?
 
 ---
 layout: default
@@ -692,19 +672,12 @@ bgPreset: palette
 **Se não terminou em aula:**
 
 - [ ] Finalizar `av05_banco.py` com as 4 fases completas
-- [ ] Fazer o `git push` e enviar o link
-
-**Se terminou:**
-
-- [ ] Reler o pseudocódigo escrito no papel
-- [ ] Adicionar comentários em **cada bloco** do script explicando o que faz
-- [ ] (Desafio) Inserir uma segunda disciplina na tabela `nota` e calcular a média por disciplina separadamente
 
 **Entrega:** antes da A21 | Arquivo: `SENAC-TecIA/Av05/av05_banco.py`
 
 ---
 layout: end
-bgPreset: palette
+bgPreset: animate
 github: LeoZanini
 avatar: https://github.com/LeoZanini.png?size=256
 ---
@@ -713,6 +686,8 @@ avatar: https://github.com/LeoZanini.png?size=256
 
 **Hoje:** SQL + Python + Pandas integrados em um projeto real
 
-**Na A21:** revisão das entregas da Av.05 + próximos passos em Python - loops `for` com `range()` e listas
+**Na A21:** revisão das entregas da Av.05
+
+Email para entregas: Leonardo.niclote@docente.pr.senac.br
 
 *Você acabou de construir o início de um pipeline real de IA.*

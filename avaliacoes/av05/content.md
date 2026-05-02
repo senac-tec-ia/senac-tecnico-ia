@@ -1,6 +1,6 @@
 # Av.05 - SQL+Python: Banco na Prática
 
-**Tipo:** AS - Atividade em Sala · **Em dupla** · **Entrega: git push**
+**Tipo:** AS - Atividade em Sala · **Em dupla** · **Entrega: link do Colab**
 
 **UCs:** UC08 Banco de Dados · UC05 Python · UC03 Fundamentos Matemáticos
 
@@ -8,7 +8,7 @@
 
 ---
 
-Você já sabe criar tabelas no SQL e escrever scripts em Python. Agora vamos unir os dois: criar um banco de dados em SQLite, inserir 100 registros com um loop, consultar no terminal, alterar um dado, e analisar com Pandas e Matplotlib.
+Você já sabe criar tabelas no SQL e escrever scripts em Python. Agora vamos unir os dois: criar um banco de dados em SQLite, inserir 100 registros com um loop, consultar no terminal, alterar um dado e calcular estatísticas com Python puro.
 
 Neste projeto, você e sua dupla vão construir um **registro de alunos e notas** do zero.
 
@@ -21,16 +21,13 @@ Neste projeto, você e sua dupla vão construir um **registro de alunos e notas*
 # SQLite: SGBD embutido no Python, sem instalacao.
 
 import sqlite3
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
 import random
 
 conn = sqlite3.connect('escola.db')
 cursor = conn.cursor()
 ```
 
-Crie duas tabelas usando `CREATE TABLE IF NOT EXISTS`. A dupla decide os nomes dos campos - consulte os slides de referência para ver quais tipos de dados usar e quais constraints aplicar.
+Crie duas tabelas usando `DROP TABLE IF EXISTS` antes de `CREATE TABLE IF NOT EXISTS`. A dupla decide os nomes dos campos.
 
 > Dica: uma tabela guarda os alunos, a outra guarda as notas. Pense em quais campos cada uma precisa.
 
@@ -50,7 +47,7 @@ for i in range(1, 101):
 conn.commit()
 ```
 
-Depois do loop, mostre os primeiros 5 registros no terminal com `SELECT`.
+Depois do loop, mostre os primeiros registros no terminal com `cursor.fetchall()`.
 
 ---
 
@@ -60,14 +57,15 @@ Atualize a turma de um aluno com `UPDATE ... WHERE`. Depois mostre a tabela de a
 
 ---
 
-## Fase 4 - Pandas e Estatísticas
+## Fase 4 - Estatísticas com Python Puro
 
 ```python
-df_notas = pd.read_sql_query("SELECT * FROM nota", conn)
+cursor.execute("SELECT valor FROM nota")
+notas = [row[0] for row in cursor.fetchall()]
 
-media = df_notas["valor"].mean()
-maior = df_notas["valor"].max()
-menor = df_notas["valor"].min()
+media = sum(notas) / len(notas)
+maior = max(notas)
+menor = min(notas)
 
 print(f"Media: {media:.2f}")
 print(f"Maior: {maior} | Menor: {menor}")
@@ -76,26 +74,15 @@ if media >= 6:
     print("Turma aprovada!")
 else:
     print("Turma precisa de reforco.")
+
+conn.close()
 ```
-
----
-
-## Fase 5 - Grafico com Matplotlib
-
-Plote as notas dos 100 alunos como pontos e adicione uma reta de tendência. Consulte o slide de referência do matplotlib.
-
-O gráfico deve ter:
-- Eixo X: número do aluno
-- Eixo Y: nota
-- Pontos azuis para cada aluno
-- Reta vermelha tracejada mostrando a tendência
-- Título e legendas
 
 ---
 
 ## Fase Bonus - se der tempo
 
-Plote as notas dos 100 alunos como dispersão e adicione uma reta de tendência. Consulte o slide de referência do matplotlib. O gráfico deve ter pontos azuis, reta vermelha tracejada, eixos com label e título.
+Importe `pandas` e carregue a tabela de notas com `pd.read_sql_query()`. Calcule a media com `.mean()` e compare com o resultado da Fase 4.
 
 ---
 
@@ -110,14 +97,14 @@ Plote as notas dos 100 alunos como dispersão e adicione uma reta de tendência.
 
 ## Checklist obrigatório
 
-- [ ] Duas tabelas criadas com `CREATE TABLE IF NOT EXISTS`
+- [ ] Duas tabelas criadas com `DROP TABLE IF EXISTS` + `CREATE TABLE IF NOT EXISTS`
 - [ ] 100 alunos inseridos com `for` + `random.uniform()`
-- [ ] `SELECT` mostrando os primeiros registros no terminal
+- [ ] `SELECT` + `fetchall()` mostrando os registros no terminal
 - [ ] `UPDATE` em 1 registro + `SELECT` para confirmar
-- [ ] Pandas: `.mean()` / `.max()` / `.min()` + if/else sobre a média
+- [ ] `sum/len/max/min` sobre lista de notas + if/else sobre a média
 - [ ] Link do Colab enviado ao professor
 
 ## Checklist bonus
 
-- [ ] Gráfico de dispersão com 100 pontos
-- [ ] Reta de tendência com `np.polyfit`
+- [ ] `pd.read_sql_query()` carregando a tabela de notas
+- [ ] `.mean()` calculando a media via Pandas
