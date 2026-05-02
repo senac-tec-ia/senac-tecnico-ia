@@ -12,6 +12,6 @@ status: em-planejamento
 titulo: "Avaliação 04"
 tipo: TC
 prazo: "TBD"
-prazoLabel: "A definir"
+prazoLabel: "30/04"
 ucs: []
-status: em-planejamento
+status: published

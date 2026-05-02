@@ -1,9 +1,9 @@
 # Metadados da Aula — Neural Slides
 # Preenchido pelo CLI ao rodar `course new`
 
-aula: null
-slug: ""
-title: ""
+aula: "20"
+slug: "a20-uc05-03-04_02mai"
+title: "Av 05 SQL"
 author: "Leonardo Zanini"
 courseTitle: "Técnico em Inteligência Artificial"
 
