@@ -46,15 +46,15 @@ bgPreset: palette
 
 **4 fases obrigatórias + 1 bônus**
 
-**Fase 1 - Conectar:** criar o banco e abrir conexão com `sqlite3`
+**Fase 1 — Conectar e Criar:** banco SQLite + duas tabelas com `FOREIGN KEY`
 
-**Fase 2 - Inserir:** criar tabelas + 100 alunos com `for` + `random`
+**Fase 2 — Inserir:** 100 alunos com `for` + `random` + mostrar os 5 primeiros
 
-**Fase 3 - Alterar:** `UPDATE` em 1 registro + `SELECT` para confirmar
+**Fase 3 — Consultar e Alterar:** `JOIN` unindo as tabelas + `UPDATE` em 1 registro
 
-**Fase 4 - Analisar:** `sum/len/max/min` em lista Python + if/else
+**Fase 4 — Analisar:** `sum/len/max/min` + `if/else` sobre a média
 
-**Fase Bonus:** Pandas `.mean()` - só se der tempo
+**Fase Bonus:** `pd.read_sql_query()` com JOIN + `.mean()` no Pandas
 
 ---
 layout: center
@@ -164,21 +164,22 @@ bgPreset: palette
 # Pseudocódigo - Passo 2: Criar as tabelas
 
 ```
-CRIAR TABELA 1 SE NÃO EXISTIR:
-  - campo de identificação única (inteiro, chave primária)
-  - campo de texto obrigatório
-  - campo de texto opcional
+CRIAR TABELA alunos:
+  - id: [TIPO] [CONSTRAINT]
+  - nome: [TIPO] [CONSTRAINT]
+  - turma: [TIPO] [CONSTRAINT]
 
-CRIAR TABELA 2 SE NÃO EXISTIR:
-  - campo de identificação única (inteiro, chave primária)
-  - campo que liga à Tabela 1
-  - campo de texto (nome da disciplina)
-  - campo numérico decimal (a nota)
+CRIAR TABELA notas:
+  - id: [TIPO] [CONSTRAINT] [CONSTRAINT]
+  - aluno_id: [TIPO] [CONSTRAINT] → FOREIGN KEY → alunos.id
+  - materia: [TIPO] [CONSTRAINT]
+  - avaliacao: [TIPO] [CONSTRAINT]
+  - valor: [TIPO] [CONSTRAINT]
 
 CONFIRMAR as mudanças no banco
 ```
 
-*Quais campos cada tabela vai ter? A dupla decide os nomes.*
+*A chave estrangeira `aluno_id` garante que cada nota pertence a um aluno real — relacao 1:N (um aluno, muitas notas).*
 
 ---
 layout: default
@@ -190,18 +191,20 @@ bgPreset: palette
 
 ```
 PARA cada número de 1 até 100:
-  GERAR um nome: "Aluno 1", "Aluno 2", ... "Aluno 100"
-  GERAR uma nota aleatória entre 0.0 e 10.0
+  GERAR nome: "Aluno 001", "Aluno 002", ... "Aluno 100"
+  SORTEAR uma materia da lista ["Matematica", "Python", "BD", "Ingles"]
+  GERAR uma nota decimal aleatória entre 0.0 e 10.0
 
-  INSERIR na Tabela 1: (número, nome, "TurmaA")
-  INSERIR na Tabela 2: (número, número, "Python", nota)
+  INSERIR em alunos: (nome, turma)
+  GUARDAR o id do aluno recém inserido
+  INSERIR em notas: (aluno_id, materia, avaliacao, valor)
 
 CONFIRMAR todas as inserções de uma vez
 
-MOSTRAR os primeiros 5 registros no terminal
+MOSTRAR os primeiros 5 registros de alunos no terminal
 ```
 
-*Use `import random` e `random.uniform(0, 10)` para as notas*
+*`cursor.lastrowid` retorna o id do último INSERT — não precisa calcular.*
 
 ---
 layout: default
@@ -209,16 +212,37 @@ card: true
 bgPreset: palette
 ---
 
-# Pseudocódigo - Passos 6-7: Alterar e mostrar de novo
+# Pseudocódigo - Passo 4: Consultar com JOIN
 
 ```
-ALTERAR a turma do aluno com id = 2
-  NOVO VALOR: "TurmaB" (ou o que a dupla preferir)
+SELECIONAR: nome do aluno, materia, valor da nota
+UNINDO tabela alunos COM tabela notas
+  ONDE alunos.id = notas.aluno_id
+LIMITAR a 10 resultados
+
+PARA cada linha do resultado:
+  IMPRIMIR a linha
+```
+
+*O JOIN funciona porque `notas.aluno_id` aponta para `alunos.id`. Sem FK, o banco aceitaria qualquer numero como aluno_id.*
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+# Pseudocódigo - Passo 5: Alterar e confirmar
+
+```
+ALTERAR em notas: SET valor = novo_valor
+  ONDE id = 1
 
 CONFIRMAR alteração
 
-MOSTRAR todos os alunos de novo
-  → para ver que a mudança funcionou
+SELECIONAR as colunas de notas
+  ONDE id = 1
+IMPRIMIR resultado para confirmar
 ```
 
 ---
@@ -258,13 +282,14 @@ bgPreset: palette
 
 Confira seu papel com o pseudocódigo no quadro:
 
-- [ ] Passo 1: conectar ao banco de dados
-- [ ] Passo 2: criar tabelas (aluno + nota)
-- [ ] Passos 3-5: inserir 3 alunos + notas, mostrar com SELECT
-- [ ] Passos 6-7: UPDATE, mostrar de novo
-- [ ] Passo 4: lista de notas, sum/len/max/min, if/else, fechar conexão
+- [ ] Passo 1: conectar + criar tabelas `alunos` e `notas`
+- [ ] Passo 2: `FOREIGN KEY (aluno_id) REFERENCES alunos(id)` declarada
+- [ ] Passo 3: 100 inserções com `for` + `random` + `cursor.lastrowid`
+- [ ] Passo 4: `JOIN` unindo nome do aluno + materia + nota
+- [ ] Passo 5: `UPDATE` em 1 registro + `SELECT` confirmando
+- [ ] Passo 6: `sum/len/max/min` + `if/else` + `conn.close()`
 
-> Corrija seu papel agora - ele vai ser sua cola durante o laboratório.
+> Corrija seu papel agora — ele vai ser sua cola durante o laboratório.
 
 ---
 layout: center
@@ -311,35 +336,24 @@ card: true
 bgPreset: palette
 ---
 
-<!-- objetivo: aluno usa CREATE TABLE IF NOT EXISTS com tipos e constraints corretos -->
+<!-- objetivo: aluno usa CREATE TABLE com tipos e constraints corretos, declarando FK -->
 
 # Referência: SQL DDL - CREATE TABLE
 
 ```python
-# Se rodar o script de novo: limpe as tabelas antes
-cursor.execute("DROP TABLE IF EXISTS nota")
-cursor.execute("DROP TABLE IF EXISTS aluno")
-conn.commit()
+cursor.execute("DROP TABLE IF EXISTS notas")
+cursor.execute("DROP TABLE IF EXISTS alunos")
 
 cursor.execute("""
-    CREATE TABLE IF NOT EXISTS nome_tabela1 (
-        id    INTEGER PRIMARY KEY,
-        campo TEXT NOT NULL,
-        outro TEXT
+    CREATE TABLE alunos (
+        id      INTEGER PRIMARY KEY,
+        nome    [TIPO DO DADO SQLITE] [CONSTRAINTS REGRA],
+        turma   [TIPO DO DADO SQLITE] [CONSTRAINTS REGRA]
     )
 """)
-cursor.execute("""
-    CREATE TABLE IF NOT EXISTS nome_tabela2 (
-        id       INTEGER PRIMARY KEY,
-        liga_id  INTEGER,
-        texto    TEXT,
-        numero   REAL
-    )
-""")
-conn.commit()
 ```
-
-> Drope `nota` antes de `aluno` - sempre na ordem inversa.
+> Tipos SQLite: `INTEGER` · `TEXT` · `REAL` (decimal) · Constraints: `NOT NULL` · `PRIMARY KEY` · `AUTOINCREMENT`
+> Referência: https://www.w3schools.com/sql/sql_datatypes.asp
 
 ---
 layout: default
@@ -347,57 +361,94 @@ card: true
 bgPreset: palette
 ---
 
-<!-- objetivo: aluno usa INSERT INTO com placeholders ? para evitar SQL injection -->
+<!-- objetivo: aluno usa CREATE TABLE com tipos e constraints corretos, declarando FK -->
 
-# Referência: SQL DML - INSERT INTO
-
-```python 
-# Inserir UM registro
-cursor.execute(
-    "INSERT INTO aluno VALUES (?, ?, ?)",
-    (1, "Maria Silva", "TurmaA")
-)
-
-# Inserir VÁRIOS de uma vez
-alunos = [
-    (2, "João Souza",  "TurmaA"),
-    (3, "Ana Lima",    "TurmaB"),
-]
-cursor.executemany("INSERT INTO aluno VALUES (?, ?, ?)", alunos)
-
-conn.commit()
-```
-
-> Use sempre `?` como placeholder - nunca concatene strings com f-string no SQL.
-
----
-layout: default
-card: true
-bgPreset: palette
----
-
-<!-- objetivo: aluno usa SELECT e UPDATE com WHERE corretamente -->
-
-# Referência: SQL DQL/DML - SELECT e UPDATE
+# Referência: SQL DDL - CREATE TABLE
 
 ```python
-# Mostrar todos os alunos
-cursor.execute("SELECT * FROM aluno")
-for linha in cursor.fetchall():
+cursor.execute("""
+    CREATE TABLE notas (
+        id        [TIPO DO DADO SQLITE] [CONSTRAINTS REGRA],
+        aluno_id  [TIPO DO DADO SQLITE] [CONSTRAINTS REGRA],
+        materia   [TIPO DO DADO SQLITE] [CONSTRAINTS REGRA],
+        avaliacao [TIPO DO DADO SQLITE] [CONSTRAINTS REGRA],
+        valor     [TIPO DO DADO SQLITE] [CONSTRAINTS REGRA],
+        FOREIGN KEY (aluno_id) REFERENCES alunos(id)
+    )
+""")
+conn.commit()
+```
+
+> Tipos SQLite: `INTEGER` · `TEXT` · `REAL` (decimal) · Constraints: `NOT NULL` · `PRIMARY KEY` · `AUTOINCREMENT`
+> Referência: https://www.w3schools.com/sql/sql_datatypes.asp
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- objetivo: aluno usa INSERT INTO com ? como placeholder, dentro do for com cursor.lastrowid -->
+
+# Referência: Fase 2 — INSERT com for + random
+
+```python
+materias = ["Matematica", "Python", "Banco de Dados", "Ingles"]
+
+for i in range(1, 101):
+    nome  = f"Aluno {i:03d}"
+    turma = "TecIA-2026"
+    cursor.execute("INSERT INTO alunos ([COLUNAS]) VALUES (?, ?)", ([VALORES_TUPLA]))
+
+    aluno_id = cursor.lastrowid              # id do aluno recem inserido — nao altere essa linha
+    materia  = random.choice([LISTA])        # escolhe um item aleatorio da lista
+    valor    = round(random.uniform([MIN], [MAX]), 1)
+    cursor.execute(
+        "INSERT INTO notas ([COLUNAS]) VALUES (?, ?, ?, ?)",
+        ([VALORES_TUPLA])
+    )
+
+conn.commit()
+```
+
+> `cursor.lastrowid` retorna o id do último INSERT — use para ligar nota ao aluno certo.
+> Referências: https://docs.python.org/3/library/random.html · https://docs.python.org/3/library/sqlite3.html
+
+---
+layout: default
+card: true
+bgPreset: palette
+---
+
+<!-- objetivo: aluno usa JOIN para unir tabelas e UPDATE com WHERE para alterar um registro -->
+
+# Referência: Fase 3 — JOIN + UPDATE
+
+```python
+# Consultar com JOIN
+cursor.execute("""
+    SELECT [TABELA].[COLUNA], [TABELA].[COLUNA], [TABELA].[COLUNA]
+    FROM [TABELA_PRINCIPAL]
+    JOIN [OUTRA_TABELA] ON [CHAVE_ESTRANGEIRA] = [CHAVE_PRIMARIA]
+    LIMIT 10
+""")
+resultados = cursor.fetchall()
+for linha in resultados:
     print(linha)
 
-# Alterar turma do aluno id=2
-cursor.execute(
-    "UPDATE aluno SET turma = ? WHERE id = ?",
-    ("TurmaB", 2)
-)
+# Alterar um registro
+cursor.execute("""
+    UPDATE [TABELA]
+    SET [COLUNA] = [NOVO_VALOR]
+    WHERE [COLUNA] = [CONDICAO]
+""")
 conn.commit()
 
-# Mostrar de novo para confirmar
-cursor.execute("SELECT * FROM aluno")
-for linha in cursor.fetchall():
-    print(linha)
+cursor.execute("SELECT [COLUNAS] FROM [TABELA] WHERE [CONDICAO]")
+print(cursor.fetchall())
 ```
+
+> Referências: https://www.w3schools.com/sql/sql_join.asp · https://www.w3schools.com/sql/sql_update.asp
 
 ---
 layout: default
@@ -430,24 +481,22 @@ card: true
 bgPreset: palette
 ---
 
-<!-- objetivo: aluno calcula média/max/min com Python puro a partir de fetchall() -->
+<!-- objetivo: aluno usa sum/len/max/min e if/else para analisar a lista de notas -->
 
-# Referência: Estatísticas com Python puro
+# Referência: Fase 4 — Estatísticas com Python puro
 
 ```python
-# Busca todos os valores de nota
-cursor.execute("SELECT valor FROM nota")
-notas = [row[0] for row in cursor.fetchall()]
+cursor.execute("SELECT [COLUNA_NUMERICA] FROM [TABELA]")
+notas = [row[0] for row in cursor.fetchall()]   # transforma o resultado numa lista de numeros
 
-# Calcula com funções nativas do Python
-media = IMPLEMENTE O CODIGO
-maior = IMPLEMENTE O CODIGO
-menor = IMPLEMENTE O CODIGO
+media = [FUNCAO_SOMA](notas) / [FUNCAO_TAMANHO](notas)
+maior = [FUNCAO_MAX](notas)
+menor = [FUNCAO_MIN](notas)
 
-print(f"Media: {media:.2f}")
-print(f"Maior: {maior} | Menor: {menor}")
+print(f"Media:  {media:.2f}")
+print(f"Maior:  {maior} | Menor: {menor}")
 
-if IMPLEMENTE O CODIGO:
+if [CONDICAO_APROVACAO]:
     print("Turma aprovada!")
 else:
     print("Turma precisa de reforco.")
@@ -455,7 +504,8 @@ else:
 conn.close()
 ```
 
-> `sum()` soma tudo · `len()` conta quantos · `max()` / `min()` maior e menor.
+> Funcoes built-in do Python: `sum()` · `len()` · `max()` · `min()` — sem importar nada.
+> Referencia: https://docs.python.org/3/library/functions.html
 
 ---
 layout: default
@@ -463,26 +513,27 @@ card: true
 bgPreset: palette
 ---
 
-<!-- objetivo: aluno entende o que é Pandas como bônus, sem pressão de entrega -->
+<!-- objetivo: aluno usa pd.read_sql_query com JOIN e .mean() como bonus -->
 
-# Referência Bonus: Pandas com SQLite
-
- NÃO PRECISA DE PANDAS NESSA ENTREGA
+# Referência Bônus: Pandas com SQLite
 
 ```python
 import pandas as pd
 
-# Carrega a tabela inteira num DataFrame (tabela Python)
-df = pd.read_sql_query("SELECT * FROM nota", conn)
+conn = sqlite3.connect('escola.db')
+df = pd.read_sql_query(
+    """[QUERY SQL COM JOIN — adapte a consulta da Fase 3]""",
+    conn
+)
+conn.close()
 
-# Mesma média, mas com Pandas
-media_pd = df["valor"].mean()
-print(f"Media via Pandas: {media_pd:.2f}")
+print(df.head())
+print(f"Media Pandas: {df['[NOME_DA_COLUNA]'].mean():.2f}")
 ```
 
-- `pd.read_sql_query(...)` roda o SELECT e devolve uma tabela Python
-- `.mean()` calcula a média direto na coluna
-- Compare com o resultado da Fase 4 - tem que ser o mesmo!
+> `pd.read_sql_query` recebe uma query SQL e uma conexao aberta, e retorna um DataFrame.
+> Compare `.mean()` com o resultado da Fase 4 — tem que ser o mesmo.
+> Referencia: https://pandas.pydata.org/docs/reference/api/pandas.read_sql_query.html
 
 
 ---
@@ -490,66 +541,6 @@ layout: default
 card: true
 bgPreset: palette
 ---
-
-<!-- objetivo: aluno gera dados com for + random sem ter o código pronto -->
-
-# Referência: for loop + random
-
-```python
-import random
-
-for i in range(1, 101):
-    nome = f"Aluno {i}"
-    # `random.uniform(0, 10)` gera um decimal aleatório entre 0 e 10.
-    nota = round(random.uniform(0, 10), 1)
-
-    cursor.execute(
-        "INSERT INTO aluno VALUES (?, ?, ?)",
-        (i, nome, "TurmaA")
-    )
-    cursor.execute(
-        "INSERT INTO nota VALUES (?, ?, ?, ?)",
-        (i, i, "Python", nota)
-    )
-
-conn.commit()
-```
-
-
-
----
-layout: default
-card: true
-bgPreset: palette
----
-
-<!-- objetivo: aluno plota pontos e reta de tendência - bônus para quem terminou cedo -->
-
-# Referência Bonus: Matplotlib - dispersão + tendência
-
-**Padrão completo - copie exatamente assim:**
-
-```python
-import matplotlib.pyplot as plt
-import numpy as np
-
-x = df_notas["id"]
-y = df_notas["valor"]
-
-# Pontos dos alunos
-plt.scatter(x, y, color="blue", alpha=0.5, label="Notas")
-
-# Reta de tendência
-z = np.polyfit(x, y, 1)
-p = np.poly1d(z)
-plt.plot(x, p(x), "r--", label="Tendência")
-
-plt.xlabel("Aluno")
-plt.ylabel("Nota")
-plt.title("Notas da Turma - Python")
-plt.legend()
-plt.show()
-```
 
 ---
 layout: default
@@ -562,15 +553,18 @@ bgPreset: palette
 
 **Obrigatório - antes de entregar:**
 
-- [ ] Duas tabelas criadas com `CREATE TABLE IF NOT EXISTS`
-- [ ] 100 alunos inseridos com `for` + `random.uniform()`
-- [ ] `SELECT` mostrando os primeiros registros
+- [ ] Duas tabelas criadas (`alunos` e `notas`) com tipos e constraints corretos
+- [ ] `FOREIGN KEY (aluno_id) REFERENCES alunos(id)` declarada em `notas`
+- [ ] 100 registros inseridos com `for` + `random`
+- [ ] `JOIN` consultando nome + materia + valor
 - [ ] `UPDATE` em 1 registro + `SELECT` para confirmar
-- [ ] `mean()` / `max()` / `min()` + if/else
+- [ ] `sum/len/max/min` + `if/else` sobre a média
+- [ ] Link do Colab enviado ao professor
 
 **Bonus - se der tempo:**
 
-- [ ] Gráfico de dispersão + reta de tendência com matplotlib
+- [ ] `pd.read_sql_query()` com JOIN carregando os dados
+- [ ] `.mean()` calculando e comparando com a Fase 4
 
 ---
 layout: center
@@ -621,15 +615,15 @@ bgPreset: palette
 
 **Acompanhe seu progresso durante o lab:**
 
-**Fase 1 - Conectar** - banco criado + `cursor` funcionando
+**Fase 1 — Conectar e Criar** — banco + tabelas `alunos` e `notas` com FK criadas
 
-**Fase 2 - Inserir** - tabelas + 100 alunos via `for` + `SELECT` mostrando os primeiros
+**Fase 2 — Inserir** — 100 inserções via `for` + `random` + 5 primeiros no terminal
 
-**Fase 3 - Alterar** - `UPDATE` executado + `SELECT` confirmando mudança
+**Fase 3 — Consultar e Alterar** — `JOIN` rodando + `UPDATE` + `SELECT` confirmando
 
-**Fase 4 - Analisar** -  media/max/min + if/else imprimindo resultado
+**Fase 4 — Analisar** — `sum/len/max/min` + `if/else` + `conn.close()`
 
-**Fase Bonus - Grafico** - dispersão + reta de tendência plotadas
+**Fase Bônus** — `pd.read_sql_query()` com JOIN + `.mean()` no Pandas
 
 > Terminou a Fase 4? Vai pro bônus ou ajuda o colega ao lado.
 
