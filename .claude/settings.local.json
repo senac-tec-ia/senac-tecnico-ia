@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(powershell *)"
+      "Bash(powershell *)",
+      "Bash(printf \"99\\\\n99mai\\\\n05+01\\\\nS\\\\n\")",
+      "Bash(echo \"Exit: $?\")"
     ]
   }
 }
