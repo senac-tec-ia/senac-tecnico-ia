@@ -1,7 +1,7 @@
 ---
 name: planejador-curricular
 description: Planejador curricular que enriquece tópicos do roadmap-t1.md com fontes web, referências pedagógicas e conteúdo detalhado. Lê contextos, metodologia e competências, pesquisa fontes, e gera plano-conteudo-A{NN}.md por aula. Não gera slides — alimenta o @produtor-aula.
-model: opus
+model: sonnet
 tools:
   - Edit
   - Glob

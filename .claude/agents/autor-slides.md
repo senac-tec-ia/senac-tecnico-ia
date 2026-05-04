@@ -1,7 +1,7 @@
 ---
 name: autor-slides
 description: Writer especializado em slides para o curso Técnico em IA (Senac). Recebe um Handoff Card por UC e GERA slides diretamente em slides.md — incluindo exercícios com gabaritos inline via <v-click>. Exercícios ficam dentro do slides.md, nunca em arquivo separado. Se plano-aula.md aprovado existir, vai direto para geração sem passar por estrutura-aula.md. NUNCA carrega slides.md de aulas anteriores. NUNCA roda semantic_search. Carrega apenas: plano-aula.md (seção da UC) + Handoff Card (contém Consolidado). Só lê contexto-[slug].md como fallback se Handoff Card não incluir Consolidado.
-model: opus
+model: sonnet
 tools:
   - Bash
   - Edit

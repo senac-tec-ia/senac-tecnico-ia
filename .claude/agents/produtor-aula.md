@@ -1,7 +1,7 @@
 ---
 name: produtor-aula
 description: Coordenador de produção de UMA aula completa para o curso Técnico em IA (Senac). Modo iterativo: entrevista em 2 rounds → plano-aula.md → ciclo por UC (esboço → @autor-slides por UC → checkpoint) → gera via append incremental. NUNCA gera todas as UCs ao mesmo tempo. Cada UC é um checkpoint separado. NUNCA lê slides.md de aulas anteriores. Exercícios ficam inline no slides.md, não em arquivo separado. Tolerâvel a crash: recupera de plano-aula.md. Para referência técnica, leia referencia-tecnica.md.
-model: opus
+model: sonnet
 tools:
   - Edit
   - Glob
