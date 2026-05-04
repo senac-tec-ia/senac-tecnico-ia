@@ -1,76 +1,170 @@
-# Av.05 - SQL+Python: Banco na Prática
+# Av.05 — SQL+Python: Banco na Prática
 
-**Tipo:** AS - Atividade em Sala · **Em dupla** · **Entrega: link do Colab**
+**Tipo:** AS — Atividade em Sala · **Em dupla** · **Entrega: link do Colab**
 
 **UCs:** UC08 Banco de Dados · UC05 Python · UC03 Fundamentos Matemáticos
 
-**Data:** 07/05/2026 - durante a aula A20 (UC05 3HA)
+**Data:** 07/05/2026 — durante a aula (UC08 + UC05)
 
 ---
 
-Você já sabe criar tabelas no SQL e escrever scripts em Python. Agora vamos unir os dois: criar um banco de dados em SQLite, inserir 100 registros com um loop, consultar no terminal, alterar um dado e calcular estatísticas com Python puro.
+Voce ja sabe criar tabelas no SQL e escrever scripts em Python. Agora vamos unir os dois: criar um banco de dados em SQLite, relacionar duas tabelas com chave estrangeira, inserir 100 registros com um loop, consultar com JOIN, alterar um dado e calcular estatisticas com Python puro.
 
-Neste projeto, você e sua dupla vão construir um **registro de alunos e notas** do zero.
+Neste projeto, voce e sua dupla vao construir um **registro de alunos e notas** do zero.
 
 ---
 
-## Fase 1 - Conectar e Criar as Tabelas
+## Fase 1 — Conectar e Criar as Tabelas
 
 ```python
 # Dupla: Nome1 e Nome2
-# SQLite: SGBD embutido no Python, sem instalacao.
+# SQLite: SGBD embutido no Python, sem instalacao, arquivo local.
 
 import sqlite3
 import random
 
 conn = sqlite3.connect('escola.db')
 cursor = conn.cursor()
-```
 
-Crie duas tabelas usando `DROP TABLE IF EXISTS` antes de `CREATE TABLE IF NOT EXISTS`. A dupla decide os nomes dos campos.
+cursor.execute("DROP TABLE IF EXISTS notas")
+cursor.execute("DROP TABLE IF EXISTS alunos")
 
-> Dica: uma tabela guarda os alunos, a outra guarda as notas. Pense em quais campos cada uma precisa.
+cursor.execute("""
+    CREATE TABLE alunos (
+        id      INTEGER PRIMARY KEY,
+        nome    [TIPO DO DADO SQLITE] [CONSTRAINTS REGRA],
+        turma   [TIPO DO DADO SQLITE] [CONSTRAINTS REGRA]
+    )
+""")
 
----
+cursor.execute("""
+    CREATE TABLE notas (
+        id        [TIPO DO DADO SQLITE] [CONSTRAINTS REGRA],
+        aluno_id  [TIPO DO DADO SQLITE] [CONSTRAINTS REGRA],
+        materia   [TIPO DO DADO SQLITE] [CONSTRAINTS REGRA],
+        avaliacao [TIPO DO DADO SQLITE] [CONSTRAINTS REGRA],
+        valor     [TIPO DO DADO SQLITE] [CONSTRAINTS REGRA],
+        FOREIGN KEY (aluno_id) REFERENCES alunos(id)
+    )
+""")
 
-## Fase 2 - Inserir 100 Alunos com For
-
-Use um `for` loop para inserir 100 alunos com notas aleatórias. Consulte o slide de referência do `random`.
-
-```python
-for i in range(1, 101):
-    nome = f"Aluno {i}"
-    nota = round(random.uniform(0, 10), 1)
-    # insira na tabela de alunos
-    # insira na tabela de notas
+"""substitua [TIPO DO DADO SQLITE] por INTEGER, TEXT ou REAL (decimal no sqlite)
+   substitua [CONSTRAINTS REGRA] por NOT NULL, PRIMARY KEY, AUTOINCREMENT conforme cada campo
+   referencia: https://www.w3schools.com/sql/sql_datatypes.asp"""
 
 conn.commit()
 ```
 
-Depois do loop, mostre os primeiros registros no terminal com `cursor.fetchall()`.
+> **Por que a chave estrangeira fica em `notas.aluno_id` e nao em `alunos`?**
+>
+> Um aluno pode ter **muitas** notas, mas cada nota pertence a **um** aluno.
+> Isso e uma relacao 1:N — um para muitos.
+>
+> Em relacoes 1:N, a chave estrangeira sempre fica no lado **muitos** (tabela `notas`).
+>
+> Se guardassemos `nota_ids` dentro de `alunos`, cada aluno precisaria de uma lista de IDs.
+> SQL nao funciona assim: cada celula guarda um unico valor.
+> Uma lista quebraria a estrutura basica do banco relacional.
+>
+> **Regra pratica: quem depende de quem guarda o ID.**
+> A nota depende do aluno → `notas` guarda `aluno_id`.
 
 ---
 
-## Fase 3 - Alterar e Mostrar de Novo
-
-Atualize a turma de um aluno com `UPDATE ... WHERE`. Depois mostre a tabela de alunos completa com `SELECT` para confirmar a mudança.
-
----
-
-## Fase 4 - Estatísticas com Python Puro
+## Fase 2 — Inserir 100 Alunos e Notas com For
 
 ```python
-cursor.execute("SELECT valor FROM nota")
-notas = [row[0] for row in cursor.fetchall()]
+materias = ["Matematica", "Python", "Banco de Dados", "Ingles"]
 
-media = implementar codigo
-maior = implementar codigo
-menor = implementar codigo
+for i in range(1, 101):
+    nome  = f"Aluno {i:03d}"
+    turma = "TecIA-2026"
+    cursor.execute("INSERT INTO alunos ([COLUNAS]) VALUES (?, ?)", ([VALORES_TUPLA]))
 
-print(f"Media: {media:.2f}")
-print(f"Maior: {maior} | Menor: {menor}")
+    aluno_id = cursor.lastrowid              # id do aluno recem inserido — nao altere essa linha
+    materia  = random.choice([LISTA])        # escolhe um item aleatorio da lista
+    valor    = round(random.uniform([MIN], [MAX]), 1)
+    cursor.execute(
+        "INSERT INTO notas ([COLUNAS]) VALUES (?, ?, ?, ?)",
+        ([VALORES_TUPLA])
+    )
 
-if implementar codigo:
+conn.commit()
+```
+
+```
+# dica: cursor.execute recebe a query com ? como placeholder e uma tupla com os valores na ordem
+# dica: random.choice(lista) sorteia um item | random.uniform(a, b) gera um decimal entre a e b
+# referencia random: https://docs.python.org/3/library/random.html
+# referencia sqlite3: https://docs.python.org/3/library/sqlite3.html
+```
+
+Depois do loop, mostre os primeiros 5 registros de `alunos` no terminal com `cursor.fetchmany(5)`.
+
+---
+
+## Fase 3 — Consultar com JOIN
+
+Agora una as duas tabelas para ver o nome do aluno junto com a nota dele.
+
+```python
+cursor.execute("""
+    SELECT [TABELA].[COLUNA], [TABELA].[COLUNA], [TABELA].[COLUNA]
+    FROM [TABELA_PRINCIPAL]
+    JOIN [OUTRA_TABELA] ON [CHAVE_ESTRANGEIRA] = [CHAVE_PRIMARIA]
+    LIMIT 10
+""")
+
+resultados = cursor.fetchall()
+for linha in resultados:
+    print(linha)
+```
+
+```
+# dica: no JOIN voce escreve tabela.coluna para especificar de qual tabela cada coluna vem
+# dica: ON liga a chave estrangeira de uma tabela com a primaria da outra
+# referencia: https://www.w3schools.com/sql/sql_join.asp
+```
+
+> O `JOIN` funciona porque `notas.aluno_id` aponta para `alunos.id`.
+> Sem a `FOREIGN KEY`, o banco aceitaria qualquer numero como `aluno_id`.
+> Com ela, garante que cada nota pertence a um aluno que existe de verdade.
+
+Depois do JOIN, atualize um campo de um registro com `UPDATE ... SET ... WHERE` e confirme com um `SELECT`.
+
+```python
+cursor.execute("""
+    UPDATE [TABELA]
+    SET [COLUNA] = [NOVO_VALOR]
+    WHERE [COLUNA] = [CONDICAO]
+""")
+conn.commit()
+
+cursor.execute("SELECT [COLUNAS] FROM [TABELA] WHERE [CONDICAO]")
+print(cursor.fetchall())
+```
+
+```
+# dica: UPDATE altera linhas existentes | SET define o novo valor | WHERE filtra qual linha
+# referencia: https://www.w3schools.com/sql/sql_update.asp
+```
+
+---
+
+## Fase 4 — Estatísticas com Python Puro
+
+```python
+cursor.execute("SELECT [COLUNA_NUMERICA] FROM [TABELA]")
+notas = [row[0] for row in cursor.fetchall()]   # transforma o resultado numa lista de numeros
+
+media = [FUNCAO_SOMA](notas) / [FUNCAO_TAMANHO](notas)
+maior = [FUNCAO_MAX](notas)
+menor = [FUNCAO_MIN](notas)
+
+print(f"Media:  {media:.2f}")
+print(f"Maior:  {maior} | Menor: {menor}")
+
+if [CONDICAO_APROVACAO]:
     print("Turma aprovada!")
 else:
     print("Turma precisa de reforco.")
@@ -78,33 +172,58 @@ else:
 conn.close()
 ```
 
+```
+# dica: Python tem funcoes built-in para isso — nao precisa importar nada
+# funcoes disponiveis: sum(), len(), max(), min()
+# referencia: https://docs.python.org/3/library/functions.html
+```
+
 ---
 
-## Fase Bonus - se der tempo
+## Fase Bonus — se der tempo
 
-Importe `pandas` e carregue a tabela de notas com `pd.read_sql_query()`. Calcule a media com `.mean()` e compare com o resultado da Fase 4.
+```python
+import pandas as pd
+
+conn = sqlite3.connect('escola.db')
+df = pd.read_sql_query(
+    """[QUERY SQL COM JOIN — adapte a consulta da Fase 3]""",
+    conn
+)
+conn.close()
+
+print(df.head())
+print(f"Media Pandas: {df['[NOME_DA_COLUNA]'].mean():.2f}")
+```
+
+```
+# dica: pd.read_sql_query recebe uma query SQL e uma conexao aberta, e retorna um DataFrame
+# dica: df['coluna'].mean() calcula a media de uma coluna numerica
+# referencia: https://pandas.pydata.org/docs/reference/api/pandas.read_sql_query.html
+```
 
 ---
 
 ## Como entregar
 
-1. Renomear o notebook para: `Av05 - Nome1 e Nome2`
+1. Renomear o notebook: `Av05 - Nome1 e Nome2`
 2. Salvar no Colab (Ctrl+S)
-3. Clicar em **Compartilhar** - "Qualquer pessoa com o link pode ver"
+3. Compartilhar → "Qualquer pessoa com o link pode ver"
 4. Enviar o link pelo WhatsApp da turma
 
 ---
 
-## Checklist obrigatório
+## Checklist obrigatorio
 
-- [ ] Duas tabelas criadas com `DROP TABLE IF EXISTS` + `CREATE TABLE IF NOT EXISTS`
-- [ ] 100 alunos inseridos com `for` + `random.uniform()`
-- [ ] `SELECT` + `fetchall()` mostrando os registros no terminal
+- [ ] Duas tabelas criadas (`alunos` e `notas`) com tipos e constraints corretos
+- [ ] `FOREIGN KEY (aluno_id) REFERENCES alunos(id)` declarada em `notas`
+- [ ] 100 registros inseridos com `for` + `random`
+- [ ] `JOIN` consultando nome + materia + valor
 - [ ] `UPDATE` em 1 registro + `SELECT` para confirmar
-- [ ] `sum/len/max/min` sobre lista de notas + if/else sobre a média
+- [ ] `sum/len/max/min` + `if/else` sobre a media
 - [ ] Link do Colab enviado ao professor
 
 ## Checklist bonus
 
-- [ ] `pd.read_sql_query()` carregando a tabela de notas
-- [ ] `.mean()` calculando a media via Pandas
+- [ ] `pd.read_sql_query()` com JOIN carregando os dados
+- [ ] `.mean()` calculando e comparando com a Fase 4

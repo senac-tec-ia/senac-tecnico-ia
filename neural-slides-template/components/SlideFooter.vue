@@ -2,6 +2,7 @@
 import { useNav, useSlideContext, configs } from "@slidev/client";
 import { computed, ref } from "vue";
 import { useOverflowGuard } from "../composables/useOverflowGuard";
+import senacLogoUrl from "../public/assets/senac-logo.png?url";
 
 const { currentPage, total } = useNav();
 const { $frontmatter } = useSlideContext();
@@ -12,7 +13,7 @@ const { isOverflowing } = useOverflowGuard(footerRef, currentPage);
 const author = (configs as any).author ?? "Leonardo Zanini";
 const courseTitle = (configs as any).courseTitle ?? (configs as any).title ?? "Técnico em Inteligência Artificial";
 const aulaNum = computed(() => ($frontmatter as any)?.aulaNum ?? (configs as any).aulaNum ?? "");
-const footerLogo = (configs as any).footerLogo ?? "assets/senac-logo.png";
+const footerLogo = (configs as any).footerLogo ?? senacLogoUrl;
 </script>
 
 <template>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, watch } from "vue";
+import titleBgUrl from "../public/assets/title-background-complete-nodes.svg?url";
 
 const props = withDefaults(
   defineProps<{
@@ -194,7 +195,7 @@ onMounted(async () => {
   if (!svgContainerRef.value) return;
 
   try {
-    const response = await fetch("assets/title-background-complete-nodes.svg");
+    const response = await fetch(titleBgUrl);
     const svgText = await response.text();
     svgContainerRef.value.innerHTML = svgText;
 

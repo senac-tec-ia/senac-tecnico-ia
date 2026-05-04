@@ -180,18 +180,18 @@ ${c.gray}  Separe por + ou espaco (ex: 05+01+02). Enter = UCXX (a definir)${c.re
 
   // ---------- Execução ----------
 
-  step('1/5', 'Copiando neural-slides-template...')
+  step('1/6', 'Copiando neural-slides-template...')
   fs.mkdirSync(destDir, { recursive: true })
   copyDir(TEMPLATE, destDir)
-  // public/ vazia: assets compartilhados ficam em neural-slides-template/public/ (tema auto-serve)
-  // coloque aqui apenas imagens específicas desta aula
+  // public/ vazia — assets compartilhados ficam em neural-slides-template/public/
+  // e são servidos pelo vite.config.ts gerado abaixo; coloque aqui só imagens desta aula
   fs.mkdirSync(path.join(destDir, 'public'), { recursive: true })
   const count = countFiles(destDir)
   ok(`${count} arquivos copiados → aulas/${mesPasta}/${dirName}`)
 
   // ---------- package.json da aula ----------
 
-  step('2/5', 'Configurando package.json da aula...')
+  step('2/6', 'Configurando package.json da aula...')
   const aulaPkgPath = path.join(destDir, 'package.json')
   if (fs.existsSync(aulaPkgPath)) {
     const pkg = JSON.parse(fs.readFileSync(aulaPkgPath, 'utf8'))

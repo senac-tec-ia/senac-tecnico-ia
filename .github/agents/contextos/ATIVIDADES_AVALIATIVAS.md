@@ -105,7 +105,7 @@
 
 | Ind. | Descrição resumida | Status pedagógico | Avaliação prevista |
 |---|---|---|---|
-| 1 | Propõe alteração no acesso a dados (FK/JOIN) | Parcialmente dado | Av.6 (MP Integrado) |
+| 1 | Propõe alteração no acesso a dados (FK/JOIN) | Parcialmente dado | Av.5 (FK declarada + JOIN obrigatório) |
 | 2 | Seleciona SGBD conforme necessidades | Parcialmente dado | Av.5 (AS SQL+Python) |
 | 3 | Cria estrutura física de banco de dados | Parcialmente dado | Av.5 (AS SQL+Python) |
 
@@ -113,10 +113,10 @@
 
 | Ind. | Descrição resumida | Status pedagógico | Avaliação prevista |
 |---|---|---|---|
-| 1 | Compreende e aplica funções lineares | Em andamento | Av.6 (MP Integrado) |
-| 2 | Compreende e aplica funções polinomiais | Em andamento | Av.6 (MP Integrado) |
-| 3 | Compreende e aplica funções logarítmicas | Em andamento | Av.6 (MP Integrado) |
-| 4 | Compreende e aplica funções exponenciais | Em andamento | Av.6 (MP Integrado) |
+| 1 | Compreende e aplica funções lineares | Em andamento | Av.6 (Seminário) |
+| 2 | Compreende e aplica funções polinomiais | Em andamento | Av.6 (Seminário) |
+| 3 | Compreende e aplica funções logarítmicas | Em andamento | Av.6 (Seminário) |
+| 4 | Compreende e aplica funções exponenciais | Em andamento | Av.6 (Seminário) |
 
 **Total de indicadores T1 a avaliar:** 26 indicadores em 9 UCs ✅
 
@@ -134,7 +134,7 @@
 | 3 | Pseudocódigo + TokenLab | AS dupla | UC05: Ind.1 · UC03: Ind.1+2+3 · UC04: Ind.1 | A17 (23/04) | ✅ Detalhada |
 | **4** | **Quiz: GPU + Arquitetura + IA** | **PQ individual · papel** | **UC06: Ind.1+2 · UC04: Ind.2 · UC01: Ind.1 · UC02: Ind.2** | **A19 abertura (30/04) — 25 min** | **✅ Detalhada** |
 | **5** | **SQL+Python: Banco na Prática (SQLite, sem def)** | **AS dupla · git** | **UC08: Ind.2+3 · UC05: Ind.1+2 · UC03: Ind.3** | **A20 (07/05)** | **✅ Detalhada** |
-| **6** | **Projeto Integrado: SQL + Python + Pandas + Matplotlib** | **MP dupla · git + PDF** | **UC08: Ind.1 · UC09: Ind.1+2+3+4 · UC03: Ind.4 · UC05: Ind.2** | **A21 (08/05)** | **✅ Detalhada** |
+| **6** | **Seminário: Funções Matemáticas na Prática** | **Seminário individual · Colab + apresentação oral** | **UC09: Ind.1+2+3+4 · UC03: Ind.4 · UC05: Ind.2** | **Quinta 07/05 (dev) · Sexta 08/05 (apresentação)** | **✅ Detalhada** |
 | — | **Recuperação** | Qualquer formato | Todos os PA/NA pendentes | **14/05 (A22) — dia inteiro** | Reservado |
 
 **Cobertura total: 26/26 indicadores T1 ✅**

@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import instagramUrl from "../public/icons/instagram.svg?url";
+import tiktokUrl from "../public/icons/tiktok.svg?url";
+import ytUrl from "../public/icons/yt.svg?url";
+import spotifyUrl from "../public/icons/spotify.svg?url";
+
 const props = withDefaults(
   defineProps<{
     icons?: Array<{ src: string; alt: string }>;
@@ -8,10 +13,10 @@ const props = withDefaults(
   }>(),
   {
     icons: () => [
-      { src: "icons/instagram.svg", alt: "Instagram" },
-      { src: "icons/tiktok.svg", alt: "TikTok" },
-      { src: "icons/yt.svg", alt: "YouTube" },
-      { src: "icons/spotify.svg", alt: "Spotify" },
+      { src: instagramUrl, alt: "Instagram" },
+      { src: tiktokUrl, alt: "TikTok" },
+      { src: ytUrl, alt: "YouTube" },
+      { src: spotifyUrl, alt: "Spotify" },
     ],
     size: "96px",
   },
