@@ -192,7 +192,7 @@ card: true
 | 6. Síntese | 5 min | Professor fecha com conexão à LGPD |
 
 ---
-layout: default
+layout: two-cols
 card: true
 ---
 
@@ -200,8 +200,6 @@ card: true
 
 ## Os 4 Papéis
 
-<div class="grid grid-cols-2 gap-6">
-<div>
 
 ** Empresa (Serasa)**
 - Defende o modelo de negócio
@@ -211,8 +209,7 @@ card: true
 - Perspectiva de quem teve os dados usados
 - Argumento: sem consentimento, sem escolha
 
-</div>
-<div>
+::right::
 
 ** ANPD (regulador)**
 - Fiscaliza e aplica a lei
@@ -222,8 +219,7 @@ card: true
 - Impacto coletivo, transparência
 - Argumento: 223 milhões de CPFs expostos
 
-</div>
-</div>
+
 
 ---
 layout: default
@@ -266,7 +262,7 @@ card: true
 
 <!-- SLIDE 15: [DEBATE] Debate: Porta-Vozes -->
 
-## Debate: Porta-Vozes
+# Debate: Porta-Vozes
 
 **Ordem de fala (sorteada pelo professor):**
 
