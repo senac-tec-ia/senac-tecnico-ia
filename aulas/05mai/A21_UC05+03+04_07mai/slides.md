@@ -1,7 +1,7 @@
 ---
 theme: ../../../neural-slides-template
 colorSchema: dark
-title: "Técnico em IA — Aula 21"
+title: "Técnico em IA - Aula 21"
 author: Leonardo Zanini
 github: LeoZanini
 courseTitle: Técnico em Inteligência Artificial
@@ -79,23 +79,20 @@ bgPreset: default
 
 <!-- objetivo: aluno sabe o que precisa entregar ao final da quinta para estar preparado para a sexta -->
 
-# O que preparar hoje (três coisas)
+# O que preparar hoje
 
-**1. A teoria - você explica, não lê**
+**1. A teoria** - você explica, não lê
 
-- O que é esse tipo de função?
-- Como é a fórmula? O que cada letra significa?
-- O gráfico cresce, cai, satura, oscila? Por que?
-- Onde aparece na vida real? Em dados, tecnologia ou IA?
+- O que é a função? Como é a fórmula? O que cada letra significa?
+- O gráfico cresce, cai, satura? Por que? Onde aparece em IA?
 
-**2. O código no Colab**
+**2. O código no Colab** - use `numpy` e `matplotlib`
 
-- Use `numpy` e `matplotlib` para plotar sua função
-- O gráfico precisa ter: título, rótulos nos eixos, pelo menos uma curva visível
+- Gráfico com título, rótulos nos eixos, pelo menos uma curva visível
 
-**3. Um exemplo real em IA ou dados**
+**3. Um exemplo real** - concreto, em ML, dados ou tecnologia
 
-- Onde sua função aparece em Machine Learning, dados ou tecnologia?
+- Não vale "aparece em matemática" - precisa de contexto real
 
 ---
 layout: default
@@ -151,194 +148,231 @@ import matplotlib.pyplot as plt
 > Todo o código do grupo fica neste mesmo notebook.
 
 ---
-layout: default
+layout: two-cols
 card: true
 bgPreset: default
 ---
 
 <!-- objetivo: aluno do Grupo 1 completa os parâmetros da função linear com os valores corretos -->
 
-# Scaffold - Grupo 1: Funções Lineares
+# Scaffold - Grupo 1: Linear
 
 ```python
-# Grupo 1 - Linear: y = ax + b
-
 x = np.linspace([INICIO], [FIM], [N_PONTOS])
 
-# Defina os coeficientes:
-a = [COEFICIENTE_ANGULAR]   # inclinacao da reta
-b = [COEFICIENTE_LINEAR]    # onde a reta cruza o eixo y
+a = [COEFICIENTE_ANGULAR]   # inclinação
+b = [COEFICIENTE_LINEAR]    # intercepto y
 
 y = a * x + b
 
-plt.plot(x, y, label="[NOME_DA_FUNCAO_ex: y = 2x + 3]")
-plt.title("[TITULO_DO_GRAFICO]")
-plt.xlabel("[ROTULO_EIXO_X]")
-plt.ylabel("[ROTULO_EIXO_Y]")
+plt.plot(x, y, label="[y = ax + b]")
+plt.title("[TITULO]")
+plt.xlabel("[EIXO_X]")
+plt.ylabel("[EIXO_Y]")
 plt.legend()
 plt.grid(True)
 plt.show()
 ```
 
-> O que muda quando `a` e negativo? E quando `a = 0`? Saiba responder isso amanhã.
+::right::
+
+**y = ax + b**
+
+- `a` → inclinação da reta
+- `b` → onde cruza o eixo y
+- `a > 0` → sobe · `a < 0` → desce
+- `a = 0` → reta horizontal
+
+> O que muda quando `a` dobra?
 
 ---
-layout: default
+layout: two-cols
 card: true
 bgPreset: default
 ---
 
 <!-- objetivo: aluno do Grupo 2 completa os parâmetros da função quadrática com os valores corretos -->
 
-# Scaffold - Grupo 2: Funções Quadráticas
+# Scaffold - Grupo 2: Quadrática
 
 ```python
-# Grupo 2 - Quadratica: y = ax² + bx + c
-
 x = np.linspace([INICIO], [FIM], [N_PONTOS])
 
-a = [VALOR_A]   # abre para cima (a > 0) ou para baixo (a < 0)
+a = [VALOR_A]   # a > 0 → abre pra cima
 b = [VALOR_B]
-c = [VALOR_C]   # ponto onde a parabola cruza o eixo y
+c = [VALOR_C]   # cruza o eixo y
 
 y = a * x**2 + b * x + c
 
-plt.plot(x, y, label="[NOME_DA_FUNCAO]")
-plt.title("[TITULO_DO_GRAFICO]")
-plt.xlabel("[ROTULO_EIXO_X]")
-plt.ylabel("[ROTULO_EIXO_Y]")
+plt.plot(x, y, label="[y = ax²+bx+c]")
+plt.title("[TITULO]")
+plt.xlabel("[EIXO_X]")
+plt.ylabel("[EIXO_Y]")
 plt.legend()
 plt.grid(True)
 plt.show()
 ```
 
-> Por que a parabola tem um ponto mais alto ou mais baixo? Saiba explicar isso amanhã.
+::right::
+
+**y = ax² + bx + c**
+
+- `a > 0` → parábola abre pra cima
+- `a < 0` → parábola abre pra baixo
+- vértice = ponto mais alto ou mais baixo
+- `c` → onde cruza o eixo y
+
+> Por que a parábola tem um ponto extremo?
 
 ---
-layout: default
+layout: two-cols
 card: true
 bgPreset: default
 ---
 
 <!-- objetivo: aluno do Grupo 3 completa os parâmetros da função polinomial de grau 3 ou superior -->
 
-# Scaffold - Grupo 3: Funções Polinomiais
+# Scaffold - Grupo 3: Polinomial
 
 ```python
-# Grupo 3 - Polinomial grau 3+: y = ax³ + bx² + cx + d
-
 x = np.linspace([INICIO], [FIM], [N_PONTOS])
 
 a = [VALOR_A]
 b = [VALOR_B]
 c = [VALOR_C]
 d = [VALOR_D]
-
 y = a * x**3 + b * x**2 + c * x + d
 
-plt.plot(x, y, label="[NOME_DA_FUNCAO]")
-plt.title("[TITULO_DO_GRAFICO]")
-plt.xlabel("[ROTULO_EIXO_X]")
-plt.ylabel("[ROTULO_EIXO_Y]")
+plt.plot(x, y, label="[y = ax³+bx²+cx+d]")
+plt.title("[TITULO]")
+plt.xlabel("[EIXO_X]")
+plt.ylabel("[EIXO_Y]")
 plt.legend()
 plt.grid(True)
 plt.show()
 ```
 
-> O que acontece com y quando x fica muito grande numa cúbica? Pesquise isso.
+::right::
+
+**y = ax³ + bx² + cx + d**
+
+- grau 3 → pode ter até 2 "curvas"
+- `a > 0` → sobe no infinito
+- `a < 0` → desce no infinito
+- pode ter inflexão (muda a concavidade)
+
+> O que acontece com y quando x → ∞?
 
 ---
-layout: default
+layout: two-cols
 card: true
 bgPreset: default
 ---
 
 <!-- objetivo: aluno do Grupo 4 completa os parâmetros da função logarítmica e entende a restrição x > 0 -->
 
-# Scaffold - Grupo 4: Funções Logarítmicas
+# Scaffold - Grupo 4: Logarítmica
 
 ```python
-# Grupo 4 - Logaritmica: y = log(x)
-# ATENCAO: x deve ser > 0 para o logaritmo funcionar
+# ATENÇÃO: [INICIO] deve ser > 0
+x = np.linspace([INICIO], [FIM], [N_PONTOS])
 
-x = np.linspace([INICIO], [FIM], [N_PONTOS])   # [INICIO] deve ser > 0
+y = np.[FUNCAO_LOG](x)
 
-y = np.[FUNCAO_LOG](x)   # np.log = ln (base e) | np.log10 = log base 10
-
-plt.plot(x, y, label="[NOME_DA_FUNCAO_ex: y = ln(x)]")
-plt.title("[TITULO_DO_GRAFICO]")
-plt.xlabel("[ROTULO_EIXO_X]")
-plt.ylabel("[ROTULO_EIXO_Y]")
+plt.plot(x, y, label="[y = log(x)]")
+plt.title("[TITULO]")
+plt.xlabel("[EIXO_X]")
+plt.ylabel("[EIXO_Y]")
 plt.legend()
 plt.grid(True)
 plt.show()
 ```
 
-> `np.log10(1000)` retorna quanto? Por que? Saiba responder isso amanhã.
+::right::
+
+**y = log(x)**
+
+- `np.log` → logaritmo natural (base e)
+- `np.log10` → log base 10
+- x deve ser **> 0** (log de 0 é -∞)
+- cresce infinitamente, mas devagar
+
+> `np.log10(1000)` retorna quanto? Por quê?
 
 ---
-layout: default
+layout: two-cols
 card: true
 bgPreset: default
 ---
 
 <!-- objetivo: aluno do Grupo 5 completa os parâmetros da função exponencial e entende o crescimento rápido -->
 
-# Scaffold - Grupo 5: Funções Exponenciais
+# Scaffold - Grupo 5: Exponencial
 
 ```python
-# Grupo 5 - Exponencial: y = a * e^x
-
 x = np.linspace([INICIO], [FIM], [N_PONTOS])
 
-a = [COEFICIENTE]   # escala vertical da curva
+a = [COEFICIENTE]   # escala vertical
 
-y = a * np.[FUNCAO_EXP](x)   # np.exp(x) = e^x
+y = a * np.[FUNCAO_EXP](x)
 
-plt.plot(x, y, label="[NOME_DA_FUNCAO_ex: y = e^x]")
-plt.title("[TITULO_DO_GRAFICO]")
-plt.xlabel("[ROTULO_EIXO_X]")
-plt.ylabel("[ROTULO_EIXO_Y]")
+plt.plot(x, y, label="[y = a·eˣ]")
+plt.title("[TITULO]")
+plt.xlabel("[EIXO_X]")
+plt.ylabel("[EIXO_Y]")
 plt.legend()
 plt.grid(True)
 plt.show()
 ```
 
-> `np.exp(0)` retorna quanto? E `np.exp(1)`? Saiba responder isso amanhã.
+::right::
+
+**y = a · eˣ**
+
+- `np.exp(x)` = eˣ (e ≈ 2,718)
+- `a` escala a curva verticalmente
+- cresce muito rápido → "explosão"
+- `np.exp(0)` = 1 · `np.exp(1)` = e
+
+> Diferença entre crescimento linear e exponencial?
 
 ---
-layout: default
+layout: two-cols
 card: true
 bgPreset: default
 ---
 
 <!-- objetivo: aluno do Grupo 6 completa os parâmetros da sequência e entende a diferença entre PA e PG -->
 
-# Scaffold - Grupo 6: Sequências e Padrões
+# Scaffold - Grupo 6: Sequências
 
 ```python
-# Grupo 6 - Sequencias: PA, PG, Fibonacci ou crescimento
+n = np.arange([INICIO], [FIM])
 
-n = np.arange([INICIO], [FIM])   # indices da sequencia
-
-# Escolha UMA das opcoes abaixo e complete os valores:
-
-# Opcao A - Progressao Aritmetica (PA): an = a1 + (n-1) * r
+# Opção A - PA: an = a1 + (n-1) * r
 y = [PRIMEIRO_TERMO] + (n - 1) * [RAZAO_PA]
 
-# Opcao B - Progressao Geometrica (PG): an = a1 * q^(n-1)
+# Opção B - PG: an = a1 * q^(n-1)
 # y = [PRIMEIRO_TERMO] * [RAZAO_PG] ** (n - 1)
 
-plt.scatter(n, y, label="[NOME_DA_SEQUENCIA]")   # scatter para sequencias discretas
-plt.title("[TITULO_DO_GRAFICO]")
-plt.xlabel("[ROTULO_EIXO_X_ex: n (indice)]")
-plt.ylabel("[ROTULO_EIXO_Y_ex: valor]")
+plt.scatter(n, y, label="[NOME]")
+plt.title("[TITULO]")
+plt.xlabel("[n (índice)]")
+plt.ylabel("[valor]")
 plt.legend()
 plt.grid(True)
 plt.show()
 ```
 
-> A sequência 2, 4, 8, 16 é PA ou PG? Como você sabe? Saiba explicar amanhã.
+::right::
+
+**PA vs PG**
+
+- PA → soma razão constante: 2, 5, 8, 11...
+- PG → multiplica razão: 2, 6, 18, 54...
+- use `scatter` (pontos) - sequência é discreta
+
+> 2, 4, 8, 16 é PA ou PG? Como sabe?
 
 ---
 layout: default
@@ -348,20 +382,16 @@ bgPreset: palette
 
 <!-- objetivo: aluno compreende os critérios pelos quais será avaliado individualmente na sexta -->
 
-# Critérios de Avaliação Individual
+# Critérios - nota individual
 
-<SlideTable fullWidth>
-
-| Critério | A - Atendido | PA - Parcialmente | NA - Não Atendido |
+| | **A** | **PA** | **NA** |
 |---|---|---|---|
-| Explica a função | Claro, com fórmula e comportamento do gráfico | Explica mas comete imprecisão | Não consegue explicar |
-| Exemplo real | Concreto e correto em IA/dados | Vago ou só repete o enunciado | Sem exemplo |
-| Explica o código | Sabe o que cada função faz | Sabe o que o código faz, mas não as funções | Não sabe explicar |
-| Responde perguntas | Corretamente sem ajuda | Com pequena correção | Não responde ou responde errado |
+| Explica a função | Com fórmula e gráfico | Com imprecisão | Não consegue |
+| Exemplo real | Concreto em IA/dados | Vago | Sem exemplo |
+| Explica o código | Sabe cada função | Sabe o geral | Não sabe |
+| Responde perguntas | Correto sem ajuda | Com correção | Não responde |
 
-</SlideTable>
-
-> A nota é individual. Garanta que você sabe explicar cada linha do código do grupo.
+legenda: A=Atendido, PA=Parcialmente Atendido (recuperação simples), NA = Não atendido (recuperação completa, nova atividade)
 
 ---
 layout: default
@@ -373,21 +403,14 @@ bgPreset: animate
 
 # O que acontece na sexta (amanhã)
 
-**Formato da apresentação:**
-
 - Cada grupo tem **12 minutos** no total
 - Cada aluno fala pelo menos **2 minutos** sobre a parte que pesquisou
 - Mostram o gráfico na tela (Colab aberto no projetor)
-- Explicam o código - o professor pode perguntar sobre qualquer linha
-- Explicam o exemplo real
-
-**Regras na sexta:**
-
-- Sem celular na mão durante a apresentação
-- Sem ler folhas ou copiar da tela enquanto fala
+- O professor pode perguntar sobre qualquer linha do código
+- Sem celular na mão · sem ler folhas · sem copiar da tela
 - Pode gesticular, desenhar no quadro, usar o gráfico na tela
 
-> Ao final: o professor faz perguntas rápidas para a turma. Qualquer aluno pode ser chamado.
+Ao final: o professor faz perguntas rápidas para a turma.
 
 ---
 layout: default
@@ -397,22 +420,20 @@ bgPreset: default
 
 <!-- objetivo: aluno conhece as perguntas que o professor pode fazer ao final e se prepara para elas -->
 
-# Perguntas que o professor pode fazer amanhã
+# Perguntas amanhã - qualquer aluno pode ser chamado
 
 <SlideTable compact fullWidth>
 
-| UC/Indicador | Pergunta possível |
+| Indicador | Pergunta |
 |---|---|
-| UC09 - Linear | "Se o coeficiente angular dobra, o que acontece com a inclinação?" |
-| UC09 - Polinomial | "O que acontece com y quando x fica muito grande numa cúbica?" |
-| UC09 - Logarítmica | "O que `np.log10(1000)` retorna? Por que?" |
-| UC09 - Exponencial | "Qual a diferença entre crescimento linear e exponencial?" |
-| UC03 - Sequências | "A sequência 2, 4, 8, 16 é PA ou PG? Como você sabe?" |
-| UC05 - Bibliotecas | "Para que serve o `np.linspace`? Por que é melhor que `range`?" |
+| Linear | "Se `a` dobra, o que muda na inclinação?" |
+| Polinomial | "O que acontece com y quando x → ∞?" |
+| Logarítmica | "`np.log10(1000)` retorna quanto?" |
+| Exponencial | "Diferença entre crescimento linear e exponencial?" |
+| Sequências | "2, 4, 8, 16 é PA ou PG?" |
+| Bibliotecas | "Para que serve `np.linspace`?" |
 
 </SlideTable>
-
-> Estude essas perguntas com o grupo hoje. Qualquer aluno pode ser chamado amanhã.
 
 ---
 layout: default
@@ -422,22 +443,14 @@ bgPreset: default
 
 <!-- [ATIV AVALIATIVA] -->
 
-# Checklist da Av.06 - O que entregar hoje
+# Checklist da Av.06
 
-**Antes de sair da aula, o grupo deve ter:**
-
-- [ ] Notebook do Colab renomeado: `Av06 - Grupo N - [TEMA]`
-- [ ] `import numpy as np` e `import matplotlib.pyplot as plt` na primeira célula
-- [ ] Gráfico plotado com título, rótulos nos eixos e pelo menos uma curva visível
-- [ ] Todos os `[PLACEHOLDERS]` substituídos por valores reais
-- [ ] Exemplo real em IA/dados identificado e anotado no notebook
-
-**Cada aluno deve saber explicar:**
-
-- [ ] O que é a função do grupo e qual a fórmula
-- [ ] O que cada parâmetro do código faz
-- [ ] Por que o gráfico tem o formato que tem
-- [ ] Onde essa função aparece em IA ou dados reais
+- [ ] Notebook: `Av06 - Grupo N - [TEMA]`
+- [ ] Gráfico com título, rótulos e curva visível
+- [ ] `[PLACEHOLDERS]` substituídos e exemplo real anotado
+- [ ] Sabe explicar a fórmula e cada parâmetro
+- [ ] Sabe explicar o que cada linha do código faz
+- [ ] Sabe onde a função aparece em IA ou dados
 
 ---
 layout: center
@@ -458,21 +471,14 @@ bgPreset: default
 
 <!-- [ATIV AVALIATIVA] -->
 
-# Av.05 - Finalize agora se não entregou
+# Av.05 - Finalize agora
 
-**Se você não terminou a Av.05 na A20:**
+- Os slides de referência da A20 estão disponíveis no link do curso
+- Use os scaffolds como guia e entregue o Colab **antes do fim desta aula**
+- Formato: `Av05 - Nome1 e Nome2: [link do Colab]`
+- Depois de entregar: una-se ao grupo da Av.06 imediatamente
 
-- Os slides de referência da A20 continuam disponíveis no link do curso
-- Use os scaffolds de código da aula anterior como guia
-- Entregue o link do Colab ao professor **antes do fim desta aula**
-- Formato do email: `Av05 - Nome1 e Nome2: [link do Colab]`
-
-**Prioridade de hoje:**
-
-- Quem ainda está na Av.05: termine e entregue até o final desta aula
-- Depois de entregar: une-se ao grupo da Av.06 imediatamente
-
-> Não deixe para amanhã. Na sexta é dia de apresentação da Av.06.
+Na sexta é dia de apresentação da Av.06 - não deixe para amanhã.
 
 ---
 layout: brainstorm

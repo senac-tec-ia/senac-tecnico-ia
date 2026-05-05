@@ -13,7 +13,7 @@
  */
 
 import { readFileSync, existsSync } from 'fs'
-import { join, relative } from 'path'
+import path, { join, relative } from 'path'
 import { globSync } from 'fs'
 
 const ROOT = join(import.meta.dirname, '..')
@@ -239,7 +239,7 @@ const args = process.argv.slice(2)
 let files = []
 
 if (args.length > 0) {
-  files = args.map(a => join(ROOT, a)).filter(f => existsSync(f))
+  files = args.map(a => path.resolve(ROOT, a)).filter(f => existsSync(f))
 } else {
   // Find all slides.md in aulas/
   const { execSync } = await import('child_process')

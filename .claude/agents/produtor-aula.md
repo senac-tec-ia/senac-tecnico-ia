@@ -238,6 +238,24 @@ Após completar o ciclo de todas as UCs:
 
 > Não há etapa de "merge" — os slides já foram gerados via append incremental diretamente em `slides.md`.
 
+#### Etapa obrigatória — Check de overflow
+
+Antes de invocar o auditor, rode o check de overflow via `scripts/check-overflow.mjs`:
+
+1. Verifique se o dev server da aula está rodando (`npm run dev:a{NN}` onde `a{NN}` é o slug)
+2. Se não estiver, instrua o professor a rodar antes de continuar, ou rode você mesmo em background:
+   ```bash
+   node scripts/check-overflow.mjs --slides=aulas/{MM}{mmm}/{PASTA}/slides.md --port=3030
+   ```
+3. **Se houver overflow reportado:** corrija os slides afetados antes de prosseguir. Estratégias por prioridade:
+   - Reduzir bullets (eliminar redundâncias, condensar em 1 linha)
+   - Mover conteúdo para um novo slide com o mesmo layout
+   - Trocar layout por `two-cols` ou `two-cols-header` para ganhar espaço lateral
+   - Encurtar blocos de código (extrair para hint/dica separada)
+4. **Só avance para o auditor após overflow zerado.**
+
+> ⚠️ Nunca entregue slides com overflow — o conteúdo cortado na apresentação é pior do que slides extras.
+
 Invocar `@auditor-estrutura`:
 ```
 "Valide A{NN} — verifique T→E→D→TC, tags e consistência com plano-aula.md"
