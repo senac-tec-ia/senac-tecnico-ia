@@ -179,7 +179,7 @@ CRIAR TABELA notas:
 CONFIRMAR as mudanças no banco
 ```
 
-*A chave estrangeira `aluno_id` garante que cada nota pertence a um aluno real — relacao 1:N (um aluno, muitas notas).*
+*A chave estrangeira `aluno_id` garante que cada nota pertence a um aluno real — relação 1:N (um aluno, muitas notas).*
 
 ---
 layout: default
@@ -224,7 +224,7 @@ PARA cada linha do resultado:
   IMPRIMIR a linha
 ```
 
-*O JOIN funciona porque `notas.aluno_id` aponta para `alunos.id`. Sem FK, o banco aceitaria qualquer numero como aluno_id.*
+*O JOIN funciona porque `notas.aluno_id` aponta para `alunos.id`. Sem FK, o banco aceitaria qualquer número como aluno_id.*
 
 ---
 layout: default
@@ -504,8 +504,8 @@ else:
 conn.close()
 ```
 
-> Funcoes built-in do Python: `sum()` · `len()` · `max()` · `min()` — sem importar nada.
-> Referencia: https://docs.python.org/3/library/functions.html
+> Funções built-in do Python: `sum()` · `len()` · `max()` · `min()` — sem importar nada.
+> Referência: https://docs.python.org/3/library/functions.html
 
 ---
 layout: default
@@ -531,9 +531,9 @@ print(df.head())
 print(f"Media Pandas: {df['[NOME_DA_COLUNA]'].mean():.2f}")
 ```
 
-> `pd.read_sql_query` recebe uma query SQL e uma conexao aberta, e retorna um DataFrame.
+> `pd.read_sql_query` recebe uma query SQL e uma conexão aberta, e retorna um DataFrame.
 > Compare `.mean()` com o resultado da Fase 4 — tem que ser o mesmo.
-> Referencia: https://pandas.pydata.org/docs/reference/api/pandas.read_sql_query.html
+> Referência: https://pandas.pydata.org/docs/reference/api/pandas.read_sql_query.html
 
 
 ---
