@@ -27,9 +27,9 @@ onMounted(async () => {
       class="sticky top-0 z-20 bg-neural-900/95 backdrop-blur-sm border-b border-neural-700 px-4 pt-5 pb-0 sm:px-6"
     >
       <div class="max-w-4xl mx-auto">
-        <div class="flex justify-center sm:justify-between items-center mb-6">
+        <div class="flex justify-center sm:justify-between items-center mb-2">
         <div>
-        <p class="text-neural-accent text-xs font-mono mb-0.5">Senac · Técnico em IA</p>
+        <p class="text-neural-accent text-xs font-mono mb-0.5">Técnico em IA - SENAC</p>
         <h1 class="text-xl sm:text-2xl font-bold text-white mb-3">Portal do Aluno</h1></div><div
           v-if="professorMessage"
           class="mb-3 rounded-xl border border-neural-accent/30 bg-neural-800/60 px-4 py-3"
