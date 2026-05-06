@@ -6,266 +6,315 @@ author: Leonardo Zanini
 github: LeoZanini
 courseTitle: Técnico em Inteligência Artificial
 aulaNum: "Aula 22"
-aulaDate: "2026-05-09"
-unlockHour: 13
+aulaDate: "2026-05-08"
+unlockHour: 7
 bgPreset: palette
 layout: cover
 ---
 
 # Aula 22
 
-## Av.06 - Seminário de Funções Matemáticas
-## Dia das Apresentações | 09/05/2026
+## Hora de Apresentar
+## Av.06 - Seminário de Funções | 08/05/2026
+
+---
+layout: default
+card: true
+bgPreset: default
+aulaNum: "Aula 22"
+---
+
+<!-- SLIDE 2 -->
+<!-- objetivo: aluno sabe o que acontece em cada bloco do dia antes de começar -->
+
+# Como funciona o dia de hoje
+
+**Manhã (até o intervalo)**
+
+- Tempo livre para ajuste final do Colab
+- Última chance de entregar a Av.05 - quem não entregar até o intervalo perde o prazo definitivamente
+
+**Tarde (após o intervalo)**
+
+- Apresentações da Av.06 - 6 grupos
+- Cada grupo tem cerca de 10 minutos
+- A nota é individual: dois alunos do mesmo grupo podem ter notas diferentes
+
+---
+layout: default
+card: true
+bgPreset: default
+aulaNum: "Aula 22"
+---
+
+<!-- SLIDE 3 -->
+<!-- objetivo: aluno usa o tempo da manhã para corrigir o código e preparar a fala -->
+
+# Últimos ajustes no Colab
+
+Você tem até o intervalo para:
+
+- Verificar se o gráfico aparece corretamente
+- Testar os parâmetros da função (mudar `a`, `b`, `c` e ver o que muda)
+- Praticar a explicação do seu bloco em voz alta
+
+**Av.05 ainda não entregou?**
+Envie agora: `Av05 - NomeParceiro1 e NomeParceiro2: [link do Colab]` pelo Classroom.
+Após o intervalo, a Av.05 está encerrada.
+
+---
+layout: default
+card: true
+bgPreset: default
+aulaNum: "Aula 22"
+---
+
+<!-- SLIDE 4 -->
+<!-- objetivo: aluno verifica individualmente se está pronto para apresentar -->
+
+# Checklist antes de apresentar
+
+Antes de o intervalo acabar, confirme:
+
+- Meu bloco do código roda sem erro?
+- Consigo explicar o que cada linha faz, sem ler?
+- Sei qual é a pergunta pontual do meu grupo?
+- (Papel Mundo real) Trouxe um número concreto e mostrei ele no código?
+
+Se algum ponto ainda está travado, use os minutos que restam para resolver.
+
+---
+layout: default
+card: true
+bgPreset: default
+aulaNum: "Aula 22"
+---
+
+<!-- SLIDE 5 -->
+<!-- objetivo: aluno conhece as regras da apresentação antes de subir ao projetor -->
+
+# Regras das apresentações
+
+- Sem celular na mão enquanto você fala
+- Sem ler papel ou tela - você explica com as suas palavras
+- Cada membro fala o seu bloco
+- O professor pode perguntar qualquer coisa para qualquer aluno durante ou após a apresentação
+- A ordem dos grupos pode ser sorteada na hora
+
+Se você travar, o professor faz uma pergunta para te ajudar a lembrar. Mas não vai dar a resposta.
+
+---
+layout: default
+card: true
+bgPreset: default
+aulaNum: "Aula 22"
+---
+
+<!-- SLIDE 6 -->
+<!-- objetivo: aluno entende exatamente como a nota dele será formada -->
+
+# Como você será avaliado
+
+Cada aluno é avaliado pelo seu papel, individualmente:
+
+1. Explica o seu bloco do código sem ler e sem ajuda do colega
+2. Responde a pergunta pontual do seu grupo
+3. Responde pelo menos uma pergunta comum (pode vir para qualquer grupo)
+4. (Papel Mundo real) Trouxe um número concreto e modificou o código para refletir o exemplo
 
 ---
 layout: default
 card: true
 bgPreset: animate
+aulaNum: "Aula 22"
 ---
 
-<!-- objetivo: aluno sabe o que vai acontecer nos blocos da aula antes de começar -->
+<!-- SLIDE 7 -->
+<!-- objetivo: qualquer aluno sabe quais perguntas comuns pode receber durante as apresentações -->
 
-# Agenda do dia
+# Perguntas que podem vir para qualquer grupo
 
-**13h00 - Abertura e regras (5 min)**
+Este slide fica projetado durante todas as apresentações.
 
-**13h05 - Apresentações dos grupos (72 min)**
-
-- 6 grupos x 12 minutos cada
-- Colab no projetor: fórmula, gráfico, exemplo real
-
-**14h17 - Perguntas surpresa para a turma (10 min)**
-
-**14h27 - Janela Av.05 - entrega final (15 min)**
-
-**14h42 - Encerramento: o que vem na próxima aula**
+- O que o `import` faz? Por que precisamos disso?
+- Quais bibliotecas foram usadas e para que serve cada uma?
+- O que é `np.linspace`? O que os três números dentro dele significam?
+- O que acontece se você mudar o número de pontos do `linspace`?
+- O que `plt.show()` faz?
 
 ---
 layout: default
 card: true
-bgPreset: default
+bgPreset: palette
+aulaNum: "Aula 22"
 ---
 
-<!-- objetivo: aluno recorda as regras da apresentação antes de subir ao projetor -->
+<!-- SLIDE 8 -->
+<!-- objetivo: painel projetado enquanto o Grupo 1 apresenta -->
 
-# Regras da apresentação
+# Grupo 1 - Função Linear
 
-- Sem celular na mão durante a apresentação
-- Sem ler folha ou tela - você explica com suas palavras
-- Cada aluno fala pelo menos **2 minutos**
-- Cada grupo tem **12 minutos** no total
-- A nota é individual: dois do mesmo grupo podem ter notas diferentes
-
-Se você travar, o professor faz uma pergunta para ajudar. Mas não vai dar a resposta.
-
----
-layout: default
-card: true
-bgPreset: default
----
-
-<!-- objetivo: professor e turma sabem os critérios que estão sendo avaliados durante cada apresentação -->
-
-# Critérios de avaliação
+**Fórmula:** `y = ax + b`
 
 <SlideTable fullWidth>
 
-| Critério | A - Atingiu | PA - Atingiu Parcialmente | NA - Não Atingiu |
-|---|---|---|---|
-| Explica a função | Com fórmula e gráfico | Com imprecisão | Não consegue |
-| Exemplo real | Concreto em IA/dados | Vago | Sem exemplo |
-| Explica o código | Sabe cada função | Sabe o geral | Não sabe |
-| Responde perguntas | Correto sem ajuda | Com correção | Não responde |
+| Papel | O que apresenta |
+|---|---|
+| Matemática | Explica a fórmula e o que `a` e `b` representam |
+| Código | Mostra o Colab e explica cada linha |
+| Gráfico | Descreve a reta e o que muda nos eixos |
+| Mundo real | Traz número concreto e mostra no código |
+| Perguntas | Responde perguntas da turma |
 
 </SlideTable>
 
-*A avaliação é feita individualmente durante a fala de cada aluno.*
-
----
-layout: center
-card: true
-bgPreset: palette
-pulse: true
-pulseDuration: 8
----
-
-# Grupo 1
-## Funções Lineares
+**Pergunta pontual do grupo:**
+> O que muda no gráfico se você dobrar o valor de `a`?
 
 ---
 layout: default
 card: true
-bgPreset: animate
----
-
-<!-- objetivo: criar foco da turma no tema do grupo que está apresentando -->
-
-# Grupo 1 - Funções Lineares
-
-**Enquanto o grupo apresenta, pense:**
-
-Uma empresa coleta dados de consumo de energia por hora. O modelo de previsão é uma reta. O que acontece com a previsão se o coeficiente angular dobra?
-
-- Preste atenção na fórmula apresentada
-- Olhe o gráfico: onde a reta sobe mais rápido?
-- Você seria capaz de explicar o que `a` e `b` representam?
-
-*O professor pode te chamar para responder ao final.*
-
----
-layout: center
-card: true
 bgPreset: palette
-pulse: true
-pulseDuration: 8
+aulaNum: "Aula 22"
 ---
 
-# Grupo 2
-## Funções Quadráticas
+<!-- SLIDE 9 -->
+<!-- objetivo: painel projetado enquanto o Grupo 2 apresenta -->
+
+# Grupo 2 - Função Quadrática
+
+**Fórmula:** `y = ax² + bx + c`
+
+<SlideTable fullWidth>
+
+| Papel | O que apresenta |
+|---|---|
+| Matemática | Explica a fórmula e o que `a`, `b` e `c` representam |
+| Código | Mostra o Colab e explica cada linha |
+| Gráfico | Descreve a parábola e o vértice |
+| Mundo real | Traz número concreto e mostra no código |
+| Perguntas | Responde perguntas da turma |
+
+</SlideTable>
+
+**Pergunta pontual do grupo:**
+> Onde está o vértice da parábola? Como o código te ajuda a ver isso?
 
 ---
 layout: default
 card: true
-bgPreset: animate
----
-
-<!-- objetivo: criar foco da turma no tema do grupo que está apresentando -->
-
-# Grupo 2 - Funções Quadráticas
-
-**Enquanto o grupo apresenta, pense:**
-
-Em otimização de modelos de ML, a função de custo costuma ter formato de parábola. Por que isso é útil para o algoritmo encontrar o mínimo?
-
-- O gráfico abre pra cima ou pra baixo? Por que?
-- Onde fica o vértice? O que ele representa no exemplo real?
-- Você consegue identificar os valores de `a`, `b` e `c` no código?
-
-*O professor pode te chamar para responder ao final.*
-
----
-layout: center
-card: true
 bgPreset: palette
-pulse: true
-pulseDuration: 8
+aulaNum: "Aula 22"
 ---
 
-# Grupo 3
-## Funções Polinomiais (grau 3+)
+<!-- SLIDE 10 -->
+<!-- objetivo: painel projetado enquanto o Grupo 3 apresenta -->
+
+# Grupo 3 - Função Polinomial (grau 3)
+
+**Fórmula:** `y = ax³ + bx² + cx + d`
+
+<SlideTable fullWidth>
+
+| Papel | O que apresenta |
+|---|---|
+| Matemática | Explica a fórmula e o que cada coeficiente faz |
+| Código | Mostra o Colab e explica cada linha |
+| Gráfico | Descreve as curvas e como o grau influencia o formato |
+| Mundo real | Traz número concreto e mostra no código |
+| Perguntas | Responde perguntas da turma |
+
+</SlideTable>
+
+**Pergunta pontual do grupo:**
+> Por que o gráfico tem mais de uma "curva"?
 
 ---
 layout: default
 card: true
-bgPreset: animate
----
-
-<!-- objetivo: criar foco da turma no tema do grupo que está apresentando -->
-
-# Grupo 3 - Funções Polinomiais
-
-**Enquanto o grupo apresenta, pense:**
-
-Curvas polinomiais de grau alto são usadas para ajuste de dados complexos. O que acontece com o gráfico quando o grau aumenta? Fica mais fácil ou mais difícil de interpretar?
-
-- Quantas "curvas" o gráfico tem?
-- O que muda no comportamento quando `x` fica muito grande?
-- O grupo conseguiu mostrar onde isso aparece em ML ou dados?
-
-*O professor pode te chamar para responder ao final.*
-
----
-layout: center
-card: true
 bgPreset: palette
-pulse: true
-pulseDuration: 8
+aulaNum: "Aula 22"
 ---
 
-# Grupo 4
-## Funções Logarítmicas
+<!-- SLIDE 11 -->
+<!-- objetivo: painel projetado enquanto o Grupo 4 apresenta -->
+
+# Grupo 4 - Função Logarítmica
+
+**Fórmula:** `y = log(x)`
+
+<SlideTable fullWidth>
+
+| Papel | O que apresenta |
+|---|---|
+| Matemática | Explica a fórmula e por que `x` precisa ser maior que zero |
+| Código | Mostra o Colab e explica cada linha |
+| Gráfico | Descreve como a curva desacelera conforme `x` cresce |
+| Mundo real | Traz número concreto e mostra no código |
+| Perguntas | Responde perguntas da turma |
+
+</SlideTable>
+
+**Pergunta pontual do grupo:**
+> O que acontece com `np.log(0)`? Por que o gráfico não começa em x=0?
 
 ---
 layout: default
 card: true
-bgPreset: animate
----
-
-<!-- objetivo: criar foco da turma no tema do grupo que está apresentando -->
-
-# Grupo 4 - Funções Logarítmicas
-
-**Enquanto o grupo apresenta, pense:**
-
-A escala de decibéis é logarítmica. Algoritmos de busca com complexidade O(log n) são muito rápidos. Por que o logaritmo "achata" valores grandes?
-
-- O gráfico cresce sem parar ou desacelera?
-- O grupo explicou por que x precisa ser maior que zero?
-- Onde esse comportamento aparece em sistemas reais de IA?
-
-*O professor pode te chamar para responder ao final.*
-
----
-layout: center
-card: true
 bgPreset: palette
-pulse: true
-pulseDuration: 8
+aulaNum: "Aula 22"
 ---
 
-# Grupo 5
-## Funções Exponenciais
+<!-- SLIDE 12 -->
+<!-- objetivo: painel projetado enquanto o Grupo 5 apresenta -->
+
+# Grupo 5 - Função Exponencial
+
+**Fórmula:** `y = eˣ`
+
+<SlideTable fullWidth>
+
+| Papel | O que apresenta |
+|---|---|
+| Matemática | Explica a fórmula e o que a base `e` representa |
+| Código | Mostra o Colab e explica cada linha |
+| Gráfico | Descreve o crescimento acelerado da curva |
+| Mundo real | Traz número concreto e mostra no código |
+| Perguntas | Responde perguntas da turma |
+
+</SlideTable>
+
+**Pergunta pontual do grupo:**
+> Qual é a diferença entre `np.exp(x)` e `2**x`?
 
 ---
 layout: default
 card: true
-bgPreset: animate
----
-
-<!-- objetivo: criar foco da turma no tema do grupo que está apresentando -->
-
-# Grupo 5 - Funções Exponenciais
-
-**Enquanto o grupo apresenta, pense:**
-
-O número de usuários de uma rede social cresceu de modo exponencial nos primeiros anos. O que isso significa na prática? Quando esse crescimento tende a parar?
-
-- O gráfico sobe devagar no início e explode depois, ou o contrário?
-- Qual é a base usada? `e`, 2 ou outra?
-- O grupo conectou esse comportamento a algum fenômeno real em IA?
-
-*O professor pode te chamar para responder ao final.*
-
----
-layout: center
-card: true
 bgPreset: palette
-pulse: true
-pulseDuration: 8
+aulaNum: "Aula 22"
 ---
 
-# Grupo 6
-## Sequências e Padrões Numéricos
+<!-- SLIDE 13 -->
+<!-- objetivo: painel projetado enquanto o Grupo 6 apresenta - inclui contexto de neurônio artificial -->
 
----
-layout: default
-card: true
-bgPreset: animate
----
+# Grupo 6 - Função Sigmoide
 
-<!-- objetivo: criar foco da turma no tema do grupo que está apresentando -->
+**Fórmula:** `y = 1 / (1 + e⁻ˣ)`
 
-# Grupo 6 - Sequências e Padrões Numéricos
+<SlideTable fullWidth>
 
-**Enquanto o grupo apresenta, pense:**
+| Papel | O que apresenta |
+|---|---|
+| Matemática | Explica a fórmula e os limites da função |
+| Código | Mostra o Colab e explica cada linha |
+| Gráfico | Descreve o formato em "S" e os valores entre 0 e 1 |
+| Mundo real | Traz número concreto e mostra no código |
+| Perguntas | Responde perguntas da turma |
 
-Fibonacci aparece na natureza e em arquiteturas de redes neurais. Progressões geométricas descrevem crescimento de dados. Como você distingue uma PA de uma PG só olhando o gráfico?
+</SlideTable>
 
-- O grupo mostrou mais de uma sequência?
-- Qual a diferença visual entre PA (linear) e PG (exponencial)?
-- Onde esse padrão aparece em modelos de IA ou conjuntos de dados?
-
-*O professor pode te chamar para responder ao final.*
+**Pergunta pontual do grupo:**
+> Qual é o valor máximo e mínimo que essa função pode produzir? Por que isso é útil numa rede neural?
 
 ---
 layout: brainstorm
@@ -273,65 +322,21 @@ card: true
 bgPreset: palette
 pulse: true
 pulseDuration: 8
+aulaNum: "Aula 22"
 ---
 
-<!-- objetivo: avaliar compreensão cruzada: aluno responde sobre o tema de outro grupo -->
+<!-- SLIDE 14 -->
+<!-- debate: [Aula 22] - reflexão final sobre funções em IA -->
 
-# Perguntas Surpresa para a Turma
+# Debate final: o que você vai lembrar daqui 10 anos?
 
-**O professor chama alunos aleatoriamente.**
+**Discussão coletiva - 5 minutos**
 
-Qualquer pergunta de qualquer grupo pode cair.
+- Qual função você encontrou com mais frequência em IA ao longo do projeto?
+- O que foi surpresa para você neste seminário?
+- Se você fosse explicar função sigmoide para alguém que não sabe nada de matemática, o que diria?
 
-**Exemplos do tipo de pergunta:**
-
-- "Explica pra mim o que é o coeficiente angular de uma função linear."
-- "Por que a função logarítmica não existe para x menor ou igual a zero?"
-- "O que Fibonacci tem a ver com padrão?"
-- "No código do Grupo 5, o que a função `np.exp` faz?"
-
-Não é pra pegar ninguém de surpresa - é pra confirmar que todo mundo prestou atenção.
-
----
-layout: default
-card: true
-bgPreset: default
----
-
-<!-- objetivo: abrir janela de entrega para alunos que ainda não enviaram a Av.05 -->
-
-# Janela de Entrega - Av.05
-
-**Para quem ainda não entregou:**
-
-- Você tem **15 minutos** agora
-- Formato: `Av05 - Nome1 e Nome2: [link do Colab]`
-- Envie pelo Classroom ou email: Leonardo.niclote@docente.pr.senac.br
-
-Se o prazo fechar sem entrega, a nota fica como NA por ausência de evidência.
-
-Quem já entregou: use esse tempo para revisar seus apontamentos da aula de hoje.
-
----
-layout: default
-card: true
-bgPreset: animate
----
-
-<!-- objetivo: aluno sabe o que vem a seguir e encerra a aula com senso de progresso -->
-
-# Próximas aulas
-
-**O que vem depois deste seminário:**
-
-- **UC05 Python:** funções em Python (`def`, parâmetros, retorno, escopo)
-- **UC08 Banco de Dados:** consultas avançadas com subconsultas e views
-- **UC09 Estatística:** distribuições de probabilidade com numpy e scipy
-
-**O que você acabou de construir aqui:**
-
-Matemática de funções + Python com numpy e matplotlib + comunicação técnica oral.
-Essas três coisas aparecem juntas em praticamente todo projeto de ML.
+> **Conexão com o T2:** funções como sigmoide e ReLU aparecem dentro de redes neurais. O que vocês estudaram agora é a base do que vem pela frente.
 
 ---
 layout: end
@@ -340,10 +345,14 @@ github: LeoZanini
 avatar: https://github.com/LeoZanini.png?size=256
 ---
 
-# Até a A23!
+<!-- SLIDE 15 -->
 
-**Hoje:** Av.06 - Seminário de Funções Matemáticas - apresentações
+# T1 fechado. Até o T2!
 
-**Próxima aula:** funções em Python (`def`, `return`, escopo) + banco de dados avançado
+**Hoje (sexta 08/05):** Av.06 - Seminário de Funções Matemáticas - apresentações
 
-Email para entregas: Leonardo.niclote@docente.pr.senac.br
+**O T1 foi isso:** Python, banco de dados, funções matemáticas, comunicação técnica oral.
+
+**No T2:** redes neurais, visão computacional, projetos com dados reais.
+
+Sem tarefa de casa - você já entregou o que tinha que entregar.

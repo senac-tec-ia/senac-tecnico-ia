@@ -5,7 +5,8 @@
       "Bash(printf \"99\\\\n99mai\\\\n05+01\\\\nS\\\\n\")",
       "Bash(echo \"Exit: $?\")",
       "Bash(/dev/null echo:*)",
-      "Bash(echo n/a find /home/leo-zanini/Documents/senac-tecnico-ia -name av05* -o -name av06*)"
+      "Bash(echo n/a find /home/leo-zanini/Documents/senac-tecnico-ia -name av05* -o -name av06*)",
+      "Bash(npx playwright *)"
     ]
   }
 }
