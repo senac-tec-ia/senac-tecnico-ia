@@ -128,14 +128,14 @@
 
 /* ── Light (projetor) ───────────────────────────────────────────── */
 [data-theme="light"] {
-  --theme-bg: #f8fafc;
+  --theme-bg: #faf7f2;
   --theme-bg-alt: #f1f5f9;
 
   --theme-text: #1e293b;
   --theme-text-strong: #0f172a;
   --theme-text-muted: #475569;
 
-  --theme-card-bg: #ffffff;
+  --theme-card-bg: #fefcf5;
   --theme-card-border: rgba(0, 0, 0, 0.1);
 
   --theme-footer-bg: var(--theme-bg);

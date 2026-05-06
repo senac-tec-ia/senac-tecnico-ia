@@ -8,11 +8,12 @@ courseTitle: Técnico em Inteligência Artificial
 aulaNum: "Aula 21"
 aulaDate: "2026-05-07"
 unlockHour: 13
+clicks: 1
 bgPreset: palette
 layout: cover
 ---
 
-# Aula 21: 2 Avals <v-click none><Meme /></v-click>
+# Aula 21: 2 Avals <Meme v-if="$clicks >= 1" />
 
 ## Fim Av05 - Começo Av06
 

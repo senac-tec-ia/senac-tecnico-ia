@@ -118,7 +118,7 @@ onUnmounted(() => {
   font-size: 0.72rem;
   color: var(--theme-footer-text);
   z-index: 100;
-  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.15);
   gap: 0.75rem;
   border-top: 1px solid var(--theme-footer-border);
   line-height: 1;
@@ -129,6 +129,10 @@ onUnmounted(() => {
   width: auto;
   object-fit: contain;
   opacity: 0.75;
+}
+
+[data-theme="light"] .footer-logo {
+  filter: invert(1);
 }
 
 .footer-right {
@@ -159,16 +163,17 @@ onUnmounted(() => {
   width: 20px;
   height: 20px;
   background: transparent;
+  border: 1px solid var(--theme-footer-text);
   border-radius: 50%;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--theme-footer-text);
   transition: all 0.2s ease;
   padding: 0;
 }
 
 .theme-btn:hover {
-  color: rgba(255, 255, 255, 0.9);
-  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--theme-footer-text-strong);
+  border-color: var(--theme-footer-text-strong);
 }
 
 .theme-icon {

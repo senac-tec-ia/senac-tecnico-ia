@@ -8,12 +8,6 @@ import memeUrl from "../public/memes/shocked.jpg";
   </span>
 </template>
 
-<style>
-.slidev-v-click-hidden .meme-img {
-  animation: none !important;
-}
-</style>
-
 <style scoped>
 .meme-inline {
   display: inline-block;

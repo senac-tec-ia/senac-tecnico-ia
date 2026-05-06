@@ -79,7 +79,7 @@
          id="stop5" />
     </linearGradient>
     <rect
-       style="fill:#000000;fill-opacity:1"
+       style="fill:var(--theme-bg,#000000);fill-opacity:1"
        width="499.99399"
        height="500"
        id="rect5"
