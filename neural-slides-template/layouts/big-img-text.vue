@@ -83,7 +83,7 @@ onMounted(async () => {
     <!-- ① Full-width title header — h1 is moved here from the right slot -->
     <!-- ② Content area: image floats left, all text flows around it (and below) -->
     <div
-      class="relative z-10 flex-1 min-h-0 flex flex-col card-wrapper rounded-xl border border-white/20 backdrop-blur-xl bg-black/25 p-6"
+      class="slide-card relative z-10 flex-1 min-h-0 flex flex-col bg-black/25"
     >
       <div ref="headerRef" class="title-header mb-4" />
 

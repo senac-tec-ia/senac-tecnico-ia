@@ -143,7 +143,7 @@ const brandVars = computed(() => {
       :style="{ maxWidth: props.maxWidth, ...brandVars }"
     >
       <div
-        class="card p-12 rounded-xl border backdrop-blur-xl min-w-2xl max-w-2xl justify-center flex flex-col items-center"
+        class="card p-12 rounded-xl border backdrop-blur-xl justify-center flex flex-col items-center"
       >
         <div class="social-header">
           <img

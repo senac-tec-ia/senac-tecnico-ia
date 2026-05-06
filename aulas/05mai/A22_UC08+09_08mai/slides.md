@@ -158,13 +158,13 @@ aulaNum: "Aula 22"
 
 <SlideTable fullWidth>
 
-| Papel | O que apresenta |
-|---|---|
-| Matemática | Explica a fórmula e o que `a` e `b` representam |
-| Código | Mostra o Colab e explica cada linha |
-| Gráfico | Descreve a reta e o que muda nos eixos |
-| Mundo real | Traz número concreto e mostra no código |
-| Perguntas | Responde perguntas da turma |
+| Papel | Bloco do código | O que explica |
+|---|---|---|
+| Fórmula | Parâmetros `a` e `b` no código | O que muda no gráfico ao alterar cada um |
+| Dados | `np.linspace(início, fim, pontos)` | Por que esses valores de intervalo foram escolhidos |
+| Cálculo | `y = a*x + b` | O que cada termo faz — por que a curva é uma reta |
+| Gráfico | `plt.plot`, labels, title | O que cada eixo representa |
+| Mundo real | Modifica `a` e `b` com dado real no código | Número concreto + fonte + por que a função modela isso |
 
 </SlideTable>
 
@@ -187,13 +187,13 @@ aulaNum: "Aula 22"
 
 <SlideTable fullWidth>
 
-| Papel | O que apresenta |
-|---|---|
-| Matemática | Explica a fórmula e o que `a`, `b` e `c` representam |
-| Código | Mostra o Colab e explica cada linha |
-| Gráfico | Descreve a parábola e o vértice |
-| Mundo real | Traz número concreto e mostra no código |
-| Perguntas | Responde perguntas da turma |
+| Papel | Bloco do código | O que explica |
+|---|---|---|
+| Fórmula | Parâmetros `a`, `b` e `c` no código | O que muda na parábola ao alterar cada um |
+| Dados | `np.linspace(início, fim, pontos)` | Por que esses valores de intervalo foram escolhidos |
+| Cálculo | `y = a*x**2 + b*x + c` | O que cada termo faz — por que a curva dobra |
+| Gráfico | `plt.plot`, labels, title | O que cada eixo representa e onde está o vértice |
+| Mundo real | Modifica `a`, `b` e `c` com dado real no código | Número concreto + fonte + por que a função modela isso |
 
 </SlideTable>
 
@@ -216,13 +216,13 @@ aulaNum: "Aula 22"
 
 <SlideTable fullWidth>
 
-| Papel | O que apresenta |
-|---|---|
-| Matemática | Explica a fórmula e o que cada coeficiente faz |
-| Código | Mostra o Colab e explica cada linha |
-| Gráfico | Descreve as curvas e como o grau influencia o formato |
-| Mundo real | Traz número concreto e mostra no código |
-| Perguntas | Responde perguntas da turma |
+| Papel | Bloco do código | O que explica |
+|---|---|---|
+| Fórmula | Parâmetros `a`, `b`, `c` e `d` no código | O que muda no gráfico ao alterar cada coeficiente |
+| Dados | `np.linspace(início, fim, pontos)` | Por que esses valores de intervalo foram escolhidos |
+| Cálculo | `y = a*x**3 + b*x**2 + c*x + d` | Por que o grau 3 faz a curva "dobrar" mais de uma vez |
+| Gráfico | `plt.plot`, labels, title | O que cada eixo representa e o formato da curva |
+| Mundo real | Modifica os parâmetros com dado real no código | Número concreto + fonte + por que a função modela isso |
 
 </SlideTable>
 
@@ -245,13 +245,13 @@ aulaNum: "Aula 22"
 
 <SlideTable fullWidth>
 
-| Papel | O que apresenta |
-|---|---|
-| Matemática | Explica a fórmula e por que `x` precisa ser maior que zero |
-| Código | Mostra o Colab e explica cada linha |
-| Gráfico | Descreve como a curva desacelera conforme `x` cresce |
-| Mundo real | Traz número concreto e mostra no código |
-| Perguntas | Responde perguntas da turma |
+| Papel | Bloco do código | O que explica |
+|---|---|---|
+| Fórmula | Parâmetro `x` e domínio no código | Por que `x` precisa ser maior que zero |
+| Dados | `np.linspace(início, fim, pontos)` | Por que o intervalo não começa em zero |
+| Cálculo | `np.log(x)` | O que a biblioteca calcula — o que log significa |
+| Gráfico | `plt.plot`, labels, title | Como a curva desacelera conforme `x` cresce |
+| Mundo real | Modifica o intervalo com dado real no código | Número concreto + fonte + por que a função modela isso |
 
 </SlideTable>
 
@@ -270,17 +270,17 @@ aulaNum: "Aula 22"
 
 # Grupo 5 - Função Exponencial
 
-**Fórmula:** `y = eˣ`
+**Fórmula:** `y = a·eˣ`
 
 <SlideTable fullWidth>
 
-| Papel | O que apresenta |
-|---|---|
-| Matemática | Explica a fórmula e o que a base `e` representa |
-| Código | Mostra o Colab e explica cada linha |
-| Gráfico | Descreve o crescimento acelerado da curva |
-| Mundo real | Traz número concreto e mostra no código |
-| Perguntas | Responde perguntas da turma |
+| Papel | Bloco do código | O que explica |
+|---|---|---|
+| Fórmula | Parâmetro `a` no código | O que muda no gráfico ao alterar `a` |
+| Dados | `np.linspace(início, fim, pontos)` | Por que esses valores de intervalo foram escolhidos |
+| Cálculo | `a * np.exp(x)` | O que a base `e` significa — diferença para `2**x` |
+| Gráfico | `plt.plot`, labels, title | Como o crescimento acelerado aparece na curva |
+| Mundo real | Modifica `a` com dado real no código | Número concreto + fonte + por que a função modela isso |
 
 </SlideTable>
 
@@ -303,13 +303,13 @@ aulaNum: "Aula 22"
 
 <SlideTable fullWidth>
 
-| Papel | O que apresenta |
-|---|---|
-| Matemática | Explica a fórmula e os limites da função |
-| Código | Mostra o Colab e explica cada linha |
-| Gráfico | Descreve o formato em "S" e os valores entre 0 e 1 |
-| Mundo real | Traz número concreto e mostra no código |
-| Perguntas | Responde perguntas da turma |
+| Papel | Bloco do código | O que explica |
+|---|---|---|
+| Fórmula | A expressão completa `1 / (1 + np.exp(-x))` | O que cada parte da fórmula faz e os limites entre 0 e 1 |
+| Dados | `np.linspace(início, fim, pontos)` | Por que o intervalo em torno do zero mostra melhor o formato em "S" |
+| Cálculo | `np.exp(-x)` dentro da fórmula | O que a biblioteca calcula — por que não deu pra fazer na mão |
+| Gráfico | `plt.plot`, labels, title | O formato em "S" e o que os eixos mostram |
+| Mundo real | Modifica o intervalo de `x` com dado real no código | Número concreto + fonte + por que isso aparece num neurônio artificial |
 
 </SlideTable>
 
@@ -328,7 +328,7 @@ aulaNum: "Aula 22"
 <!-- SLIDE 14 -->
 <!-- debate: [Aula 22] - reflexão final sobre funções em IA -->
 
-# Debate final: o que você vai lembrar daqui 10 anos?
+# Debate final: o que você realmente aprendeu hj?
 
 **Discussão coletiva - 5 minutos**
 

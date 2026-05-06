@@ -74,7 +74,7 @@ const bgOpacity = computed(() =>
 .content-wrapper :deep(p) {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: #e2e8f0;
+  color: var(--theme-text);
   margin-bottom: 1rem;
 }
 
@@ -88,19 +88,12 @@ const bgOpacity = computed(() =>
 .content-wrapper :deep(li) {
   font-size: 1.125rem;
   margin-top: 0.75rem;
-  color: #e2e8f0;
+  color: var(--theme-text);
 }
 
 /* Strong/Bold */
 .content-wrapper :deep(strong) {
   font-weight: 700;
-  color: #f1f5f9;
-}
-
-.content-wrapper :deep(pre) {
-  background-color: rgba(15, 23, 42, 0.8);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  margin: 1.5rem 0;
+  color: var(--theme-text-strong);
 }
 </style>

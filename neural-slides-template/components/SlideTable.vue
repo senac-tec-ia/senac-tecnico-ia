@@ -47,9 +47,9 @@ withDefaults(
   overflow-x: auto;
   border-radius: 12px;
   /* subtle border matches card glows in the theme */
-  border: 1px solid rgba(83, 186, 255, 0.18);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
-  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid var(--theme-card-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  background: var(--theme-card-bg);
   backdrop-filter: blur(4px);
 }
 

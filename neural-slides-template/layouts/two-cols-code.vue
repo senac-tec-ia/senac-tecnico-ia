@@ -30,7 +30,6 @@ const moveHeader = () => {
 
   const left = leftRef.value;
 
-  // Move o primeiro H1 (título) para o header
   const title = left.querySelector("h1");
   if (title) headerRef.value.appendChild(title);
 };
@@ -43,7 +42,7 @@ onMounted(async () => {
 
 <template>
   <div
-    class="slidev-layout two-cols-text h-full flex justify-center items-center relative p-8"
+    class="slidev-layout two-cols-code h-full flex justify-center items-center relative p-8"
   >
     <SlideBackground
       v-bind="attrs"
@@ -59,9 +58,9 @@ onMounted(async () => {
     <div
       class="slide-card relative z-10 h-full flex flex-col"
     >
-      <div ref="headerRef" class="two-cols-text-header"></div>
+      <div ref="headerRef" class="two-cols-code-header"></div>
 
-      <div class="two-cols-text-grid">
+      <div class="two-cols-code-grid">
         <div ref="leftRef" class="col-left content-wrapper">
           <slot />
         </div>
@@ -71,7 +70,7 @@ onMounted(async () => {
         </div>
       </div>
 
-      <div class="two-cols-text-footer">
+      <div class="two-cols-code-footer">
         <slot name="footer" />
       </div>
     </div>
@@ -81,24 +80,24 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-.two-cols-text {
+.two-cols-code {
   position: relative;
   padding-bottom: 2rem;
 }
 
-.two-cols-text-header {
+.two-cols-code-header {
   position: relative;
   z-index: 10;
   margin-bottom: 1.25rem;
 }
 
-.two-cols-text-grid {
+.two-cols-code-grid {
   position: relative;
   z-index: 10;
   flex: 1;
   min-height: 0;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: auto minmax(0, 1fr);
   gap: 2rem;
 }
 
@@ -106,7 +105,7 @@ onMounted(async () => {
   min-width: 0;
 }
 
-.two-cols-text-footer {
+.two-cols-code-footer {
   flex-shrink: 0;
   margin-top: 0.75rem;
   padding-top: 0.5rem;
@@ -116,25 +115,23 @@ onMounted(async () => {
   font-style: italic;
 }
 
-/* Header (título/subtítulo compartilhados) */
-.two-cols-text-header :deep(h1) {
+.two-cols-code-header :deep(h1) {
   margin: 0 0 0.5rem;
 }
 
-.two-cols-text-header :deep(p),
-.two-cols-text-header :deep(h2) {
+.two-cols-code-header :deep(p),
+.two-cols-code-header :deep(h2) {
   font-size: 1.4rem;
   font-weight: 600;
   margin: 0;
   color: var(--slidev-theme-text-muted);
 }
 
-.two-cols-text-header :deep(strong) {
+.two-cols-code-header :deep(strong) {
   font-weight: 800;
   color: var(--theme-text-strong);
 }
 
-/* Colunas */
 .content-wrapper :deep(h2) {
   font-size: 1.5rem;
   font-weight: 600;
@@ -158,14 +155,5 @@ onMounted(async () => {
   font-size: 1rem;
   margin-top: 8px;
   color: var(--theme-text);
-}
-
-.vs-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #94a3b8;
 }
 </style>

@@ -38,7 +38,7 @@ const bgOpacity = computed(() =>
       :backgroundOpacity="bgOpacity"
     />
     <div class="content-wrapper">
-      <div class="p-12 rounded-xl border border-white backdrop-blur-xl">
+      <div class="slide-card">
         <div v-if="props.wide" class="wide-content">
           <slot />
         </div>
@@ -78,7 +78,7 @@ const bgOpacity = computed(() =>
 .content-wrapper :deep(p) {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: #e2e8f0;
+  color: var(--theme-text);
 }
 
 /* Modo wide: alinha à esquerda e texto maior */
@@ -94,7 +94,7 @@ const bgOpacity = computed(() =>
 .wide-content :deep(p) {
   font-size: inherit;
   line-height: 1.7;
-  color: #e2e8f0;
+  color: var(--theme-text);
 }
 
 .wide-content :deep(p + p) {
@@ -110,7 +110,7 @@ const bgOpacity = computed(() =>
 .wide-content :deep(li) {
   font-size: inherit;
   margin-top: 0.5rem;
-  color: #e2e8f0;
+  color: var(--theme-text);
 }
 
 /* Listas */
@@ -122,13 +122,13 @@ const bgOpacity = computed(() =>
 .content-wrapper :deep(li) {
   font-size: 1.125rem;
   margin-top: 12px;
-  color: #e2e8f0;
+  color: var(--theme-text);
 }
 
 /* Strong/Bold */
 .content-wrapper :deep(strong) {
   font-weight: 700;
-  color: #f1f5f9;
+  color: var(--theme-text-strong);
 }
 
 /* ── Conteúdo corporal sempre alinhado à esquerda ────────────────────

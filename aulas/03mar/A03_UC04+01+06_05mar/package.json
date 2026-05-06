@@ -11,7 +11,7 @@
     "export:pptx": "slidev export slides.md --format pptx --output aula-export.pptx"
   },
   "slidev": {
-    "colorSchema": "dark"
+    "colorSchema": "both"
   },
   "devDependencies": {
     "@slidev/cli": "^0.49.0",

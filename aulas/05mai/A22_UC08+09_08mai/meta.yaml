@@ -3,7 +3,7 @@
 
 aula: "A22_UC08+09_08mai"
 slug: "a22-uc08-09-08mai"
-title: ""
+title: "A06 Apresentações"
 author: "Leonardo Zanini"
 courseTitle: "Técnico em Inteligência Artificial"
 
@@ -12,7 +12,7 @@ disciplines: []
 date: "TBD"
 
 # draft | ready | published
-status: em-planejamento
+status: published
 
 deployUrl: ""
 

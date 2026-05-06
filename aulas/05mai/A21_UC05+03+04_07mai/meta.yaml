@@ -3,7 +3,7 @@
 
 aula: "A21_UC05+03+04_07mai"
 slug: "a21-uc05-03-04-07mai"
-title: ""
+title: "AV05 e AV06"
 author: "Leonardo Zanini"
 courseTitle: "Técnico em Inteligência Artificial"
 
@@ -12,7 +12,7 @@ disciplines: []
 date: "TBD"
 
 # draft | ready | published
-status: em-planejamento
+status: published
 
 deployUrl: ""
 

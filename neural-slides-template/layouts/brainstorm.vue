@@ -45,8 +45,8 @@ const props = withDefaults(
       :pulseDuration="props.pulseDuration"
       :pulseScale="props.pulseScale"
     />
-    <div class="relative z-10 w-full max-w-3xl">
-      <div class="p-12 rounded-xl border border-white backdrop-blur-xl">
+    <div class="relative z-10 w-full">
+      <div class="slide-card">
         <slot />
       </div>
     </div>

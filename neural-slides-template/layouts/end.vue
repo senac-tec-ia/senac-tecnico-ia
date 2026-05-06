@@ -128,7 +128,8 @@ const bgOpacity = computed(() =>
 /* Parágrafos */
 .content-wrapper :deep(p) {
   font-size: 1.125rem;
-  color: rgba(226, 232, 240, 0.7);
+  color: var(--theme-text);
+  opacity: 0.85;
 }
 
 /* Card de perfil (avatar + github) */
@@ -164,7 +165,7 @@ const bgOpacity = computed(() =>
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 4px;
-  color: #f1f5f9;
+  color: var(--theme-text-strong);
   transition: color 0.2s ease;
 }
 

@@ -12,9 +12,11 @@ bgPreset: palette
 layout: cover
 ---
 
-# Aula 21 Dois Momentos, Uma Meta
+# Aula 21: 2 Avals <v-click><Meme /></v-click>
 
 ## Fim Av05 - Começo Av06
+
+
 
 ---
 layout: default
@@ -158,6 +160,31 @@ aulaNum: "Aula 21"
 ---
 
 <!-- SLIDE 8 -->
+<!-- objetivo: professor exibe os grupos formados com o tema de cada um -->
+
+# Grupos de hoje
+
+<SlideTable fullWidth>
+
+| Grupo | Tema | Integrantes |
+|---|---|---|
+| 1 | Linear | Igor Ravaneli · Edson Maciel · Arthur Haacke · Graziely Siqueira · Kaliel Pagnonceli |
+| 2 | Quadrática | Isabella Trojan · João Lucas Cadena · Anderson Nunes · Ana Clara Pires · Livia Hofmann |
+| 3 | Polinomial grau 3 | Agatha Seibel · Ludmyla Duarte · Antonella Mata · Pedro Dalmagro · Samuel Prestes |
+| 4 | Logarítmica | Raul Boff · João Vitor Godoy · Ana Julia Fontana · Jullya Albani · Marianyeli Espinoza |
+| 5 | Exponencial | Gabriel Antunes · Bianca Pereira · Lucas Miranda · Pedro Silva · Sthefany Martins |
+| 6 | Sigmoide | Julia Glovacki · Vitória Hennih · Gabriella Jaiany · Gustavo Correia · Valentina Fagundes |
+
+</SlideTable>
+
+---
+layout: default
+card: true
+bgPreset: default
+aulaNum: "Aula 21"
+---
+
+<!-- SLIDE 9 -->
 <!-- [TEORIA] -->
 <!-- objetivo: aluno entende o papel que recebeu e o que precisa fazer -->
 
@@ -201,7 +228,9 @@ aulaNum: "Aula 21"
 - "O Instagram saiu de 1 milhão para 100 milhões de usuários em dois anos. Eu mudei o parâmetro `a` para simular esse crescimento no gráfico."
 - Um número real + a modificação no código que prova.
 
-> Não é citar. É simular.
+::footer::
+
+Não é citar. É simular.
 
 ---
 layout: default
@@ -283,7 +312,7 @@ aulaNum: "Aula 21"
 > Pesquisar documentação é parte do trabalho de quem programa. Quem souber fazer isso na apresentação amanhã vai bem.
 
 ---
-layout: two-cols-header
+layout: two-cols-code
 card: true
 bgPreset: default
 aulaNum: "Aula 21"
@@ -295,8 +324,6 @@ aulaNum: "Aula 21"
 <!-- objetivo: Grupo 1 recebe o código-base e entende onde cada papel age -->
 
 # Grupo 1 - Linear &nbsp;|&nbsp; `y = ax + b`
-
-::left::
 
 ```python
 import numpy as np
@@ -324,10 +351,12 @@ plt.show()
 - **Gráfico:** o que os eixos mostram?
 - **Mundo real:** número concreto + modifica o código
 
-> O que muda no gráfico se dobrar `a`?
+::footer::
+
+O que muda no gráfico se dobrar `a`?
 
 ---
-layout: two-cols-header
+layout: two-cols-code
 card: true
 bgPreset: default
 aulaNum: "Aula 21"
@@ -339,8 +368,6 @@ aulaNum: "Aula 21"
 <!-- objetivo: Grupo 2 recebe o código-base e entende onde cada papel age -->
 
 # Grupo 2 - Quadrática &nbsp;|&nbsp; `y = ax² + bx + c`
-
-::left::
 
 ```python
 import numpy as np
@@ -368,10 +395,12 @@ plt.show()
 - **Gráfico:** onde está o vértice? O que os eixos mostram?
 - **Mundo real:** número concreto + modifica o código
 
-> O que muda quando `a` é negativo?
+::footer::
+
+O que muda quando `a` é negativo?
 
 ---
-layout: two-cols-header
+layout: two-cols-code
 card: true
 bgPreset: default
 aulaNum: "Aula 21"
@@ -382,9 +411,7 @@ aulaNum: "Aula 21"
 <!-- [EXCECAO: slides-por-grupo] -->
 <!-- objetivo: Grupo 3 recebe o código-base e entende onde cada papel age -->
 
-# Grupo 3 - Polinomial &nbsp;|&nbsp; `y = ax³ + bx² + cx + d`
-
-::left::
+# Grupo 3 - Polinomial `y = ax³ + bx² + cx + d`
 
 ```python
 import numpy as np
@@ -412,10 +439,12 @@ plt.show()
 - **Gráfico:** quantas "curvas" o gráfico tem? Por quê?
 - **Mundo real:** número concreto + modifica o código
 
-> O que acontece com `y` quando `x` cresce muito?
+::footer::
+
+O que acontece com `y` quando `x` cresce muito?
 
 ---
-layout: two-cols-header
+layout: two-cols-code
 card: true
 bgPreset: default
 aulaNum: "Aula 21"
@@ -427,8 +456,6 @@ aulaNum: "Aula 21"
 <!-- objetivo: Grupo 4 recebe o código-base e entende onde cada papel age -->
 
 # Grupo 4 - Logarítmica &nbsp;|&nbsp; `y = log(x)`
-
-::left::
 
 ```python
 import numpy as np
@@ -457,10 +484,12 @@ plt.show()
 - **Gráfico:** a curva sobe mais rápido no começo ou no final?
 - **Mundo real:** número concreto + modifica o código
 
-> O que acontece se tentar `np.log(0)`?
+::footer::
+
+O que acontece se tentar `np.log(0)`?
 
 ---
-layout: two-cols-header
+layout: two-cols-code
 card: true
 bgPreset: default
 aulaNum: "Aula 21"
@@ -472,8 +501,6 @@ aulaNum: "Aula 21"
 <!-- objetivo: Grupo 5 recebe o código-base e entende onde cada papel age -->
 
 # Grupo 5 - Exponencial &nbsp;|&nbsp; `y = a · eˣ`
-
-::left::
 
 ```python
 import numpy as np
@@ -502,10 +529,12 @@ plt.show()
 - **Gráfico:** por que a curva dispara para x positivo?
 - **Mundo real:** número concreto + modifica o código
 
-> Qual é a diferença entre `np.exp(x)` e `2**x`?
+::footer::
+
+Qual é a diferença entre `np.exp(x)` e `2**x`?
 
 ---
-layout: two-cols-header
+layout: two-cols-code
 card: true
 bgPreset: default
 aulaNum: "Aula 21"
@@ -517,8 +546,6 @@ aulaNum: "Aula 21"
 <!-- objetivo: Grupo 6 recebe o código-base com dica e pergunta-gatilho sobre o neurônio artificial -->
 
 # Grupo 6 - Sigmoide &nbsp;|&nbsp; `y = 1 / (1 + e⁻ˣ)`
-
-::left::
 
 ```python
 import numpy as np
@@ -546,7 +573,9 @@ plt.show()
 - **Gráfico:** o formato em "S" - o que ele mostra?
 - **Mundo real:** saída de um neurônio artificial: o que isso significa?
 
-> Qual é a saída quando `x` é 0? E quando `x` é 10?
+::footer::
+
+Qual é a saída quando `x` é 0? E quando `x` é 10?
 
 ---
 layout: default
@@ -573,26 +602,6 @@ aulaNum: "Aula 21"
 
 > Quem entender o que cada linha faz vai bem. Quem só copiou vai travar.
 
----
-layout: default
-card: true
-bgPreset: default
-aulaNum: "Aula 21"
----
-
-<!-- SLIDE 20 -->
-<!-- [TAREFA DE CASA] -->
-<!-- tarefa de casa: aula 21 -->
-
-# Tarefa de Casa: Aula 21
-
-> Prazo: amanhã (A22), antes das apresentações
-
-**O que fazer:**
-- Rode o Colab em casa e teste mudar os parâmetros
-- Pesquise um dado real com número concreto para a sua função
-- Anote o dado, a fonte e como o código simula isso
-- Explore a doc: `numpy.org/doc/stable` e `matplotlib.org/stable/gallery`
 
 ---
 layout: end

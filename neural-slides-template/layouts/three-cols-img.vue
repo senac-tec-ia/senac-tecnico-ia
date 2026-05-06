@@ -40,7 +40,7 @@ const bgOpacity = computed(() =>
     />
 
     <div
-      class="content-wrapper relative z-10 w-full p-10 rounded-xl border border-white backdrop-blur-xl"
+      class="content-wrapper relative z-10 w-full slide-card"
     >
       <!-- Título / slot padrão (h1 será elevado ao topo) -->
       <div class="header-block mb-4">
@@ -79,10 +79,6 @@ const bgOpacity = computed(() =>
 .three-cols-img {
   position: relative;
   padding-bottom: 2rem;
-}
-
-.content-wrapper {
-  max-width: 72rem;
 }
 
 .three-cols-grid {
@@ -132,6 +128,6 @@ const bgOpacity = computed(() =>
 
 .caption {
   font-size: 1rem;
-  color: #e2e8f0;
+  color: var(--theme-text);
 }
 </style>

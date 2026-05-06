@@ -13,7 +13,7 @@
     "publish": "npm run build && node .github/scripts/publish.mjs"
   },
   "slidev": {
-    "colorSchema": "dark"
+    "colorSchema": "both"
   },
   "devDependencies": {
     "@slidev/cli": "^0.49.0",
