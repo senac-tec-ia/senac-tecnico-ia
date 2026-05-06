@@ -12,9 +12,9 @@ bgPreset: palette
 layout: cover
 ---
 
-# Aula 21 - Dois Momentos, Uma Meta
+# Aula 21 Dois Momentos, Uma Meta
 
-## Manhã: fechar Av05 · Tarde: lançar Av06
+## Fim Av05 - Começo Av06
 
 ---
 layout: default
@@ -34,7 +34,7 @@ aulaNum: "Aula 21"
 |---|---|---|
 | Manhã | Até 09h35 | Av05 aberta - Colab, silêncio, entrega |
 | Intervalo | 09h35 | Ponto de virada. Av05 encerra aqui. |
-| Tarde | Após intervalo | Av06 começa - grupos, papéis, código-base |
+| Manhã | Após intervalo | Av06 começa - grupos, papéis, código-base |
 
 <MLToast title="REGRA EXPLÍCITA">
   Quem tocar na Av05 depois do intervalo está prejudicando o próprio grupo e a si mesmo na AV06
@@ -76,7 +76,7 @@ aulaNum: "Aula 21"
 
 <!-- SLIDE 4 - divisor de bloco, não conta para consecutivos -->
 
-# PARTE 2 - Tarde
+# PARTE 2
 ## Av06: Seminário de Funções Matemáticas
 
 ---
@@ -91,9 +91,9 @@ aulaNum: "Aula 21"
 <!-- [DEBATE] -->
 <!-- objetivo: ativar o que os alunos já sabem sobre pesquisar e descobrir por conta própria -->
 
-# Sala de aula invertida - o que é isso?
+# Sala de aula invertida
 
-**Discussão coletiva: 3 minutos**
+**Discussão coletiva:**
 
 - Quando você quer aprender algo novo no YouTube, o que faz?
 - Você já montou algo lendo uma documentação ou tutorial sozinho?
