@@ -12,7 +12,7 @@ bgPreset: palette
 layout: cover
 ---
 
-# Aula 21: 2 Avals <v-click><Meme /></v-click>
+# Aula 21: 2 Avals <v-click none><Meme /></v-click>
 
 ## Fim Av05 - Começo Av06
 
