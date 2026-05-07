@@ -31,7 +31,7 @@ aulaNum: "Aula 22"
 
 **Manhã (até o intervalo)**
 
-- Tempo livre para ajuste final do Colab
+- Tempo livre para ajuste final do Colab.
 - Última chance de entregar a Av.05 - quem não entregar até o intervalo perde o prazo definitivamente
 
 **Tarde (após o intervalo)**
