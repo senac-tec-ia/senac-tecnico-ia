@@ -4,7 +4,7 @@
 
 **UCs:** UC09 Estatistica Aplicada · UC03 Fundamentos Matematicos · UC05 Python
 
-**Indicadores:** UC09 Ind.1+2+3+4 · UC03 Ind.4 · UC05 Ind.2
+**Indicadores:** UC09 Ind.1+2+3+4 · UC05 Ind.2
 
 **Quinta (desenvolvimento):** preparar o trabalho em sala, em grupo
 **Sexta (seminário):** cada aluno apresenta sua parte — sem celular, sem anotacoes, sem leitura
@@ -28,7 +28,7 @@ Na quinta voce pesquisa, monta, experimenta. Na sexta voce fala. Simples assim.
 | **3** | Funcoes Polinomiais (grau 3+) | y = ax³ + bx² + ... |
 | **4** | Funcoes Logaritmicas | y = log(x) |
 | **5** | Funcoes Exponenciais | y = a · eˣ |
-| **6** | Sequencias e Padroes Numericos | PA, PG, Fibonacci, crescimento |
+| **6** | Sigmoide | y = 1 / (1 + e⁻ˣ) |
 
 Os grupos sao definidos pelo professor na quinta.
 
@@ -81,10 +81,10 @@ x = np.linspace(0, 3, 100)
 y = np.exp(x)
 plt.plot(x, y, label="y = e^x")
 
-# Grupo 6 — Sequencia (exemplo: progressao geometrica)
-n = np.arange(1, 11)
-y = 2 ** n
-plt.scatter(n, y, label="PG: 2^n")
+# Grupo 6 — Sigmoide
+x = np.linspace(-10, 10, 100)
+y = 1 / (1 + np.exp(-x))
+plt.plot(x, y, label="y = 1/(1+e^-x)")
 
 plt.title("Nome da Funcao")
 plt.xlabel("x")
@@ -94,8 +94,32 @@ plt.grid(True)
 plt.show()
 ```
 
-Pesquise como as funcoes do `numpy` funcionam (`np.log`, `np.exp`, `np.linspace`, etc).
-Voce vai precisar explicar o que cada uma faz na sexta.
+**O que `import` faz:** traz uma biblioteca pronta para voce usar. `numpy` faz calculos com listas de numeros; `matplotlib` cria graficos. O `as np` e `as plt` sao apelidos para escrever menos.
+
+**Funcoes que o professor pode perguntar:**
+
+| Funcao | O que faz |
+|---|---|
+| `np.linspace(a, b, n)` | gera `n` pontos igualmente espacados entre `a` e `b` |
+| `np.exp(x)` | calcula e elevado a x para cada ponto |
+| `np.log(x)` | logaritmo natural de x (x deve ser > 0) |
+| `plt.plot(x, y)` | desenha a curva |
+| `plt.xlabel` / `plt.ylabel` | rotulos dos eixos |
+| `plt.title` | titulo do grafico |
+| `plt.grid(True)` | mostra a grade |
+| `plt.show()` | exibe o grafico |
+
+**Os 5 papeis do grupo — cada membro e dono de um bloco:**
+
+| Papel | Bloco do codigo | O que explica na apresentacao |
+|---|---|---|
+| Formula | onde os parametros (a, b...) aparecem | o que a formula calcula e o que cada letra muda |
+| Dados | `np.linspace(inicio, fim, pontos)` | o que e gerar dados e por que esses valores |
+| Calculo | a linha que calcula y | o que a biblioteca fez — por que nao dava pra calcular na mao |
+| Grafico | `plt.plot`, labels, title | o que cada eixo representa e como a curva se comporta |
+| Mundo real | modifica parametros com dado real | numero concreto + fonte + por que a funcao modela isso |
+
+Amanha o professor pode perguntar qualquer linha do codigo para qualquer membro. Quem entender o que cada funcao faz vai bem.
 
 ### 3. Um exemplo real em IA ou dados
 
@@ -105,7 +129,7 @@ Escolha uma situacao concreta onde sua funcao aparece:
 - Polinomial: curvas de ajuste de dados complexos
 - Logaritmica: escala de decibeis, complexidade O(log n) de algoritmos
 - Exponencial: crescimento de usuarios, treinamento de redes neurais, juros compostos
-- Sequencias: progressao de camadas em redes neurais, Fibonacci na natureza
+- Sigmoide: saida de um neuronio artificial, probabilidade em classificacao binaria
 
 ---
 
@@ -140,7 +164,7 @@ Qualquer aluno pode ser chamado para responder.
 | UC09 Ind.2 — Polinomial | "Por que a parabola tem um ponto mais alto ou mais baixo?" | "O que acontece com y quando x fica muito grande numa cubica?" |
 | UC09 Ind.3 — Logaritmica | "Por que usamos escala logaritmica para medir decibeis?" | "O que np.log10(1000) retorna? Por que?" |
 | UC09 Ind.4 — Exponencial | "Qual a diferenca entre crescimento linear e exponencial de usuarios?" | "O que np.exp(0) retorna? E np.exp(1)?" |
-| UC03 Ind.4 — Sequencias | "A sequencia 2, 4, 8, 16 e uma PA ou PG? Como voce sabe?" | "Qual funcao matematica representa esse padrao?" |
+| UC09 Ind.4 — Sigmoide | "Qual e a saida da sigmoide quando x = 0? E quando x = 10?" | "Por que a saida entre 0 e 1 e util para um neuronio artificial?" |
 | UC05 Ind.2 — Bibliotecas | "Para que serve o np.linspace? Por que e melhor que um range normal?" | "O que plt.legend() faz no grafico?" |
 
 ---
