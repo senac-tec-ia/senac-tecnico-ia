@@ -168,8 +168,7 @@ aulaNum: "Aula 22"
 
 </SlideTable>
 
-**Pergunta pontual do grupo:**
-> O que muda no gráfico se você dobrar o valor de `a`?
+O que muda no gráfico se você dobrar o valor de `a`?
 
 ---
 layout: default
@@ -197,8 +196,7 @@ aulaNum: "Aula 22"
 
 </SlideTable>
 
-**Pergunta pontual do grupo:**
-> Onde está o vértice da parábola? Como o código te ajuda a ver isso?
+Onde está o vértice da parábola? Como o código te ajuda a ver isso?
 
 ---
 layout: default
@@ -226,8 +224,7 @@ aulaNum: "Aula 22"
 
 </SlideTable>
 
-**Pergunta pontual do grupo:**
-> Por que o gráfico tem mais de uma "curva"?
+Por que o gráfico tem mais de uma "curva"?
 
 ---
 layout: default
@@ -255,8 +252,7 @@ aulaNum: "Aula 22"
 
 </SlideTable>
 
-**Pergunta pontual do grupo:**
-> O que acontece com `np.log(0)`? Por que o gráfico não começa em x=0?
+O que acontece com `np.log(0)`? Por que o gráfico não começa em x=0?
 
 ---
 layout: default
@@ -283,9 +279,7 @@ aulaNum: "Aula 22"
 | Mundo real | Modifica `a` com dado real no código | Número concreto + fonte + por que a função modela isso |
 
 </SlideTable>
-
-**Pergunta pontual do grupo:**
-> Qual é a diferença entre `np.exp(x)` e `2**x`?
+Qual é a diferença entre `np.exp(x)` e `2**x`?
 
 ---
 layout: default
@@ -312,9 +306,7 @@ aulaNum: "Aula 22"
 | Mundo real | Modifica o intervalo de `x` com dado real no código | Número concreto + fonte + por que isso aparece num neurônio artificial |
 
 </SlideTable>
-
-**Pergunta pontual do grupo:**
-> Qual é o valor máximo e mínimo que essa função pode produzir? Por que isso é útil numa rede neural?
+Qual é o valor máximo e mínimo que essa função pode produzir? Por que isso é útil numa rede neural?
 
 ---
 layout: brainstorm
