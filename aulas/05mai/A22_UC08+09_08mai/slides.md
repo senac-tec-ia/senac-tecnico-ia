@@ -293,15 +293,13 @@ aulaNum: "Aula 22"
 
 # Grupo 6 - Função Sigmoide
 
-**Fórmula:** `y = 1 / (1 + e⁻ˣ)`
-
 <SlideTable fullWidth>
 
 | Papel | Bloco do código | O que explica |
 |---|---|---|
-| Fórmula | A expressão completa `1 / (1 + np.exp(-x))` | O que cada parte da fórmula faz e os limites entre 0 e 1 |
+| Fórmula | `1 / (1 + np.exp(-x))` | O que cada parte da fórmula faz e os limites entre 0 e 1 |
 | Dados | `np.linspace(início, fim, pontos)` | Por que o intervalo em torno do zero mostra melhor o formato em "S" |
-| Cálculo | `np.exp(-x)` dentro da fórmula | O que a biblioteca calcula — por que não deu pra fazer na mão |
+| Cálculo | `np.exp(-x)` dentro da fórmula | O que a biblioteca calcula,por que não deu pra fazer na mão |
 | Gráfico | `plt.plot`, labels, title | O formato em "S" e o que os eixos mostram |
 | Mundo real | Modifica o intervalo de `x` com dado real no código | Número concreto + fonte + por que isso aparece num neurônio artificial |
 
@@ -326,9 +324,11 @@ aulaNum: "Aula 22"
 
 - Qual função você encontrou com mais frequência em IA ao longo do projeto?
 - O que foi surpresa para você neste seminário?
-- Se você fosse explicar função sigmoide para alguém que não sabe nada de matemática, o que diria?
+- Se você fosse explicar função sigmoide,
+- para alguém que não sabe nada de matemática, o que diria?
+-
 
-> **Conexão com o T2:** funções como sigmoide e ReLU aparecem dentro de redes neurais. O que vocês estudaram agora é a base do que vem pela frente.
+**Conexão com o futuro do curso:** funções como sigmoide e ReLU aparecem dentro de redes neurais. O que vocês estudaram agora é a base do que vem pela frente.
 
 ---
 layout: end
@@ -339,12 +339,6 @@ avatar: https://github.com/LeoZanini.png?size=256
 
 <!-- SLIDE 15 -->
 
-# T1 fechado. Até o T2!
+# Até 14/05
 
 **Hoje (sexta 08/05):** Av.06 - Seminário de Funções Matemáticas - apresentações
-
-**O T1 foi isso:** Python, banco de dados, funções matemáticas, comunicação técnica oral.
-
-**No T2:** redes neurais, visão computacional, projetos com dados reais.
-
-Sem tarefa de casa - você já entregou o que tinha que entregar.
