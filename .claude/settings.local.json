@@ -7,7 +7,8 @@
       "Bash(/dev/null echo:*)",
       "Bash(echo n/a find /home/leo-zanini/Documents/senac-tecnico-ia -name av05* -o -name av06*)",
       "Bash(npx playwright *)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(bun http-orionweb.js)"
     ]
   }
 }
