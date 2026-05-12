@@ -1,6 +1,6 @@
 # Faltas — Turma 202600029
 
-**Gerado em:** 12/05/2026, 15:29:39
+**Gerado em:** 12/05/2026, 15:33:34
 
 **Fonte por UC** (aula mais recente com chamada registrada):
 - Fundamentos de computação: `30/04/2026`

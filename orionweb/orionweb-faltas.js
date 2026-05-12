@@ -250,7 +250,8 @@ function buildFlat(rows, disciplines) {
 import { writeFileSync } from "fs"
 import { resolve } from "path"
 
-const OUT_FILE = resolve(import.meta.dirname, "faltas.md")
+const OUT_MD  = resolve(import.meta.dirname, "faltas.md")
+const OUT_CSV = resolve(import.meta.dirname, "faltas.csv")
 
 async function main() {
   const disciplines = fetchDisciplines()
@@ -289,11 +290,16 @@ async function main() {
   ]
 
   const content = [...header, ...lines, ""].join("\n")
+  writeFileSync(OUT_MD, content, "utf8")
+  log(`Salvo: ${OUT_MD}`)
 
-  writeFileSync(OUT_FILE, content, "utf8")
-  log(`\nSalvo em: ${OUT_FILE}`)
+  const csv = lines
+    .filter(l => !l.match(/^\| -+/))
+    .map(l => l.split("|").slice(1, -1).map(c => c.trim()).join(","))
+    .join("\n") + "\n"
+  writeFileSync(OUT_CSV, csv, "utf8")
+  log(`Salvo: ${OUT_CSV}`)
 
-  // Também imprime no terminal
   lines.forEach(l => console.log(l))
 }
 
