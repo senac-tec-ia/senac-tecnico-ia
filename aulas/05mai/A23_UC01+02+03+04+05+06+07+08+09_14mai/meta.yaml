@@ -1,0 +1,21 @@
+# Metadados da Aula — Neural Slides
+# Preenchido pelo CLI ao rodar `course new`
+
+aula: "A23_UC01+02+03+04+05+06+07+08+09_14mai"
+slug: "a23-uc01-02-03-04-05-06-07-08-09-14mai"
+title: "RECUPERAÇÕES"
+author: "Leonardo Zanini"
+courseTitle: "Técnico em Inteligência Artificial"
+
+disciplines: []
+
+date: "14/05/2026"
+
+# draft | ready | published
+status: published
+
+deployUrl: ""
+
+slideCount: 0
+
+agentsUsed: []
