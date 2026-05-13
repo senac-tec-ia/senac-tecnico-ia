@@ -154,3 +154,35 @@ git push origin main
 | Divisão sem decimais | `//` (ex: `9 // 4` = 2) |
 | Formatar decimal | `f"R$ {valor:.4f}"` |
 | Comparar 3 valores | `if a <= b and a <= c:` |
+
+---
+
+## Recuperação — 14/05/2026
+
+**Quem faz:** alunos com PA ou NA em UC05 Ind.1 ou UC03 Ind.1+2.
+
+Versão reduzida do TokenLab com **apenas as Fases 1 e 2**.
+
+**O que o programa precisa fazer:**
+
+1. Ler um texto com `input()`
+2. Calcular os tokens: `tokens = len(texto) // 4` (mínimo 1)
+3. Classificar o tamanho: `curto` (até 20 tokens) · `médio` (até 100) · `longo` (acima de 100)
+4. Calcular o custo para **1 chamada** nos 3 modelos:
+
+```python
+custo_gpt4   = tokens * 0.30 / 1000
+custo_gpt35  = tokens * 0.03 / 1000
+custo_gemini = tokens * 0.01 / 1000
+```
+
+5. Imprimir os 3 custos na tela
+
+Não precisa das Fases 3 e 4 (volumes de 100/1.000 chamadas, recomendação, context window).
+
+**Como entregar:**
+
+- Colab: salve como `Rec03 - [Seu Nome]`, compartilhe ("qualquer pessoa com o link pode ver") e envie o link
+- GitHub: salve como `rec03_tokenlab.py` na pasta `SENAC-TecIA/Rec03/` e envie o link do repositório
+
+**Prazo:** enviar o link até as 23h59 de 14/05/2026.

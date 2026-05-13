@@ -107,3 +107,19 @@ Envie o PDF por e-mail:
 - [ ] E-mail enviado com o assunto correto
 
 > Escreva com as suas próprias palavras. Prefira ser específico: *"a empresa usa o ChatGPT para redigir e-mails comerciais"* é muito melhor do que *"eles usam IA"*.
+
+---
+
+## Recuperação — 14/05/2026
+
+**Quem faz:** alunos com PA ou NA em qualquer indicador desta avaliação.
+
+Entregue o **relatório completo** com as 4 seções obrigatórias — o enunciado é o mesmo descrito acima.
+
+Pode escrever de memória, consultar o site da Limber ou usar anotações da visita. O que importa é o conteúdo de cada seção.
+
+Não é obrigatório seguir a formatação ABNT nesta entrega — mas as 4 seções precisam estar respondidas com texto próprio.
+
+**Como entregar:** e-mail para `leonardo.niclote@docente.pr.senac.br`  
+**Assunto:** `Rec Av02 - Relatório Limber - [Seu Nome]`  
+**Prazo:** 14/05/2026

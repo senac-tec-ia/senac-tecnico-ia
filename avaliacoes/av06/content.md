@@ -187,3 +187,33 @@ Qualquer aluno pode ser chamado para responder.
 | **Quinta** | Professor define grupos · cada grupo pesquisa e monta o Colab em sala |
 | **Sexta** | 6 grupos × 12 min de apresentacao · perguntas ao final · avaliacao individual |
 | **14/05** | Recuperacao — alunos com PA ou NA reapresentam a parte pendente (15 min) |
+
+---
+
+## Recuperação — 14/05/2026
+
+**Quem faz:** alunos com PA ou NA na apresentação do seminário.
+
+Você terá **15 minutos individuais** com o professor.
+
+**Se você ficou NA:** reapresente sua parte — explique a função do seu grupo, mostre o gráfico no Colab e cite um exemplo real em IA ou dados. O professor fará 2 perguntas.
+
+**Se você ficou PA:** o professor fará 2 perguntas focadas no ponto onde você teve dificuldade. Responda com suas próprias palavras — sem leitura, sem celular.
+
+**O que revisar antes:**
+
+| Função | O que estudar |
+|---|---|
+| Linear | fórmula y = ax + b · o que `a` e `b` mudam no gráfico |
+| Quadrática | vértice, concavidade, quando y é zero |
+| Polinomial | comportamento com x grande, número de raízes |
+| Logarítmica | por que não existe log de número negativo · escala log na prática |
+| Exponencial | diferença entre crescimento linear e exponencial · `np.exp(0)` = 1 |
+| Sigmoide | saída entre 0 e 1 · uso em classificação binária |
+
+**Perguntas que o professor pode fazer:**
+
+- `np.linspace(0, 10, 100)` — o que isso gera?
+- `plt.legend()` — para que serve?
+- Cite um exemplo real onde sua função aparece em IA ou dados.
+- 2, 4, 8, 16 — é PA ou PG? Como você sabe?

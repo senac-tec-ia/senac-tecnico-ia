@@ -227,3 +227,84 @@ print(f"Media Pandas: {df['[NOME_DA_COLUNA]'].mean():.2f}")
 
 - [ ] `pd.read_sql_query()` com JOIN carregando os dados
 - [ ] `.mean()` calculando e comparando com a Fase 4
+
+---
+
+## Recuperação — 14/05/2026
+
+**Quem faz:** alunos com PA ou NA em qualquer indicador desta avaliação.
+
+Versão simplificada com **1 tabela, 10 registros e estatísticas básicas** — sem JOIN, sem FK, sem Pandas.
+
+**Fase 1 — Conectar e criar a tabela**
+
+```python
+# Rec05 — Recuperacao
+# Nome: _______________
+
+import sqlite3
+import random
+
+conn = sqlite3.connect('escola_rec.db')
+cursor = conn.cursor()
+
+cursor.execute("DROP TABLE IF EXISTS alunos")
+
+cursor.execute("""
+    CREATE TABLE alunos (
+        id    [TIPO] [CONSTRAINT],
+        nome  [TIPO] [CONSTRAINT],
+        nota  [TIPO] [CONSTRAINT]
+    )
+""")
+
+conn.commit()
+```
+
+> Substitua `[TIPO]` por `INTEGER`, `TEXT` ou `REAL` e `[CONSTRAINT]` por `PRIMARY KEY`, `NOT NULL` ou `AUTOINCREMENT` conforme cada campo.
+
+**Fase 2 — Inserir 10 alunos com `for`**
+
+```python
+for i in range(1, 11):
+    nome = f"Aluno {i:02d}"
+    nota = round(random.uniform(4.0, 10.0), 1)
+    cursor.execute("INSERT INTO alunos ([COLUNAS]) VALUES (?, ?)", ([VALORES]))
+
+conn.commit()
+
+cursor.execute("SELECT * FROM alunos")
+for linha in cursor.fetchall():
+    print(linha)
+```
+
+**Fase 3 — Estatísticas com Python puro**
+
+```python
+cursor.execute("SELECT nota FROM alunos")
+notas = [row[0] for row in cursor.fetchall()]
+
+media = [FUNCAO](notas) / [FUNCAO](notas)
+maior = [FUNCAO](notas)
+menor = [FUNCAO](notas)
+
+print(f"Media: {media:.2f}")
+print(f"Maior: {maior} | Menor: {menor}")
+
+if [CONDICAO]:
+    print("Turma aprovada!")
+else:
+    print("Turma precisa de reforco.")
+
+conn.close()
+```
+
+> Use as funções built-in do Python: `sum()`, `len()`, `max()`, `min()`.
+
+**Como entregar:**
+
+1. Salve no Colab como `Rec05 - [Seu Nome]`
+2. Compartilhe → "Qualquer pessoa com o link pode ver"
+3. Envie o link pelo WhatsApp da turma
+
+**Prazo:** 14/05/2026
