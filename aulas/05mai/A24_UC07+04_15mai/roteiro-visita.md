@@ -148,23 +148,3 @@
 Use esta pergunta em qualquer parada quando houver abertura:
 
 > "Se voces pudessem adotar uma tecnologia de IA hoje, sem custo e sem curva de aprendizado, o que automatizariam primeiro - e por que?"
-
----
-
-## Espaco para Observacoes Gerais
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
----
-
-*Curso Tecnico em Inteligencia Artificial - SENAC | Aula 24 | 15/05/2026*
