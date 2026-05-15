@@ -9,7 +9,9 @@
       "Bash(npx playwright *)",
       "Bash(npx tsc:*)",
       "Bash(bun http-orionweb.js)",
-      "Bash(xargs -I{} sh -c 'echo \"=== {} ===\" && head -3 {}')"
+      "Bash(xargs -I{} sh -c 'echo \"=== {} ===\" && head -3 {}')",
+      "Skill(grill-me)",
+      "Skill(grill-me:*)"
     ]
   }
 }
