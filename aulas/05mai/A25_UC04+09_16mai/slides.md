@@ -99,6 +99,17 @@ bgPreset: default
 - Via API na nuvem: sem GPU própria, paga por uso
 - Rodando local: precisa de GPU com pelo menos 8 GB de VRAM
 
+---
+layout: default
+card: true
+bgPreset: default
+pulse: false
+---
+
+<!-- SLIDE 5b — Brief: Geração de Código (cont.) -->
+
+# Brief Técnico — Geração de Código (cont.)
+
 **Como integra:** plugin no VS Code, extensão no navegador, ou API REST
 
 **Modelo de negócio típico:** assinatura por desenvolvedor (R$ 20 a 100/mês) ou licença corporativa
@@ -125,6 +136,17 @@ bgPreset: default
 - Atendente humano aprova ou edita
 - Cliente recebe a resposta final
 
+---
+layout: default
+card: true
+bgPreset: default
+pulse: false
+---
+
+<!-- SLIDE 6b — Brief: Agente de Suporte (cont.) -->
+
+# Brief Técnico — Agente de Suporte (cont.)
+
 **Infraestrutura:** moderada. Pode ser cloud pago, sem GPU obrigatória se usar API externa
 
 **Modelo de negócio típico:** por conversa processada (R$ 0,50 a 5,00) ou mensalidade por empresa
@@ -147,6 +169,17 @@ bgPreset: default
 - Llama 3.1 (Meta) — gratuito para usar, muito capaz
 - Mistral — gratuito, eficiente em hardware menor
 - Gemma (Google) — gratuito, bom para tarefas menores
+
+---
+layout: default
+card: true
+bgPreset: default
+pulse: false
+---
+
+<!-- SLIDE 7b — Brief: Fábrica de LLM Local (cont.) -->
+
+# Brief Técnico — Fábrica de LLM Local (cont.)
 
 **Hardware: VRAM é o que define tudo**
 
@@ -183,7 +216,20 @@ ARQUÉTIPO:  [ ] Geração de Código
 PROBLEMA (1 frase): ______________________________
 
 CLIENTE (quem paga?): ___________________________
+```
 
+---
+layout: default
+card: true
+bgPreset: palette
+pulse: false
+---
+
+<!-- SLIDE 8b — Canvas de bolso (cont.) -->
+
+# Canvas de Bolso (cont.)
+
+```
 SOLUÇÃO IA (o que a IA faz exatamente?): __________
 
 ARQUITETURA  entrada → IA → saída → usuário: ______
@@ -516,7 +562,7 @@ bgPreset: default
 
 <!-- SLIDE 25 — Roteiro do Relatório -->
 
-# Roteiro do Relatório — siga essa ordem
+# Roteiro do Relatório — siga essa ordem (seções 1 a 4)
 
 **1. Introdução** — O que era a visita, quando foi, onde foi, quem participou.
 
@@ -525,6 +571,17 @@ bgPreset: default
 **3. ITECPB — Incubadora** — Como funciona, critérios de entrada, o que oferecem além do espaço físico.
 
 **4. Tour pelos espaços** — O que vocês viram, como é a infraestrutura, o que chamou atenção.
+
+---
+layout: default
+card: true
+bgPreset: default
+pulse: false
+---
+
+<!-- SLIDE 25b — Roteiro do Relatório (cont.) -->
+
+# Roteiro do Relatório (cont.) — seções 5 a 7
 
 **5. Bitz** — O que a empresa faz, qual problema resolve, como usa tecnologia.
 
