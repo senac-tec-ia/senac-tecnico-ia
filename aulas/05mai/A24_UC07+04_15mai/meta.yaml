@@ -1,0 +1,21 @@
+# Metadados da Aula — Neural Slides
+# Preenchido pelo CLI ao rodar `course new`
+
+aula: "A24_UC07+04_15mai"
+slug: "a24-uc07-04-15mai"
+title: "Visita Parque Tec"
+author: "Leonardo Zanini"
+courseTitle: "Técnico em Inteligência Artificial"
+
+disciplines: []
+
+date: "15/05/2026"
+
+# draft | ready | published
+status: published
+
+deployUrl: ""
+
+slideCount: 0
+
+agentsUsed: []
